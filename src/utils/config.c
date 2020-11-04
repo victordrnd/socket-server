@@ -14,9 +14,6 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         printf("%s\n", wp->name);
         config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         wp->clients_name = (char **)malloc((int)2 * sizeof(char *));
-        // for (int j = 0; j < (int)game_configuration->nb_room * 2; j++)
-        // {
-        // }
         for (int j = 0; j < 2; j++)
         {
             wp->clients_name[j] = (char *)malloc(100 * sizeof(char));
