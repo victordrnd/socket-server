@@ -1,0 +1,6 @@
+/nbproject/
+dist/*
+build/
+.vscode/
+*.o
+output/*
