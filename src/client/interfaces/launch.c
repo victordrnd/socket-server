@@ -17,14 +17,29 @@ void on_mise_10_selected(GtkWidget *button)
 
 void on_mise_25_selected()
 {
+    GtkWidget  *rbtn_label;
+
+    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 25");
+
+    printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
 
 void on_mise_50_selected()
 {
+    GtkWidget  *rbtn_label;
+
+    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 50");
+
+    printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
 
 void on_mise_100_selected()
 {
+    GtkWidget  *rbtn_label;
+
+    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 100");
+
+    printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
 
 void btn_collab_toggled_cb()
