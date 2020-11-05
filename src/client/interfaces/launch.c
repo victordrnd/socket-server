@@ -1,6 +1,5 @@
 #include "launch.h"
-
-builder = NULL;
+GtkBuilder *builder = NULL;
 void init_main_window(int argc, char **argv){
     GtkWidget *win;
 
@@ -10,4 +9,8 @@ void init_main_window(int argc, char **argv){
     gtk_builder_connect_signals(builder, NULL);
     gtk_widget_show(win);
     gtk_main();
+}
+
+GtkBuilder *get_gtk_builder(){
+    return builder;
 }

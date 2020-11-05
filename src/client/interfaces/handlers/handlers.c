@@ -29,7 +29,8 @@ void on_mise_100_selected()
 
 void btn_trahir_toggled_cb()
 {
-    GtkWidget *btn = GTK_WIDGET(gtk_builder_get_object(builder, "texte"));
+    GtkWidget *btn = GTK_WIDGET(gtk_builder_get_object(get_gtk_builder(), "btn_trahir"));
+    
 }
 
 void btn_collab_toggled_cb()
