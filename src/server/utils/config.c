@@ -12,7 +12,9 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
     {
         config_setting_t *current_room_config = config_setting_get_elem(setting, i);
         config_setting_lookup_string(current_room_config, "name", &wp->name);
-        printf("%s\n", wp->name);
+        //config_setting_lookup_int(current_room_config, "inital_amount", &wp->initial_amount);
+        //config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
+        //printf("%s\n", wp->initial_amount);
         config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         wp->clients_name = (char **)malloc((int)2 * sizeof(char *));
         for (int j = 0; j < 2; j++)
@@ -20,6 +22,9 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
             wp->clients_name[j] = (char *)malloc(100 * sizeof(char));
             config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
             config_setting_lookup_string(client_name_config, "name", &wp->clients_name[j]);
+            #if DEBUG
+            printf("%s\n", wp->clients_name[j]);
+            #endif
         }
         game_configuration->rooms[i] = *wp;
         wp++;
@@ -31,7 +36,6 @@ void *read_config(Config *configuration, char *filename)
     config_t cfg;
     config_setting_t *setting;
     config_init(&cfg);
-    configuration = malloc(sizeof(Config));
 
     if (!config_read_file(&cfg, filename))
     {

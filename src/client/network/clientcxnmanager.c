@@ -39,6 +39,8 @@ int open_connection(Config *configuration) {
     // Address family is Internet 
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
+    printf("%s", configuration->ip);
+    //serverAddr.sin_addr.s_addr = inet_addr(configuration->ip);
     serverAddr.sin_addr.s_addr = inet_addr(configuration->ip);
     memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);
     //Connect the socket to the server using the address

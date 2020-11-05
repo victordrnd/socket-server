@@ -6,8 +6,7 @@ void read_config(Config *configuration, char *filename){
     config_t cfg;
     config_setting_t *setting;
     config_init(&cfg);
-    configuration = malloc(sizeof(Config));
-
+    char *ip = malloc(30* sizeof(char));
     if (!config_read_file(&cfg, filename))
     {
         fprintf(stderr, "%s:%d - %s\n", config_error_file(&cfg),

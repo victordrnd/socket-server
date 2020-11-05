@@ -30,20 +30,20 @@ GtkBuilder *builder = NULL;
  */
 int main(int argc, char **argv)
 {
-    Config *configuration;
-    read_config(&configuration, "client_config.cfg");
+    Config *configuration = malloc(sizeof(Config)); 
+    read_config(configuration, "client_config.cfg");
 
     int sockfd;
     int status = 0;
     char msg[100];
     pthread_t thread;
 
-    sockfd = open_connection(&configuration);
+    sockfd = open_connection(configuration);
 
     GtkWidget *win;
 
     gtk_init(&argc, &argv);
-    builder = gtk_builder_new_from_file("ressources/glade/interface_prisonnier.glade");
+    builder = gtk_builder_new_from_file("src/client/ressources/glade/interface_prisonnier.glade");
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
     //gtk_builder_connect_signals(builder, NULL);
     gtk_widget_show(win);

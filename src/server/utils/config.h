@@ -2,6 +2,8 @@
 #define CONFIG_HEADER_FILE_H
 typedef struct{
     char *name;
+    int *nb_games;
+    int *initial_amount;
     char **clients_name;
 } Room;
 

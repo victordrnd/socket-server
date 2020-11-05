@@ -30,8 +30,8 @@
  */
 
 int main(int argc, char** argv) {
-    Config *configuration;
-    read_config(&configuration, "server_config.cfg");
+    Config *configuration = malloc(sizeof(Config));
+    read_config(configuration, "server_config.cfg");
 
     int sockfd = -1;
     int index = 1;
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
     /* init array*/
     init_sockets_array();
     /* create socket */
-    sockfd = create_server_socket(&configuration);
+    sockfd = create_server_socket(configuration);
 
     /* listen on port , stack size 50 for incoming connections*/
     if (listen(sockfd, 50) < 0) {
