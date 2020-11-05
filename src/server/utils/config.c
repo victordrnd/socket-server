@@ -12,8 +12,8 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
     {
         config_setting_t *current_room_config = config_setting_get_elem(setting, i);
         config_setting_lookup_string(current_room_config, "name", &wp->name);
-        //config_setting_lookup_int(current_room_config, "inital_amount", &wp->initial_amount);
-        //config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
+        config_setting_lookup_int(current_room_config, "inital_amount", &wp->initial_amount);
+        config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
         //printf("%s\n", wp->initial_amount);
         config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         wp->clients_name = (char **)malloc((int)2 * sizeof(char *));
