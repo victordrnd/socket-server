@@ -1,7 +1,7 @@
 
 typedef struct
 {
-    bool rb_state;
+    // bool rb_state;
     char rb_label;
 
 } radio_button;

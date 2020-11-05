@@ -1,5 +1,13 @@
 #include "launch.h"
 GtkBuilder *builder = NULL;
+
+void btn_trahir_toggled_cb()
+{
+    GtkButton *btn = GTK_BUTTON(gtk_builder_get_object(builder, "btn_trahir"));
+    printf("%s", gtk_button_get_label(&btn));
+
+}
+
 void init_main_window(int argc, char **argv){
     GtkWidget *win;
 
