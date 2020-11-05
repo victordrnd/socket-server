@@ -4,6 +4,7 @@
 
 void parse_game_configuration(GameConfiguration *game_configuration, config_setting_t *setting)
 {
+    game_configuration = malloc(sizeof(GameConfiguration));
     game_configuration->nb_room = config_setting_length(setting);
     game_configuration->rooms = malloc((int)game_configuration->nb_room * sizeof(Room));
     Room *wp = game_configuration->rooms;
@@ -19,7 +20,6 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
             wp->clients_name[j] = (char *)malloc(100 * sizeof(char));
             config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
             config_setting_lookup_string(client_name_config, "name", &wp->clients_name[j]);
-            printf("%s\n", wp->clients_name[j]);
         }
         game_configuration->rooms[i] = *wp;
         wp++;
@@ -46,7 +46,7 @@ void *read_config(Config *configuration, char *filename)
         config_lookup_int(&cfg, "max_simultaneous_connection", &configuration->max_simultaneous_connection);
 
         setting = config_lookup(&cfg, "game_configuration");
-        GameConfiguration *game_configuration = malloc(sizeof(GameConfiguration));
+        GameConfiguration *game_configuration;
         parse_game_configuration(&game_configuration, setting);
         configuration->game_config = game_configuration;
 #if DEBUG
