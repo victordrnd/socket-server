@@ -19,12 +19,13 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
-#include <gtk/gtk.h>
+
 
 #include "network/clientcxnmanager.h"
 #include "utils/config.h"
+#include "interfaces/launch.h"
 
-GtkBuilder *builder = NULL;
+
 /*
  * 
  */
@@ -40,14 +41,7 @@ int main(int argc, char **argv)
 
     sockfd = open_connection(configuration);
 
-    GtkWidget *win;
-
-    gtk_init(&argc, &argv);
-    builder = gtk_builder_new_from_file("src/client/ressources/glade/interface_prisonnier.glade");
-    win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
-    //gtk_builder_connect_signals(builder, NULL);
-    gtk_widget_show(win);
-    gtk_main();
+    init_main_window(argc, argv);
 
 
     strcpy(msg, "Hello from Xeon");

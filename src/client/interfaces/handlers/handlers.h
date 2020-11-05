@@ -1,7 +1,3 @@
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 typedef struct
 {
@@ -15,3 +11,5 @@ typedef struct
     
 
 } toggle_button;
+
+void btn_trahir_toggled_cb();

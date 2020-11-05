@@ -8,12 +8,12 @@ CC = gcc
 GTK1 = `pkg-config --cflags gtk+-3.0`
 GTK2 = `pkg-config --libs gtk+-3.0`
 # define any compile-time flags
-CFLAGS	:= -Wall -Wextra -g -DDEBUG #Normal le double D?
+CFLAGS	:= -Wall -Wextra -g -DDEBUG 
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
 #   their path using -Lpath, something like:
-LFLAGS = -lconfig -pthread
+LFLAGS = -lconfig -pthread -rdynamic
 
 # define output directory
 OUTPUT	:= output
@@ -70,10 +70,10 @@ SERVER_OBJECTS		:= $(SERVER_SOURCES:.c=.o)
 
 CLIENT_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(CLIENT_MAIN))
 SERVER_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(SERVER_MAIN))
+_GREEN="\033[0;32m"
+all: $(CLIENT_MAIN) $(SERVER_MAIN)
+	@echo ${_GREEN}All compilation completed !
 
-all: $(OUTPUT) $(CLIENT_MAIN)
-	$(MAKE) $(SERVER_MAIN)
-	@echo Executing 'all' complete!
 
 $(OUTPUT):
 	$(MD) $(OUTPUT)
