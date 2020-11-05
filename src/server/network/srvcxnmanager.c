@@ -9,6 +9,7 @@
 #include <arpa/inet.h>
 
 #include "srvcxnmanager.h"
+#include "../utils/config.h"
 
 connection_t *connections[MAXSIMULTANEOUSCLIENTS];
 
@@ -132,11 +133,11 @@ void *threadProcess(void *ptr)
     pthread_exit(0);
 }
 
-int create_server_socket()
+int create_server_socket(Config *configuration)
 {
     int sockfd = -1;
     struct sockaddr_in address;
-    int port = 7788;
+    int port = configuration->bind_port;
 
     /* create socket */
     sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -152,7 +153,7 @@ int create_server_socket()
     //address.sin_addr.s_addr = INADDR_ANY;
     //ou 0.0.0.0
     //Sinon  127.0.0.1
-    address.sin_addr.s_addr = inet_addr("0.0.0.0");
+    address.sin_addr.s_addr = inet_addr(configuration->bind_ip);
     address.sin_port = htons(port);
 
     /* prevent the 60 secs timeout */

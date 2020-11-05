@@ -1,5 +1,9 @@
+#ifndef CONFIG_HEADER_FILE_H
+#define CONFIG_HEADER_FILE_H
 typedef struct{
     char *name;
+    int *nb_games;
+    int *initial_amount;
     char **clients_name;
 } Room;
 
@@ -19,3 +23,4 @@ typedef struct
 
 
 void *read_config(Config *configuration, char *filename);
+#endif
