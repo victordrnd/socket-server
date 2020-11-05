@@ -9,8 +9,9 @@ GtkBuilder *builder = NULL;
 void on_mise_10_selected(GtkWidget *button)
 {
     GtkWidget  *rbtn_label;
+    GtkWidget  *rbtn_state;
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 10");
+    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_10");
 
     printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
@@ -18,8 +19,9 @@ void on_mise_10_selected(GtkWidget *button)
 void on_mise_25_selected()
 {
     GtkWidget  *rbtn_label;
+    GtkWidget  *rbtn_state;
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 25");
+    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_25");
 
     printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
@@ -27,8 +29,9 @@ void on_mise_25_selected()
 void on_mise_50_selected()
 {
     GtkWidget  *rbtn_label;
+    GtkWidget  *rbtn_state;
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 50");
+    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_50");
 
     printf("%s\n", gtk_button_get_label(&rbtn_label));
 }
@@ -36,8 +39,9 @@ void on_mise_50_selected()
 void on_mise_100_selected()
 {
     GtkWidget  *rbtn_label;
+    GtkWidget  *rbtn_state;                                              
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "mise de 100");
+    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_100");
 
     printf("%s\n", gtk_button_get_label(&rbtn_label));
 }

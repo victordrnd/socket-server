@@ -8,7 +8,7 @@ typedef struct
     // bool rb_state;
     char rb_label;
 
-} GtkRadioButton;
+} radio_button;
 
 typedef struct
 {
