@@ -24,7 +24,7 @@
 #include "network/clientcxnmanager.h"
 #include "utils/config.h"
 #include "interfaces/launch.h"
-
+#include "game/game.h"
 
 /*
  * 
@@ -40,8 +40,10 @@ int main(int argc, char **argv)
     pthread_t thread;
 
     sockfd = open_connection(configuration);
-
-    init_main_window(argc, argv);
+    
+    Game game;
+    init_game(&game, configuration);
+    init_main_window(argc, argv, &game);
 
 
     strcpy(msg, "Hello from Xeon");

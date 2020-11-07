@@ -38,7 +38,7 @@
                 <property name="row_homogeneous">True</property>
                 <property name="column_homogeneous">True</property>
                 <child>
-                  <object class="GtkGrid">
+                  <object class="GtkGrid" id="bet_btn_container">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="column_homogeneous">True</property>
@@ -52,6 +52,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <signal name="toggled" handler="on_mise_10_selected" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -68,6 +69,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <signal name="toggled" handler="on_mise_25_selected" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -84,6 +86,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <signal name="toggled" handler="on_mise_50_selected" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -100,6 +103,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <signal name="toggled" handler="on_mise_75_selected" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">3</property>
@@ -116,6 +120,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <signal name="toggled" handler="on_mise_100_selected" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">4</property>
@@ -248,12 +253,6 @@
                         <property name="top_attach">2</property>
                         <property name="width">2</property>
                       </packing>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
                     </child>
                   </object>
                   <packing>

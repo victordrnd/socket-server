@@ -1,50 +1,40 @@
 #include <gtk/gtk.h>
-#include "launch.h"
-
 #include <stdbool.h>
-#include <gtk/gtk.h>
+
+#include "../utils/config.h"
+
+#include "launch.h"
+#include "../game/game.h"
+#include "game_ui/game_ui.h"
 
 GtkBuilder *builder = NULL;
 
-
-void on_mise_10_selected(GtkWidget *button)
+void on_mise_10_selected(GtkToggleButton *button)
 {
-    GtkWidget  *rbtn_label;
-    GtkWidget  *rbtn_state;
-
-    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_10");
-
-    printf("%s\n", gtk_button_get_label(&rbtn_label));
+    game_set_current_bet(10);
+    untoggle_previous_bet_btn(button);
 }
 
-void on_mise_25_selected()
+void on_mise_25_selected(GtkToggleButton *button)
 {
-    GtkWidget  *rbtn_label;
-    GtkWidget  *rbtn_state;
-
-    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_25");
-
-    printf("%s\n", gtk_button_get_label(&rbtn_label));
+    untoggle_previous_bet_btn(button);
 }
 
-void on_mise_50_selected()
+void on_mise_50_selected(GtkToggleButton *button)
 {
-    GtkWidget  *rbtn_label;
-    GtkWidget  *rbtn_state;
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_50");
-
-    printf("%s\n", gtk_button_get_label(&rbtn_label));
+    untoggle_previous_bet_btn(button);
 }
 
-void on_mise_100_selected()
+void on_mise_75_selected(GtkToggleButton *button)
 {
-    GtkWidget  *rbtn_label;
-    GtkWidget  *rbtn_state;                                              
 
-    rbtn_label = gtk_radio_button_new_with_label (builder, "cb_100");
+    untoggle_previous_bet_btn(button);
+}
 
-    printf("%s\n", gtk_button_get_label(&rbtn_label));
+void on_mise_100_selected(GtkToggleButton *button)
+{
+    untoggle_previous_bet_btn(button);
 }
 
 void btn_collab_toggled_cb()
@@ -59,9 +49,9 @@ void btn_trahir_toggled_cb()
     printf("%s", gtk_button_get_label(&btn));
 }
 
-void init_main_window(int argc, char **argv){
+void init_main_window(int argc, char **argv, Game *c_game)
+{
     GtkWidget *win;
-    
     gtk_init(&argc, &argv);
     builder = gtk_builder_new_from_file("src/client/ressources/glade/game_interface.glade");
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
