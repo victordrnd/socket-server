@@ -108,7 +108,7 @@ void *threadProcess(void *ptr)
         else if (buffer_in[0] == '#')
         {
             int client = 0;
-            int read = sscanf(buffer_in, "%*[^0123456789]%d ", &client);
+            sscanf(buffer_in, "%*[^0123456789]%d ", &client);
             for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
             {
                 if (client == connections[i]->index)
