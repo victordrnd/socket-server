@@ -78,9 +78,12 @@ void read_config(Config *configuration, char *filename)
         configuration->game_config = game_configuration;
     }
 #ifndef NDEBUG
+    char *ip = malloc(12 * sizeof(char));
+    strcpy(ip, configuration->bind_ip);
     assert(configuration->bind_port > 1024);
     assert(configuration->max_simultaneous_connection == 50);
-    assert(is_ip_valid(configuration->bind_ip) == true);
+    assert(is_ip_valid(ip) == true);
+    free(ip);
     printf("server ip : %s\n", configuration->bind_ip);
     printf("server port : %d\n", configuration->bind_port);
     printf("max simultaneous connection : %d\n", configuration->max_simultaneous_connection);

@@ -23,9 +23,5 @@ jobs:
       run : make server
     - name : Make client program
       run : make client
-    - name : Launch client
-      run : (sleep 5 && ./output/client)&
-    - name : Kill all process
-      run : (sleep 10 && kill %1)&
-    - name : Launch server
-      run : ./output/server
+    - name : Execute launch sequence
+      run : ./test_launch.sh 
