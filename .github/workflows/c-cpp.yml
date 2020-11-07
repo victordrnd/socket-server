@@ -17,7 +17,9 @@ jobs:
       run: sudo apt install libconfig-dev
     - name : Install GTK+ dev
       run: sudo apt install libgtk-3-dev
-    - name : Make server programm
+    - name : Create output folder
+      run : mkdir output 
+    - name : Make server program
       run : make server
     - name : Make client program
       run : make client
