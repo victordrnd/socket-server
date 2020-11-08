@@ -66,20 +66,18 @@ void on_mise_100_selected(GtkToggleButton *button)
  * @brief 
  * 
  */
-void btn_collab_toggled_cb()
-{
-    GtkButton *btn = GTK_BUTTON(gtk_builder_get_object(builder, "btn_collab"));
-    printf("%s", gtk_button_get_label(&btn));
+void on_betray_btn_click(GtkButton *button, GtkProgressBar *progressbar){
+
+    activate_countdown(progressbar, 10, 20);
 }
 
 /**
  * @brief 
  * 
  */
-void btn_trahir_toggled_cb()
+void on_collaborate_btn_click()
 {
-    GtkButton *btn = GTK_BUTTON(gtk_builder_get_object(builder, "btn_trahir"));
-    printf("%s", gtk_button_get_label(&btn));
+
 }
 
 /**
