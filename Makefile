@@ -30,7 +30,8 @@ INCLUDE	:= include
 LIB		:= lib
 
 ifeq ($(OS),Windows_NT)
-MAIN	:= main.exe
+CLIENT_MAIN := client
+SERVER_MAIN := server
 SOURCEDIRS	:= $(SRC)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
@@ -38,7 +39,6 @@ FIXPATH = $(subst /,\,$1)
 RM			:= del /q /f
 MD	:= mkdir
 else
-MAIN	:= main
 CLIENT_MAIN := client
 SERVER_MAIN := server
 CLIENT_SOURCEDIRS	:= $(shell find $(SRC_CLIENT) -type d) $(shell find $(SRC_COMMON) -type d)
@@ -80,7 +80,6 @@ $(OUTPUT):
 
 
 all: $(OUTPUT) $(CLIENT_MAIN) $(SERVER_MAIN)
-	@echo $(CLIENT_SOURCEDIRS)
 	@echo ${_GREEN}All compilation completed !
 
 
@@ -111,13 +110,12 @@ $(SERVER_MAIN): $(OUTPUT) $(SERVER_OBJECTS)
 
 
 clean:
-	# @echo $(shell find $(SRC_SERVER) -type d)
 	$(RM) -R $(OUTPUT)
 	$(RM) $(call FIXPATH,$(CLIENT_OBJECTS))
 	$(RM) $(call FIXPATH,$(SERVER_OBJECTS))
 	@echo Cleanup complete!
 
 run: all
+	timeout 2 ./$(SERVER_OUTPUTMAIN)&
 	./$(CLIENT_OUTPUTMAIN)
-	./$(SERVER_OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
