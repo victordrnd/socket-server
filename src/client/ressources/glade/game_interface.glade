@@ -52,6 +52,7 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <property name="active">True</property>
                         <signal name="toggled" handler="on_mise_10_selected" swapped="no"/>
                         <style>
                           <class name="toggle_btn"/>

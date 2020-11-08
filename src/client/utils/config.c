@@ -8,6 +8,14 @@
 #include <stdbool.h>
 #include "../../common/tests/network/network.h"
 #endif
+
+
+/**
+ * @brief Read configuration file
+ * 
+ * @param configuration current configuration (or empty)
+ * @param filename filename of configuration file
+ */
 void read_config(Config *configuration, char *filename)
 {
     config_t cfg;

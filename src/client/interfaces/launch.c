@@ -17,7 +17,7 @@ GtkBuilder *builder = NULL;
 void on_mise_10_selected(GtkToggleButton *button)
 {
     game_set_current_bet(10);
-    untoggle_previous_bet_btn(button);
+    untoggle_previous_bet_btn(builder,button);
 }
 
 /**
@@ -27,7 +27,7 @@ void on_mise_10_selected(GtkToggleButton *button)
  */
 void on_mise_25_selected(GtkToggleButton *button)
 {
-    untoggle_previous_bet_btn(button);
+    untoggle_previous_bet_btn(builder,button);
 }
 
 /**
@@ -38,7 +38,7 @@ void on_mise_25_selected(GtkToggleButton *button)
 void on_mise_50_selected(GtkToggleButton *button)
 {
 
-    untoggle_previous_bet_btn(button);
+    untoggle_previous_bet_btn(builder,button);
 }
 
 /**
@@ -49,7 +49,7 @@ void on_mise_50_selected(GtkToggleButton *button)
 void on_mise_75_selected(GtkToggleButton *button)
 {
 
-    untoggle_previous_bet_btn(button);
+    untoggle_previous_bet_btn(builder,button);
 }
 
 /**
@@ -59,7 +59,7 @@ void on_mise_75_selected(GtkToggleButton *button)
  */
 void on_mise_100_selected(GtkToggleButton *button)
 {
-    untoggle_previous_bet_btn(button);
+    untoggle_previous_bet_btn(builder, button);
 }
 
 /**
