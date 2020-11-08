@@ -5,3 +5,5 @@ build/
 *.o
 output/*
 *.glade~
+*.d
+*.gressource

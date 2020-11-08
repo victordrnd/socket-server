@@ -5,12 +5,12 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="pixbuf">../images/betray.svg</property>
+    <property name="resource">/org/ics/include/images/betray.svg</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="pixbuf">../images/collaborate.svg</property>
+    <property name="resource">/org/ics/include/images/collaborate.svg</property>
   </object>
   <object class="GtkWindow" id="app_win">
     <property name="can_focus">False</property>
