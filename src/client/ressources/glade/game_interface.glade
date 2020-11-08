@@ -23,7 +23,7 @@
       <placeholder/>
     </child>
     <child>
-      <object class="GtkStack">
+      <object class="GtkStack" id="app_frame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
