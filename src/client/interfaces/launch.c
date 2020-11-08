@@ -98,7 +98,7 @@ void init_main_window(int argc, char **argv, Game *c_game)
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
 
     GtkCssProvider *provider = gtk_css_provider_new();
-	gtk_css_provider_load_from_path(provider, "src/client/ressources/styles/main.css", NULL);
+	gtk_css_provider_load_from_path(provider, "src/client/ressources/styles/orchis.css", NULL);
 	gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
     //win1 = GTK_WIDGET(gtk_builder_get_object(builder1, "waiting_room_window"));
