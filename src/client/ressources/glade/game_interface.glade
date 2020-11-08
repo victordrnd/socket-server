@@ -53,6 +53,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_10_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -70,6 +73,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_25_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -87,6 +93,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_50_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -104,6 +113,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_75_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">3</property>
@@ -121,6 +133,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_100_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">4</property>
@@ -201,6 +216,9 @@
                     <property name="image_position">top</property>
                     <property name="always_show_image">True</property>
                     <signal name="clicked" handler="on_collaborate_btn_click" swapped="no"/>
+                    <style>
+                      <class name="btn"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -246,6 +264,7 @@
                     </child>
                     <child>
                       <object class="GtkProgressBar">
+                        <property name="name">progressbar</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">50</property>
