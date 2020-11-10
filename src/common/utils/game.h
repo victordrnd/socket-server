@@ -11,12 +11,11 @@ enum actions
 };
 
 typedef struct {
-    int tmpreact;
-    int mise;
-    int rest;
-    bool stat;
+    int react_time;
+    int bet;
+    int balance;
     enum actions action;
-} Choix;
+} Game;
 
 #endif
 
