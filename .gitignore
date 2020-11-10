@@ -4,3 +4,6 @@ build/
 .vscode/
 *.o
 output/*
+*.glade~
+*.d
+*.gressource

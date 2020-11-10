@@ -4,16 +4,22 @@
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="waiting_room_window">
     <property name="can_focus">False</property>
+    <property name="halign">center</property>
+    <property name="valign">center</property>
     <property name="title" translatable="yes">Salle d'attente</property>
     <property name="resizable">False</property>
     <property name="modal">True</property>
+    <property name="window_position">center</property>
     <property name="destroy_with_parent">True</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="urgency_hint">True</property>
     <property name="deletable">False</property>
     <child type="titlebar">
       <placeholder/>
     </child>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="app_frame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="margin_bottom">10</property>
@@ -27,7 +33,6 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="row_homogeneous">True</property>
-            <property name="column_homogeneous">True</property>
             <child>
               <object class="GtkLabel">
                 <property name="visible">True</property>

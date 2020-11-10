@@ -32,7 +32,7 @@
 
 int main(int argc, char** argv) {
     Config *configuration = malloc(sizeof(Config));
-    read_config(configuration, "server_config.cfg");
+    read_config(configuration, "include/config/server_config.cfg");
 
     int sockfd = -1;
     int index = 1;
