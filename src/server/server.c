@@ -31,7 +31,7 @@
  */
 
 int main(int argc, char** argv) {
-    Config *configuration = malloc(sizeof(Config));
+    Config *configuration = (Config *) malloc(sizeof(Config));
     read_config(configuration, "include/config/server_config.cfg");
 
     int sockfd = -1;
@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
     while (true) {
         /* accept incoming connections */
         connection = (connection_t *) malloc(sizeof (connection_t));
-        connection->sockfd = accept(sockfd, &connection->address, &connection->addr_len);
+        connection->sockfd = accept(sockfd, &connection->address,(unsigned int *) &connection->addr_len);
         connection->index = index++;
         if (connection->sockfd <= 0) {
             free(connection);

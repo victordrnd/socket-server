@@ -11,12 +11,12 @@ Game *game;
  * @param c_game game to initialized
  * @param config Client configuration
  */
-void init_game(Game *c_game, Config *config){
+void init_game(Game *c_game){
     game = c_game;
     //TODO get balance from server conf
     game->balance = 100; 
-    game->currentBet = 10;
-    game->round = 1; 
+    game->bet = 10;
+    game->current_round = 1; 
 }
 
 /**
@@ -24,8 +24,8 @@ void init_game(Game *c_game, Config *config){
  * 
  * @param bet 
  */
-void game_set_current_bet(int bet){
-    game->currentBet = bet;
+void game_set_current_bet(unsigned int bet){
+    game->bet = bet;
 }
 
 /**
@@ -34,6 +34,11 @@ void game_set_current_bet(int bet){
  * @return int 
  */
 int game_get_current_bet(){
-    return game->currentBet;
+    return game->bet;
+}
+
+
+void game_set_action(enum actions action){
+    game->action = action;
 }
 #endif

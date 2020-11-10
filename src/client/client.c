@@ -31,7 +31,7 @@
  */
 int main(int argc, char **argv)
 {
-    Config *configuration = malloc(sizeof(Config)); 
+    Config *configuration =(Config *) malloc(sizeof(Config)); 
     read_config(configuration, "include/config/client_config.cfg");
 
     int sockfd;
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
     sockfd = open_connection(configuration);
     
     Game game;
-    init_game(&game, configuration);
+    init_game(&game);
     init_main_window(argc, argv, &game);
 
 

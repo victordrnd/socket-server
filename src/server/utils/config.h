@@ -4,7 +4,7 @@
 
 typedef struct
 {
-    char *name;
+    const char *name;
     int nb_games;
     int initial_amount;
     char **clients_name;
@@ -12,15 +12,15 @@ typedef struct
 
 typedef struct
 {
-    int nb_room;
+    unsigned int nb_room;
     Room *rooms;
 } GameConfiguration;
 
 typedef struct
 {
     const char *bind_ip;
-    int bind_port;
-    int max_simultaneous_connection;
+    unsigned int bind_port;
+    unsigned int max_simultaneous_connection;
     GameConfiguration *game_config;
 } Config;
 

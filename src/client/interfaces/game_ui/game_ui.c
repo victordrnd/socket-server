@@ -26,7 +26,7 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkToggleButton *button)
 {
     if (previousToggledBtn == NULL)
     {
-        previousToggledBtn = gtk_builder_get_object(builder, "mise_10"); //selected by default
+        previousToggledBtn = (GtkToggleButton *) gtk_builder_get_object(builder, "mise_10"); //selected by default
     }
     gtk_toggle_button_set_active(previousToggledBtn, FALSE);
     assert(gtk_toggle_button_get_active(previousToggledBtn) == FALSE);
@@ -43,14 +43,14 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkToggleButton *button)
  */
 void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
 {
-    gtk_widget_show(progress_bar);
+    gtk_widget_show((GtkWidget *) progress_bar);
     gtk_progress_bar_set_show_text(progress_bar, TRUE);
     for (int i = seconds * fps; i >= 0; i--)
     {
         gdouble fraction = (i * (1.0 / seconds)) / fps;
         if ((i / (fps / 10)) % 10 == 0)
         {
-            char *res = malloc(3 * sizeof(char));
+            char *res = (char *) malloc(3 * sizeof(char));
             sprintf(res, "%.f s", (double)i / fps);
             gtk_progress_bar_set_text(progress_bar, res);
             free(res);
@@ -60,5 +60,18 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
             gtk_main_iteration();
         delay(1000 / fps);
     }
-    gtk_widget_hide(progress_bar);
+    gtk_widget_hide((GtkWidget *)progress_bar);
 }
+
+void stop_count_down(GtkProgressBar *progress_bar){
+
+}
+
+
+void toggle_action_button(GtkBuilder *builder, gboolean sensitive){
+    GtkWidget *betray_btn = (GtkWidget *) gtk_builder_get_object(builder, "betray_btn");
+    GtkWidget *collaborate_btn = (GtkWidget *) gtk_builder_get_object(builder, "collaborate_btn");
+    gtk_widget_set_sensitive(betray_btn, sensitive);
+    gtk_widget_set_sensitive(collaborate_btn, sensitive);
+}
+

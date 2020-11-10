@@ -44,7 +44,7 @@ SERVER_MAIN := server
 CLIENT_SOURCEDIRS	:= $(shell find $(SRC_CLIENT) -type d) $(shell find $(SRC_COMMON) -type d)
 SERVER_SOURCEDIRS   := $(shell find $(SRC_SERVER) -type d) $(shell find $(SRC_COMMON) -type d)
 
-INCLUDEDIRS	:= $(shell find $(INCLUDE) -type d)
+INCLUDEDIRS	:= #$(shell find $(INCLUDE) -type d)
 LIBDIRS		:= $(shell find $(LIB) -type d)
 FIXPATH = $1
 RM = rm -f

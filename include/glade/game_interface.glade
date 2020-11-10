@@ -196,7 +196,7 @@
                     <property name="image">image1</property>
                     <property name="image_position">top</property>
                     <property name="always_show_image">True</property>
-                    <signal name="clicked" handler="on_betray_btn_click" object="progressbar" swapped="no"/>
+                    <signal name="clicked" handler="on_betray_btn_click" swapped="no"/>
                     <style>
                       <class name="btn"/>
                     </style>
@@ -208,7 +208,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="collaborate_btn">
                     <property name="label" translatable="yes">Collaborer</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>

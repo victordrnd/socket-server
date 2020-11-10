@@ -1,34 +1,8 @@
-#include <gtk/gtk.h>
-#include "../game/game.h"
-
 #ifndef LAUNCH_HEADER_H
 #define LAUNCH_HEADER_H
 
-typedef struct 
-{
-    // bool rb_state;
-    char rb_label;
+#include <gtk/gtk.h>
 
-} radio_button;
-
-typedef struct
-{
-    
-
-} toggle_button;
-
-//Boutons radios
-void on_mise_10_selected(GtkToggleButton *button, GtkBuilder *builder);
-void on_mise_25_selected(GtkToggleButton *button, GtkBuilder *builder);
-void on_mise_50_selected(GtkToggleButton *button, GtkBuilder *builder);
-void on_mise_100_selected(GtkToggleButton *button, GtkBuilder *builder);
-
-void on_betray_btn_click(GtkButton *button, GtkProgressBar *progressbar);
-
-//Plateau du jeu
-void init_main_window(int argc, char **argv, Game *c_game);
-
-//Glade builder
-GtkBuilder *get_gtk_builder();
+void init_main_window(int argc, char **argv);
 
 #endif
