@@ -18,7 +18,7 @@ typedef struct
 
 typedef struct
 {
-    char *bind_ip;
+    const char *bind_ip;
     int bind_port;
     int max_simultaneous_connection;
     GameConfiguration *game_config;
