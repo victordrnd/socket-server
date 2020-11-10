@@ -8,7 +8,7 @@ CC = gcc
 GTK1 = `pkg-config --cflags gtk+-3.0` -rdynamic
 GTK2 = `pkg-config --libs gtk+-3.0`
 # define any compile-time flags
-CFLAGS	:= -Wall -Wextra -g -DDEBUG 
+CFLAGS	:= -Wall -Wextra -g -DDEBUG -std=c99
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
@@ -21,6 +21,7 @@ OUTPUT	:= output
 # define source directory
 SRC_CLIENT		:= src/client
 SRC_SERVER      := src/server
+SRC_COMMON		:= src/common
 
 # define include directory
 INCLUDE	:= include
@@ -29,7 +30,8 @@ INCLUDE	:= include
 LIB		:= lib
 
 ifeq ($(OS),Windows_NT)
-MAIN	:= main.exe
+CLIENT_MAIN := client
+SERVER_MAIN := server
 SOURCEDIRS	:= $(SRC)
 INCLUDEDIRS	:= $(INCLUDE)
 LIBDIRS		:= $(LIB)
@@ -37,12 +39,12 @@ FIXPATH = $(subst /,\,$1)
 RM			:= del /q /f
 MD	:= mkdir
 else
-MAIN	:= main
 CLIENT_MAIN := client
 SERVER_MAIN := server
-CLIENT_SOURCEDIRS	:= $(shell find $(SRC_CLIENT) -type d)
-SERVER_SOURCEDIRS   := $(shell find $(SRC_SERVER) -type d)
-INCLUDEDIRS	:= $(shell find $(INCLUDE) -type d)
+CLIENT_SOURCEDIRS	:= $(shell find $(SRC_CLIENT) -type d) $(shell find $(SRC_COMMON) -type d)
+SERVER_SOURCEDIRS   := $(shell find $(SRC_SERVER) -type d) $(shell find $(SRC_COMMON) -type d)
+
+INCLUDEDIRS	:= #$(shell find $(INCLUDE) -type d)
 LIBDIRS		:= $(shell find $(LIB) -type d)
 FIXPATH = $1
 RM = rm -f
@@ -71,18 +73,30 @@ SERVER_OBJECTS		:= $(SERVER_SOURCES:.c=.o)
 CLIENT_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(CLIENT_MAIN))
 SERVER_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(SERVER_MAIN))
 _GREEN="\033[0;32m"
-all: $(CLIENT_MAIN) $(SERVER_MAIN)
-	@echo ${_GREEN}All compilation completed !
 
 
 $(OUTPUT):
 	$(MD) $(OUTPUT)
 
-$(CLIENT_MAIN): $(CLIENT_OBJECTS) 
-	$(CC) $(CFLAGS) $(GTK1) $(INCLUDES) -o $(CLIENT_OUTPUTMAIN) $(CLIENT_OBJECTS) $(LFLAGS) $(LIBS) $(GTK2)
 
-$(SERVER_MAIN): $(SERVER_OBJECTS) 
+all: $(OUTPUT) $(CLIENT_MAIN) $(SERVER_MAIN)
+	@echo ${_GREEN}All compilation completed !
+
+
+# Client compilation
+$(CLIENT_MAIN): $(OUTPUT) $(CLIENT_OBJECTS)
+	glib-compile-resources --target=app.gressource ressources.xml
+	$(MD) $(OUTPUT)/ressources
+	mv app.gressource $(OUTPUT)/ressources/
+	$(CC) $(CFLAGS) $(GTK1) $(INCLUDES) -o $(CLIENT_OUTPUTMAIN) $(CLIENT_OBJECTS) $(LFLAGS) $(LIBS) $(GTK2)
+	rsync -rupE $(INCLUDE)/config $(OUTPUT)
+
+
+
+# Server compilation
+$(SERVER_MAIN): $(OUTPUT) $(SERVER_OBJECTS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(SERVER_OUTPUTMAIN) $(SERVER_OBJECTS) $(LFLAGS) $(LIBS)
+	rsync -rupE $(INCLUDE)/config $(OUTPUT)
 
 # this is a suffix replacement rule for building .o's from .c's
 # it uses automatic variables $<: the name of the prerequisite of
@@ -92,15 +106,16 @@ $(SERVER_MAIN): $(SERVER_OBJECTS)
 	$(CC) $(GTK1) $(CFLAGS) $(INCLUDES) -c $<  -o $@
 
 .PHONY: clean
+
+
+
 clean:
-	# @echo $(shell find $(SRC_SERVER) -type d)
-	$(RM) $(CLIENT_OUTPUTMAIN)
-	$(RM) $(SERVER_OUTPUTMAIN)
+	$(RM) -R $(OUTPUT)
 	$(RM) $(call FIXPATH,$(CLIENT_OBJECTS))
 	$(RM) $(call FIXPATH,$(SERVER_OBJECTS))
 	@echo Cleanup complete!
 
 run: all
+	timeout 2 ./$(SERVER_OUTPUTMAIN)&
 	./$(CLIENT_OUTPUTMAIN)
-	./$(SERVER_OUTPUTMAIN)
 	@echo Executing 'run: all' complete!

@@ -1,15 +1,13 @@
+#ifndef HANDLERS_H
+#define HANDLERS_H
 
-typedef struct
-{
-    // bool rb_state;
-    char rb_label;
+#include <gtk/gtk.h>
 
-} radio_button;
+//Boutons radios
+void on_mise_10_selected(GtkToggleButton *button, GtkBuilder *builder);
+void on_mise_25_selected(GtkToggleButton *button, GtkBuilder *builder);
+void on_mise_50_selected(GtkToggleButton *button, GtkBuilder *builder);
+void on_mise_100_selected(GtkToggleButton *button, GtkBuilder *builder);
 
-typedef struct
-{
-    
-
-} toggle_button;
-
-void btn_trahir_toggled_cb();
+void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder);
+#endif

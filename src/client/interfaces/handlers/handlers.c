@@ -1,34 +1,85 @@
-#include <stdbool.h>
-#include <gtk/gtk.h>
-
-#include "../launch.h"
 #include "handlers.h"
+#include "../game_ui/game_ui.h"
+#include "../../../common/game.h"
+#include "../../game/game.h"
 
-void on_mise_10_selected(GtkWidget *button)
+/**
+ * @brief Mise 10 handler
+ * 
+ * @param button clicked button
+ */
+void on_mise_10_selected(GtkToggleButton *button, GtkBuilder *builder)
 {
-    bool *rb_state;
-    char *rb_label;
-
-
-    rb_label = gtk_button_get_label(GTK_BUTTON(button));
-
-    g_print("%s est %s\n", rb_label);
+    game_set_current_bet(10);
+    untoggle_previous_bet_btn(builder, button);
 }
 
-void on_mise_25_selected()
+/**
+ * @brief Mise 25 handler
+ * 
+ * @param button clicked button 
+ */
+void on_mise_25_selected(GtkToggleButton *button, GtkBuilder *builder)
 {
+    game_set_current_bet(25);
+    untoggle_previous_bet_btn(builder, button);
 }
 
-void on_mise_50_selected()
+/**
+ * @brief Mise 50 handler
+ * 
+ * @param button clicked button
+ */
+void on_mise_50_selected(GtkToggleButton *button, GtkBuilder *builder)
 {
+    game_set_current_bet(50);
+    untoggle_previous_bet_btn(builder, button);
 }
 
-void on_mise_100_selected()
+/**
+ * @brief Mise 75 handler
+ * 
+ * @param button clicked button
+ */
+void on_mise_75_selected(GtkToggleButton *button, GtkBuilder *builder)
 {
+    game_set_current_bet(75);
+    untoggle_previous_bet_btn(builder, button);
 }
 
-
-
-void btn_collab_toggled_cb()
+/**
+ * @brief Mise 100 handler
+ * 
+ * @param button clicked button
+ */
+void on_mise_100_selected(GtkToggleButton *button, GtkBuilder *builder)
 {
+    game_set_current_bet(100);
+    untoggle_previous_bet_btn(builder, button);
+}
+
+/**
+ * @brief 
+ * 
+ */
+void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
+{
+    toggle_action_button(builder, FALSE);
+    game_set_action(BETRAY);
+    GtkProgressBar *progressbar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
+    activate_countdown(progressbar, 20, 20);
+    toggle_action_button(builder, TRUE);
+}
+
+/**
+ * @brief 
+ * 
+ */
+void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
+{
+    toggle_action_button(builder, FALSE);
+    game_set_action(COLLABORATE);
+    GtkProgressBar *progressbar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
+    activate_countdown(progressbar, 20, 20);
+    toggle_action_button(builder, TRUE);
 }

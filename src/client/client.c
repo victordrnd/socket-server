@@ -24,15 +24,15 @@
 #include "network/clientcxnmanager.h"
 #include "utils/config.h"
 #include "interfaces/launch.h"
-
+#include "game/game.h"
 
 /*
  * 
  */
 int main(int argc, char **argv)
 {
-    Config *configuration = malloc(sizeof(Config)); 
-    read_config(configuration, "client_config.cfg");
+    Config *configuration =(Config *) malloc(sizeof(Config)); 
+    read_config(configuration, "include/config/client_config.cfg");
 
     int sockfd;
     int status = 0;
@@ -40,7 +40,9 @@ int main(int argc, char **argv)
     pthread_t thread;
 
     sockfd = open_connection(configuration);
-
+    
+    Game game;
+    init_game(&game);
     init_main_window(argc, argv);
 
 
