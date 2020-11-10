@@ -43,7 +43,7 @@ int main(int argc, char **argv)
     
     Game game;
     init_game(&game);
-    init_main_window(argc, argv, &game);
+    init_main_window(argc, argv);
 
 
     strcpy(msg, "Hello from Xeon");
