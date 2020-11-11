@@ -5,12 +5,12 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="pixbuf">../images/betray.svg</property>
+    <property name="resource">/org/ics/include/images/betray.svg</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="pixbuf">../images/collaborate.svg</property>
+    <property name="resource">/org/ics/include/images/collaborate.svg</property>
   </object>
   <object class="GtkWindow" id="app_win">
     <property name="can_focus">False</property>
@@ -23,7 +23,7 @@
       <placeholder/>
     </child>
     <child>
-      <object class="GtkStack">
+      <object class="GtkStack" id="app_frame">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
@@ -52,7 +52,11 @@
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
+                        <property name="active">True</property>
                         <signal name="toggled" handler="on_mise_10_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -70,6 +74,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_25_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -87,6 +94,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_50_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -104,6 +114,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_75_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">3</property>
@@ -121,6 +134,9 @@
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
                         <signal name="toggled" handler="on_mise_100_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
                       </object>
                       <packing>
                         <property name="left_attach">4</property>
@@ -172,13 +188,19 @@
                 <child>
                   <object class="GtkButton" id="betray_btn">
                     <property name="label" translatable="yes">Trahir</property>
+                    <property name="name">betray_btn</property>
                     <property name="visible">True</property>
+                    <property name="sensitive">False</property>
+                    <property name="app_paintable">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image1</property>
                     <property name="image_position">top</property>
                     <property name="always_show_image">True</property>
                     <signal name="clicked" handler="on_betray_btn_click" swapped="no"/>
+                    <style>
+                      <class name="btn"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">0</property>
@@ -187,15 +209,19 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkButton">
+                  <object class="GtkButton" id="collaborate_btn">
                     <property name="label" translatable="yes">Collaborer</property>
                     <property name="visible">True</property>
+                    <property name="sensitive">False</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image2</property>
                     <property name="image_position">top</property>
                     <property name="always_show_image">True</property>
                     <signal name="clicked" handler="on_collaborate_btn_click" swapped="no"/>
+                    <style>
+                      <class name="btn"/>
+                    </style>
                   </object>
                   <packing>
                     <property name="left_attach">1</property>
@@ -226,7 +252,7 @@
                       <object class="GtkAccelLabel" id="info_label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">C'est au tour de client_2 de jouer</property>
+                        <property name="label" translatable="yes">Vous êtes actuellement dans la salle d'attente...</property>
                         <property name="justify">center</property>
                         <attributes>
                           <attribute name="font-desc" value="Sawasdee Bold 10"/>
@@ -240,8 +266,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkProgressBar">
-                        <property name="visible">True</property>
+                      <object class="GtkProgressBar" id="progressbar">
+                        <property name="name">progressbar</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">50</property>
                         <property name="margin_right">50</property>

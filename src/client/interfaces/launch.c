@@ -1,61 +1,52 @@
-#include <gtk/gtk.h>
-#include <stdbool.h>
-
-#include "../utils/config.h"
-
 #include "launch.h"
-#include "../game/game.h"
-#include "game_ui/game_ui.h"
+#include "../network/communication.h"
 
-GtkBuilder *builder = NULL;
 
-void on_mise_10_selected(GtkToggleButton *button)
+void register_styles()
 {
-    game_set_current_bet(10);
-    untoggle_previous_bet_btn(button);
+    GResource *resource = g_resource_load("output/ressources/app.gressource", NULL);
+    g_resources_register(resource);
+    GtkCssProvider *provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_resource(provider, "/org/ics/style.css");
+    gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 }
 
-void on_mise_25_selected(GtkToggleButton *button)
+void init_waiting_room()
 {
-    untoggle_previous_bet_btn(button);
+    GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/waiting_room_interface.glade");
+    GtkWidget *waiting_room = GTK_WIDGET(gtk_builder_get_object(builder, "waiting_room_window"));
+    gtk_window_set_keep_above(waiting_room, TRUE);
+    gtk_widget_show(waiting_room);
 }
-
-void on_mise_50_selected(GtkToggleButton *button)
-{
-
-    untoggle_previous_bet_btn(button);
-}
-
-void on_mise_75_selected(GtkToggleButton *button)
-{
-
-    untoggle_previous_bet_btn(button);
-}
-
-void on_mise_100_selected(GtkToggleButton *button)
-{
-    untoggle_previous_bet_btn(button);
-}
-
-void btn_collab_toggled_cb()
-{
-    GtkButton *btn = GTK_BUTTON(gtk_builder_get_object(builder, "btn_collab"));
-    printf("%s", gtk_button_get_label(&btn));
-}
-
-void btn_trahir_toggled_cb()
-{
-    GtkButton *btn = GTK_BUTTON(gtk_builder_get_object(builder, "btn_trahir"));
-    printf("%s", gtk_button_get_label(&btn));
-}
-
-void init_main_window(int argc, char **argv, Game *c_game)
+/**
+ * @brief  Init game window
+ * 
+ * @param argc 
+ * @param argv 
+ * @param c_game current game
+ */
+void init_main_window(int argc, char **argv)
 {
     GtkWidget *win;
     gtk_init(&argc, &argv);
-    builder = gtk_builder_new_from_file("src/client/ressources/glade/game_interface.glade");
+    register_styles();
+    GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/game_interface.glade");
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
-    gtk_builder_connect_signals(builder, NULL);
+
+    gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);
+    g_signal_connect(G_OBJECT(win), "destroy", close_main_window, NULL);
+    //init_waiting_room();
     gtk_main();
+}
+
+
+
+
+
+void close_main_window(gboolean is_cnx_closed)
+{
+    gtk_main_quit();
+    if (is_cnx_closed == FALSE)
+        close_connection();
 }

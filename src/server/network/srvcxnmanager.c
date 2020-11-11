@@ -86,7 +86,7 @@ void *threadProcess(void *ptr)
         {
             break;
         }
-#if DEBUG
+#ifndef NDEBUG
         printf("DEBUG-----------------------------------------------------------\n");
         printf("len : %i\n", len);
         printf("Buffer : %.*s\n", len, buffer_in);
