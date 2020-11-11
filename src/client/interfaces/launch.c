@@ -32,6 +32,11 @@ void init_main_window(int argc, char **argv)
     // gtk_window_set_transient_for(win1, win);
     gtk_widget_show(win);
     // gtk_widget_show(win1);
+    // TODO on window destroy exit other threads 
 
+    /*
+     g_signal_connect(G_OBJECT(win),
+        "destroy", gtk_main_quit, NULL);
+    */
     gtk_main();
 }

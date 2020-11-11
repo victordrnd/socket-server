@@ -16,8 +16,12 @@
 #define CLIENTCXNMANAGER_H
 
 #define BUFFERSIZE 2048
+typedef struct {
+    int sock;
+    int status;
+} Connection;
 
-void *threadProcess(void * ptr);
+void *threadProcess(Connection *cnx);
 int open_connection(Config *configuration);
 
 #endif /* CLIENTCXNMANAGER_H */

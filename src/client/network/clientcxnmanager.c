@@ -11,18 +11,18 @@
 #include "clientcxnmanager.h"
 #include "../utils/config.h"
 
-void *threadProcess(void * ptr) {
+void *threadProcess(Connection *cnx) {
     char buffer_in[BUFFERSIZE];
-    int sockfd = *((int *) ptr);
+    // int sockfd = *((int *) ptr);
     int len;
-    while ((len = read(sockfd, buffer_in, BUFFERSIZE)) != 0) {
+    while ((len = read(cnx->sock, buffer_in, BUFFERSIZE)) != 0) {
         if (strncmp(buffer_in, "exit", 4) == 0) {
             break;
         }
         printf("receive %d chars\n", len);
         printf("%.*s\n", len, buffer_in);
     }
-    close(sockfd);
+    close(cnx->sock);
     printf("client pthread ended, len=%d\n", len);
 }
 
@@ -39,7 +39,6 @@ int open_connection(Config *configuration) {
     // Address family is Internet 
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
-    //serverAddr.sin_addr.s_addr = inet_addr(configuration->ip);
     serverAddr.sin_addr.s_addr = inet_addr(configuration->ip);
     memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);
     //Connect the socket to the server using the address

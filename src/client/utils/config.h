@@ -8,5 +8,5 @@ typedef struct
 } Config;
 
 
-void read_config(Config *configuration, char *filename);
+void read_config(Config *configuration, char const *filename);
 #endif

@@ -16,7 +16,7 @@
  * @param configuration current configuration (or empty)
  * @param filename filename of configuration file
  */
-void read_config(Config *configuration, char *filename)
+void read_config(Config *configuration, const char *filename)
 {
     config_t cfg;
     config_init(&cfg);

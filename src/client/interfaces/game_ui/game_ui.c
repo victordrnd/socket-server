@@ -64,7 +64,8 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
 }
 
 void stop_count_down(GtkProgressBar *progress_bar){
-
+     gtk_widget_hide((GtkWidget *) progress_bar);
+     gtk_progress_bar_set_fraction(progress_bar, (gdouble) 1);
 }
 
 
