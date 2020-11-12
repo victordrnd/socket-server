@@ -15,9 +15,9 @@ enum verbs{
 
 typedef struct {
 
-    int sender_id;
-    int destination_id;
-    int timestamp;
+    char sender_id[30];
+    char destination_id[30];
+    int timestamp; //nb secondes depuis 01/01/1970 38237283723 
     enum verbs action;
     char binary[2048];
     
