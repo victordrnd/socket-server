@@ -59,9 +59,13 @@
       border-radius: 0px;
       border : 1px solid rgba(0,0,0,0.15);
   }
+
   .toggle_btn{
     border : 1px solid rgba(0,0,0,0.15);
   }
+
+  
+
   .progressbar{
       border: none;
   }
@@ -247,12 +251,15 @@
   }
   
   
-  button:disabled {
+  /* button:disabled {
     box-shadow: none;
     background-color: rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 0.5);
+  } */
+
+  .toggle_btn.selected{
+    background-color: #ea9a32;
   }
-  
   
   button:checked {
     box-shadow: none;
