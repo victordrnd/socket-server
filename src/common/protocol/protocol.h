@@ -3,13 +3,14 @@
 
 enum verbs{
 
-    CONNECT = 0x10,
+    CONNECT = 0x10, //Hexadecimal : pour plus de sécurité au niveau des trames et optimise la mémoire 
     CONNECTED = 0x11,
-    GAME_START = 0x12,
-    ROUND_START = 0x13,
-    ROUND_END = 0x14,
-    GAME_END = 0x15,
-    DISCONNECT = 0x16
+    FAILED = 0x12,
+    GAME_START = 0x13,
+    ROUND_START = 0x14,
+    ROUND_END = 0x15,
+    GAME_END = 0x16,
+    DISCONNECT = 0x17
 };
 
 typedef struct {
@@ -19,7 +20,10 @@ typedef struct {
     int timestamp;
     enum verbs action;
     char binary[2048];
-    
+
 } Encapsulation;
 
+void parse_verbs_data(Encapsulation *encapsulation);
+
 #endif
+
