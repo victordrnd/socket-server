@@ -4,14 +4,21 @@
 #include <string.h>
 
 #include "config.h"
+#include "../../common/tests/network/network.h"
 #ifndef NDEBUG
 #include <stdbool.h>
-#include "../../common/tests/network/network.h"
 #endif
-void read_config(Config *configuration, char *filename)
+
+
+/**
+ * @brief Read configuration file
+ * 
+ * @param configuration current configuration (or empty)
+ * @param filename filename of configuration file
+ */
+void read_config(Config *configuration, const char *filename)
 {
     config_t cfg;
-    config_setting_t *setting;
     config_init(&cfg);
     if (!config_read_file(&cfg, filename))
     {
@@ -23,13 +30,13 @@ void read_config(Config *configuration, char *filename)
     {
         config_lookup_string(&cfg, "name", &configuration->name);
         config_lookup_string(&cfg, "server_ip", &configuration->ip);
-        config_lookup_int(&cfg, "server_port", &configuration->port);
+        config_lookup_int(&cfg, "server_port", (int *) &configuration->port);
     }
 
 #ifndef NDEBUG
 
         assert(strlen(configuration->name) > 1);
-        char *ip = malloc(12 * sizeof(char));
+        char *ip = (char *) malloc(12 * sizeof(char));
         strcpy(ip, configuration->ip);
         assert(is_ip_valid(ip) == true);
         free(ip);

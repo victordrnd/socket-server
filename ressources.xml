@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/org/ics/">
+        <!-- <file>include/styles/main.css</file> -->
+        <file alias="style.css">include/styles/orchis.css</file>
+        <file>include/images/betray.svg</file>
+        <file>include/images/collaborate.svg</file>
+        <file compressed="true">include/glade/game_interface.glade</file>
+        <file compressed="true">include/glade/waiting_room_interface.glade</file>
+    </gresource>
+</gresources>
