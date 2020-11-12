@@ -20,6 +20,7 @@ typedef struct {
     int timestamp; //nb secondes depuis 01/01/1970 38237283723 
     enum verbs action;
     char binary[2048];
+    double protocol_version;
 
 } Encapsulation;
 

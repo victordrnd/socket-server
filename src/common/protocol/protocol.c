@@ -9,9 +9,9 @@ void parse_verbs_data(Encapsulation *encapsulation)
     {
         case CONNECT :
             
+            
             break;
             
-        
         case CONNECTED :
             
             break;
