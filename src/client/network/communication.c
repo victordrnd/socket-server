@@ -76,7 +76,7 @@ void *listen_stdin_thread_process(void *ptr)
     Connection *cnx = (Connection *) ptr;
     int status = cnx->status;
     int sockfd = cnx->sock;
-    char msg[100];
+    char msg[2048];
     do
     {
         fgets(msg, 100, stdin);
