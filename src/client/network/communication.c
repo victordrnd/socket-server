@@ -81,7 +81,7 @@ void *listen_stdin_thread_process(void *ptr)
     {
         fgets(msg, 100, stdin);
         pthread_mutex_lock(&mutex);
-        printf("sending : %s\n", msg);
+        // printf("sending : %s\n", msg);
         pthread_mutex_unlock(&mutex);
         status = write(sockfd, msg, strlen(msg));
     } while (status != -1);
