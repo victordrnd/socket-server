@@ -6,6 +6,6 @@
 void open_csv(char *filename);
 
 void write_header(char *filename);
-void write_line(char *filename,Game);
+void write_line(char *filename,Game *data);
 
 #endif

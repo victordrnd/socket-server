@@ -46,7 +46,8 @@ int main(int argc, char** argv) {
     Game data;
     open_csv(filename);
     write_header(filename);
-    write_line(filename,data);
+    write_line(filename,&data);
+    write_line(filename,&data);
     
 
     /* init array*/
