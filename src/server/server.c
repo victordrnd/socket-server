@@ -26,6 +26,8 @@
 #include "./network/srvcxnmanager.h"
 #include "utils/config.h"
 
+#include "utils/export/result.h"
+
 /*
  *
  */
@@ -37,8 +39,15 @@ int main(int argc, char** argv) {
     int sockfd = -1;
     int index = 1;
     connection_t *connection;
-    pthread_t thread;
+    pthread_t thread;    
 
+    const char filename[] = "output/test";
+    
+    Game data;
+    open_csv(filename);
+    write_header(filename);
+    write_line(filename,data);
+    
 
     /* init array*/
     init_sockets_array();
