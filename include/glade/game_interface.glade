@@ -43,77 +43,39 @@
                     <property name="can_focus">False</property>
                     <property name="column_homogeneous">True</property>
                     <child>
-                      <object class="GtkToggleButton" id="mise_10">
-                        <property name="label" translatable="yes">$10</property>
+                      <object class="GtkButton" id="mise_100">
+                        <property name="label" translatable="yes">$100</property>
                         <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
                         <property name="margin_left">3</property>
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
-                        <property name="active">True</property>
-                        <signal name="toggled" handler="on_mise_10_selected" swapped="no"/>
+                        <signal name="clicked" handler="on_mise_100_selected" swapped="no"/>
                         <style>
                           <class name="toggle_btn"/>
                         </style>
                       </object>
                       <packing>
-                        <property name="left_attach">0</property>
+                        <property name="left_attach">4</property>
                         <property name="top_attach">0</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="mise_25">
-                        <property name="label" translatable="yes">$25</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="margin_left">3</property>
-                        <property name="margin_right">3</property>
-                        <property name="margin_top">1</property>
-                        <property name="margin_bottom">1</property>
-                        <signal name="toggled" handler="on_mise_25_selected" swapped="no"/>
-                        <style>
-                          <class name="toggle_btn"/>
-                        </style>
-                      </object>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="top_attach">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkToggleButton" id="mise_50">
-                        <property name="label" translatable="yes">$50</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="receives_default">True</property>
-                        <property name="margin_left">3</property>
-                        <property name="margin_right">3</property>
-                        <property name="margin_top">1</property>
-                        <property name="margin_bottom">1</property>
-                        <signal name="toggled" handler="on_mise_50_selected" swapped="no"/>
-                        <style>
-                          <class name="toggle_btn"/>
-                        </style>
-                      </object>
-                      <packing>
-                        <property name="left_attach">2</property>
-                        <property name="top_attach">0</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <object class="GtkToggleButton" id="mise_75">
+                      <object class="GtkButton" id="mise_75">
                         <property name="label" translatable="yes">$75</property>
+                        <property name="name">mise_75</property>
                         <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
                         <property name="margin_left">3</property>
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
-                        <signal name="toggled" handler="on_mise_75_selected" swapped="no"/>
+                        <signal name="clicked" handler="on_mise_75_selected" swapped="no"/>
                         <style>
                           <class name="toggle_btn"/>
                         </style>
@@ -124,22 +86,66 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="mise_100">
-                        <property name="label" translatable="yes">$100</property>
+                      <object class="GtkButton" id="mise_50">
+                        <property name="label" translatable="yes">$50</property>
                         <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
                         <property name="margin_left">3</property>
                         <property name="margin_right">3</property>
                         <property name="margin_top">1</property>
                         <property name="margin_bottom">1</property>
-                        <signal name="toggled" handler="on_mise_100_selected" swapped="no"/>
+                        <signal name="clicked" handler="on_mise_50_selected" swapped="no"/>
                         <style>
                           <class name="toggle_btn"/>
                         </style>
                       </object>
                       <packing>
-                        <property name="left_attach">4</property>
+                        <property name="left_attach">2</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="mise_25">
+                        <property name="label" translatable="yes">$25</property>
+                        <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="margin_left">3</property>
+                        <property name="margin_right">3</property>
+                        <property name="margin_top">1</property>
+                        <property name="margin_bottom">1</property>
+                        <signal name="clicked" handler="on_mise_25_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="top_attach">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="mise_10">
+                        <property name="label" translatable="yes">$10</property>
+                        <property name="visible">True</property>
+                        <property name="app_paintable">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="margin_left">3</property>
+                        <property name="margin_right">3</property>
+                        <property name="margin_top">1</property>
+                        <property name="margin_bottom">1</property>
+                        <signal name="clicked" handler="on_mise_10_selected" swapped="no"/>
+                        <style>
+                          <class name="toggle_btn"/>
+                          <class name="selected"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="left_attach">0</property>
                         <property name="top_attach">0</property>
                       </packing>
                     </child>
@@ -190,6 +196,7 @@
                     <property name="label" translatable="yes">Trahir</property>
                     <property name="name">betray_btn</property>
                     <property name="visible">True</property>
+                    <property name="sensitive">False</property>
                     <property name="app_paintable">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -211,6 +218,7 @@
                   <object class="GtkButton" id="collaborate_btn">
                     <property name="label" translatable="yes">Collaborer</property>
                     <property name="visible">True</property>
+                    <property name="sensitive">False</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image2</property>
@@ -250,7 +258,7 @@
                       <object class="GtkAccelLabel" id="info_label">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">C'est au tour de client_2 de jouer</property>
+                        <property name="label" translatable="yes">Vous êtes actuellement dans la salle d'attente...</property>
                         <property name="justify">center</property>
                         <attributes>
                           <attribute name="font-desc" value="Sawasdee Bold 10"/>
@@ -266,7 +274,6 @@
                     <child>
                       <object class="GtkProgressBar" id="progressbar">
                         <property name="name">progressbar</property>
-                        <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_left">50</property>
                         <property name="margin_right">50</property>

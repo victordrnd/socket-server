@@ -1,4 +1,26 @@
 #include "launch.h"
+#include "../network/communication.h"
+
+/**
+ * @brief Register css styles from resource file.
+ * 
+ */
+void register_styles()
+{
+    GResource *resource = g_resource_load("output/ressources/app.gressource", NULL);
+    g_resources_register(resource);
+    GtkCssProvider *provider = gtk_css_provider_new();
+    gtk_css_provider_load_from_resource(provider, "/org/ics/style.css");
+    gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+}
+
+void init_waiting_room()
+{
+    GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/waiting_room_interface.glade");
+    GtkWidget *waiting_room = GTK_WIDGET(gtk_builder_get_object(builder, "waiting_room_window"));
+    gtk_window_set_keep_above((GtkWindow *) waiting_room, TRUE);
+    gtk_widget_show(waiting_room);
+}
 
 
 /**
@@ -10,28 +32,30 @@
  */
 void init_main_window(int argc, char **argv)
 {
-    GtkWidget *win; //, *win1;
+    GtkWidget *win;
     gtk_init(&argc, &argv);
-    GResource *resource = g_resource_load("output/ressources/app.gressource", NULL);
-    g_resources_register(resource);
+    register_styles();
     GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/game_interface.glade");
-    GtkBuilder *builder1 = gtk_builder_new_from_file("include/glade/waiting_room_interface.glade");
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
 
-    GtkCssProvider *provider = gtk_css_provider_new();
-    gtk_css_provider_load_from_resource(provider, "/org/ics/style.css");
-    gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-    //win1 = GTK_WIDGET(gtk_builder_get_object(builder1, "waiting_room_window"));
     gtk_builder_connect_signals(builder, builder);
-    //GtkWidget *test = gtk_builder_get_object(builder1, "app_frame");
-    //gtk_container_remove(win1, test);
-    //gtk_container_remove(win, gtk_builder_get_object(builder, "app_frame"));
-    //gtk_container_add(win, test);
-    // gtk_window_set_attached_to(win, win1);
-    // gtk_window_set_transient_for(win1, win);
     gtk_widget_show(win);
-    // gtk_widget_show(win1);
-
+    g_signal_connect(G_OBJECT(win), "destroy",(GCallback) close_main_window, NULL);
+    //init_waiting_room();
     gtk_main();
+}
+
+
+
+
+/**
+ * @brief Close main window and connection
+ * 
+ * @param is_cnx_closed TRUE if connection already closed
+ */
+void close_main_window(gboolean is_cnx_closed)
+{
+    gtk_main_quit();
+    if (is_cnx_closed == FALSE)
+        close_connection();
 }
