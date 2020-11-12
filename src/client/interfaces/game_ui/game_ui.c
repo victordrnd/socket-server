@@ -30,10 +30,10 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkButton *button)
     }
     if (previousToggledBtn != button)
     {
-        GtkStyleContext *context = gtk_widget_get_style_context(button);
+        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) button);
         gtk_style_context_add_class(context, "selected");
 
-        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context(previousToggledBtn);
+        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *) previousToggledBtn);
         gtk_style_context_remove_class(PreviousButtoncontext, "selected");
 
         previousToggledBtn = button;
@@ -73,12 +73,24 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
     gtk_widget_hide((GtkWidget *)progress_bar);
 }
 
+/**
+ * @brief Hide countdown progress bar
+ * 
+ * @param progress_bar progressbar to hide
+ */
 void stop_count_down(GtkProgressBar *progress_bar)
 {
     gtk_widget_hide((GtkWidget *)progress_bar);
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }
 
+
+/**
+ * @brief Activate or desactivate action buttons
+ * 
+ * @param builder Window Builder
+ * @param sensitive TRUE to toggle sensitiveness
+ */
 void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
 {
     GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(builder, "betray_btn");

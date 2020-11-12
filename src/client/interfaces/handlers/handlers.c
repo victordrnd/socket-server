@@ -59,8 +59,10 @@ void on_mise_100_selected(GtkButton *button, GtkBuilder *builder)
 }
 
 /**
- * @brief 
+ * @brief Handler for betray click event
  * 
+ * @param button button clicked
+ * @param builder Window builder
  */
 void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
 {
@@ -72,8 +74,10 @@ void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
 }
 
 /**
- * @brief 
+ * @brief Hander for collaborate click event
  * 
+ * @param button button clicked
+ * @param builder Window builder
  */
 void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
 {

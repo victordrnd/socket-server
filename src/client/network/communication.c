@@ -13,6 +13,11 @@ static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static app_threads_t threads;
 Connection *cnx;
 
+/**
+ * @brief Starts listening thread process and establish server connection
+ * 
+ * @param configuration app configuration
+ */
 void init_communication(Config *configuration){
 
     char msg[100];
@@ -32,7 +37,12 @@ void init_communication(Config *configuration){
     pthread_detach(threads.stdin_thread);
 }
 
-
+/**
+ * @brief Open cpnnection socket with server
+ * 
+ * @param configuration client configuration
+ * @return Connection* 
+ */
 Connection *open_connection(Config *configuration) {
     Connection *cnx = (Connection *) malloc(sizeof(Connection));
 
@@ -54,6 +64,13 @@ Connection *open_connection(Config *configuration) {
     return cnx;
 }
 
+
+/**
+ * @brief Thread process for listening socket input
+ * 
+ * @param *ptr socket
+ * @return void* 
+ */
 void *listen_socket_thread_process(void *ptr) {
     char buffer_in[BUFFERSIZE];
     int sockfd = *((int *) ptr);
@@ -88,7 +105,10 @@ void *listen_stdin_thread_process(void *ptr)
     return NULL;
 }
 
-
+/**
+ * @brief Close connection between client and server
+ * 
+ */
 void close_connection(){
     pthread_cancel(threads.stdin_thread);
     close(cnx->sock);
