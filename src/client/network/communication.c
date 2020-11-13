@@ -20,11 +20,12 @@ Connection *cnx;
  */
 void init_communication(Config *configuration){
 
-    char msg[100];
+    char msg[100] = "Hello from client: ";
 
     cnx = open_connection(configuration);
-    char text[50] = "Hello from ";
-    strcpy(msg, strcat(text, configuration->name));
+    char text[50];
+    sprintf(text, "%d", configuration->client_id);
+    strcat(msg, text);
     // printf("sending : %s\n", msg);
     write(cnx->sock, msg, strlen(msg));
 

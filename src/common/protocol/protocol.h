@@ -1,9 +1,10 @@
 #ifndef PROTOCOL_H
 #define PROTOCOL_H
+#include <time.h>
+
 
 enum verbs{
-
-    CONNECT = 0x10,             //Hexadecimal : pour plus de sécurité au niveau des trames et optimise la mémoire 
+    CONNECT = 0x10, //Offset de 16 car 0-16 réservé pour les actions (collaborate, betray)
     CONNECTED = 0x11,
     FAILED = 0x12,
     GAME_START = 0x13,
@@ -15,13 +16,13 @@ enum verbs{
 };
 
 typedef struct {
-
-    char sender_id[30];         //id du client
-    char destination_id[30];    //
-    int timestamp;              //nb secondes depuis 01/01/1970 38237283723 
-    enum verbs action;          //encapsulation de enum vers
-    char binary[2048];          //buffer de mise et choix
+    unsigned int sender_id;         
+    unsigned int destination_id;
+    time_t timestamp;              //nb secondes depuis 01/01/1970 38237283723 
+    enum verbs action;
     double protocol_version;    
+    size_t sizeof_data;
+    int data[];
 
 } Encapsulation;
 
