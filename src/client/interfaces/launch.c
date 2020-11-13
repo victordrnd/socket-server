@@ -1,7 +1,10 @@
 #include "launch.h"
 #include "../network/communication.h"
 
-
+/**
+ * @brief Register css styles from resource file.
+ * 
+ */
 void register_styles()
 {
     GResource *resource = g_resource_load("output/ressources/app.gressource", NULL);
@@ -15,9 +18,11 @@ void init_waiting_room()
 {
     GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/waiting_room_interface.glade");
     GtkWidget *waiting_room = GTK_WIDGET(gtk_builder_get_object(builder, "waiting_room_window"));
-    gtk_window_set_keep_above(waiting_room, TRUE);
+    gtk_window_set_keep_above((GtkWindow *) waiting_room, TRUE);
     gtk_widget_show(waiting_room);
 }
+
+
 /**
  * @brief  Init game window
  * 
@@ -35,7 +40,7 @@ void init_main_window(int argc, char **argv)
 
     gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);
-    g_signal_connect(G_OBJECT(win), "destroy", close_main_window, NULL);
+    g_signal_connect(G_OBJECT(win), "destroy",(GCallback) close_main_window, NULL);
     //init_waiting_room();
     gtk_main();
 }
@@ -43,7 +48,11 @@ void init_main_window(int argc, char **argv)
 
 
 
-
+/**
+ * @brief Close main window and connection
+ * 
+ * @param is_cnx_closed TRUE if connection already closed
+ */
 void close_main_window(gboolean is_cnx_closed)
 {
     gtk_main_quit();
