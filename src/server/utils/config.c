@@ -40,7 +40,7 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         {
             // wp->clients_id[j] = malloc(sizeof(char));
             const config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
-            config_setting_lookup_int(client_name_config, "client_id",(unsigned int *) &wp->clients_id[j]);
+            config_setting_lookup_int(client_name_config, "client_id",(int *) &wp->clients_id[j]);
             assert(wp->clients_id[j] > 0);
         }
         game_configuration->rooms[i] = *wp;

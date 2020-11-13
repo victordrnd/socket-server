@@ -16,15 +16,13 @@ enum verbs{
 };
 
 typedef struct {
-    unsigned int sender_id;         
-    unsigned int destination_id;
-    time_t timestamp;              //nb secondes depuis 01/01/1970 38237283723 
-    enum verbs action;
-    double protocol_version;    
-    size_t sizeof_data;
-    int data[];
-
-} Encapsulation;
+    __uint32_t sender_id;         
+    __uint32_t destination_id;
+    __uint64_t timestamp;              //nb secondes depuis 01/01/1970 38237283723 
+    __uint32_t action;
+    __int64_t sizeof_data;
+    __uint8_t data[];
+} __attribute__((packed)) Encapsulation;
 
 void parse_verbs_data(Encapsulation *encapsulation);
 
