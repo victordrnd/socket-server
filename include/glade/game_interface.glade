@@ -196,7 +196,7 @@
                     <property name="label" translatable="yes">Trahir</property>
                     <property name="name">betray_btn</property>
                     <property name="visible">True</property>
-                    <property name="sensitive">False</property>
+                    <property name="sensitive">True</property>
                     <property name="app_paintable">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -218,7 +218,7 @@
                   <object class="GtkButton" id="collaborate_btn">
                     <property name="label" translatable="yes">Collaborer</property>
                     <property name="visible">True</property>
-                    <property name="sensitive">False</property>
+                    <property name="sensitive">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image2</property>
