@@ -82,14 +82,14 @@ void *threadProcess(void *ptr)
 
     while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0)
     {
-        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
-        memcpy(buffer, buffer_in, sizeof(Encapsulation));
+        int size = sizeof(Encapsulation);
+        unsigned char *buffer = (unsigned char *)malloc(size);
+        memcpy(buffer, buffer_in, size);
         Encapsulation *packet = (Encapsulation *)buffer;
         
-        // Test *t =(Test *) packet->data[0];
-        // printf("%d", t->x);
-        // for (int i = 0; i < sizeof(Test); i++)
-        //     printf("%02X ", packet->data[i]);
+        Test *t =(Test *) packet->data;
+        printf("x : %d\n", t->x);
+        printf("x : %d\n", t->y);
 
         if (strncmp(buffer_in, "bye", 3) == 0)
         {
@@ -99,12 +99,13 @@ void *threadProcess(void *ptr)
         printf("DEBUG-----------------------------------------------------------\n");
         // printf("len : %i\n", len);
         printf("Buffer : ");
-        for (int i = 0; i < sizeof(Encapsulation); i++)
+        for (int i = 0; i < size; i++)
             printf("%02X ", buffer[i]);
         printf("\n");
         printf("Sender_id : %d\n", packet->sender_id);
         printf("Destination_id : %d\n", packet->destination_id);
         printf("Action : %d\n", packet->action);
+        printf("Packet size : %d\n", packet->sizeof_data);
         printf("Timestamp : %lld\n", (long long)packet->timestamp);
         printf("----------------------------------------------------------------\n");
 #endif

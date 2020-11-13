@@ -6,7 +6,7 @@
 #include "../game.h"
 
 
-void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data){
+void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data, size_t data_size){
     if(sender_id > 0){
         destionation_id = 0; //0 is server
     }
@@ -14,9 +14,10 @@ void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint3
     encapsulation->destination_id = destionation_id;
     encapsulation->timestamp = time(NULL);
     encapsulation->action = verb;
-    //encapsulation->sizeof_data = sizeof(data);
-    //encapsulation->data[sizeof(Test)] = *((__uint8_t *)data);
-    //memcpy(data_test,(const unsigned char*)data,sizeof(Test));
+    encapsulation->sizeof_data = data_size;
+    // encapsulation->data = *((__uint8_t *)data);
+    //encapsulation->data[sizeof(Test)];
+    memcpy(encapsulation->data,(const unsigned char*)data,sizeof(Test));
     // memcpy(encapsulation->data,(const __uint8_t*)&data,sizeof(data));
     // for (int i = 0; i < sizeof(Test); i++)
     //         printf("%02X ", encapsulation->data[i]);

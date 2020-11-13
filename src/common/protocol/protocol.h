@@ -24,11 +24,11 @@ typedef struct {
     __uint32_t destination_id;
     __uint64_t timestamp;              //nb secondes depuis 01/01/1970 38237283723 
     __uint32_t action;
-    __int64_t sizeof_data;
-    __uint8_t data[];
+    __uint64_t sizeof_data;
+    __uint8_t data[16];
 } __attribute__((packed)) Encapsulation;
 
-void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data);
+void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data, size_t data_size);
 void parse_verbs_data(Encapsulation *encapsulation);
 
 #endif
