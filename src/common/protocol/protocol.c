@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
@@ -5,22 +6,20 @@
 #include "../game.h"
 
 
-Encapsulation encapsulate_data(__uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data){
+void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data){
     if(sender_id > 0){
         destionation_id = 0; //0 is server
     }
-
-    __uint8_t *buffer=(__uint8_t*) malloc(sizeof(data));
-    memcpy(buffer,(const __uint8_t*)&data,sizeof(data));
-
-    Encapsulation encapsulation;
-    encapsulation.sender_id = sender_id;
-    encapsulation.destination_id = destionation_id;
-    encapsulation.timestamp = time(NULL);
-    encapsulation.action = verb;
-    encapsulation.data[sizeof(data)] = *((__uint8_t *) buffer);
-    free(buffer);
-    return encapsulation;
+    encapsulation->sender_id = sender_id;
+    encapsulation->destination_id = destionation_id;
+    encapsulation->timestamp = time(NULL);
+    encapsulation->action = verb;
+    //encapsulation->sizeof_data = sizeof(data);
+    //encapsulation->data[sizeof(Test)] = *((__uint8_t *)data);
+    //memcpy(data_test,(const unsigned char*)data,sizeof(Test));
+    // memcpy(encapsulation->data,(const __uint8_t*)&data,sizeof(data));
+    // for (int i = 0; i < sizeof(Test); i++)
+    //         printf("%02X ", encapsulation->data[i]);
 }
 
 

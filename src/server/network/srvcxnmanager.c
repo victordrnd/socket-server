@@ -10,7 +10,8 @@
 
 #include "srvcxnmanager.h"
 #include "../utils/config.h"
-
+#include "../../common/protocol/protocol.h"
+#include <time.h>
 connection_t *connections[MAXSIMULTANEOUSCLIENTS];
 
 void init_sockets_array()
@@ -81,6 +82,14 @@ void *threadProcess(void *ptr)
 
     while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0)
     {
+        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+        memcpy(buffer, buffer_in, sizeof(Encapsulation));
+        Encapsulation *packet = (Encapsulation *)buffer;
+        
+        // Test *t =(Test *) packet->data[0];
+        // printf("%d", t->x);
+        // for (int i = 0; i < sizeof(Test); i++)
+        //     printf("%02X ", packet->data[i]);
 
         if (strncmp(buffer_in, "bye", 3) == 0)
         {
@@ -88,8 +97,15 @@ void *threadProcess(void *ptr)
         }
 #ifndef NDEBUG
         printf("DEBUG-----------------------------------------------------------\n");
-        printf("len : %i\n", len);
-        printf("Buffer : %.*s\n", len, buffer_in);
+        // printf("len : %i\n", len);
+        printf("Buffer : ");
+        for (int i = 0; i < sizeof(Encapsulation); i++)
+            printf("%02X ", buffer[i]);
+        printf("\n");
+        printf("Sender_id : %d\n", packet->sender_id);
+        printf("Destination_id : %d\n", packet->destination_id);
+        printf("Action : %d\n", packet->action);
+        printf("Timestamp : %lld\n", (long long)packet->timestamp);
         printf("----------------------------------------------------------------\n");
 #endif
         strcpy(buffer_out, "\nServer Echo : ");

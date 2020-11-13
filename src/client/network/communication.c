@@ -9,6 +9,7 @@
 
 #include "communication.h"
 #include "../interfaces/launch.h"
+#include "../../common/protocol/protocol.h"
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static app_threads_t threads;
 Connection *cnx;
@@ -27,8 +28,17 @@ void init_communication(Config *configuration){
     sprintf(text, "%d", configuration->client_id);
     strcat(msg, text);
     // printf("sending : %s\n", msg);
-    write(cnx->sock, msg, strlen(msg));
+    //write(cnx->sock, msg, strlen(msg));
 
+    Encapsulation packet;
+    encapsulate_data(&packet, config_get_client_id(), 1, CONNECT, NULL);
+
+    unsigned char *buffer=(unsigned char*)malloc(sizeof(Encapsulation));
+    memcpy(buffer,(const unsigned char*)&packet,sizeof(Encapsulation));
+    write(cnx->sock,(const unsigned char*)&packet, sizeof(Encapsulation));
+    for(int i=0;i<sizeof(Encapsulation);i++)
+		printf("%02X ",buffer[i]);
+	printf("\n");
     //Creation d'un pthread de lecture
     pthread_create(&threads.socket_thread, 0, listen_socket_thread_process, &cnx->sock);
     //write(connection->sock,"Main APP Still running",15);

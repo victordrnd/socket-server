@@ -2,6 +2,10 @@
 #define PROTOCOL_H
 #include <time.h>
 
+typedef struct{
+    int x;
+    int y;
+} Test;
 
 enum verbs{
     CONNECT = 0x10, //Offset de 16 car 0-16 réservé pour les actions (collaborate, betray)
@@ -24,6 +28,7 @@ typedef struct {
     __uint8_t data[];
 } __attribute__((packed)) Encapsulation;
 
+void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data);
 void parse_verbs_data(Encapsulation *encapsulation);
 
 #endif
