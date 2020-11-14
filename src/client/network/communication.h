@@ -2,6 +2,7 @@
 #define COMMUNICATION_HEADER_H
 #include "../utils/config.h"
 #include <pthread.h>
+#include "../../common/protocol/protocol.h"
 #define BUFFERSIZE 2048
 
 typedef struct {
@@ -19,5 +20,6 @@ void init_communication(Config *configuration);
 Connection *open_connection(Config *configuration);
 void *listen_socket_thread_process(void *ptr);
 void *listen_stdin_thread_process(void *ptr);
+void send_packet(enum verbs action, void *data, size_t data_size);
 void close_connection();
 #endif

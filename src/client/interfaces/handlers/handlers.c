@@ -3,6 +3,7 @@
 #include "../../../common/game.h"
 #include "../../game/game.h"
 
+GtkBuilder *builder = NULL;
 /**
  * @brief Mise 10 handler
  * 
@@ -11,7 +12,7 @@
 void on_mise_10_selected(GtkButton *button, GtkBuilder *builder)
 {
     game_set_current_bet(10);
-    untoggle_previous_bet_btn(builder, button);
+    untoggle_previous_bet_btn(builder, (GtkWidget *) button);
 }
 
 /**
@@ -22,7 +23,7 @@ void on_mise_10_selected(GtkButton *button, GtkBuilder *builder)
 void on_mise_25_selected(GtkButton *button, GtkBuilder *builder)
 {
     game_set_current_bet(25);
-    untoggle_previous_bet_btn(builder, button);
+    untoggle_previous_bet_btn(builder, (GtkWidget *) button);
 }
 
 /**
@@ -33,7 +34,7 @@ void on_mise_25_selected(GtkButton *button, GtkBuilder *builder)
 void on_mise_50_selected(GtkButton *button, GtkBuilder *builder)
 {
     game_set_current_bet(50);
-    untoggle_previous_bet_btn(builder, button);
+    untoggle_previous_bet_btn(builder, (GtkWidget *) button);
 }
 
 /**
@@ -44,7 +45,7 @@ void on_mise_50_selected(GtkButton *button, GtkBuilder *builder)
 void on_mise_75_selected(GtkButton *button, GtkBuilder *builder)
 {
     game_set_current_bet(75);
-    untoggle_previous_bet_btn(builder, button);
+    untoggle_previous_bet_btn(builder, (GtkWidget *) button);
 }
 
 /**
@@ -55,7 +56,7 @@ void on_mise_75_selected(GtkButton *button, GtkBuilder *builder)
 void on_mise_100_selected(GtkButton *button, GtkBuilder *builder)
 {
     game_set_current_bet(100);
-    untoggle_previous_bet_btn(builder, button);
+    untoggle_previous_bet_btn(builder, (GtkWidget *) button);
 }
 
 /**
@@ -86,4 +87,18 @@ void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
     GtkProgressBar *progressbar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
     activate_countdown(progressbar, 20, 20);
     toggle_action_button(builder, TRUE);
+}
+
+
+void on_connected_action(Connected_data *data){
+    GtkLabel *label = (GtkLabel *) gtk_builder_get_object(builder, "balance");
+    char amount[10];
+    sprintf(amount, "$ %d", data->initial_balance);
+    gtk_label_set_label(label, amount);
+}   
+
+
+
+void gtk_set_builder(GtkBuilder *buildr){
+    builder = buildr;
 }

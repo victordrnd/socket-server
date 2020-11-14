@@ -35,13 +35,13 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
-        wp->clients_name = (char **)malloc(nb_players * sizeof(char *));
+        wp->clients_id = (int *)malloc(nb_players * sizeof(int));
         for (int j = 0; j < nb_players; j++)
         {
-            wp->clients_name[j] = (char *)malloc(25 * sizeof(char));
+            // wp->clients_id[j] = malloc(sizeof(char));
             const config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
-            config_setting_lookup_string(client_name_config, "name",(const char **) &wp->clients_name[j]);
-            assert(strlen(wp->clients_name[j]) > 1);
+            config_setting_lookup_int(client_name_config, "client_id",(int *) &wp->clients_id[j]);
+            assert(wp->clients_id[j] > 0);
         }
         game_configuration->rooms[i] = *wp;
         wp++;

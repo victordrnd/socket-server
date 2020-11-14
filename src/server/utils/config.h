@@ -7,7 +7,7 @@ typedef struct
     const char *name;
     int nb_games;
     int initial_amount;
-    char **clients_name;
+    int *clients_id;
 } Room;
 
 typedef struct

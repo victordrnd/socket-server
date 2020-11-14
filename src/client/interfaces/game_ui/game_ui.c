@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "game_ui.h"
 #include "../../game/game.h"
-GtkButton *previousToggledBtn = NULL;
+GtkWidget *previousToggledBtn = NULL;
 
 /**
  * @brief Stop execution for a delay
@@ -22,11 +22,11 @@ void delay(unsigned int msecs)
  * 
  * @param button button to toggle
  */
-void untoggle_previous_bet_btn(GtkBuilder *builder, GtkButton *button)
+void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
 {
     if (previousToggledBtn == NULL)
     {
-        previousToggledBtn = (GtkButton *)gtk_builder_get_object(builder, "mise_10"); //selected by default
+        previousToggledBtn = (GtkWidget *)gtk_builder_get_object(builder, "mise_10"); //selected by default
     }
     if (previousToggledBtn != button)
     {
@@ -39,9 +39,6 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkButton *button)
         previousToggledBtn = button;
         g_print("%d\n", game_get_current_bet());
     }
-
-    // gtk_toggle_button_set_active(previousToggledBtn, FALSE);
-    // assert(gtk_toggle_button_get_active(previousToggledBtn) == FALSE);
 }
 
 /**
