@@ -27,8 +27,8 @@ int main(int argc, char **argv)
     Game game;
     init_game(&game);
     
-    init_communication(&configuration);
-    
     init_main_window(argc, argv);
+    init_communication(&configuration);
+    gtk_main();
     return (EXIT_SUCCESS);
 }

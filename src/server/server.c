@@ -23,7 +23,7 @@
 #include <stdbool.h>
 #include <assert.h>
 
-#include "./network/srvcxnmanager.h"
+#include "./network/communication.h"
 #include "utils/config.h"
 
 /*

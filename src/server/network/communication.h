@@ -10,20 +10,22 @@
  *
  */
 #include "../utils/config.h"
-
+#include "../../common/protocol/protocol.h"
 #ifndef SRVCXNMANAGER_H
 #define SRVCXNMANAGER_H
-
+#include <netinet/in.h>
+#include <sys/socket.h>
 #define BUFFERSIZE 2048
 #define MAXSIMULTANEOUSCLIENTS 100
 
-typedef struct {
+typedef struct
+{
     int sockfd;
     struct sockaddr address;
     int addr_len;
     int index;
+    unsigned int client_id;
 } connection_t;
-
 
 void init_sockets_array();
 void add(connection_t *connection);
@@ -31,5 +33,6 @@ void del(connection_t *connection);
 void *threadProcess(void *ptr);
 int create_server_socket(Config *configuration);
 
-#endif /* SRVCXNMANAGER_H */
+void send_packet(unsigned int client_id, enum verbs action, void *data, size_t data_size);
 
+#endif /* SRVCXNMANAGER_H */

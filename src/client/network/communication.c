@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include <sys/socket.h>
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <stdbool.h>
 
 #include "communication.h"
-#include "../interfaces/launch.h"
-#include "../../common/protocol/protocol.h"
+#include "actions.h"
+// #include "../interfaces/launch.h"
+
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static app_threads_t threads;
 Connection *cnx;
@@ -21,29 +21,9 @@ Connection *cnx;
  */
 void init_communication(Config *configuration)
 {
-
-    char msg[100] = "Hello from client: ";
-
-    cnx = open_connection(configuration);
-    char text[50];
-    sprintf(text, "%d", configuration->client_id);
-    strcat(msg, text);
-    // printf("sending : %s\n", msg);
-    //write(cnx->sock, msg, strlen(msg));
-
-    Test t;
-    t.x = 5;
-    t.y = 4;
-    int size = sizeof(Encapsulation);
-    Encapsulation packet;
-    encapsulate_data(&packet, config_get_client_id(), 1, CONNECT, &t, sizeof(Test));
-
-    unsigned char *buffer = (unsigned char *)malloc(size);
-    memcpy(buffer, (const unsigned char *)&packet, size);
-    write(cnx->sock, (const unsigned char *)&packet, size);
-    for (int i = 0; i < size; i++)
-        printf("%02X ", buffer[i]);
-    printf("\n");
+    cnx = open_connection(configuration); 
+    send_packet(CONNECT, NULL,(size_t) 0);
+    
     //Creation d'un pthread de lecture
     pthread_create(&threads.socket_thread, 0, listen_socket_thread_process, &cnx->sock);
     //write(connection->sock,"Main APP Still running",15);
@@ -95,15 +75,31 @@ void *listen_socket_thread_process(void *ptr)
     int len;
     while ((len = read(sockfd, buffer_in, BUFFERSIZE)) != 0)
     {
-        if (strncmp(buffer_in, "exit", 4) == 0)
-        {
-            break;
-        }
-        pthread_mutex_lock(&mutex);
-        printf("receive %d chars\n", len);
-        printf("%.*s\n", len, buffer_in);
-        
-        pthread_mutex_unlock(&mutex);
+        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+        memcpy(buffer, buffer_in, sizeof(Encapsulation));
+        Encapsulation *packet = (Encapsulation *)buffer;
+         printf("DEBUG-----------------------------------------------------------\n");
+        // printf("len : %i\n", len);
+        printf("Buffer : ");
+        for (int i = 0; i < sizeof(Encapsulation); i++)
+            printf("%02X ", buffer[i]);
+        printf("\n");
+        printf("Sender_id : %d\n", packet->sender_id);
+        printf("Destination_id : %d\n", packet->destination_id);
+        printf("Action : %d\n", packet->action);
+        printf("Packet size : %d\n", sizeof(Encapsulation));
+        printf("Timestamp : %lld\n", (long long)packet->timestamp);
+        printf("----------------------------------------------------------------\n");
+        settle_action(packet);
+        // if (strncmp(buffer_in, "exit", 4) == 0)
+        // {
+        //     break;
+        // }
+        // pthread_mutex_lock(&mutex);
+        // printf("receive %d chars\n", len);
+        // printf("%.*s\n", len, buffer_in);
+
+        // pthread_mutex_unlock(&mutex);
     }
     close_connection();
     return NULL;
@@ -126,6 +122,20 @@ void *listen_stdin_thread_process(void *ptr)
     return NULL;
 }
 
+void send_packet(enum verbs action, void *data, size_t data_size)
+{
+    Encapsulation packet;
+    encapsulate_data(&packet, config_get_client_id(), 0, action, data, data_size);
+    write(cnx->sock, (const unsigned char *)&packet, sizeof(Encapsulation));
+    #ifndef NDEBUG
+    unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+    memcpy(buffer, (const unsigned char *)&packet, sizeof(Encapsulation));
+    printf("Sending buffer : \n");
+    for (int i = 0; i < sizeof(Encapsulation); i++)
+        printf("%02X ", buffer[i]);
+    printf("\n");
+    #endif
+}
 /**
  * @brief Close connection between client and server
  * 
@@ -134,5 +144,5 @@ void close_connection()
 {
     pthread_cancel(threads.stdin_thread);
     close(cnx->sock);
-    close_main_window(TRUE);
+    // close_main_window(TRUE);
 }

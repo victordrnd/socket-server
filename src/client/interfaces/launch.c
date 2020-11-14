@@ -1,6 +1,6 @@
 #include "launch.h"
 #include "../network/communication.h"
-
+#include "handlers/handlers.h"
 /**
  * @brief Register css styles from resource file.
  * 
@@ -40,9 +40,10 @@ void init_main_window(int argc, char **argv)
 
     gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);
+    gtk_set_builder(builder);
     g_signal_connect(G_OBJECT(win), "destroy",(GCallback) close_main_window, NULL);
     //init_waiting_room();
-    gtk_main();
+    
 }
 
 
@@ -59,3 +60,4 @@ void close_main_window(gboolean is_cnx_closed)
     if (is_cnx_closed == FALSE)
         close_connection();
 }
+
