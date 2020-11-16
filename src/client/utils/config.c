@@ -4,8 +4,9 @@
 #include <string.h>
 
 #include "config.h"
-#include "../../common/tests/network/network.h"
 #ifndef NDEBUG
+#include "../../common/tests/logs/logs.h"
+#include "../../common/tests/network/network.h"
 #include <stdbool.h>
 #endif
 
@@ -41,9 +42,7 @@ void read_config(Config *configuration, const char *filename)
         assert(is_ip_valid(ip) == true);
         free(ip);
 
-        printf("client id : %d\n", configuration->client_id);
-        printf("server ip : %s\n", configuration->ip);
-        printf("server port : %d\n", configuration->port);
+       debug_print_client_config(configuration->client_id, configuration->ip, configuration->port);
 #endif
 }
 

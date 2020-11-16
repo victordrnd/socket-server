@@ -7,6 +7,7 @@
 #ifndef NDEBUG
 #include <stdbool.h>
 #include "../../common/tests/network/network.h"
+#include "../../common/tests/logs/logs.h"
 #endif
 
 /**
@@ -19,13 +20,13 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
 {
     game_configuration->nb_room = config_setting_length(settings);
     assert(game_configuration->nb_room > 0);
-    game_configuration->rooms = (Room *) malloc((int)game_configuration->nb_room * sizeof(Room));
+    game_configuration->rooms = (Room *)malloc((int)game_configuration->nb_room * sizeof(Room));
     Room *wp = game_configuration->rooms;
     assert(sizeof(*wp) == sizeof(Room));
-    for (int i = 0; i < (int) game_configuration->nb_room; ++i)
+    for (int i = 0; i < (int)game_configuration->nb_room; ++i)
     {
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
-        config_setting_lookup_string(current_room_config, "name", (const char** ) &wp->name);
+        config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
         config_setting_lookup_int(current_room_config, "initial_amount", &wp->initial_amount);
         config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
 
@@ -40,7 +41,7 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         {
             // wp->clients_id[j] = malloc(sizeof(char));
             const config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
-            config_setting_lookup_int(client_name_config, "client_id",(int *) &wp->clients_id[j]);
+            config_setting_lookup_int(client_name_config, "client_id", (int *)&wp->clients_id[j]);
             assert(wp->clients_id[j] > 0);
         }
         game_configuration->rooms[i] = *wp;
@@ -70,11 +71,12 @@ void read_config(Config *configuration, char *filename)
     {
         assert(sizeof(cfg) == sizeof(config_t));
         config_lookup_string(&cfg, "bind_ip", &configuration->bind_ip);
-        config_lookup_int(&cfg, "bind_port",(int *) &configuration->bind_port);
-        config_lookup_int(&cfg, "max_simultaneous_connection",(int *) &configuration->max_simultaneous_connection);
+        config_lookup_int(&cfg, "bind_port", (int *)&configuration->bind_port);
+        config_lookup_int(&cfg, "max_simultaneous_connection", (int *)&configuration->max_simultaneous_connection);
 
         setting = config_lookup(&cfg, "game_configuration");
-        GameConfiguration *game_configuration = (GameConfiguration *) malloc(sizeof(GameConfiguration));;
+        GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
+        ;
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
     }
@@ -86,8 +88,6 @@ void read_config(Config *configuration, char *filename)
     strcpy(ip, configuration->bind_ip);
     assert(is_ip_valid(ip) == true);
     free(ip);
-    printf("server ip : %s\n", configuration->bind_ip);
-    printf("server port : %d\n", configuration->bind_port);
-    printf("max simultaneous connection : %d\n", configuration->max_simultaneous_connection);
+    debug_print_server_config(configuration->bind_ip, configuration->bind_port, configuration->max_simultaneous_connection);
 #endif
 }
