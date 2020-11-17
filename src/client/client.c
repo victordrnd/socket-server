@@ -18,9 +18,6 @@
 int main(int argc, char **argv)
 {
     Config configuration;
-    char path[500] = {0};
-    int dest_len = 500;
-
     read_config(&configuration, "output/config/client_config.cfg");
 
     Game game;

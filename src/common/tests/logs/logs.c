@@ -3,9 +3,8 @@
 #include <stdarg.h>
 #include "logs.h"
 #include "fort.h"
-void debug_print(char *fm, ...)
+void debug_print_f(char *fm, ...)
 {
-#ifndef NDEBUG
     time_t t = time(NULL);
 
     va_list arg;
@@ -38,17 +37,16 @@ void debug_print(char *fm, ...)
             putchar(va_arg(arg, int));
             break;
         case 'd':
-            fputs(convert(va_arg(arg, int), 10), stdout);
+            printf("%d",va_arg(arg, int));
             break;
         }
         fm++;
     }
 
     va_end(arg);
-#endif
 }
 
-void debug_print_client_config(unsigned int client_id, const char *server_ip, unsigned int port)
+void debug_print_client_config_f(unsigned int client_id, const char *server_ip, unsigned int port)
 {
 #ifndef NDEBUG
     ft_table_t *table = ft_create_table();
@@ -60,7 +58,7 @@ void debug_print_client_config(unsigned int client_id, const char *server_ip, un
 #endif
 }
 
-void debug_print_server_config(const char *bind_ip, unsigned int port, unsigned int max_cnx)
+void debug_print_server_config_f(const char *bind_ip, unsigned int port, unsigned int max_cnx)
 {
 #ifndef NDEBUG
     ft_table_t *table = ft_create_table();
@@ -70,22 +68,4 @@ void debug_print_server_config(const char *bind_ip, unsigned int port, unsigned 
     printf("%s\n", ft_to_string(table));
     ft_destroy_table(table);
 #endif
-}
-
-char *convert(unsigned int num, int base)
-{
-    static char Representation[] = "0123456789ABCDEF";
-    static char buffer[50];
-    char *ptr;
-
-    ptr = &buffer[49];
-    *ptr = '\0';
-
-    do
-    {
-        *--ptr = Representation[num % base];
-        num /= base;
-    } while (num != 0);
-
-    return (ptr);
 }
