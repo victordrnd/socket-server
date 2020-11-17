@@ -12,9 +12,9 @@ qui sont leurs adversaires.
 On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une
 confrontation trahison-collaboration entre les deux volontaires.
 
-<div style="text-align:center">
+<h1 align="center">
     <img src="https://i.postimg.cc/523HnPsr/Capture-d-cran-du-2020-11-17-17-20-52.png" />
-</div>
+</h1>
 
 
 ---
