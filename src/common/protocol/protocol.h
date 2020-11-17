@@ -2,21 +2,18 @@
 #define PROTOCOL_H
 #include <time.h>
 
-typedef struct{
-    int x;
-    int y;
-} Test;
+
 
 enum verbs{
-    CONNECT = 0x10, //Offset de 16 car 0-16 réservé pour les actions (collaborate, betray)
-    CONNECTED = 0x11,
-    FAILED = 0x12,
-    GAME_START = 0x13,
-    ROUND_START = 0x14,
-    ACTION = 0x15,
-    ROUND_END = 0x16,
-    GAME_END = 0x17,
-    DISCONNECT = 0x18
+    CONNECT = 0x10U, //Offset de 16 car 0-16 réservé pour les actions (collaborate, betray)
+    CONNECTED = 0x11U,
+    FAILED = 0x12U,
+    GAME_START = 0x13U,
+    ROUND_START = 0x14U,
+    ACTION = 0x15U,
+    ROUND_END = 0x16U,
+    GAME_END = 0x17U,
+    DISCONNECT = 0x18U
 };
 
 typedef struct {

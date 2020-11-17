@@ -2,16 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include <pthread.h>
 #include <sys/socket.h>
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <assert.h>
-#include "communication.h"
-#include "../utils/config.h"
-#include "actions.h"
 
+#include "communication.h"
+#include "actions.h"
+#include "../../common/tests/logs/logs.h"
 
 connection_t *connections[MAXSIMULTANEOUSCLIENTS];
 
@@ -64,7 +63,6 @@ pthread_mutex_unlock(&lock);
 void *threadProcess(void *ptr)
 {
     char buffer_in[BUFFERSIZE];
-    char buffer_out[BUFFERSIZE];
 
     int len;
     connection_t *connection;
@@ -72,17 +70,12 @@ void *threadProcess(void *ptr)
     if (!ptr)
         pthread_exit(0);
     connection = (connection_t *)ptr;
-    printf("New incoming connection \n");
 
     add(connection);
 
-    //Welcome the new client
-    // printf("Welcome #%i\n", connection->index);
-    // sprintf(buffer_out, "Welcome #%i\n", connection->index);
-    // write(connection->sockfd, buffer_out, strlen(buffer_out));
-
     while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0)
     {
+        
         int size = sizeof(Encapsulation);
         unsigned char *buffer = (unsigned char *)malloc(size);
         memcpy(buffer, buffer_in, size);
@@ -91,57 +84,27 @@ void *threadProcess(void *ptr)
         {
             connection->client_id = packet->sender_id;
         }
-        settle_action(packet);
 #ifndef NDEBUG
-        printf("DEBUG-----------------------------------------------------------\n");
-        // printf("len : %i\n", len);
-        printf("Buffer : ");
-        for (int i = 0; i < size; i++)
-            printf("%02X ", buffer[i]);
-        printf("\n");
-        printf("Sender_id : %d\n", packet->sender_id);
-        printf("Destination_id : %d\n", packet->destination_id);
-        printf("Action : %d\n", packet->action);
-        printf("Packet size : %d\n", sizeof(Encapsulation));
-        printf("Timestamp : %lld\n", (long long)packet->timestamp);
-        printf("----------------------------------------------------------------\n");
+        // printf("DEBUG-----------------------------------------------------------\n");
+        // // printf("len : %i\n", len);
+        // printf("Buffer : ");
+        // for (int i = 0; i < size; i++)
+        //     printf("%02X ", buffer[i]);
+        // printf("\n");
+        // printf("Sender_id : %d\n", packet->sender_id);
+        // printf("Destination_id : %d\n", packet->destination_id);
+        // printf("Action : %d\n", packet->action);
+        // printf("Packet size : %d\n", sizeof(Encapsulation));
+        // printf("Timestamp : %lld\n", (long long)packet->timestamp);
+        // printf("----------------------------------------------------------------\n");
 #endif
+
         assert(sizeof(*packet) == sizeof(Encapsulation));
-        // strcpy(buffer_out, "\nServer Echo : ");
-        // strncat(buffer_out, buffer_in, len);
+        settle_action(packet);
 
-        // if (buffer_in[0] == '@')
-        // {
-        //     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
-        //     {
-        //         if (connections[i] != NULL)
-        //         {
-        //             write(connections[i]->sockfd, buffer_out, strlen(buffer_out));
-        //         }
-        //     }
-        // }
-        // else if (buffer_in[0] == '#')
-        // {
-        //     int client = 0;
-        //     sscanf(buffer_in, "%*[^0123456789]%d ", &client);
-        //     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
-        //     {
-        //         if (client == connections[i]->index)
-        //         {
-        //             write(connections[i]->sockfd, buffer_out, strlen(buffer_out));
-        //             break;
-        //         } //no client found ? : we dont care !!
-        //     }
-        // }
-        // else
-        // {
-        //     write(connection->sockfd, buffer_out, strlen(buffer_out));
-        // }
-
-        //clear input buffer
         memset(buffer_in, '\0', BUFFERSIZE);
     }
-    printf("Connection to client %i ended \n", connection->index);
+    debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", connection->client_id);
     close(connection->sockfd);
     del(connection);
     free(connection);
@@ -203,9 +166,9 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
 #ifndef NDEBUG
     unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
     memcpy(buffer, (const unsigned char *)&packet, sizeof(Encapsulation));
-    printf("Sending buffer : \n");
-    for (int i = 0; i < sizeof(Encapsulation); i++)
-        printf("%02X ", buffer[i]);
-    printf("\n");
+    // printf("Sending buffer : \n");
+    // for (int i = 0; i < sizeof(Encapsulation); i++)
+    //     printf("%02X ", buffer[i]);
+    // printf("\n");
 #endif
 }

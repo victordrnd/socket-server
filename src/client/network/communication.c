@@ -78,28 +78,19 @@ void *listen_socket_thread_process(void *ptr)
         unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
         memcpy(buffer, buffer_in, sizeof(Encapsulation));
         Encapsulation *packet = (Encapsulation *)buffer;
-         printf("DEBUG-----------------------------------------------------------\n");
-        // printf("len : %i\n", len);
-        printf("Buffer : ");
-        for (int i = 0; i < sizeof(Encapsulation); i++)
-            printf("%02X ", buffer[i]);
-        printf("\n");
-        printf("Sender_id : %d\n", packet->sender_id);
-        printf("Destination_id : %d\n", packet->destination_id);
-        printf("Action : %d\n", packet->action);
-        printf("Packet size : %d\n", sizeof(Encapsulation));
-        printf("Timestamp : %lld\n", (long long)packet->timestamp);
-        printf("----------------------------------------------------------------\n");
+        //  printf("DEBUG-----------------------------------------------------------\n");
+        // // printf("len : %i\n", len);
+        // printf("Buffer : ");
+        // for (int i = 0; i < sizeof(Encapsulation); i++)
+        //     printf("%02X ", buffer[i]);
+        // printf("\n");
+        // printf("Sender_id : %d\n", packet->sender_id);
+        // printf("Destination_id : %d\n", packet->destination_id);
+        // printf("Action : %d\n", packet->action);
+        // printf("Packet size : %d\n", sizeof(Encapsulation));
+        // printf("Timestamp : %lld\n", (long long)packet->timestamp);
+        // printf("----------------------------------------------------------------\n");
         settle_action(packet);
-        // if (strncmp(buffer_in, "exit", 4) == 0)
-        // {
-        //     break;
-        // }
-        // pthread_mutex_lock(&mutex);
-        // printf("receive %d chars\n", len);
-        // printf("%.*s\n", len, buffer_in);
-
-        // pthread_mutex_unlock(&mutex);
     }
     close_connection();
     return NULL;
@@ -127,14 +118,6 @@ void send_packet(enum verbs action, void *data, size_t data_size)
     Encapsulation packet;
     encapsulate_data(&packet, config_get_client_id(), 0, action, data, data_size);
     write(cnx->sock, (const unsigned char *)&packet, sizeof(Encapsulation));
-    #ifndef NDEBUG
-    unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
-    memcpy(buffer, (const unsigned char *)&packet, sizeof(Encapsulation));
-    printf("Sending buffer : \n");
-    for (int i = 0; i < sizeof(Encapsulation); i++)
-        printf("%02X ", buffer[i]);
-    printf("\n");
-    #endif
 }
 /**
  * @brief Close connection between client and server
