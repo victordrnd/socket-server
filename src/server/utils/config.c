@@ -160,6 +160,12 @@ int get_opponent_id(client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(client_id);
+int get_max_round_count(client_id)
+{
+    GameConfiguration *game_config = conf->game_config;
+}
+
+
+
 
 get_initial_amount(client_id);
