@@ -119,26 +119,47 @@ bool is_client_exists(client_id) {
     return false;
 }
 
+Room* get_client_room(client_id){
+
+    GameConfiguration *game_config = conf->game_config;
+
+    for(int i=0; i<game_config->nb_room; i++)
+    {
+        Room current_room = game_config->rooms[i];
+
+        int *wp = current_room.clients_id; //wp = working pointer
+
+        while(wp != NULL)
+        {
+            if(*wp == client_id)
+            {
+                return &current_room;
+            }
+            wp++;
+        }   
+    }
+}
+
 int get_opponent_id(client_id) //recuperer l'id de l'adversaire
 { 
     GameConfiguration *game_config = conf->game_config;
     
-    Room current_room = *game_config->rooms;
+    Room *current_room = get_client_room(client_id);
 
-    int *opponent_id = current_room.clients_id;
+    int *wp = current_room->clients_id;
 
-    for(int i=0; i<2; i++)
+    while (wp !=NULL)
     {
-        if(opponent_id[i] != client_id)
+        if (*wp != client_id)
         {
-            return opponent_id[i];
+            return *wp;
         }
-        else
-        {
-            return NULL;
-        }
+        
+        wp++;
     }
+    return -1;
 }
 
-get_max_round_count(client_id);
+int get_max_round_count(client_id);
+
 get_initial_amount(client_id);
