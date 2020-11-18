@@ -8,7 +8,7 @@ CC = gcc
 GTK1 = `pkg-config --cflags gtk+-3.0` -rdynamic
 GTK2 = `pkg-config --libs gtk+-3.0`
 # define any compile-time flags #-DNDEBUG
-CFLAGS	:= -Wall -Wextra -g -std=c99
+CFLAGS	:= -Wall -Wextra -g -std=c99 
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify

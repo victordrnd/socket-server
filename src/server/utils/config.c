@@ -98,7 +98,7 @@ void read_config(Config *configuration, char *filename)
 #endif
 }
 
-bool is_client_exists(client_id) {
+bool is_client_exists(unsigned int client_id) {
 
     GameConfiguration *game_config = conf->game_config;
 
@@ -119,31 +119,30 @@ bool is_client_exists(client_id) {
     return false;
 }
 
-Room* get_client_room(client_id){
+Room* get_client_room(unsigned int client_id){
 
     GameConfiguration *game_config = conf->game_config;
 
     for(int i=0; i<game_config->nb_room; i++)
     {
-        Room current_room = game_config->rooms[i];
+        Room *current_room = &game_config->rooms[i];
 
-        int *wp = current_room.clients_id; //wp = working pointer
+        int *wp = current_room->clients_id; //wp = working pointer
 
         while(wp != NULL)
         {
             if(*wp == client_id)
             {
-                return &current_room;
+                return current_room;
             }
             wp++;
         }   
     }
+    return NULL;
 }
 
-int get_opponent_id(client_id) //recuperer l'id de l'adversaire
+int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
 { 
-    GameConfiguration *game_config = conf->game_config;
-    
     Room *current_room = get_client_room(client_id);
 
     int *wp = current_room->clients_id;
@@ -160,6 +159,6 @@ int get_opponent_id(client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(client_id);
+int get_max_round_count(Room *room);
 
-int get_initial_amount(client_id);
+int get_initial_amount(Room *room);
