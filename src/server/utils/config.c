@@ -30,8 +30,8 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
     {
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
-        config_setting_lookup_int(current_room_config, "initial_amount", &wp->initial_amount);
-        config_setting_lookup_int(current_room_config, "nb_rounds", &wp->nb_rounds);
+        config_setting_lookup_int(current_room_config, "initial_amount",(int *) &wp->initial_amount);
+        config_setting_lookup_int(current_room_config, "nb_rounds",(int *) &wp->nb_rounds);
 
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
@@ -39,7 +39,7 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
-        wp->clients_id = (int *)malloc(nb_players * sizeof(int));
+        wp->clients_id = (unsigned int *)malloc(nb_players * sizeof(int));
         for (int j = 0; j < nb_players; j++)
         {
             // wp->clients_id[j] = malloc(sizeof(char));
