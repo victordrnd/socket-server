@@ -31,6 +31,23 @@ typedef struct{
     __uint32_t initial_balance;
 } Connected_data;
 
+typedef struct {
+    __uint32_t max_rounds;
+} Game_Start_data;
+
+typedef struct {
+    __uint32_t current_round;
+    __uint32_t deadline;
+} Round_Start_data;
+
+typedef struct {
+    __uint32_t balance;
+} Round_End_data;
+
+typedef struct {
+    __uint32_t balance;
+    __uint32_t max_rounds;
+} Game_End_data;
 
 void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id,__uint32_t destionation_id, enum verbs verb, void *data, size_t data_size);
 void parse_verbs_data(Encapsulation *encapsulation);
