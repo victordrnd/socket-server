@@ -162,4 +162,4 @@ int get_opponent_id(client_id) //recuperer l'id de l'adversaire
 
 int get_max_round_count(client_id);
 
-get_initial_amount(client_id);
+int get_initial_amount(client_id);

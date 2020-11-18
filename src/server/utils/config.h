@@ -25,6 +25,7 @@ typedef struct
 } Config;
 
 void read_config(Config *configuration, char *filename);
+int get_opponent_id(client_id);
 
 
 #endif //!CONFIG_HEADER_FILE_H
