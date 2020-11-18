@@ -125,8 +125,19 @@ int get_opponent_id(client_id) //recuperer l'id de l'adversaire
     
     Room current_room = *game_config->rooms;
 
-    int *opponent_id != current_room.clients_id;
+    int *opponent_id = current_room.clients_id;
 
+    for(int i=0; i<2; i++)
+    {
+        if(opponent_id[i] != client_id)
+        {
+            return opponent_id[i];
+        }
+        else
+        {
+            return NULL;
+        }
+    }
 }
 
 get_max_round_count(client_id);
