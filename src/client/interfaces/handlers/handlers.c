@@ -97,8 +97,16 @@ void on_connected_action(Connected_data *data){
     gtk_label_set_label(label, amount);
 }   
 
+void on_game_start_action(Game_Start_data *data){
 
+    game_set_max_rounds(data->max_rounds);
+}
+
+void on_round_start_action(Connected_data *data){
+    
+}
 
 void gtk_set_builder(GtkBuilder *buildr){
     builder = buildr;
 }
+

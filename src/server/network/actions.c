@@ -2,6 +2,8 @@
 #include "actions.h"
 #include "communication.h"
 #include "../../common/tests/logs/logs.h"
+#include "../utils/config.h"
+
 
 void on_connect_action(Encapsulation *packet)
 {
@@ -14,11 +16,13 @@ void on_connect_action(Encapsulation *packet)
 
     if (check_oppponent_connected(packet->sender_id))
     {
-        send_packet(packet->sender_id, GAME_START, NULL, 0);
+        Room* room = get_client_room(packet->sender_id);
+        Game_Start_data data = {get_max_round_count(room),get_initial_amount(room)};
+        send_packet(packet->sender_id, GAME_START, &data, sizeof(Game_Start_data));
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
 
         int opponent = get_opponent_id(packet->sender_id);
-        send_packet(opponent, GAME_START, NULL, 0);
+        send_packet(opponent, GAME_START, &data, sizeof(Game_Start_data));
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n", opponent);
     }
 }
@@ -34,9 +38,9 @@ void settle_action(Encapsulation *packet)
         break;
     }
 
-    case GAME_START:
+    case DISCONNECT:
     {
-
+        
         break;
     }
     default:

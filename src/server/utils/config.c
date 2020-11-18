@@ -5,7 +5,6 @@
 
 #include "config.h"
 #ifndef NDEBUG
-#include <stdbool.h>
 #include "../../common/tests/network/network.h"
 #include "../../common/tests/logs/logs.h"
 #endif
