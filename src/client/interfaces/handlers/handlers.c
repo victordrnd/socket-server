@@ -102,3 +102,7 @@ void on_connected_action(Connected_data *data){
 void gtk_set_builder(GtkBuilder *buildr){
     builder = buildr;
 }
+
+void on_game_start_action(Connected_data *data){
+    
+}

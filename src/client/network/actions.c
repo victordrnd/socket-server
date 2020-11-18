@@ -14,7 +14,8 @@ void settle_action(Encapsulation *packet){
     }
 
     case GAME_START:{
-        
+        Connected_data *data = (Connected_data *) packet->data;
+        on_game_start_action(data);
     }
     
     default:
