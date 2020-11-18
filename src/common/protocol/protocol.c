@@ -9,7 +9,7 @@ void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint
 {
     if (sender_id > 0)
     {
-        destionation_id = 0; //0 is server
+        destionation_id = 0; //0 is server 
     }
     encapsulation->sender_id = sender_id;
     encapsulation->destination_id = destionation_id;

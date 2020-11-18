@@ -23,6 +23,14 @@ void settle_action(Encapsulation *packet)
         on_connect_action(packet);
         break;
     }
+
+    case GAME_START:
+    {
+
+        
+        
+        break;
+    }
     default:
         break;
     }
