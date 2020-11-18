@@ -105,7 +105,7 @@ bool is_client_exists(unsigned int client_id) {
     for(int i=0; i<game_config->nb_room; i++) //verifier si l'id du client est bien dans le fichier de configuration
     { 
         Room current_room = game_config->rooms[i];
-        int *wp = current_room.clients_id; //wp = working pointer
+        unsigned int *wp = current_room.clients_id; //wp = working pointer
 
         while(wp != NULL)
         {
@@ -127,7 +127,7 @@ Room* get_client_room(unsigned int client_id){
     {
         Room current_room = game_config->rooms[i];
 
-        int *wp = current_room.clients_id; //wp = working pointer
+        unsigned int *wp = current_room.clients_id; //wp = working pointer
 
         while(wp != NULL)
         {
@@ -147,7 +147,7 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     
     Room *current_room = get_client_room(client_id);
 
-    int *wp = current_room->clients_id;
+    unsigned int *wp = current_room->clients_id;
 
     while (wp !=NULL)
     {

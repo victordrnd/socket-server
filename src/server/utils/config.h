@@ -5,9 +5,9 @@
 typedef struct
 {
     const char *name;
-    int nb_rounds;
-    int initial_amount;
-    int *clients_id;
+    unsigned int nb_rounds;
+    unsigned int initial_amount;
+    unsigned int *clients_id;
 } Room;
 
 typedef struct
