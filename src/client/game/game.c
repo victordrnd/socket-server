@@ -41,4 +41,9 @@ int game_get_current_bet(){
 void game_set_action(enum actions action){
     game->action = action;
 }
+
+void game_set_max_rounds(unsigned int maxrounds){
+    game->total_rounds = maxrounds;
+}
+
 #endif
