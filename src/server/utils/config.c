@@ -138,6 +138,7 @@ Room* get_client_room(unsigned int client_id){
             wp++;
         }   
     }
+    return NULL;
 }
 
 int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
@@ -160,13 +161,10 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(Room *room) //Obtient le nombre maximal de round dans la partie
-{​​
-    return room->nb_rounds; //il y a 10 rounds (voir server_config.cfg)
-}​​
+int get_max_round_count(Room *room){
+    return room->nb_rounds;
+}
 
-
-int get_initial_amount(Room *room) //Obitent le balance initial de la partie
-{
+int get_initial_amount(Room *room) {
     return room->initial_amount;
 }
