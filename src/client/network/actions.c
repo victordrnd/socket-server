@@ -12,6 +12,10 @@ void settle_action(Encapsulation *packet){
         on_connected_action(data);
         break;
     }
+
+    case GAME_START:{
+        
+    }
     
     default:
         break;

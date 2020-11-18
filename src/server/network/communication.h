@@ -33,6 +33,9 @@ void del(connection_t *connection);
 void *threadProcess(void *ptr);
 int create_server_socket(Config *configuration);
 
+connection_t *get_connection(unsigned int client_id);
 void send_packet(unsigned int client_id, enum verbs action, void *data, size_t data_size);
+connection_t *get_connections();
+
 
 #endif /* SRVCXNMANAGER_H */

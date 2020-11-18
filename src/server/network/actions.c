@@ -11,6 +11,12 @@ void on_connect_action(Encapsulation *packet)
 
     send_packet(packet->sender_id, CONNECTED, &data, sizeof(Connected_data));
     debug_print("\033[1;32m#%d \033[0mis sucessfully \033[0;32mCONNECTED.\n", packet->sender_id);
+
+    if(check_oppponent_connected(packet->sender_id)){
+        send_packet(packet->sender_id,GAME_START,NULL,0);
+        int opponent = get_opponent_id(packet->sender_id);
+        send_packet(opponent,GAME_START,NULL,0);
+    }
 }
 
 void settle_action(Encapsulation *packet)
@@ -26,12 +32,19 @@ void settle_action(Encapsulation *packet)
 
     case GAME_START:
     {
-
-        
         
         break;
     }
     default:
         break;
+    }
+}
+
+
+int check_oppponent_connected(unsigned int client_id){
+    
+    if(get_opponent_id(client_id) != NULL){
+        int opponent = get_opponent_id(client_id);
+        return get_connection(opponent) != NULL;
     }
 }
