@@ -33,6 +33,7 @@ typedef struct{
 
 typedef struct {
     __uint32_t max_rounds;
+    __uint32_t initial_balance;
 } Game_Start_data;
 
 typedef struct {

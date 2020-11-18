@@ -79,7 +79,7 @@ void read_config(Config *configuration, char *filename)
 
         setting = config_lookup(&cfg, "game_configuration");
         GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
-        ;
+        
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
 
@@ -159,6 +159,10 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(Room *room);
+int get_max_round_count(Room *room){
+    return room->nb_rounds;
+}
 
-int get_initial_amount(Room *room);
+int get_initial_amount(Room *room) {
+    return room->initial_amount;
+}
