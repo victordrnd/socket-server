@@ -10,6 +10,9 @@
 #include "../../common/tests/logs/logs.h"
 #endif
 
+
+Config *conf = NULL;
+
 /**
  * @brief Parse only game_configuration section of config file
  * 
@@ -79,7 +82,10 @@ void read_config(Config *configuration, char *filename)
         ;
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
+
+        conf = configuration;
     }
+
 #ifndef NDEBUG
     assert(configuration->bind_port > 1024);
     assert(configuration->max_simultaneous_connection == 50);
@@ -91,3 +97,37 @@ void read_config(Config *configuration, char *filename)
     debug_print_server_config(configuration->bind_ip, configuration->bind_port, configuration->max_simultaneous_connection);
 #endif
 }
+
+bool is_client_exists(client_id) {
+
+    GameConfiguration *game_config = conf->game_config;
+
+    for(int i=0; i<game_config->nb_room; i++) //verifier si l'id du client est bien dans le fichier de configuration
+    { 
+        Room current_room = game_config->rooms[i];
+        int *wp = current_room.clients_id; //wp = working pointer
+
+        while(wp != NULL)
+        {
+            if(*wp == client_id)
+            {
+                return true;
+            }
+            wp++;
+        }
+    }
+    return false;
+}
+
+int get_opponent_id(client_id) //recuperer l'id de l'adversaire
+{ 
+    GameConfiguration *game_config = conf->game_config;
+    
+    Room current_room = *game_config->rooms;
+
+    int *opponent_id != current_room.clients_id;
+
+}
+
+get_max_round_count(client_id);
+get_initial_amount(client_id);
