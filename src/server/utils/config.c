@@ -79,7 +79,7 @@ void read_config(Config *configuration, char *filename)
 
         setting = config_lookup(&cfg, "game_configuration");
         GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
-        ;
+        
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
 
@@ -98,7 +98,7 @@ void read_config(Config *configuration, char *filename)
 #endif
 }
 
-bool is_client_exists(client_id) {
+bool is_client_exists(unsigned int client_id) {
 
     GameConfiguration *game_config = conf->game_config;
 
@@ -119,7 +119,7 @@ bool is_client_exists(client_id) {
     return false;
 }
 
-Room* get_client_room(client_id){
+Room* get_client_room(unsigned int client_id){
 
     GameConfiguration *game_config = conf->game_config;
 
@@ -140,7 +140,7 @@ Room* get_client_room(client_id){
     }
 }
 
-int get_opponent_id(client_id) //recuperer l'id de l'adversaire
+int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
 { 
     GameConfiguration *game_config = conf->game_config;
     
@@ -160,12 +160,13 @@ int get_opponent_id(client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(client_id)
+int get_max_round_count(Room *room) //Obtient le nombre maximal de round dans la partie
+{​​
+    return room->nb_rounds; //il y a 10 rounds (voir server_config.cfg)
+}​​
+
+
+int get_initial_amount(Room *room) //Obitent le balance initial de la partie
 {
-    GameConfiguration *game_config = conf->game_config;
+    return room->initial_amount;
 }
-
-
-
-
-get_initial_amount(client_id);
