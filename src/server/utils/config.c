@@ -30,8 +30,8 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
     {
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
-        config_setting_lookup_int(current_room_config, "initial_amount", &wp->initial_amount);
-        config_setting_lookup_int(current_room_config, "nb_rounds", &wp->nb_rounds);
+        config_setting_lookup_int(current_room_config, "initial_amount",(int *) &wp->initial_amount);
+        config_setting_lookup_int(current_room_config, "nb_rounds",(int *) &wp->nb_rounds);
 
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
@@ -39,7 +39,7 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
-        wp->clients_id = (int *)malloc(nb_players * sizeof(int));
+        wp->clients_id = (unsigned int *)malloc(nb_players * sizeof(int));
         for (int j = 0; j < nb_players; j++)
         {
             // wp->clients_id[j] = malloc(sizeof(char));
@@ -79,7 +79,7 @@ void read_config(Config *configuration, char *filename)
 
         setting = config_lookup(&cfg, "game_configuration");
         GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
-        ;
+        
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
 
@@ -105,7 +105,7 @@ bool is_client_exists(unsigned int client_id) {
     for(int i=0; i<game_config->nb_room; i++) //verifier si l'id du client est bien dans le fichier de configuration
     { 
         Room current_room = game_config->rooms[i];
-        int *wp = current_room.clients_id; //wp = working pointer
+        unsigned int *wp = current_room.clients_id; //wp = working pointer
 
         while(wp != NULL)
         {
@@ -127,7 +127,7 @@ Room* get_client_room(unsigned int client_id){
     {
         Room *current_room = &game_config->rooms[i];
 
-        int *wp = current_room->clients_id; //wp = working pointer
+        unsigned int *wp = current_room->clients_id; //wp = working pointer
 
         while(wp != NULL)
         {
@@ -145,7 +145,7 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
 { 
     Room *current_room = get_client_room(client_id);
 
-    int *wp = current_room->clients_id;
+    unsigned int *wp = current_room->clients_id;
 
     while (wp !=NULL)
     {
@@ -159,6 +159,10 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-int get_max_round_count(Room *room);
+int get_max_round_count(Room *room){
+    return room->nb_rounds;
+}
 
-int get_initial_amount(Room *room);
+int get_initial_amount(Room *room) {
+    return room->initial_amount;
+}
