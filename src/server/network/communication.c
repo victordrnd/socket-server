@@ -172,8 +172,3 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
     // printf("\n");
 #endif
 }
-
-connection_t *get_connections(){
-    
-    return connections;
-}
