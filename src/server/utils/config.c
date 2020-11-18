@@ -28,11 +28,11 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
         config_setting_lookup_int(current_room_config, "initial_amount", &wp->initial_amount);
-        config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
+        config_setting_lookup_int(current_room_config, "nb_rounds", &wp->nb_rounds);
 
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
-        assert(wp->nb_games > 0);
+        assert(wp->nb_rounds > 0);
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
