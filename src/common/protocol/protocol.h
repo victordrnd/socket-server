@@ -38,7 +38,7 @@ typedef struct {
 
 typedef struct {
     __uint32_t current_round;
-    __uint32_t deadline;
+    __uint32_t round_duration;
 } Round_Start_data;
 
 typedef struct {

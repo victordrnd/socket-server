@@ -126,16 +126,10 @@ Room* get_client_room(unsigned int client_id){
     {
         Room *current_room = &game_config->rooms[i];
 
-        unsigned int *wp = current_room->clients_id; //wp = working pointer
-
-        while(wp != NULL)
-        {
-            if(*wp == client_id)
-            {
+        for(int j = 0; j < 2; j++){
+            if(current_room->clients_id[j] == client_id)
                 return current_room;
-            }
-            wp++;
-        }   
+        }
     }
     return NULL;
 }

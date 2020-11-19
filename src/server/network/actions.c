@@ -17,7 +17,7 @@ void on_connect_action(Encapsulation *packet)
     if (check_oppponent_connected(packet->sender_id))
     {
         Room* room = get_client_room(packet->sender_id);
-        Game_Start_data data = {get_max_round_count(room),get_initial_amount(room)};
+        Game_Start_data data = {get_max_round_count(room), (unsigned int) get_initial_amount(room)};
         send_packet(packet->sender_id, GAME_START, &data, sizeof(Game_Start_data));
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
 
@@ -48,12 +48,12 @@ void settle_action(Encapsulation *packet)
     }
 }
 
-int check_oppponent_connected(unsigned int client_id)
+bool check_oppponent_connected(unsigned int client_id)
 {
-
     if (get_opponent_id(client_id) > 0)
     {
         int opponent = get_opponent_id(client_id);
+        printf("%d\n", opponent);
         return get_connection(opponent) != NULL;
     }
 }
