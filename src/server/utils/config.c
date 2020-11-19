@@ -137,16 +137,13 @@ Room* get_client_room(unsigned int client_id){
 int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
 { 
     Room *current_room = get_client_room(client_id);
-
     unsigned int *wp = current_room->clients_id;
-
     while (wp !=NULL)
     {
         if (*wp != client_id)
         {
             return *wp;
         }
-        
         wp++;
     }
     return -1;

@@ -95,9 +95,6 @@ void on_connected_action(Connected_data *data)
     char amount[10];
     sprintf(amount, "$ %d", data->initial_balance);
     gtk_label_set_label(label, amount);
-
-    //Disable button
-    //radio_bet_button(builder,FALSE);
     toggle_action_button(builder, FALSE);
 }
 
@@ -111,16 +108,6 @@ void on_failed_action()
     gtk_widget_hide(spinner);
     GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)label);
     gtk_style_context_add_class(context, "error-label");
-    // GtkWindow *window = (GtkWindow *) gtk_builder_get_object(builder, "app_win");
-    // GtkWidget *dialog;
-    // dialog = gtk_message_dialog_new(GTK_WINDOW(window),
-    //     GTK_DIALOG_DESTROY_WITH_PARENT,
-    //     GTK_MESSAGE_ERROR,
-    //     GTK_BUTTONS_OK,
-    //     "Error");
-    // gtk_window_set_title(GTK_WINDOW(dialog), "Connection failed");
-    // gtk_dialog_run(GTK_DIALOG(dialog));
-    // //gtk_widget_destroy(dialog);
 }
 
 void on_game_start_action(Game_Start_data *data)

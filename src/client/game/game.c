@@ -13,7 +13,7 @@ Game *game;
  */
 void init_game(Game *c_game){
     game = c_game;
-    //TODO get balance from server conf
+    game->action = NOACTION;
     game->balance = 100; 
     game->bet = 10;
     game->current_round = 1; 
@@ -37,6 +37,9 @@ int game_get_current_bet(){
     return game->bet;
 }
 
+bool game_next_round(){
+    return ++(game->current_round) <= game->total_rounds;
+}
 
 void game_set_action(enum actions action){
     game->action = action;
@@ -44,6 +47,10 @@ void game_set_action(enum actions action){
 
 void game_set_max_rounds(unsigned int maxrounds){
     game->total_rounds = maxrounds;
+}
+
+Game *get_game(){
+    return game;
 }
 
 #endif
