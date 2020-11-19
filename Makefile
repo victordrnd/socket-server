@@ -121,4 +121,4 @@ run: all
 	@echo Executing 'run: all' complete!
 
 documentation:
-	doxygene
+	doxygen
