@@ -95,6 +95,12 @@ void on_connected_action(Connected_data *data){
     char amount[10];
     sprintf(amount, "$ %d", data->initial_balance);
     gtk_label_set_label(label, amount);
+
+    //Disable button
+    //radio_bet_button(builder,FALSE);
+    toggle_action_button(builder,FALSE);
+    
+
 }   
 
 void on_failed_action(){
@@ -120,10 +126,18 @@ void on_game_start_action(Game_Start_data *data){
 }
 
 void on_round_start_action(Connected_data *data){
-    GtkProgressBar *progress_bar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progress_bar, 10,20);
+
     GtkLabel *label = (GtkLabel *) gtk_builder_get_object(builder, "info_label");
     gtk_label_set_label(label,"La partie va bientôt commencer");
+
+    GtkSpinner *spinner_central = (GtkSpinner *) gtk_builder_get_object(builder,"spinner_central");
+    gtk_spinner_stop(spinner_central);
+
+    
+
+    GtkProgressBar *progress_bar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
+    activate_countdown(progress_bar, 10,20);
+
 }
 
 void gtk_set_builder(GtkBuilder *buildr){

@@ -95,3 +95,17 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     gtk_widget_set_sensitive(betray_btn, sensitive);
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
 }
+
+void radio_bet_button(GtkBuilder *builder, gboolean sensitive){
+
+    GtkButton *mise_10 = (GtkButton * ) gtk_builder_get_object(builder,"mise_10");
+    GtkButton *mise_25 = (GtkButton * ) gtk_builder_get_object(builder,"mise_25");
+    GtkButton *mise_50 = (GtkButton * ) gtk_builder_get_object(builder,"mise_50");
+    GtkButton *mise_75 = (GtkButton * ) gtk_builder_get_object(builder,"mise_75");
+    GtkButton *mise_100 = (GtkButton * ) gtk_builder_get_object(builder,"mise_100");
+    gtk_widget_set_sensitive(mise_10,sensitive);
+    gtk_widget_set_sensitive(mise_25,sensitive);
+    gtk_widget_set_sensitive(mise_50,sensitive);
+    gtk_widget_set_sensitive(mise_75,sensitive);
+    gtk_widget_set_sensitive(mise_100,sensitive);
+}
