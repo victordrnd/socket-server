@@ -1,0 +1,119 @@
+\hypertarget{md__readme_autotoc_md1}{}\doxysection{Contexte}\label{md__readme_autotoc_md1}
+L’\+I\+CS (institue of Cognitives Sciences) est un laboratoire interdisciplinaire qui intègre l\textquotesingle{}expertise de chercheurs des Sciences de la Vie (psychologie cognitive, neurosciences) et de médecine (pédopsychiatrie, neuro-\/pediatrie) avec celle de chercheurs des Sciences Humaines et Sociales (linguistique computationelle et théorique et philosophie) pour étudier la nature et la spécificité de l\textquotesingle{}esprit humain.
+
+Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des données expérimentales. Il a besoin que des volontaires jouent l’un contre l’autre un nombre de fois à définir, sans jamais savoir qui sont leurs adversaires. On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une confrontation trahison-\/collaboration entre les deux volontaires.
+
+\doxysection*{ }
+
+\DoxyHorRuler{0}
+ \hypertarget{md__readme_autotoc_md3}{}\doxysection{Documentation}\label{md__readme_autotoc_md3}
+\hypertarget{md__readme_autotoc_md4}{}\doxysubsubsection{1. Installation}\label{md__readme_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{\#dépendances}{\texttt{ Dépendances}}
+\item \href{\#how-to-use}{\texttt{ Comment l\textquotesingle{}utiliser}}
+\end{DoxyItemize}\hypertarget{md__readme_autotoc_md5}{}\doxysubsubsection{2. Configuration}\label{md__readme_autotoc_md5}
+
+\begin{DoxyItemize}
+\item \href{\#configuration-serveur}{\texttt{ Serveur}}
+\item \href{\#configuration-client}{\texttt{ Client}}
+\end{DoxyItemize}\hypertarget{md__readme_autotoc_md6}{}\doxysubsubsection{2. Développement}\label{md__readme_autotoc_md6}
+
+\begin{DoxyItemize}
+\item \href{\#debug}{\texttt{ Debug}}
+\item \href{\#protocole}{\texttt{ Protocole}} 
+\end{DoxyItemize}\hypertarget{md__readme_autotoc_md7}{}\doxysubsection{Installation}\label{md__readme_autotoc_md7}
+\hypertarget{md__readme_autotoc_md8}{}\doxysubsubsection{Dépendances}\label{md__readme_autotoc_md8}
+Ce projet est dépendant de la librairie \href{https://hyperrealm.github.io/libconfig/}{\texttt{ libconfig}}. \hypertarget{md__readme_autotoc_md9}{}\doxyparagraph{Distribution basée sur Ubuntu (\+Ubuntu, Linux Mint, Elementary, etc)}\label{md__readme_autotoc_md9}
+Exécutez la commande suivante dans un terminal.
+
+{\ttfamily sudo apt install libconfig-\/dev} \hypertarget{md__readme_autotoc_md10}{}\doxyparagraph{Fedora, Cent\+OS}\label{md__readme_autotoc_md10}
+Exécutez la commande suivante dans un terminal.
+
+{\ttfamily dnf install libconfig-\/devel}\hypertarget{md__readme_autotoc_md11}{}\doxysubsubsection{How to use}\label{md__readme_autotoc_md11}
+Exécutez la commande suivante dans un terminal.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Clonez le dépot Github }
+\DoxyCodeLine{\$ git clone https://github.com/victordrnd/socket-\/server.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Aller vers le répertoire}
+\DoxyCodeLine{\$ cd socket-\/server}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Compiler le projet (make all, make server, make client)}
+\DoxyCodeLine{\$ make all}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Executer le serveur/client}
+\DoxyCodeLine{\$ ./output/server}
+\DoxyCodeLine{\$ ./output/client}
+\end{DoxyCode}
+\hypertarget{md__readme_autotoc_md12}{}\doxysubsection{Configuration}\label{md__readme_autotoc_md12}
+\hypertarget{md__readme_autotoc_md13}{}\doxysubsubsection{Configuration serveur}\label{md__readme_autotoc_md13}
+La configuration du serveur se trouve dans le fichier {\ttfamily output/config/server\+\_\+config.\+cfg} une fois le serveur compilé.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{bind\_ip = "{}0.0.0.0"{};}
+\DoxyCodeLine{bind\_port = 7799;}
+\DoxyCodeLine{max\_simultaneous\_connection = 50;}
+\DoxyCodeLine{}
+\DoxyCodeLine{game\_configuration =}
+\DoxyCodeLine{(}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    name = "{}room\_1"{};}
+\DoxyCodeLine{    initial\_amount = 50;}
+\DoxyCodeLine{    nb\_games = 10;}
+\DoxyCodeLine{    clients = (}
+\DoxyCodeLine{      \{client\_id = 1;\},}
+\DoxyCodeLine{      \{client\_id = 2;\}}
+\DoxyCodeLine{    );}
+\DoxyCodeLine{  \},}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    name = "{}room\_2"{};}
+\DoxyCodeLine{    initial\_amount = 50;}
+\DoxyCodeLine{    nb\_games = 10;}
+\DoxyCodeLine{    clients = (}
+\DoxyCodeLine{      \{client\_id = 3;\},}
+\DoxyCodeLine{      \{client\_id = 4;\}}
+\DoxyCodeLine{    );}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{);}
+\end{DoxyCode}
+\hypertarget{md__readme_autotoc_md14}{}\doxysubsubsection{Configuration client}\label{md__readme_autotoc_md14}
+La configuration du serveur se trouve dans le fichier {\ttfamily output/config/client\+\_\+config.\+cfg} une fois le client compilé.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{client\_id = 1;}
+\DoxyCodeLine{server\_ip = "{}127.0.0.1"{};}
+\DoxyCodeLine{server\_port = 7799;}
+\end{DoxyCode}
+\hypertarget{md__readme_autotoc_md15}{}\doxysection{Développement}\label{md__readme_autotoc_md15}
+\hypertarget{md__readme_autotoc_md16}{}\doxysubsection{Debug}\label{md__readme_autotoc_md16}
+Il est possible d\textquotesingle{}activer le mode {\bfseries{D\+E\+B\+UG}} sur le serveur et le client en ajoutant {\bfseries{-\/D\+N\+D\+E\+B\+UG}} lors de la compilation.
+
+Dans le {\itshape Makefile} modifié la ligne comme ceci \+:
+
+{\ttfamily C\+F\+L\+A\+GS \+:= -\/Wall -\/Wextra -\/g -\/std=c99 -\/D\+N\+D\+E\+B\+UG}\hypertarget{md__readme_autotoc_md17}{}\doxysubsection{Protocole}\label{md__readme_autotoc_md17}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Code  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Client  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Server  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Détails   }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Code  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Client  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Server  }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Détails   }\\\cline{1-4}
+\endhead
+16  &C\+O\+N\+N\+E\+CT  &&\\\cline{1-4}
+17  &&C\+O\+N\+N\+E\+C\+T\+ED  &{\itshape Connected\+\_\+data} \+: (balance initiale, adversaire\+\_\+id)   \\\cline{1-4}
+18  &&F\+A\+I\+L\+ED  &L\textquotesingle{}utilisateur n\textquotesingle{}est pas présent dans la configuration serveur   \\\cline{1-4}
+19  &&G\+A\+M\+E\+\_\+\+S\+T\+A\+RT  &Max round count   \\\cline{1-4}
+20  &&R\+O\+U\+N\+D\+\_\+\+S\+T\+A\+RT  &(Envoie simultané aux deux clients \+: current\+\_\+round, délai de jeu)   \\\cline{1-4}
+21  &A\+C\+T\+I\+ON  &&(mise, action, tmps réaction)   \\\cline{1-4}
+22  &&R\+O\+U\+N\+D\+\_\+\+E\+ND  &Envoie des résultats (vainqueur, perdant)   \\\cline{1-4}
+23  &&G\+A\+M\+E\+\_\+\+E\+ND  &(round == max\+Round $|$$|$ balance == 0)   \\\cline{1-4}
+24  &&D\+I\+S\+C\+O\+N\+N\+E\+CT  &\\\cline{1-4}
+24  &D\+I\+S\+C\+O\+N\+N\+E\+CT  &&\\\cline{1-4}
+\end{longtabu}

@@ -119,3 +119,6 @@ run: all
 	timeout 2 ./$(SERVER_OUTPUTMAIN)&
 	./$(CLIENT_OUTPUTMAIN)
 	@echo Executing 'run: all' complete!
+
+documentation:
+	doxygene
