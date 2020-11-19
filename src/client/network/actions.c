@@ -9,7 +9,7 @@ void settle_action(Encapsulation *packet)
     {
     case CONNECTED:
     {
-        Connected_data *data = (Connected_data *)packet->data;
+        Connected_data *data = (Connected_data *) packet->data;
         on_connected_action(data);
         break;
     }
@@ -22,15 +22,21 @@ void settle_action(Encapsulation *packet)
 
     case GAME_START:
     {
-        Game_Start_data *data = (Game_Start_data *)packet->data;
+        Game_Start_data *data = (Game_Start_data *) packet->data;
         on_game_start_action(data);
         break;
     }
 
     case ROUND_START:
     {
-        Round_Start_data *data = (Round_Start_data *)packet->data;
+        Round_Start_data *data = (Round_Start_data *) packet->data;
         on_round_start_action(data);
+        break;
+    }
+    case ROUND_END:
+    {
+        Game *data = (Game *) packet->data;
+        on_round_end_action(data);       
         break;
     }
     }

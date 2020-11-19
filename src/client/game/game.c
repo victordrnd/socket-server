@@ -1,8 +1,6 @@
-#ifndef GAME_HEADER_H
-#define GAME_HEADER_H
 #include "game.h"
 #include "../utils/config.h"
-
+#include <time.h>
 Game *game;
 
 /**
@@ -45,6 +43,10 @@ void game_set_action(enum actions action){
     game->action = action;
 }
 
+
+void game_set_react_time(clock_t round_start_time, clock_t action_clicked_time){
+    game->react_time = action_clicked_time - round_start_time;
+}
 void game_set_max_rounds(unsigned int maxrounds){
     game->total_rounds = maxrounds;
 }
@@ -52,5 +54,10 @@ void game_set_max_rounds(unsigned int maxrounds){
 Game *get_game(){
     return game;
 }
+void set_game(Game *game_v){
+    game = game_v;
+}
 
-#endif
+void game_set_balance(unsigned int balance){
+    game->balance = balance;;
+}

@@ -30,10 +30,10 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
     }
     if (previousToggledBtn != button)
     {
-        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) button);
+        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)button);
         gtk_style_context_add_class(context, "selected");
 
-        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *) previousToggledBtn);
+        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *)previousToggledBtn);
         gtk_style_context_remove_class(PreviousButtoncontext, "selected");
 
         previousToggledBtn = button;
@@ -47,24 +47,16 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
  * @param seconds time to go to 0
  * @param fps fraps per seconds for animation
  */
-void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
+void activate_countdown(GtkProgressBar *progress_bar, double seconds, double fps)
 {
     gtk_widget_show((GtkWidget *)progress_bar);
     gtk_progress_bar_set_show_text(progress_bar, TRUE);
-    for (int i = seconds * fps; i >= 0; i--)
+    for (int i = 0; i <= seconds * fps; i++)
     {
-        gdouble fraction = (i * (1.0 / seconds)) / fps;
-        if ((i / (fps / 10)) % 10 == 0)
-        {
-            char *res = (char *)malloc(3 * sizeof(char));
-            sprintf(res, "%.f s", (double)i / fps);
-            gtk_progress_bar_set_text(progress_bar, res);
-            free(res);
-        }
-        gtk_progress_bar_set_fraction(progress_bar, fraction);
+        delay(1000 / fps);
+        gtk_progress_bar_set_fraction(progress_bar, (seconds * fps - i) / (seconds * fps));
         while (gtk_events_pending())
             gtk_main_iteration();
-        delay(1000 / fps);
     }
     gtk_widget_hide((GtkWidget *)progress_bar);
 }
@@ -80,7 +72,6 @@ void stop_count_down(GtkProgressBar *progress_bar)
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }
 
-
 /**
  * @brief Activate or desactivate action buttons
  * 
@@ -95,16 +86,17 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
 }
 
-void radio_bet_button(GtkBuilder *builder, gboolean sensitive){
+void radio_bet_button(GtkBuilder *builder, gboolean sensitive)
+{
 
-    GtkButton *mise_10 = (GtkButton * ) gtk_builder_get_object(builder,"mise_10");
-    GtkButton *mise_25 = (GtkButton * ) gtk_builder_get_object(builder,"mise_25");
-    GtkButton *mise_50 = (GtkButton * ) gtk_builder_get_object(builder,"mise_50");
-    GtkButton *mise_75 = (GtkButton * ) gtk_builder_get_object(builder,"mise_75");
-    GtkButton *mise_100 = (GtkButton * ) gtk_builder_get_object(builder,"mise_100");
-    gtk_widget_set_sensitive(mise_10,sensitive);
-    gtk_widget_set_sensitive(mise_25,sensitive);
-    gtk_widget_set_sensitive(mise_50,sensitive);
-    gtk_widget_set_sensitive(mise_75,sensitive);
-    gtk_widget_set_sensitive(mise_100,sensitive);
+    GtkButton *mise_10 = (GtkButton *)gtk_builder_get_object(builder, "mise_10");
+    GtkButton *mise_25 = (GtkButton *)gtk_builder_get_object(builder, "mise_25");
+    GtkButton *mise_50 = (GtkButton *)gtk_builder_get_object(builder, "mise_50");
+    GtkButton *mise_75 = (GtkButton *)gtk_builder_get_object(builder, "mise_75");
+    GtkButton *mise_100 = (GtkButton *)gtk_builder_get_object(builder, "mise_100");
+    gtk_widget_set_sensitive(mise_10, sensitive);
+    gtk_widget_set_sensitive(mise_25, sensitive);
+    gtk_widget_set_sensitive(mise_50, sensitive);
+    gtk_widget_set_sensitive(mise_75, sensitive);
+    gtk_widget_set_sensitive(mise_100, sensitive);
 }

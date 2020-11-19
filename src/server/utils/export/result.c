@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <libconfig.h>
-#include <assert.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -16,19 +14,11 @@
  */
 void open_csv(char *filename){
 
-    printf("\n Creating %s.csv file",filename);
     FILE *file;
 
     filename=strcat(filename,".csv");
 
     file = fopen(filename,"w");
-
-    if(file == NULL){
-        printf("Fichier pas trouvé, création en cours\n");
-    }else{
-        printf("Fichier créé, prêt à êre utilisé\n");
-        fclose(file);
-    }   
 }
 
 
@@ -38,14 +28,12 @@ void open_csv(char *filename){
  * @param  *filename: 
  * @retval None
  */
-void write_header(char *filename){
+void write_header(const char *filename){
 
     FILE* file = fopen(filename,"a+");
     
     if(file != NULL){
-        fprintf(file,"react_time;bet;balance;current_round;total_rounds;action\n");
-        printf("writing header\n");
-        
+        fprintf(file,"client_id;react_time;bet;balance;current_round;total_rounds;action\n");        
     }else{
         printf("Error writing header\n");
         
@@ -61,15 +49,12 @@ void write_header(char *filename){
  * @param  data: 
  * @retval None
  */
-void write_line(char *filename,Game *data) {
+void write_line(const char *filename,Game *data,int client_id) {
 
     FILE* file = fopen(filename,"a+");
 
     if(file != NULL){
-        fprintf(file,"%d;%d;%d;%d;%d;%d\n",data->react_time,data->bet,data->balance,data->current_round,data->total_rounds,data->action);
-
-    }else{
-        printf("Error writing header\n");
+        fprintf(file,"%d;%d;%d;%d;%d;%d;%x\n",client_id,data->react_time,data->bet,data->balance,data->current_round,data->total_rounds,data->action);
     }
     fclose(file);
 }

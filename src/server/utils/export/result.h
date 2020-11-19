@@ -5,7 +5,7 @@
 
 void open_csv(char *filename);
 
-void write_header(char *filename);
-void write_line(char *filename,Game *data);
+void write_header(const char *filename);
+void write_line(const char *filename,Game *data,int client_id);
 
 #endif

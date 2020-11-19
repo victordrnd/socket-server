@@ -41,15 +41,6 @@ int main(int argc, char** argv) {
     connection_t *connection;
     pthread_t thread;    
 
-    const char filename[] = "output/test";
-    
-    Game data;
-    open_csv(filename);
-    write_header(filename);
-    write_line(filename,&data);
-    write_line(filename,&data);
-    
-
     /* init array*/
     init_sockets_array();
     /* create socket */

@@ -40,9 +40,6 @@ typedef struct {
     __uint32_t round_duration;
 } Round_Start_data;
 
-typedef struct {
-    __uint32_t balance;
-} Round_End_data;
 
 typedef struct {
     __uint32_t balance;
