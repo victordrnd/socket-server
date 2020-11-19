@@ -13,6 +13,11 @@ void settle_action(Encapsulation *packet){
         break;
     }
 
+    case FAILED:{
+        on_failed_action();
+        break;
+    }
+
     case GAME_START:{
         Game_Start_data *data = (Game_Start_data *) packet->data;
         on_game_start_action(data);

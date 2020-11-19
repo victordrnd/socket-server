@@ -42,6 +42,10 @@ void send_round_start(int client1, int client2){
 
 }
 
+void on_action_receive(){
+    
+}
+
 void settle_action(Encapsulation *packet)
 {
     switch (packet->action)
