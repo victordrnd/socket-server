@@ -1,16 +1,10 @@
 # ICS - Dilemme du prisonnier
 
 ## Contexte 
-L’ICS (institue of Cognitives Sciences) est un laboratoire interdisciplinaire qui intègre l'expertise de
-chercheurs des Sciences de la Vie (psychologie cognitive, neurosciences) et de médecine (pédopsychiatrie, neuro-pediatrie) avec celle de chercheurs des Sciences Humaines et Sociales
-(linguistique computationelle et théorique et philosophie) pour étudier la nature et la spécificité de
-l'esprit humain. 
+L’ICS (institue of Cognitives Sciences) est un laboratoire interdisciplinaire qui intègre l'expertise de chercheurs des Sciences de la Vie (psychologie cognitive, neurosciences) et de médecine (pédopsychiatrie, neuro-pediatrie) avec celle de chercheurs des Sciences Humaines et Sociales (linguistique computationelle et théorique et philosophie) pour étudier la nature et la spécificité de l'esprit humain. 
 
-Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des données expérimentales. Il a
-besoin que des volontaires jouent l’un contre l’autre un nombre de fois à définir, sans jamais savoir
-qui sont leurs adversaires.
-On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une
-confrontation trahison-collaboration entre les deux volontaires.
+Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des données expérimentales. Il a besoin que des volontaires jouent l’un contre l’autre un nombre de fois à définir, sans jamais savoir qui sont leurs adversaires.
+On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une confrontation trahison-collaboration entre les deux volontaires.
 
 <h1 align="center">
     <img src="https://i.postimg.cc/523HnPsr/Capture-d-cran-du-2020-11-17-17-20-52.png" />
