@@ -21,6 +21,7 @@ void on_connect_action(Encapsulation *packet)
         }
     }else{
         //FAILED user not in config
+        send_packet(packet->sender_id, FAILED, NULL, 0);
     }
 }
 

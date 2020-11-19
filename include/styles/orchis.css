@@ -64,6 +64,11 @@
     border : 1px solid rgba(0,0,0,0.15);
   }
 
+  .error-label{
+    font-size: 55px;
+    color : #F28B82;
+
+  }
   
 
   .progressbar{

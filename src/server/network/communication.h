@@ -16,7 +16,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #define BUFFERSIZE 2048
-#define MAXSIMULTANEOUSCLIENTS 100
+#define MAXSIMULTANEOUSCLIENTS 50
 
 typedef struct
 {
