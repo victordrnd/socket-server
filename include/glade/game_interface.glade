@@ -5,12 +5,12 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="resource">/org/ics/include/images/betray.svg</property>
+    <property name="resource">/org/ics/include/images/betray.png</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="resource">/org/ics/include/images/collaborate.svg</property>
+    <property name="resource">/org/ics/include/images/collaborate.png</property>
   </object>
   <object class="GtkWindow" id="app_win">
     <property name="can_focus">False</property>
@@ -158,7 +158,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkLabel" id="cagnotte">
+                  <object class="GtkLabel" id="balance">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="margin_top">20</property>
@@ -195,8 +195,8 @@
                   <object class="GtkButton" id="betray_btn">
                     <property name="label" translatable="yes">Trahir</property>
                     <property name="name">betray_btn</property>
-                    <property name="visible">True</property>
                     <property name="sensitive">False</property>
+                    <property name="visible">True</property>
                     <property name="app_paintable">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -217,8 +217,8 @@
                 <child>
                   <object class="GtkButton" id="collaborate_btn">
                     <property name="label" translatable="yes">Collaborer</property>
-                    <property name="visible">True</property>
                     <property name="sensitive">False</property>
+                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
                     <property name="image">image2</property>

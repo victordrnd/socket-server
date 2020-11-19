@@ -3,7 +3,7 @@
 #include <assert.h>
 #include "game_ui.h"
 #include "../../game/game.h"
-GtkButton *previousToggledBtn = NULL;
+GtkWidget *previousToggledBtn = NULL;
 
 /**
  * @brief Stop execution for a delay
@@ -22,11 +22,11 @@ void delay(unsigned int msecs)
  * 
  * @param button button to toggle
  */
-void untoggle_previous_bet_btn(GtkBuilder *builder, GtkButton *button)
+void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
 {
     if (previousToggledBtn == NULL)
     {
-        previousToggledBtn = (GtkButton *)gtk_builder_get_object(builder, "mise_10"); //selected by default
+        previousToggledBtn = (GtkWidget *)gtk_builder_get_object(builder, "mise_10"); //selected by default
     }
     if (previousToggledBtn != button)
     {
@@ -37,11 +37,7 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkButton *button)
         gtk_style_context_remove_class(PreviousButtoncontext, "selected");
 
         previousToggledBtn = button;
-        g_print("%d\n", game_get_current_bet());
     }
-
-    // gtk_toggle_button_set_active(previousToggledBtn, FALSE);
-    // assert(gtk_toggle_button_get_active(previousToggledBtn) == FALSE);
 }
 
 /**
@@ -97,4 +93,18 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(builder, "collaborate_btn");
     gtk_widget_set_sensitive(betray_btn, sensitive);
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
+}
+
+void radio_bet_button(GtkBuilder *builder, gboolean sensitive){
+
+    GtkButton *mise_10 = (GtkButton * ) gtk_builder_get_object(builder,"mise_10");
+    GtkButton *mise_25 = (GtkButton * ) gtk_builder_get_object(builder,"mise_25");
+    GtkButton *mise_50 = (GtkButton * ) gtk_builder_get_object(builder,"mise_50");
+    GtkButton *mise_75 = (GtkButton * ) gtk_builder_get_object(builder,"mise_75");
+    GtkButton *mise_100 = (GtkButton * ) gtk_builder_get_object(builder,"mise_100");
+    gtk_widget_set_sensitive(mise_10,sensitive);
+    gtk_widget_set_sensitive(mise_25,sensitive);
+    gtk_widget_set_sensitive(mise_50,sensitive);
+    gtk_widget_set_sensitive(mise_75,sensitive);
+    gtk_widget_set_sensitive(mise_100,sensitive);
 }

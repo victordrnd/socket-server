@@ -23,7 +23,7 @@
 #include <stdbool.h>
 #include <assert.h>
 
-#include "./network/srvcxnmanager.h"
+#include "./network/communication.h"
 #include "utils/config.h"
 
 /*
@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
         return -5;
     }
 
-    printf("ready and listening\n");
+    printf("Ready and listening...\n");
 
     //Wait for connection
     while (true) {

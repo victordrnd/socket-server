@@ -5,9 +5,12 @@
 
 #include "config.h"
 #ifndef NDEBUG
-#include <stdbool.h>
 #include "../../common/tests/network/network.h"
+#include "../../common/tests/logs/logs.h"
 #endif
+
+
+Config *conf = NULL;
 
 /**
  * @brief Parse only game_configuration section of config file
@@ -19,29 +22,29 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
 {
     game_configuration->nb_room = config_setting_length(settings);
     assert(game_configuration->nb_room > 0);
-    game_configuration->rooms = (Room *) malloc((int)game_configuration->nb_room * sizeof(Room));
+    game_configuration->rooms = (Room *)malloc((int)game_configuration->nb_room * sizeof(Room));
     Room *wp = game_configuration->rooms;
     assert(sizeof(*wp) == sizeof(Room));
-    for (int i = 0; i < (int) game_configuration->nb_room; ++i)
+    for (int i = 0; i < (int)game_configuration->nb_room; ++i)
     {
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
-        config_setting_lookup_string(current_room_config, "name", (const char** ) &wp->name);
-        config_setting_lookup_int(current_room_config, "initial_amount", &wp->initial_amount);
-        config_setting_lookup_int(current_room_config, "nb_games", &wp->nb_games);
+        config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
+        config_setting_lookup_int(current_room_config, "initial_amount",(int *) &wp->initial_amount);
+        config_setting_lookup_int(current_room_config, "nb_rounds",(int *) &wp->nb_rounds);
 
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
-        assert(wp->nb_games > 0);
+        assert(wp->nb_rounds > 0);
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
-        wp->clients_name = (char **)malloc(nb_players * sizeof(char *));
+        wp->clients_id = (unsigned int *)malloc(nb_players * sizeof(int));
         for (int j = 0; j < nb_players; j++)
         {
-            wp->clients_name[j] = (char *)malloc(25 * sizeof(char));
+            // wp->clients_id[j] = malloc(sizeof(char));
             const config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
-            config_setting_lookup_string(client_name_config, "name",(const char **) &wp->clients_name[j]);
-            assert(strlen(wp->clients_name[j]) > 1);
+            config_setting_lookup_int(client_name_config, "client_id", (int *)&wp->clients_id[j]);
+            assert(wp->clients_id[j] > 0);
         }
         game_configuration->rooms[i] = *wp;
         wp++;
@@ -70,14 +73,18 @@ void read_config(Config *configuration, char *filename)
     {
         assert(sizeof(cfg) == sizeof(config_t));
         config_lookup_string(&cfg, "bind_ip", &configuration->bind_ip);
-        config_lookup_int(&cfg, "bind_port",(int *) &configuration->bind_port);
-        config_lookup_int(&cfg, "max_simultaneous_connection",(int *) &configuration->max_simultaneous_connection);
+        config_lookup_int(&cfg, "bind_port", (int *)&configuration->bind_port);
+        config_lookup_int(&cfg, "max_simultaneous_connection", (int *)&configuration->max_simultaneous_connection);
 
         setting = config_lookup(&cfg, "game_configuration");
-        GameConfiguration *game_configuration = (GameConfiguration *) malloc(sizeof(GameConfiguration));;
+        GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
+        
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
+
+        conf = configuration;
     }
+
 #ifndef NDEBUG
     assert(configuration->bind_port > 1024);
     assert(configuration->max_simultaneous_connection == 50);
@@ -86,8 +93,66 @@ void read_config(Config *configuration, char *filename)
     strcpy(ip, configuration->bind_ip);
     assert(is_ip_valid(ip) == true);
     free(ip);
-    printf("server ip : %s\n", configuration->bind_ip);
-    printf("server port : %d\n", configuration->bind_port);
-    printf("max simultaneous connection : %d\n", configuration->max_simultaneous_connection);
+    debug_print_server_config(configuration->bind_ip, configuration->bind_port, configuration->max_simultaneous_connection);
 #endif
+}
+
+bool is_client_exists(unsigned int client_id) {
+
+    GameConfiguration *game_config = conf->game_config;
+
+    for(int i=0; i<game_config->nb_room; i++) //verifier si l'id du client est bien dans le fichier de configuration
+    { 
+        Room current_room = game_config->rooms[i];
+        unsigned int *wp = current_room.clients_id; //wp = working pointer
+
+        while(wp != NULL)
+        {
+            if(*wp == client_id)
+            {
+                return true;
+            }
+            wp++;
+        }
+    }
+    return false;
+}
+
+Room* get_client_room(unsigned int client_id){
+
+    GameConfiguration *game_config = conf->game_config;
+
+    for(int i=0; i<game_config->nb_room; i++)
+    {
+        Room *current_room = &game_config->rooms[i];
+
+        for(int j = 0; j < 2; j++){
+            if(current_room->clients_id[j] == client_id)
+                return current_room;
+        }
+    }
+    return NULL;
+}
+
+int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
+{ 
+    Room *current_room = get_client_room(client_id);
+    unsigned int *wp = current_room->clients_id;
+    while (wp !=NULL)
+    {
+        if (*wp != client_id)
+        {
+            return *wp;
+        }
+        wp++;
+    }
+    return -1;
+}
+
+unsigned int get_max_round_count(Room *room){
+    return room->nb_rounds;
+}
+
+unsigned int get_initial_amount(Room *room) {
+    return room->initial_amount;
 }

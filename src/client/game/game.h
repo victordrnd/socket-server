@@ -6,4 +6,6 @@ void init_game(Game *game);
 void game_set_current_bet(unsigned int bet);
 int game_get_current_bet();
 void game_set_action(enum actions action);
+void game_set_max_rounds(unsigned int maxrounds);
+Game *get_game();
 #endif

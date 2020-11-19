@@ -1,13 +1,15 @@
 #ifndef CONFIG_HEADER_FILE_H
 #define CONFIG_HEADER_FILE_H
 
+#include <stdbool.h>
+
 
 typedef struct
 {
     const char *name;
-    int nb_games;
-    int initial_amount;
-    char **clients_name;
+    unsigned int nb_rounds;
+    unsigned int initial_amount;
+    unsigned int *clients_id;
 } Room;
 
 typedef struct
@@ -25,6 +27,12 @@ typedef struct
 } Config;
 
 void read_config(Config *configuration, char *filename);
+int get_opponent_id(unsigned int client_id);
+bool is_client_exists(unsigned int client_id);
+Room* get_client_room(unsigned int client_id);
+
+unsigned int get_max_round_count(Room *room);
+unsigned int get_initial_amount(Room *room);
 
 
 #endif //!CONFIG_HEADER_FILE_H
