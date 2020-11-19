@@ -67,7 +67,7 @@ void *listen_socket_thread_process(void *ptr)
     char buffer_in[BUFFERSIZE];
     int sockfd = *((int *)ptr);
     int len;
-    while ((len = read(sockfd, buffer_in, BUFFERSIZE)) != 0)
+    while ((len = read(sockfd, buffer_in, sizeof(Encapsulation))) != 0)
     {
         unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
         memcpy(buffer, buffer_in, sizeof(Encapsulation));

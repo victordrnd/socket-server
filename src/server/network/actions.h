@@ -16,5 +16,6 @@ void send_round_start(int client1, int client2);
 void on_action_received();
 void settle_action(Encapsulation *packet);
 bool check_oppponent_connected(unsigned int client_id);
+Session *check_if_opponent_played(unsigned int opponent_id);
 
 #endif

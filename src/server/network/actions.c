@@ -4,7 +4,7 @@
 #include "../../common/tests/logs/logs.h"
 #include "../utils/config.h"
 
-Session *sessions;
+Session *sessions[MAXSIMULTANEOUSCLIENTS];
 
 void on_connect_action(Encapsulation *packet)
 {
@@ -19,8 +19,12 @@ void on_connect_action(Encapsulation *packet)
         {
             send_game_start(packet, room);
         }
-    }else{
+    }
+    else
+    {
         send_packet(packet->sender_id, FAILED, NULL, 0);
+        connection_t *cnx = get_connection(packet->sender_id);
+        del(cnx);
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mFAILED\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
     }
 }
@@ -47,11 +51,13 @@ void send_round_start(int client1, int client2)
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client2);
 }
 
-void on_action_received(Encapsulation *packet){
-    Game *game = (Game *) packet->data;
+void on_action_received(Encapsulation *packet)
+{
+    Game *game = (Game *)packet->data;
     unsigned int opponent_id = get_opponent_id(packet->sender_id);
     Session *opponent_session = check_if_opponent_played(opponent_id);
-    if(opponent_session != NULL){
+    if (opponent_session != NULL)
+    {
         Game *opponnent_game = opponent_session->game;
         //Process results
     }
@@ -73,7 +79,8 @@ void settle_action(Encapsulation *packet)
 
         break;
     }
-    case ACTION: {
+    case ACTION:
+    {
         debug_print("\033[1;32m#%d\033[0m sent \033[0;32mACTION\033[0m action.\n", packet->sender_id);
         on_action_received(packet);
         break;
@@ -92,11 +99,15 @@ bool check_oppponent_connected(unsigned int client_id)
     }
 }
 
-
-Session *check_if_opponent_played(unsigned int opponent_id){
-    for(int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++){
-        if(sessions[i].client_id == opponent_id)
-            return &sessions[i];
+Session *check_if_opponent_played(unsigned int opponent_id)
+{
+    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
+    {
+        if (sessions[i] != NULL)
+        {
+            if (sessions[i]->client_id == opponent_id)
+                return sessions[i];
+        }
     }
     return NULL;
 }

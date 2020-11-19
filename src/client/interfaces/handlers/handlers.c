@@ -2,6 +2,7 @@
 #include "../game_ui/game_ui.h"
 #include "../../../common/game.h"
 #include "../../game/game.h"
+#include "../../network/actions.h"
 
 GtkBuilder *builder = NULL;
 /**
@@ -70,8 +71,8 @@ void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
     toggle_action_button(builder, FALSE);
     game_set_action(BETRAY);
     GtkProgressBar *progressbar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progressbar, 20, 20);
-    toggle_action_button(builder, TRUE);
+    //stop_count_down(progressbar);
+    send_action_packet(get_game());
 }
 
 /**
@@ -85,8 +86,8 @@ void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
     toggle_action_button(builder, FALSE);
     game_set_action(COLLABORATE);
     GtkProgressBar *progressbar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progressbar, 20, 20);
-    toggle_action_button(builder, TRUE);
+    //stop_count_down(progressbar);
+    send_action_packet(get_game());
 }
 
 void on_connected_action(Connected_data *data)
@@ -113,7 +114,7 @@ void on_failed_action()
 void on_game_start_action(Game_Start_data *data)
 {
 
-    GtkWindow *window = (GtkLabel *)gtk_builder_get_object(builder, "app_win");
+    GtkWindow *window = (GtkWindow *)gtk_builder_get_object(builder, "app_win");
     game_set_max_rounds(data->max_rounds);
     char title[50];
     sprintf(title, "Round 1 / %d", data->max_rounds);
@@ -126,7 +127,7 @@ void on_round_start_action(Connected_data *data)
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
     gtk_label_set_label(label, "La partie va bientôt commencer");
 
-    GtkSpinner *spinner_central = (GtkSpinner *)gtk_builder_get_object(builder, "spinner_central");
+    GtkWidget *spinner_central = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
     gtk_widget_hide(spinner_central);
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
