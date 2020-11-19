@@ -21,9 +21,9 @@ Connection *cnx;
  */
 void init_communication(Config *configuration)
 {
-    cnx = open_connection(configuration); 
-    send_packet(CONNECT, NULL,(size_t) 0);
-    
+    cnx = open_connection(configuration);
+    send_packet(CONNECT, NULL, (size_t)0);
+
     //Creation d'un pthread de lecture
     pthread_create(&threads.socket_thread, 0, listen_socket_thread_process, &cnx->sock);
     //write(connection->sock,"Main APP Still running",15);
@@ -75,9 +75,13 @@ void *listen_socket_thread_process(void *ptr)
     int len;
     while ((len = read(sockfd, buffer_in, BUFFERSIZE)) != 0)
     {
-        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
-        memcpy(buffer, buffer_in, sizeof(Encapsulation));
-        Encapsulation *packet = (Encapsulation *)buffer;
+        for(int i = 0; i < len / sizeof(Encapsulation); i++)
+        {
+            unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+            memcpy(buffer, (buffer_in + i*sizeof(Encapsulation)), sizeof(Encapsulation));
+            Encapsulation *packet = (Encapsulation *)buffer;
+            settle_action(packet);
+        }
         //  printf("DEBUG-----------------------------------------------------------\n");
         // // printf("len : %i\n", len);
         // printf("Buffer : ");
@@ -90,7 +94,6 @@ void *listen_socket_thread_process(void *ptr)
         // printf("Packet size : %d\n", sizeof(Encapsulation));
         // printf("Timestamp : %lld\n", (long long)packet->timestamp);
         // printf("----------------------------------------------------------------\n");
-        settle_action(packet);
     }
     close_connection();
     return NULL;

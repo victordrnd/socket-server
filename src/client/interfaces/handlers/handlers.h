@@ -13,6 +13,7 @@ void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder);
 void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder);
 
 void on_connected_action(Connected_data *data);
-
+void on_game_start_action(Game_Start_data *data);
+void on_round_start_action(Connected_data *data);
 void gtk_set_builder(GtkBuilder *builder);
 #endif

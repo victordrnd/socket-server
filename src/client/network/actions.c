@@ -14,13 +14,15 @@ void settle_action(Encapsulation *packet){
     }
 
     case GAME_START:{
-        Connected_data *data = (Game_Start_data *) packet->data;
+        Game_Start_data *data = (Game_Start_data *) packet->data;
         on_game_start_action(data);
+        break;
     }
 
     case ROUND_START:{
-        Connected_data *data = (Connected_data *) packet->data;
+        Round_Start_data *data = (Round_Start_data *) packet->data;
         on_round_start_action(data);
+        break;
     }
     
     default:

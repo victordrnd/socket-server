@@ -36,7 +36,9 @@ void send_game_start(Encapsulation *packet, Room* room){
 void send_round_start(int client1, int client2){
     Round_Start_data data = {10};
     send_packet(client1,ROUND_START,&data,sizeof(Round_Start_data));
+    debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client1);
     send_packet(client2,ROUND_START,&data,sizeof(Round_Start_data));
+    debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client2);
 
 }
 

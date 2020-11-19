@@ -108,7 +108,7 @@ void on_game_start_action(Game_Start_data *data){
 
 void on_round_start_action(Connected_data *data){
     GtkProgressBar *progress_bar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progress_bar, 10,30);
+    activate_countdown(progress_bar, 10,20);
     GtkLabel *label = (GtkLabel *) gtk_builder_get_object(builder, "info_label");
     gtk_label_set_label(label,"La partie va bientôt commencer");
 }
