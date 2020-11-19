@@ -8,6 +8,7 @@
 void on_connect_action(Encapsulation *packet);
 void send_game_start(Encapsulation *packet, Room* room);
 void send_round_start(int client1, int client2);
+void on_action_receive();
 void settle_action(Encapsulation *packet);
 bool check_oppponent_connected(unsigned int client_id);
 
