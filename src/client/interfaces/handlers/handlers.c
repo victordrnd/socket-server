@@ -99,11 +99,18 @@ void on_connected_action(Connected_data *data){
 
 void on_game_start_action(Game_Start_data *data){
 
+    GtkWindow *window = (GtkLabel *) gtk_builder_get_object(builder, "app_win");
     game_set_max_rounds(data->max_rounds);
+    char title[50];
+    sprintf(title, "Round 1 / %d", data->max_rounds);
+    gtk_window_set_title (window, title);
 }
 
 void on_round_start_action(Connected_data *data){
-    
+    GtkProgressBar *progress_bar = (GtkProgressBar *) gtk_builder_get_object(builder, "progressbar");
+    activate_countdown(progress_bar, 10,30);
+    GtkLabel *label = (GtkLabel *) gtk_builder_get_object(builder, "info_label");
+    gtk_label_set_label(label,"La partie va bientôt commencer");
 }
 
 void gtk_set_builder(GtkBuilder *buildr){
