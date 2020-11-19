@@ -8,3 +8,5 @@ output/*
 *.d
 *.gressource
 *.csv
+html/
+latex/
