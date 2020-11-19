@@ -60,6 +60,20 @@ void on_action_received(Encapsulation *packet)
     {
         Game *opponnent_game = opponent_session->game;
         //Process results
+        if(game->action == BETRAY){
+            if(opponnent_game->action == BETRAY){
+                game->balance -= game->bet;
+                opponnent_game->balance -= game->bet;
+            }else{ //Collaborate
+                game->balance += opponnent_game->bet;
+                opponnent_game->balance -= opponnent_game->bet;
+            }
+        }else{
+            if(opponnent_game->action == BETRAY){
+                game->balance -= game->bet;
+                opponnent_game->balance += game->bet;
+            }
+        }
     }
 }
 
