@@ -149,10 +149,8 @@ connection_t *get_connection(unsigned int client_id)
     {
         if (connections[i] != NULL)
         {
-            if (connections[i]->client_id == client_id){
-                printf("client_id : %d\n",client_id);
+            if (connections[i]->client_id == client_id)
                 return connections[i];
-            }
         }
     }
     return NULL;
