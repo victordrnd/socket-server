@@ -7,15 +7,11 @@
 
 void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint32_t destionation_id, enum verbs verb, void *data, size_t data_size)
 {
-    if (sender_id > 0)
-    {
-        destionation_id = 0; //0 is server 
-    }
     encapsulation->sender_id = sender_id;
     encapsulation->destination_id = destionation_id;
     encapsulation->timestamp = time(NULL);
     encapsulation->action = verb;
-    //encapsulation->sizeof_data = data_size;
+    encapsulation->sizeof_data = data_size;
     if (data != NULL)
     {
         memcpy(encapsulation->data, (const unsigned char *)data, data_size);
