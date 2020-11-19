@@ -6,6 +6,7 @@
 
 enum actions
 {
+    NOACTION,
     BETRAY,
     COLLABORATE
 };

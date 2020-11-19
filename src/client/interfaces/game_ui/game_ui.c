@@ -37,7 +37,6 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
         gtk_style_context_remove_class(PreviousButtoncontext, "selected");
 
         previousToggledBtn = button;
-        g_print("%d\n", game_get_current_bet());
     }
 }
 

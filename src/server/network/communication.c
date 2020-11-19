@@ -7,6 +7,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <assert.h>
+#include <netinet/tcp.h>
 
 #include "communication.h"
 #include "actions.h"
@@ -75,7 +76,7 @@ void *threadProcess(void *ptr)
 
     while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0)
     {
-        
+
         int size = sizeof(Encapsulation);
         unsigned char *buffer = (unsigned char *)malloc(size);
         memcpy(buffer, buffer_in, size);
@@ -132,7 +133,8 @@ int create_server_socket(Config *configuration)
     /* prevent the 60 secs timeout */
     int reuse = 1;
     setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, (const char *)&reuse, sizeof(reuse));
-
+     int flags = 1;
+    setsockopt(sockfd, SOL_SOCKET, TCP_NODELAY, (void *)&flags, sizeof(flags));
     /* bind */
     if (bind(sockfd, (struct sockaddr *)&address, sizeof(struct sockaddr_in)) < 0)
     {
@@ -162,6 +164,8 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
     encapsulate_data(&packet, 0, client_id, action, data, data_size);
 
     connection_t *connection = get_connection(client_id);
+   
+
     write(connection->sockfd, (const unsigned char *)&packet, sizeof(Encapsulation));
 #ifndef NDEBUG
     unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));

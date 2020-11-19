@@ -8,7 +8,6 @@
 
 #include "communication.h"
 #include "actions.h"
-// #include "../interfaces/launch.h"
 
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static app_threads_t threads;
@@ -28,9 +27,6 @@ void init_communication(Config *configuration)
     pthread_create(&threads.socket_thread, 0, listen_socket_thread_process, &cnx->sock);
     //write(connection->sock,"Main APP Still running",15);
     pthread_detach(threads.socket_thread);
-
-    pthread_create(&threads.stdin_thread, 0, listen_stdin_thread_process, cnx);
-    pthread_detach(threads.stdin_thread);
 }
 
 /**
@@ -48,12 +44,10 @@ Connection *open_connection(Config *configuration)
 
     cnx->sock = socket(AF_INET, SOCK_STREAM, 0);
 
-    //Configure settings of the server address
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(port);
     serverAddr.sin_addr.s_addr = inet_addr(configuration->ip);
     memset(serverAddr.sin_zero, '\0', sizeof serverAddr.sin_zero);
-    //Connect the socket to the server using the address
     if (connect(cnx->sock, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) != 0)
     {
         printf("Fail to connect to server");
@@ -75,46 +69,16 @@ void *listen_socket_thread_process(void *ptr)
     int len;
     while ((len = read(sockfd, buffer_in, BUFFERSIZE)) != 0)
     {
-        for(int i = 0; i < len / sizeof(Encapsulation); i++)
-        {
-            unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
-            memcpy(buffer, (buffer_in + i*sizeof(Encapsulation)), sizeof(Encapsulation));
-            Encapsulation *packet = (Encapsulation *)buffer;
-            settle_action(packet);
-        }
-        //  printf("DEBUG-----------------------------------------------------------\n");
-        // // printf("len : %i\n", len);
-        // printf("Buffer : ");
-        // for (int i = 0; i < sizeof(Encapsulation); i++)
-        //     printf("%02X ", buffer[i]);
-        // printf("\n");
-        // printf("Sender_id : %d\n", packet->sender_id);
-        // printf("Destination_id : %d\n", packet->destination_id);
-        // printf("Action : %d\n", packet->action);
-        // printf("Packet size : %d\n", sizeof(Encapsulation));
-        // printf("Timestamp : %lld\n", (long long)packet->timestamp);
-        // printf("----------------------------------------------------------------\n");
+        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+        memcpy(buffer, buffer_in, sizeof(Encapsulation));
+        printf("Received buffer len : %d\n", len);
+        Encapsulation *packet = (Encapsulation *)buffer;
+        settle_action(packet);
     }
     close_connection();
     return NULL;
 }
 
-void *listen_stdin_thread_process(void *ptr)
-{
-    Connection *cnx = (Connection *)ptr;
-    int status = cnx->status;
-    int sockfd = cnx->sock;
-    char msg[2048];
-    do
-    {
-        fgets(msg, 100, stdin);
-        pthread_mutex_lock(&mutex);
-        // printf("sending : %s\n", msg);
-        pthread_mutex_unlock(&mutex);
-        status = write(sockfd, msg, strlen(msg));
-    } while (status != -1);
-    return NULL;
-}
 
 void send_packet(enum verbs action, void *data, size_t data_size)
 {
