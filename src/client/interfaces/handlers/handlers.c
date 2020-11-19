@@ -144,6 +144,11 @@ void on_round_start_action(Connected_data *data)
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
     activate_countdown(progress_bar, 10, 20);
+
+    toggle_action_button(builder,TRUE);
+
+    gtk_label_set_label(label,"A vous de jouer!");
+
 }
 
 void gtk_set_builder(GtkBuilder *buildr)
