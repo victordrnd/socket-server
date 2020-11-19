@@ -7,3 +7,5 @@ output/*
 *.glade~
 *.d
 *.gressource
+html/
+latex/
