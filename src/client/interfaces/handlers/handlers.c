@@ -99,7 +99,6 @@ void on_connected_action(Connected_data *data){
     //Disable button
     //radio_bet_button(builder,FALSE);
     toggle_action_button(builder,FALSE);
-    
 
 }   
 
