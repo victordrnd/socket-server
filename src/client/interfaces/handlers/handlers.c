@@ -3,10 +3,10 @@
 #include "../../../common/game.h"
 #include "../../game/game.h"
 #include "../../network/actions.h"
-#include <time.h>
+#include <sys/time.h> 
 
 GtkBuilder *builder = NULL;
-time_t *round_start_time = NULL;
+struct timeval round_start_time;
 /**
  * @brief Mise 10 handler
  * 
@@ -72,7 +72,9 @@ void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
 {
     toggle_action_button(builder, FALSE);
     game_set_action(BETRAY);
-    GtkProgressBar *progressbar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
+    struct timeval action_clicked;
+    gettimeofday(&action_clicked, NULL);
+    game_set_react_time(round_start_time, action_clicked);
     send_action_packet(get_game());
 }
 
@@ -86,11 +88,11 @@ void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
 {
     toggle_action_button(builder, FALSE);
     game_set_action(COLLABORATE);
-    GtkProgressBar *progressbar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
+    struct timeval action_clicked;
+    gettimeofday(&action_clicked, NULL);
+    game_set_react_time(round_start_time, action_clicked);
     send_action_packet(get_game());
 }
-
-
 
 /////////////////////
 /* NETWORK HANDLERS*/
@@ -132,32 +134,32 @@ void on_round_start_action(Round_Start_data *data)
 {
 
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
-    gtk_label_set_label(label, "La partie va bientôt commencer");
+    gtk_label_set_label(label, "Le round va bientôt commencer");
 
     GtkWidget *spinner_central = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
     gtk_widget_hide(spinner_central);
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progress_bar, 10, 20);
+    activate_countdown(progress_bar, 15, 20);
 
-    toggle_action_button(builder,TRUE);
+    toggle_action_button(builder, TRUE);
 
-    gtk_label_set_label(label,"A vous de jouer!");
-    clock_t time = clock();
-    round_start_time = &time;
+    gtk_label_set_label(label, "A vous de jouer!");
+    gettimeofday(&round_start_time, NULL);
 }
 
-void on_round_end_action(Game *data){
-    game_next_round();
-    GtkWidget *spinner = (GtkWidget *) gtk_builder_get_object(builder, "spinner_central");
+void on_round_end_action(Game *data)
+{
+    GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
     gtk_widget_show(spinner);
     set_game(data);
-
+    game_next_round();
+    game_set_balance(data->balance);
+    game_set_action(data->action);
     //Modifie le titre de la fenêtre
     GtkWindow *window = (GtkWindow *)gtk_builder_get_object(builder, "app_win");
-    game_set_max_rounds(data->total_rounds);
     char title[50];
-    sprintf(title, "Round %d / %d",data->current_round ,data->total_rounds);
+    sprintf(title, "Round %d / %d", data->current_round, data->total_rounds);
     gtk_window_set_title(window, title);
 
     //modifier le label  balance data->balance
@@ -165,7 +167,33 @@ void on_round_end_action(Game *data){
     char amount[10];
     sprintf(amount, "$ %d", data->balance);
     gtk_label_set_label(label, amount);
+}
 
+void on_game_end_action(Game_End_data *data){
+    GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
+    GtkImage *image = (GtkImage *)gtk_builder_get_object(builder, "result_image");
+    GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
+    gtk_widget_hide(spinner);
+    switch (data->result)
+    {
+    case VICTORY:{
+        gtk_label_set_label(label, "VICTOIRE !");
+        break;
+    }
+    case DEFEAT:{
+        gtk_label_set_label(label, "DEFAITE !");
+        gtk_image_set_from_resource(image, "/org/ics/include/images/defeat.png");
+        break;
+    }
+    case EQUALITY: {
+        gtk_label_set_label(label, "EGALITE !");
+        gtk_image_set_from_resource(image, "/org/ics/include/images/equality.png");
+        break;
+    }    
+    default:
+        break;
+    }
+    gtk_widget_show((GtkWidget*) image);
 }
 
 void gtk_set_builder(GtkBuilder *buildr)

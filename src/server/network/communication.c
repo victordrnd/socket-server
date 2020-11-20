@@ -162,16 +162,6 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
 {
     Encapsulation packet;
     encapsulate_data(&packet, 0, client_id, action, data, data_size);
-
     connection_t *connection = get_connection(client_id);
-
     write(connection->sockfd, (const unsigned char *)&packet, sizeof(Encapsulation));
-#ifndef NDEBUG
-    unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
-    memcpy(buffer, (const unsigned char *)&packet, sizeof(Encapsulation));
-    // printf("Sending buffer : \n");
-    // for (int i = 0; i < sizeof(Encapsulation); i++)
-    //     printf("%02X ", buffer[i]);
-    // printf("\n");
-#endif
 }

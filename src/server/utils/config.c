@@ -41,7 +41,6 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         wp->clients_id = (unsigned int *)malloc(nb_players * sizeof(int));
         for (int j = 0; j < nb_players; j++)
         {
-            // wp->clients_id[j] = malloc(sizeof(char));
             const config_setting_t *client_name_config = config_setting_get_elem(clients_room_config, j);
             config_setting_lookup_int(client_name_config, "client_id", (int *)&wp->clients_id[j]);
             assert(wp->clients_id[j] > 0);
@@ -101,11 +100,9 @@ bool is_client_exists(unsigned int client_id) {
 
     GameConfiguration *game_config = conf->game_config;
 
-    for(int i=0; i<game_config->nb_room; i++) //verifier si l'id du client est bien dans le fichier de configuration
-    { 
+    for(unsigned int i=0; i<game_config->nb_room; i++){ 
         Room current_room = game_config->rooms[i];
-        unsigned int *wp = current_room.clients_id; //wp = working pointer
-
+        unsigned int *wp = current_room.clients_id;
         while(wp != NULL)
         {
             if(*wp == client_id)
@@ -122,7 +119,7 @@ Room* get_client_room(unsigned int client_id){
 
     GameConfiguration *game_config = conf->game_config;
 
-    for(int i=0; i<game_config->nb_room; i++)
+    for(unsigned int i=0; i<game_config->nb_room; i++)
     {
         Room *current_room = &game_config->rooms[i];
 

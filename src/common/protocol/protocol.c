@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
+#include <assert.h>
 #include "protocol.h"
 #include "../game.h"
 
@@ -10,6 +10,7 @@ void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint
     if(destionation_id > 0){
         sender_id = 0;
     }
+    assert(data_size <= MAXPACKETSIZE);
     encapsulation->sender_id = sender_id;
     encapsulation->destination_id = destionation_id;
     encapsulation->timestamp = time(NULL);
@@ -18,62 +19,5 @@ void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint
     if (data != NULL)
     {
         memcpy(encapsulation->data, (const unsigned char *)data, data_size);
-    }
-}
-
-void parse_verbs_data(Encapsulation *encapsulation)
-{
-    switch (encapsulation->action)
-    {
-    case CONNECT:
-    {
-
-        break;
-    }
-    case CONNECTED:
-    { //Renvoi la cagnotte inital et le nom de l'adversaire
-
-        //Game *dataGame = (Game *) encapsulation->data;
-
-        break;
-    }
-    case FAILED:
-    {
-
-        //encapsulation->data = NULL;
-
-        break;
-    }
-
-    case GAME_START:
-    {
-
-        break;
-    }
-    case ROUND_START:
-    {
-
-        break;
-    }
-    case ACTION:
-    {
-
-        break;
-    }
-    case ROUND_END:
-    {
-
-        break;
-    }
-    case GAME_END:
-    {
-
-        break;
-    }
-    case DISCONNECT:
-    {
-
-        break;
-    }
     }
 }

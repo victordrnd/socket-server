@@ -39,6 +39,10 @@ void settle_action(Encapsulation *packet)
         on_round_end_action(data);       
         break;
     }
+    case GAME_END:{
+        Game_End_data *data = (Game_End_data *) packet->data;
+        on_game_end_action(data);
+    }
     }
 }
 

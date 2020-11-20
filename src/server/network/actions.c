@@ -7,18 +7,24 @@
 
 Session *sessions[MAXSIMULTANEOUSCLIENTS];
 
-void add_session(Session *session){
-    for(int i=0; i < MAXSIMULTANEOUSCLIENTS; i++){
-        if(sessions[i] == NULL){
+void add_session(Session *session)
+{
+    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
+    {
+        if (sessions[i] == NULL)
+        {
             sessions[i] = session;
             continue;
         }
     }
 }
 
-void remove_session(Session *session){
-    for(int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++){
-        if(session == sessions[i]){
+void remove_session(Session *session)
+{
+    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
+    {
+        if (session == sessions[i])
+        {
             sessions[i] = NULL;
             continue;
         }
@@ -61,8 +67,7 @@ void send_game_start(Encapsulation *packet, Room *room)
     send_round_start(packet->sender_id);
     send_round_start(opponent);
 
-
-    open_csv(room->name);
+    open_csv((char *)room->name);
     write_header(room->name);
 }
 
@@ -76,7 +81,7 @@ void send_round_start(unsigned int client_id)
 void send_round_end(unsigned int client_id, Game *game)
 {
     send_packet(client_id, ROUND_END, game, sizeof(Game));
-    debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
+    debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_END\033[0m to \033[1;32m#%d\033[0m. %d/%d\n", client_id, game->current_round, game->total_rounds);
 }
 
 void on_action_received(Encapsulation *packet)
@@ -111,22 +116,45 @@ void on_action_received(Encapsulation *packet)
         Room *room = get_client_room(packet->sender_id);
         game->action = NOACTION;
         opponnent_game->action = NOACTION;
-        game->total_rounds = get_max_round_count(room);
-        opponnent_game->total_rounds = get_max_round_count(room);
         write_line(room->name, game, packet->sender_id);
-        write_line(room->name, opponnent_game,opponent_session->client_id);
+        write_line(room->name, opponnent_game, opponent_session->client_id);
         send_round_end(packet->sender_id, game);
-        send_round_end(opponent_id, game);
+        send_round_end(opponent_id, opponnent_game);
         remove_session(opponent_session);
-        printf("max round : %d\n", get_max_round_count(room));
-        if(game->current_round < get_max_round_count(room)){
+        if (game->current_round < get_max_round_count(room))
+        {
             send_round_start(packet->sender_id);
             send_round_start(opponent_id);
         }
-    }else{
-        Session current_session = {packet->sender_id,game};
+        else
+        {
+            if (game->balance > opponnent_game->balance)
+            {
+                send_game_end(packet->sender_id, VICTORY);
+                send_game_end(opponent_id, DEFEAT);
+            }
+            else if (game->balance < opponnent_game->balance)
+            {
+                send_game_end(packet->sender_id, DEFEAT);
+                send_game_end(opponent_id, VICTORY);
+            }else{
+                send_game_end(packet->sender_id, EQUALITY);
+                send_game_end(opponent_id, EQUALITY);
+            }
+        }
+    }
+    else
+    {
+        Session current_session = {packet->sender_id, game};
         add_session(&current_session);
     }
+}
+
+void send_game_end(unsigned int client_id, enum results winner)
+{
+    Game_End_data data = {winner};
+    send_packet(client_id, GAME_END, &data, sizeof(Game_End_data));
+    debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
 
 void settle_action(Encapsulation *packet)
@@ -163,6 +191,7 @@ bool check_oppponent_connected(unsigned int client_id)
         int opponent = get_opponent_id(client_id);
         return get_connection(opponent) != NULL;
     }
+    return false;
 }
 
 Session *check_if_opponent_played(unsigned int opponent_id)

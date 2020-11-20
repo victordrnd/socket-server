@@ -12,7 +12,7 @@ enum actions
 };
 
 typedef struct {
-    int react_time;
+    double react_time;
     unsigned int bet;
     unsigned int balance;
     unsigned int current_round;

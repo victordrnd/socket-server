@@ -9,7 +9,6 @@
 #include "communication.h"
 #include "actions.h"
 
-static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static app_threads_t threads;
 Connection *cnx;
 
@@ -71,7 +70,7 @@ void *listen_socket_thread_process(void *ptr)
     {
         unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
         memcpy(buffer, buffer_in, sizeof(Encapsulation));
-        printf("Received buffer len : %d\n", len);
+        // printf("Received buffer len : %d\n", len);
         Encapsulation *packet = (Encapsulation *)buffer;
         settle_action(packet);
     }
