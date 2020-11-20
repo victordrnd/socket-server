@@ -30,14 +30,13 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
     }
     if (previousToggledBtn != button)
     {
-        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) button);
+        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)button);
         gtk_style_context_add_class(context, "selected");
 
-        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *) previousToggledBtn);
+        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *)previousToggledBtn);
         gtk_style_context_remove_class(PreviousButtoncontext, "selected");
 
         previousToggledBtn = button;
-        g_print("%d\n", game_get_current_bet());
     }
 }
 
@@ -81,7 +80,6 @@ void stop_count_down(GtkProgressBar *progress_bar)
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }
 
-
 /**
  * @brief Activate or desactivate action buttons
  * 
@@ -94,4 +92,19 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(builder, "collaborate_btn");
     gtk_widget_set_sensitive(betray_btn, sensitive);
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
+}
+
+void radio_bet_button(GtkBuilder *builder, gboolean sensitive)
+{
+
+    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(builder, "mise_10");
+    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(builder, "mise_25");
+    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(builder, "mise_50");
+    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(builder, "mise_75");
+    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(builder, "mise_100");
+    gtk_widget_set_sensitive(mise_10, sensitive);
+    gtk_widget_set_sensitive(mise_25, sensitive);
+    gtk_widget_set_sensitive(mise_50, sensitive);
+    gtk_widget_set_sensitive(mise_75, sensitive);
+    gtk_widget_set_sensitive(mise_100, sensitive);
 }

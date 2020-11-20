@@ -41,9 +41,7 @@ void init_main_window(int argc, char **argv)
     gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);
     gtk_set_builder(builder);
-    g_signal_connect(G_OBJECT(win), "destroy",(GCallback) close_main_window, NULL);
-    //init_waiting_room();
-    
+    g_signal_connect(G_OBJECT(win), "destroy",(GCallback) close_main_window, NULL); 
 }
 
 

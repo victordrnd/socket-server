@@ -6,16 +6,17 @@
 
 enum actions
 {
+    NOACTION,
     BETRAY,
     COLLABORATE
 };
 
 typedef struct {
-    int react_time;
-    int bet;
-    int balance;
-    int current_round;
-    int total_rounds;
+    double react_time;
+    unsigned int bet;
+    unsigned int balance;
+    unsigned int current_round;
+    unsigned int total_rounds;
     enum actions action;
 } Game;
 

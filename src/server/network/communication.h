@@ -16,7 +16,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 #define BUFFERSIZE 2048
-#define MAXSIMULTANEOUSCLIENTS 100
+#define MAXSIMULTANEOUSCLIENTS 50
 
 typedef struct
 {
@@ -33,6 +33,8 @@ void del(connection_t *connection);
 void *threadProcess(void *ptr);
 int create_server_socket(Config *configuration);
 
+connection_t *get_connection(unsigned int client_id);
 void send_packet(unsigned int client_id, enum verbs action, void *data, size_t data_size);
+
 
 #endif /* SRVCXNMANAGER_H */

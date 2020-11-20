@@ -26,6 +26,8 @@
 #include "./network/communication.h"
 #include "utils/config.h"
 
+#include "utils/export/result.h"
+
 /*
  *
  */
@@ -37,8 +39,7 @@ int main(int argc, char** argv) {
     int sockfd = -1;
     int index = 1;
     connection_t *connection;
-    pthread_t thread;
-
+    pthread_t thread;    
 
     /* init array*/
     init_sockets_array();
