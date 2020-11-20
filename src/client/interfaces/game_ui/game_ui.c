@@ -59,7 +59,7 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
             char *res = (char *)malloc(3 * sizeof(char));
             sprintf(res, "%.f s", (double)i / fps);
             gtk_progress_bar_set_text(progress_bar, res);
-            free(res);
+            //free(res);
         }
         gtk_progress_bar_set_fraction(progress_bar, fraction);
         while (gtk_events_pending())

@@ -114,10 +114,10 @@ void on_action_received(Encapsulation *packet)
             }
         }
         Room *room = get_client_room(packet->sender_id);
-        game->action = NOACTION;
-        opponnent_game->action = NOACTION;
         write_line(room->name, game, packet->sender_id);
         write_line(room->name, opponnent_game, opponent_session->client_id);
+        game->action = NOACTION;
+        opponnent_game->action = NOACTION;
         send_round_end(packet->sender_id, game);
         send_round_end(opponent_id, opponnent_game);
         remove_session(opponent_session);
