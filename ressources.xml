@@ -9,6 +9,5 @@
         <file>include/images/betray.png</file>
         <file>include/images/collaborate.png</file>
         <file compressed="true">include/glade/game_interface.glade</file>
-        <file compressed="true">include/glade/waiting_room_interface.glade</file>
     </gresource>
 </gresources>

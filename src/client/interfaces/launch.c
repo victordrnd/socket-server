@@ -1,13 +1,15 @@
 #include "launch.h"
 #include "../network/communication.h"
 #include "handlers/handlers.h"
+#include "../utils/config.h"
 /**
  * @brief Register css styles from resource file.
  * 
  */
 void register_styles()
 {
-    GResource *resource = g_resource_load("output/ressources/app.gressource", NULL);
+    char *ressource_url = strcat(get_executable_path(),"/ressources/app.gressource");
+    GResource *resource = g_resource_load(ressource_url, NULL);
     g_resources_register(resource);
     GtkCssProvider *provider = gtk_css_provider_new();
     gtk_css_provider_load_from_resource(provider, "/org/ics/style.css");
