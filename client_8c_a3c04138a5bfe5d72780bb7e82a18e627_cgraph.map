@@ -1,0 +1,21 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,289,56,316"/>
+<area shape="rect" id="node2" href="$client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b" title=" " alt="" coords="483,340,624,367"/>
+<area shape="rect" id="node3" href="$client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="107,125,241,152"/>
+<area shape="rect" id="node12" href="$client_2utils_2config_8c.html#aa08df544e8579c3090ab13b8c7407069" title=" " alt="" coords="104,264,244,291"/>
+<area shape="rect" id="node13" href="$game_8c.html#a869a2cc102466a96f92172b54265894f" title="Init current game." alt="" coords="135,315,213,341"/>
+<area shape="rect" id="node14" href="$launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="111,213,237,240"/>
+<area shape="rect" id="node18" href="$client_2utils_2config_8c.html#a7eb9b2879361ca0e028d34abd65df59a" title="Read configuration file." alt="" coords="130,416,218,443"/>
+<area shape="rect" id="node4" href="$client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="292,147,435,189"/>
+<area shape="rect" id="node7" href="$client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="303,25,423,52"/>
+<area shape="rect" id="node9" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="315,96,411,123"/>
+<area shape="rect" id="node5" href="$client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="492,212,615,239"/>
+<area shape="rect" id="node6" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="505,157,601,184"/>
+<area shape="rect" id="node8" href="$links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="528,5,579,32"/>
+<area shape="rect" id="node10" href="$client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="485,56,621,83"/>
+<area shape="rect" id="node11" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="491,107,615,133"/>
+<area shape="rect" id="node15" href="$launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="294,213,433,240"/>
+<area shape="rect" id="node16" href="$handlers_8c.html#a3875841c1532579c95855055b3884f67" title=" " alt="" coords="308,264,419,291"/>
+<area shape="rect" id="node17" href="$launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c" title="Register css styles from resource file." alt="" coords="310,315,417,341"/>
+<area shape="rect" id="node19" href="$network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="322,416,405,443"/>
+</map>

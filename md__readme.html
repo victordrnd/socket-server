@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier: ICS - Dilemme du prisonnier</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">ICS - Dilemme du prisonnier </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Contexte</h1>
+<p>L’ICS (institue of Cognitives Sciences) est un laboratoire interdisciplinaire qui intègre l'expertise de chercheurs des Sciences de la Vie (psychologie cognitive, neurosciences) et de médecine (pédopsychiatrie, neuro-pediatrie) avec celle de chercheurs des Sciences Humaines et Sociales (linguistique computationelle et théorique et philosophie) pour étudier la nature et la spécificité de l'esprit humain.</p>
+<p>Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des données expérimentales. Il a besoin que des volontaires jouent l’un contre l’autre un nombre de fois à définir, sans jamais savoir qui sont leurs adversaires. On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une confrontation trahison-collaboration entre les deux volontaires.</p>
+<h1 align="center"><img src="https://i.postimg.cc/523HnPsr/Capture-d-cran-du-2020-11-17-17-20-52.png" alt="" class="inline"/> </h1>
+<hr  />
+ <h1><a class="anchor" id="autotoc_md3"></a>
+Documentation</h1>
+<h3><a class="anchor" id="autotoc_md4"></a>
+1. Installation</h3>
+<ul>
+<li><a href="#dépendances">Dépendances</a></li>
+<li><a href="#how-to-use">Comment l'utiliser</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md5"></a>
+2. Configuration</h3>
+<ul>
+<li><a href="#configuration-serveur">Serveur</a></li>
+<li><a href="#configuration-client">Client</a></li>
+</ul>
+<h3><a class="anchor" id="autotoc_md6"></a>
+2. Développement</h3>
+<ul>
+<li><a href="#debug">Debug</a></li>
+<li><a href="#protocole">Protocole</a> </li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Installation</h2>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Dépendances</h3>
+<p>Ce projet est dépendant de la librairie <a href="https://hyperrealm.github.io/libconfig/">libconfig</a>. </p>
+<h4><a class="anchor" id="autotoc_md9"></a>
+Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)</h4>
+<p>Exécutez la commande suivante dans un terminal.</p>
+<p><code>sudo apt install libconfig-dev</code> </p>
+<h4><a class="anchor" id="autotoc_md10"></a>
+Fedora, CentOS</h4>
+<p>Exécutez la commande suivante dans un terminal.</p>
+<p><code>dnf install libconfig-devel</code></p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+How to use</h3>
+<p>Exécutez la commande suivante dans un terminal.</p>
+<div class="fragment"><div class="line"># Clonez le dépot Github </div>
+<div class="line">$ git clone https://github.com/victordrnd/socket-server.git</div>
+<div class="line"> </div>
+<div class="line"># Aller vers le répertoire</div>
+<div class="line">$ cd socket-server</div>
+<div class="line"> </div>
+<div class="line"># Compiler le projet (make all, make server, make client)</div>
+<div class="line">$ make all</div>
+<div class="line"> </div>
+<div class="line"># Executer le serveur/client</div>
+<div class="line">$ ./output/server</div>
+<div class="line">$ ./output/client</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md12"></a>
+Configuration</h2>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Configuration serveur</h3>
+<p>La configuration du serveur se trouve dans le fichier <code>output/config/server_config.cfg</code> une fois le serveur compilé.</p>
+<div class="fragment"><div class="line">bind_ip = &quot;0.0.0.0&quot;;</div>
+<div class="line">bind_port = 7799;</div>
+<div class="line">max_simultaneous_connection = 50;</div>
+<div class="line"> </div>
+<div class="line">game_configuration =</div>
+<div class="line">(</div>
+<div class="line">  {</div>
+<div class="line">    name = &quot;room_1&quot;;</div>
+<div class="line">    initial_amount = 50;</div>
+<div class="line">    nb_games = 10;</div>
+<div class="line">    clients = (</div>
+<div class="line">      {client_id = 1;},</div>
+<div class="line">      {client_id = 2;}</div>
+<div class="line">    );</div>
+<div class="line">  },</div>
+<div class="line">  {</div>
+<div class="line">    name = &quot;room_2&quot;;</div>
+<div class="line">    initial_amount = 50;</div>
+<div class="line">    nb_games = 10;</div>
+<div class="line">    clients = (</div>
+<div class="line">      {client_id = 3;},</div>
+<div class="line">      {client_id = 4;}</div>
+<div class="line">    );</div>
+<div class="line">  }</div>
+<div class="line">);</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md14"></a>
+Configuration client</h3>
+<p>La configuration du serveur se trouve dans le fichier <code>output/config/client_config.cfg</code> une fois le client compilé.</p>
+<div class="fragment"><div class="line">client_id = 1;</div>
+<div class="line">server_ip = &quot;127.0.0.1&quot;;</div>
+<div class="line">server_port = 7799;</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
+Développement</h1>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Debug</h2>
+<p>Il est possible d'activer le mode <b>DEBUG</b> sur le serveur et le client en ajoutant <b>-DNDEBUG</b> lors de la compilation.</p>
+<p>Dans le <em>Makefile</em> modifié la ligne comme ceci :</p>
+<p><code>CFLAGS := -Wall -Wextra -g -std=c99 -DNDEBUG</code></p>
+<h2><a class="anchor" id="autotoc_md17"></a>
+Protocole</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Code  </th><th class="markdownTableHeadNone">Client  </th><th class="markdownTableHeadNone">Server  </th><th class="markdownTableHeadNone">Détails   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">16  </td><td class="markdownTableBodyNone">CONNECT  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">17  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">CONNECTED  </td><td class="markdownTableBodyNone"><em><a class="el" href="struct_connected__data.html">Connected_data</a></em> : (balance initiale, adversaire_id)   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">18  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">FAILED  </td><td class="markdownTableBodyNone">L'utilisateur n'est pas présent dans la configuration serveur   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">19  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">GAME_START  </td><td class="markdownTableBodyNone">Max round count   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">20  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ROUND_START  </td><td class="markdownTableBodyNone">(Envoie simultané aux deux clients : current_round, délai de jeu)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">21  </td><td class="markdownTableBodyNone">ACTION  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">(mise, action, tmps réaction)   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">22  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">ROUND_END  </td><td class="markdownTableBodyNone">Envoie des résultats (vainqueur, perdant)   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">23  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">GAME_END  </td><td class="markdownTableBodyNone">(round == maxRound || balance == 0)   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">24  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">DISCONNECT  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">24  </td><td class="markdownTableBodyNone">DISCONNECT  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+</table>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:11 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

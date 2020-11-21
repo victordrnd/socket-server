@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier:  Fichier source de src/client/network/communication.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_95286cc27d0839770b2811ca335a3dfc.html">network</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">communication.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="client_2network_2communication_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef COMMUNICATION_HEADER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define COMMUNICATION_HEADER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../utils/config.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../common/protocol/protocol.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="client_2network_2communication_8h.html#ac3146f1e9227301bb4aa518f4d336cee">    6</a></span>&#160;<span class="preprocessor">#define BUFFERSIZE 2048</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structapp__threads__t.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">    9</a></span>&#160;    pthread_t <a class="code" href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">stdin_thread</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">   10</a></span>&#160;    pthread_t <a class="code" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">socket_thread</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;} <a class="code" href="structapp__threads__t.html">app_threads_t</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="struct_connection.html">   14</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">   15</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="struct_connection.html#a97d0ff34458fe4977e63e1a0e68b7278">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_connection.html#a97d0ff34458fe4977e63e1a0e68b7278">status</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;} <a class="code" href="struct_connection.html">Connection</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b">init_communication</a>(<a class="code" href="struct_config.html">Config</a> *configuration);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="struct_connection.html">Connection</a> *<a class="code" href="client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4">open_connection</a>(<a class="code" href="struct_config.html">Config</a> *configuration);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> *<a class="code" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="client_2network_2communication_8h.html#a792a1ef504caf3924f233c6a26648e1a">   22</a></span>&#160;<span class="keywordtype">void</span> *<a class="code" href="client_2network_2communication_8h.html#a792a1ef504caf3924f233c6a26648e1a">listen_stdin_thread_process</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(<span class="keyword">enum</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72e">verbs</a> action, <span class="keywordtype">void</span> *data, <span class="keywordtype">size_t</span> data_size);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2communication_8h.html#a46274ed155268e6193b079e2b8cfb1e7">close_connection</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructapp__threads__t_html_ac5ef266da9d8d6a8144093b8ca695bca"><div class="ttname"><a href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">app_threads_t::stdin_thread</a></div><div class="ttdeci">pthread_t stdin_thread</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00009">communication.h:9</a></div></div>
+<div class="ttc" id="astructapp__threads__t_html_ab629518f21130c02a9d789c26a4260cc"><div class="ttname"><a href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">app_threads_t::socket_thread</a></div><div class="ttdeci">pthread_t socket_thread</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00010">communication.h:10</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_a696dec889c2641fd81501271d4683fe4"><div class="ttname"><a href="client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4">open_connection</a></div><div class="ttdeci">Connection * open_connection(Config *configuration)</div><div class="ttdoc">Open cpnnection socket with server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00037">communication.c:37</a></div></div>
+<div class="ttc" id="astruct_connection_html_a97d0ff34458fe4977e63e1a0e68b7278"><div class="ttname"><a href="struct_connection.html#a97d0ff34458fe4977e63e1a0e68b7278">Connection::status</a></div><div class="ttdeci">int status</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00016">communication.h:16</a></div></div>
+<div class="ttc" id="astructapp__threads__t_html"><div class="ttname"><a href="structapp__threads__t.html">app_threads_t</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00008">communication.h:8</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_a45a759d2dbd41a51b95f0718a2be9734"><div class="ttname"><a href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a></div><div class="ttdeci">void send_packet(enum verbs action, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00082">communication.c:82</a></div></div>
+<div class="ttc" id="astruct_connection_html"><div class="ttname"><a href="struct_connection.html">Connection</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00014">communication.h:14</a></div></div>
+<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00004">config.h:5</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_a792a1ef504caf3924f233c6a26648e1a"><div class="ttname"><a href="client_2network_2communication_8h.html#a792a1ef504caf3924f233c6a26648e1a">listen_stdin_thread_process</a></div><div class="ttdeci">void * listen_stdin_thread_process(void *ptr)</div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_a42fc9c0eb8502984121f1b6d8fbb92b1"><div class="ttname"><a href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a></div><div class="ttdeci">void * listen_socket_thread_process(void *ptr)</div><div class="ttdoc">Thread process for listening socket input.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00064">communication.c:64</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_a46274ed155268e6193b079e2b8cfb1e7"><div class="ttname"><a href="client_2network_2communication_8h.html#a46274ed155268e6193b079e2b8cfb1e7">close_connection</a></div><div class="ttdeci">void close_connection()</div><div class="ttdoc">Close connection between client and server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00092">communication.c:92</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8h_html_af6f333aef95418aceff428c71785712b"><div class="ttname"><a href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b">init_communication</a></div><div class="ttdeci">void init_communication(Config *configuration)</div><div class="ttdoc">Starts listening thread process and establish server connection.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00020">communication.c:20</a></div></div>
+<div class="ttc" id="astruct_connection_html_acccd0099e1f8360fa0a0b04d7a5abe93"><div class="ttname"><a href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">Connection::sock</a></div><div class="ttdeci">int sock</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00015">communication.h:15</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72e"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72e">verbs</a></div><div class="ttdeci">verbs</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00007">protocol.h:7</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

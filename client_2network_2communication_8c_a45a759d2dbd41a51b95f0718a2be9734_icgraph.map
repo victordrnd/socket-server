@@ -1,0 +1,15 @@
+<map id="send_packet" name="send_packet">
+<area shape="rect" id="node1" title=" " alt="" coords="700,173,796,200"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="515,5,650,32"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,224,280,251"/>
+<area shape="rect" id="node6" href="$client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="513,123,652,149"/>
+<area shape="rect" id="node9" href="$server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="524,325,641,352"/>
+<area shape="rect" id="node11" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="335,224,458,251"/>
+<area shape="rect" id="node12" href="$server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="524,275,641,301"/>
+<area shape="rect" id="node13" href="$server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="521,224,644,251"/>
+<area shape="rect" id="node3" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="371,5,422,32"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,249,101,276"/>
+<area shape="rect" id="node7" href="$handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="328,107,465,133"/>
+<area shape="rect" id="node8" href="$handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="331,158,462,199"/>
+<area shape="rect" id="node10" href="$server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="329,275,464,301"/>
+</map>

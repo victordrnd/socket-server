@@ -1,0 +1,11 @@
+<map id="init_communication" name="init_communication">
+<area shape="rect" id="node1" title="Starts listening thread process and establish server connection." alt="" coords="5,111,140,137"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="188,45,331,86"/>
+<area shape="rect" id="node5" href="$client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="199,111,319,137"/>
+<area shape="rect" id="node7" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="211,161,307,188"/>
+<area shape="rect" id="node3" href="$client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="385,5,508,32"/>
+<area shape="rect" id="node4" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="399,56,495,83"/>
+<area shape="rect" id="node6" href="$links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="421,111,472,137"/>
+<area shape="rect" id="node8" href="$client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="379,161,515,188"/>
+<area shape="rect" id="node9" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="385,212,509,239"/>
+</map>

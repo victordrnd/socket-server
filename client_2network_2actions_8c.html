@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier: Référence du fichier src/client/network/actions.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_95286cc27d0839770b2811ca335a3dfc.html">network</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier actions.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="client_2network_2actions_8h_source.html">actions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="handlers_8h_source.html">../interfaces/handlers/handlers.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="protocol_8h_source.html">../../common/protocol/protocol.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de actions.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2network_2actions_8c__incl.png" border="0" usemap="#asrc_2client_2network_2actions_8c" alt=""/></div>
+<map name="src_2client_2network_2actions_8c" id="asrc_2client_2network_2actions_8c">
+<area shape="rect" title=" " alt="" coords="364,5,489,47"/>
+<area shape="rect" href="client_2network_2actions_8h.html" title=" " alt="" coords="257,102,332,129"/>
+<area shape="rect" href="protocol_8h.html" title=" " alt="" coords="357,259,499,300"/>
+<area shape="rect" href="handlers_8h.html" title=" " alt="" coords="355,95,498,136"/>
+<area shape="rect" href="client_2network_2communication_8h.html" title=" " alt="" coords="95,184,215,211"/>
+<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="239,184,377,211"/>
+<area shape="rect" href="client_2utils_2config_8h.html" title=" " alt="" coords="5,266,109,293"/>
+<area shape="rect" title=" " alt="" coords="133,266,208,293"/>
+<area shape="rect" title=" " alt="" coords="399,348,457,375"/>
+<area shape="rect" title=" " alt="" coords="259,266,333,293"/>
+<area shape="rect" title=" " alt="" coords="452,184,524,211"/>
+</map>
+</div>
+</div>
+<p><a href="client_2network_2actions_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab5084505bd2ee1d2038605b46547d250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a> (Encapsulation *packet)</td></tr>
+<tr class="separator:ab5084505bd2ee1d2038605b46547d250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a56ae919ec9974e5354183fffa243e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2actions_8c.html#a93a56ae919ec9974e5354183fffa243e">send_action_packet</a> (<a class="el" href="struct_game.html">Game</a> *<a class="el" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>)</td></tr>
+<tr class="separator:a93a56ae919ec9974e5354183fffa243e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a93a56ae919ec9974e5354183fffa243e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a56ae919ec9974e5354183fffa243e">&#9670;&nbsp;</a></span>send_action_packet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void send_action_packet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_game.html">Game</a> *&#160;</td>
+          <td class="paramname"><em>game</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2actions_8c_source.html#l00049">49</a> du fichier <a class="el" href="client_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                   {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(<a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eae1bb1460cb779888412e634e983be161">ACTION</a>,<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>,<span class="keyword">sizeof</span>(<a class="code" href="struct_game.html">Game</a>));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="protocol_8h_source.html#l00013">ACTION</a>, <a class="el" href="game_8c_source.html#l00004">game</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00071">on_betray_btn_click()</a>, et <a class="el" href="handlers_8c_source.html#l00087">on_collaborate_btn_click()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_cgraph.png" border="0" usemap="#aclient_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_cgraph" alt=""/></div>
+<map name="client_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_cgraph" id="aclient_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,144,57"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="192,31,288,57"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="336,5,472,32"/>
+<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="342,56,466,83"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_icgraph.png" border="0" usemap="#aclient_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_icgraph" alt=""/></div>
+<map name="client_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_icgraph" id="aclient_2network_2actions_8c_a93a56ae919ec9974e5354183fffa243e_icgraph">
+<area shape="rect" title=" " alt="" coords="191,35,329,61"/>
+<area shape="rect" href="handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="5,5,143,32"/>
+<area shape="rect" href="handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="9,57,139,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab5084505bd2ee1d2038605b46547d250"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5084505bd2ee1d2038605b46547d250">&#9670;&nbsp;</a></span>settle_action()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void settle_action </td>
+          <td>(</td>
+          <td class="paramtype">Encapsulation *&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2actions_8c_source.html#l00005">5</a> du fichier <a class="el" href="client_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">switch</span> (packet-&gt;action)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="struct_connected__data.html">Connected_data</a> *data = (<a class="code" href="struct_connected__data.html">Connected_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a>(data);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="handlers_8c.html#a40aeca7c660df99a6e7782cdf573da9b">on_failed_action</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="struct_game___start__data.html">Game_Start_data</a> *data = (<a class="code" href="struct_game___start__data.html">Game_Start_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a>(data);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="struct_round___start__data.html">Round_Start_data</a> *data = (<a class="code" href="struct_round___start__data.html">Round_Start_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="handlers_8c.html#a65be5a2ae07e01a0f09ca9be6c11fd0e">on_round_start_action</a>(data);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="struct_game.html">Game</a> *data = (<a class="code" href="struct_game.html">Game</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a>(data);       </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a>:{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="struct_game___end__data.html">Game_End_data</a> *data = (<a class="code" href="struct_game___end__data.html">Game_End_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a>(data);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00064">listen_socket_thread_process()</a>, et <a class="el" href="server_2network_2communication_8c_source.html#l00064">threadProcess()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2network_2actions_8c_ab5084505bd2ee1d2038605b46547d250_icgraph.png" border="0" usemap="#aclient_2network_2actions_8c_ab5084505bd2ee1d2038605b46547d250_icgraph" alt=""/></div>
+<map name="client_2network_2actions_8c_ab5084505bd2ee1d2038605b46547d250_icgraph" id="aclient_2network_2actions_8c_ab5084505bd2ee1d2038605b46547d250_icgraph">
+<area shape="rect" title=" " alt="" coords="477,42,573,69"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="ahandlers_8c_html_abee5b4ff1b44a2d31f8c359db69b7363"><div class="ttname"><a href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a></div><div class="ttdeci">void on_round_end_action(Game *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00151">handlers.c:151</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
+<div class="ttc" id="agame_8c_html_a58bdb5643d0814ac4e697a1564b79b70"><div class="ttname"><a href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00004">game.c:4</a></div></div>
+<div class="ttc" id="astruct_connected__data_html"><div class="ttname"><a href="struct_connected__data.html">Connected_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00035">protocol.h:35</a></div></div>
+<div class="ttc" id="astruct_game___start__data_html"><div class="ttname"><a href="struct_game___start__data.html">Game_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00040">protocol.h:40</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a40aeca7c660df99a6e7782cdf573da9b"><div class="ttname"><a href="handlers_8c.html#a40aeca7c660df99a6e7782cdf573da9b">on_failed_action</a></div><div class="ttdeci">void on_failed_action()</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00111">handlers.c:111</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_ab6b042ca056e1812003c2bae58e89954"><div class="ttname"><a href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a></div><div class="ttdeci">void on_game_start_action(Game_Start_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00123">handlers.c:123</a></div></div>
+<div class="ttc" id="astruct_game___end__data_html"><div class="ttname"><a href="struct_game___end__data.html">Game_End_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00050">protocol.h:50</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_a45a759d2dbd41a51b95f0718a2be9734"><div class="ttname"><a href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a></div><div class="ttdeci">void send_packet(enum verbs action, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00082">communication.c:82</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_aa1fed6654e7a3cfab8d1ba5c44c60b19"><div class="ttname"><a href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a></div><div class="ttdeci">void on_game_end_action(Game_End_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00172">handlers.c:172</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a></div><div class="ttdeci">@ ROUND_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00014">protocol.h:14</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eae1bb1460cb779888412e634e983be161"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eae1bb1460cb779888412e634e983be161">ACTION</a></div><div class="ttdeci">@ ACTION</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00013">protocol.h:13</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a></div><div class="ttdeci">@ CONNECTED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00009">protocol.h:9</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00010">protocol.h:10</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a65be5a2ae07e01a0f09ca9be6c11fd0e"><div class="ttname"><a href="handlers_8c.html#a65be5a2ae07e01a0f09ca9be6c11fd0e">on_round_start_action</a></div><div class="ttdeci">void on_round_start_action(Round_Start_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00133">handlers.c:133</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a206838ccba42dc7d6d58ccfa2dcc003f"><div class="ttname"><a href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a></div><div class="ttdeci">void on_connected_action(Connected_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00101">handlers.c:101</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a></div><div class="ttdeci">@ GAME_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00011">protocol.h:11</a></div></div>
+<div class="ttc" id="astruct_round___start__data_html"><div class="ttname"><a href="struct_round___start__data.html">Round_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00045">protocol.h:45</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a></div><div class="ttdeci">@ GAME_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00015">protocol.h:15</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a></div><div class="ttdeci">@ ROUND_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00012">protocol.h:12</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

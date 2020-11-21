@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier: Référence du fichier src/server/utils/config.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_075bb3ff235063c77951cd176d15a741.html">server</a></li><li class="navelem"><a class="el" href="dir_e3bcf32b4ae126056ca108469a439c7f.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier config.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de config.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h__incl.png" border="0" usemap="#asrc_2server_2utils_2config_8h" alt=""/></div>
+<map name="src_2server_2utils_2config_8h" id="asrc_2server_2utils_2config_8h">
+<area shape="rect" title=" " alt="" coords="5,5,161,32"/>
+<area shape="rect" title=" " alt="" coords="46,80,121,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h__dep__incl.png" border="0" usemap="#asrc_2server_2utils_2config_8hdep" alt=""/></div>
+<map name="src_2server_2utils_2config_8hdep" id="asrc_2server_2utils_2config_8hdep">
+<area shape="rect" title=" " alt="" coords="199,5,355,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html" title=" " alt="" coords="5,169,136,211"/>
+<area shape="rect" href="server_2network_2actions_8h.html" title=" " alt="" coords="57,80,188,121"/>
+<area shape="rect" href="server_2network_2communication_8h.html" title=" " alt="" coords="212,80,343,121"/>
+<area shape="rect" href="server_8c.html" title=" " alt="" coords="315,177,445,203"/>
+<area shape="rect" href="server_2utils_2config_8c.html" title=" " alt="" coords="418,87,574,114"/>
+<area shape="rect" href="server_2network_2communication_8c.html" title=" " alt="" coords="160,169,291,211"/>
+</map>
+</div>
+</div>
+<p><a href="server_2utils_2config_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room.html">Room</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_game_configuration.html">GameConfiguration</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_config.html">Config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a1f64e494184b60751fe0756d5cdcb482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#a1f64e494184b60751fe0756d5cdcb482">read_config</a> (<a class="el" href="struct_config.html">Config</a> *configuration, char *filename)</td></tr>
+<tr class="memdesc:a1f64e494184b60751fe0756d5cdcb482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read configuration file.  <a href="server_2utils_2config_8h.html#a1f64e494184b60751fe0756d5cdcb482">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1f64e494184b60751fe0756d5cdcb482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b1706411d9de5e1b3800019f4b8df2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a> (unsigned int client_id)</td></tr>
+<tr class="separator:a72b1706411d9de5e1b3800019f4b8df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80457037759624b348c90fd0f938589"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#ac80457037759624b348c90fd0f938589">is_client_exists</a> (unsigned int client_id)</td></tr>
+<tr class="separator:ac80457037759624b348c90fd0f938589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad449d93d01791051b81d7e1d1d4addc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_room.html">Room</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a> (unsigned int client_id)</td></tr>
+<tr class="separator:ad449d93d01791051b81d7e1d1d4addc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ec6cc3245582f471ca97f8eb0fc09e9"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#a3ec6cc3245582f471ca97f8eb0fc09e9">get_max_round_count</a> (<a class="el" href="struct_room.html">Room</a> *room)</td></tr>
+<tr class="separator:a3ec6cc3245582f471ca97f8eb0fc09e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e4ad826243b53bcba130bcca9dc0da"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a> (<a class="el" href="struct_room.html">Room</a> *room)</td></tr>
+<tr class="separator:aa4e4ad826243b53bcba130bcca9dc0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0827ab2ac31e7fd68e3437b17e63ce1b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a> ()</td></tr>
+<tr class="separator:a0827ab2ac31e7fd68e3437b17e63ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08df544e8579c3090ab13b8c7407069"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2utils_2config_8h.html#aa08df544e8579c3090ab13b8c7407069">init_executable_path</a> (<a class="el" href="struct_config.html">Config</a> *configuration)</td></tr>
+<tr class="separator:aa08df544e8579c3090ab13b8c7407069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ad449d93d01791051b81d7e1d1d4addc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad449d93d01791051b81d7e1d1d4addc6">&#9670;&nbsp;</a></span>get_client_room()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_room.html">Room</a>* get_client_room </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00121">121</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="struct_game_configuration.html">GameConfiguration</a> *game_config = <a class="code" href="server_2utils_2config_8c.html#ac94fcb821d102689c5f3de71e20d6f53">conf</a>-&gt;<a class="code" href="struct_config.html#a8056faec94be55b82d78275ed8d3c1ed">game_config</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; game_config-&gt;<a class="code" href="struct_game_configuration.html#a8cab78b0eb03c82858b0e1c9edccc031">nb_room</a>; i++)</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="struct_room.html">Room</a> *current_room = &amp;game_config-&gt;<a class="code" href="struct_game_configuration.html#aeed216b42efc2685bf31ff26599b2def">rooms</a>[i];</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (current_room-&gt;<a class="code" href="struct_room.html#a69a6047cd574120f48361d87869b51a0">clients_id</a>[j] == client_id)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">return</span> current_room;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00011">Room::clients_id</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00014">conf</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00025">Config::game_config</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00016">GameConfiguration::nb_room</a>, et <a class="el" href="server_2utils_2config_8h_source.html#l00017">GameConfiguration::rooms</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00139">get_opponent_id()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00034">on_connect_action()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_ad449d93d01791051b81d7e1d1d4addc6_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_ad449d93d01791051b81d7e1d1d4addc6_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_ad449d93d01791051b81d7e1d1d4addc6_icgraph" id="aserver_2utils_2config_8h_ad449d93d01791051b81d7e1d1d4addc6_icgraph">
+<area shape="rect" title=" " alt="" coords="732,78,847,104"/>
+<area shape="rect" href="server_2utils_2config_8h.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="567,78,684,104"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,40,280,67"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="356,128,491,155"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="328,27,519,54"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="362,78,485,104"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,78,101,104"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0827ab2ac31e7fd68e3437b17e63ce1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0827ab2ac31e7fd68e3437b17e63ce1b">&#9670;&nbsp;</a></span>get_executable_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* get_executable_path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00066">66</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                           {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">char</span> *executable_path = (<span class="keywordtype">char</span> *) malloc(256);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    memcpy(executable_path, <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>, 256);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> executable_path;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8c_source.html#l00014">conf</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00009">Config::executable_path</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>, et <a class="el" href="launch_8c_source.html#l00009">register_styles()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph" id="aserver_2utils_2config_8h_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph">
+<area shape="rect" title=" " alt="" coords="432,5,573,32"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c" title="Register css styles from resource file." alt="" coords="277,31,384,57"/>
+<area shape="rect" href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="104,31,229,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa4e4ad826243b53bcba130bcca9dc0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e4ad826243b53bcba130bcca9dc0da">&#9670;&nbsp;</a></span>get_initial_amount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_initial_amount </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_room.html">Room</a> *&#160;</td>
+          <td class="paramname"><em>room</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00159">159</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">return</span> room-&gt;<a class="code" href="struct_room.html#a2b2b0e701929309b33a7d25d5a16fe39">initial_amount</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00010">Room::initial_amount</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00034">on_connect_action()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00057">send_game_start()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_aa4e4ad826243b53bcba130bcca9dc0da_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_aa4e4ad826243b53bcba130bcca9dc0da_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_aa4e4ad826243b53bcba130bcca9dc0da_icgraph" id="aserver_2utils_2config_8h_aa4e4ad826243b53bcba130bcca9dc0da_icgraph">
+<area shape="rect" title=" " alt="" coords="499,5,625,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,5,280,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="328,31,451,57"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3ec6cc3245582f471ca97f8eb0fc09e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ec6cc3245582f471ca97f8eb0fc09e9">&#9670;&nbsp;</a></span>get_max_round_count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_max_round_count </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_room.html">Room</a> *&#160;</td>
+          <td class="paramname"><em>room</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00154">154</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">return</span> room-&gt;<a class="code" href="struct_room.html#a7ae7f386dbd66ead530e284073ec6541">nb_rounds</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00009">Room::nb_rounds</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00057">send_game_start()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_a3ec6cc3245582f471ca97f8eb0fc09e9_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_a3ec6cc3245582f471ca97f8eb0fc09e9_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_a3ec6cc3245582f471ca97f8eb0fc09e9_icgraph" id="aserver_2utils_2config_8h_a3ec6cc3245582f471ca97f8eb0fc09e9_icgraph">
+<area shape="rect" title=" " alt="" coords="503,31,652,57"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,5,284,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="332,56,455,83"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,31,101,57"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="151,56,282,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72b1706411d9de5e1b3800019f4b8df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b1706411d9de5e1b3800019f4b8df2">&#9670;&nbsp;</a></span>get_opponent_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int get_opponent_id </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00139">139</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="struct_room.html">Room</a> *current_room = <a class="code" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a>(client_id);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *wp = current_room-&gt;<a class="code" href="struct_room.html#a69a6047cd574120f48361d87869b51a0">clients_id</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordflow">while</span> (wp != NULL)</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">if</span> (*wp != client_id)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">return</span> *wp;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        wp++;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00011">Room::clients_id</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00121">get_client_room()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00187">check_oppponent_connected()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00057">send_game_start()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_cgraph.png" border="0" usemap="#aserver_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_cgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_cgraph" id="aserver_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,123,32"/>
+<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="171,5,285,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_icgraph" id="aserver_2utils_2config_8h_a72b1706411d9de5e1b3800019f4b8df2_icgraph">
+<area shape="rect" title=" " alt="" coords="571,56,688,83"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="332,5,523,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,107,284,133"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="366,56,489,83"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="151,56,282,83"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,81,101,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa08df544e8579c3090ab13b8c7407069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08df544e8579c3090ab13b8c7407069">&#9670;&nbsp;</a></span>init_executable_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* init_executable_path </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *&#160;</td>
+          <td class="paramname"><em>configuration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00071">71</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a> = configuration;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">char</span> filename[248];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> count = readlink(<span class="stringliteral">&quot;/proc/self/exe&quot;</span>, filename, 256);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (count != -1)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        memcpy(configuration-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>, dirname(filename), 256);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8c_source.html#l00014">conf</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00009">Config::executable_path</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_aa08df544e8579c3090ab13b8c7407069_icgraph.png" border="0" usemap="#aserver_2utils_2config_8h_aa08df544e8579c3090ab13b8c7407069_icgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_aa08df544e8579c3090ab13b8c7407069_icgraph" id="aserver_2utils_2config_8h_aa08df544e8579c3090ab13b8c7407069_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,244,32"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac80457037759624b348c90fd0f938589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80457037759624b348c90fd0f938589">&#9670;&nbsp;</a></span>is_client_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_client_exists </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>client_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00100">100</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="struct_game_configuration.html">GameConfiguration</a> *game_config = <a class="code" href="server_2utils_2config_8c.html#ac94fcb821d102689c5f3de71e20d6f53">conf</a>-&gt;<a class="code" href="struct_config.html#a8056faec94be55b82d78275ed8d3c1ed">game_config</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; game_config-&gt;<a class="code" href="struct_game_configuration.html#a8cab78b0eb03c82858b0e1c9edccc031">nb_room</a>; i++)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="struct_room.html">Room</a> current_room = game_config-&gt;<a class="code" href="struct_game_configuration.html#aeed216b42efc2685bf31ff26599b2def">rooms</a>[i];</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *wp = current_room.<a class="code" href="struct_room.html#a69a6047cd574120f48361d87869b51a0">clients_id</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">while</span> (wp != NULL)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (*wp == client_id)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            wp++;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00011">Room::clients_id</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00014">conf</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00025">Config::game_config</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00016">GameConfiguration::nb_room</a>, et <a class="el" href="server_2utils_2config_8h_source.html#l00017">GameConfiguration::rooms</a>.</p>
+
+</div>
+</div>
+<a id="a1f64e494184b60751fe0756d5cdcb482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f64e494184b60751fe0756d5cdcb482">&#9670;&nbsp;</a></span>read_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *&#160;</td>
+          <td class="paramname"><em>configuration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read configuration file. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configuration</td><td>configuration struct to fill <br  />
+ </td></tr>
+    <tr><td class="paramname">filename</td><td>filename of the cfg file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8c_source.html#l00060">60</a> du fichier <a class="el" href="server_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    config_t cfg;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    config_setting_t *setting;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    config_init(&amp;cfg);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (!config_read_file(&amp;cfg, filename))</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;%s:%d - %s\n&quot;</span>, config_error_file(&amp;cfg),</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                config_error_line(&amp;cfg), config_error_text(&amp;cfg));</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        config_destroy(&amp;cfg);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        assert(<span class="keyword">sizeof</span>(cfg) == <span class="keyword">sizeof</span>(config_t));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        config_lookup_string(&amp;cfg, <span class="stringliteral">&quot;bind_ip&quot;</span>, &amp;configuration-&gt;<a class="code" href="struct_config.html#aeac4bb947894bcb82e5acc46001e9e41">bind_ip</a>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        config_lookup_int(&amp;cfg, <span class="stringliteral">&quot;bind_port&quot;</span>, (<span class="keywordtype">int</span> *)&amp;configuration-&gt;<a class="code" href="struct_config.html#afc70f775f8877871e484ca7ab8970a6a">bind_port</a>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        config_lookup_int(&amp;cfg, <span class="stringliteral">&quot;max_simultaneous_connection&quot;</span>, (<span class="keywordtype">int</span> *)&amp;configuration-&gt;<a class="code" href="struct_config.html#a9cbf55d70d6fa8a3f8d29794e4c45e26">max_simultaneous_connection</a>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        setting = config_lookup(&amp;cfg, <span class="stringliteral">&quot;game_configuration&quot;</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="struct_game_configuration.html">GameConfiguration</a> *game_configuration = (<a class="code" href="struct_game_configuration.html">GameConfiguration</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_game_configuration.html">GameConfiguration</a>));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="server_2utils_2config_8c.html#abcf382e0a3e3b4b51bf4c929c47c2e3e">parse_game_configuration</a>(game_configuration, setting);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        configuration-&gt;<a class="code" href="struct_config.html#a8056faec94be55b82d78275ed8d3c1ed">game_config</a> = game_configuration;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="server_2utils_2config_8c.html#ac94fcb821d102689c5f3de71e20d6f53">conf</a> = configuration;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    assert(configuration-&gt;<a class="code" href="struct_config.html#afc70f775f8877871e484ca7ab8970a6a">bind_port</a> &gt; 1024);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    assert(configuration-&gt;<a class="code" href="struct_config.html#a9cbf55d70d6fa8a3f8d29794e4c45e26">max_simultaneous_connection</a> == 50);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    assert(<span class="keyword">sizeof</span>(*(configuration-&gt;<a class="code" href="struct_config.html#a8056faec94be55b82d78275ed8d3c1ed">game_config</a>)) == <span class="keyword">sizeof</span>(<a class="code" href="struct_game_configuration.html">GameConfiguration</a>));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">char</span> *ip = (<span class="keywordtype">char</span> *)malloc(12 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    strcpy(ip, configuration-&gt;<a class="code" href="struct_config.html#aeac4bb947894bcb82e5acc46001e9e41">bind_ip</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    assert(<a class="code" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b">is_ip_valid</a>(ip) == <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    free(ip);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="logs_8h.html#a103f59d8f97b79892edd9a608ef861db">debug_print_server_config</a>(configuration-&gt;<a class="code" href="struct_config.html#aeac4bb947894bcb82e5acc46001e9e41">bind_ip</a>, configuration-&gt;<a class="code" href="struct_config.html#afc70f775f8877871e484ca7ab8970a6a">bind_port</a>, configuration-&gt;<a class="code" href="struct_config.html#a9cbf55d70d6fa8a3f8d29794e4c45e26">max_simultaneous_connection</a>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="server_2utils_2config_8h_source.html#l00022">Config::bind_ip</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00023">Config::bind_port</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00014">conf</a>, <a class="el" href="logs_8h_source.html#l00006">debug_print_server_config</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00025">Config::game_config</a>, <a class="el" href="network_8c_source.html#l00012">is_ip_valid()</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00024">Config::max_simultaneous_connection</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00022">parse_game_configuration()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2utils_2config_8h_a1f64e494184b60751fe0756d5cdcb482_cgraph.png" border="0" usemap="#aserver_2utils_2config_8h_a1f64e494184b60751fe0756d5cdcb482_cgraph" alt=""/></div>
+<map name="server_2utils_2config_8h_a1f64e494184b60751fe0756d5cdcb482_cgraph" id="aserver_2utils_2config_8h_a1f64e494184b60751fe0756d5cdcb482_cgraph">
+<area shape="rect" title="Read configuration file." alt="" coords="5,31,93,57"/>
+<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="187,5,269,32"/>
+<area shape="rect" href="server_2utils_2config_8c.html#abcf382e0a3e3b4b51bf4c929c47c2e3e" title="Parse only game_configuration section of config file." alt="" coords="141,56,315,83"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="astruct_game_configuration_html"><div class="ttname"><a href="struct_game_configuration.html">GameConfiguration</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00014">config.h:15</a></div></div>
+<div class="ttc" id="astruct_game_configuration_html_a8cab78b0eb03c82858b0e1c9edccc031"><div class="ttname"><a href="struct_game_configuration.html#a8cab78b0eb03c82858b0e1c9edccc031">GameConfiguration::nb_room</a></div><div class="ttdeci">unsigned int nb_room</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00016">config.h:16</a></div></div>
+<div class="ttc" id="astruct_room_html_a2b2b0e701929309b33a7d25d5a16fe39"><div class="ttname"><a href="struct_room.html#a2b2b0e701929309b33a7d25d5a16fe39">Room::initial_amount</a></div><div class="ttdeci">unsigned int initial_amount</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00010">config.h:10</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_ac94fcb821d102689c5f3de71e20d6f53"><div class="ttname"><a href="server_2utils_2config_8c.html#ac94fcb821d102689c5f3de71e20d6f53">conf</a></div><div class="ttdeci">Config * conf</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00014">config.c:14</a></div></div>
+<div class="ttc" id="astruct_config_html_a8056faec94be55b82d78275ed8d3c1ed"><div class="ttname"><a href="struct_config.html#a8056faec94be55b82d78275ed8d3c1ed">Config::game_config</a></div><div class="ttdeci">GameConfiguration * game_config</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00025">config.h:25</a></div></div>
+<div class="ttc" id="alogs_8h_html_a103f59d8f97b79892edd9a608ef861db"><div class="ttname"><a href="logs_8h.html#a103f59d8f97b79892edd9a608ef861db">debug_print_server_config</a></div><div class="ttdeci">#define debug_print_server_config(...)</div><div class="ttdef"><b>Definition:</b> <a href="logs_8h_source.html#l00006">logs.h:6</a></div></div>
+<div class="ttc" id="astruct_room_html"><div class="ttname"><a href="struct_room.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00006">config.h:7</a></div></div>
+<div class="ttc" id="astruct_config_html_aeac4bb947894bcb82e5acc46001e9e41"><div class="ttname"><a href="struct_config.html#aeac4bb947894bcb82e5acc46001e9e41">Config::bind_ip</a></div><div class="ttdeci">const char * bind_ip</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00022">config.h:22</a></div></div>
+<div class="ttc" id="anetwork_8c_html_ab972e742ae1ea3be0eb8f877f018d13b"><div class="ttname"><a href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b">is_ip_valid</a></div><div class="ttdeci">bool is_ip_valid(char *ip)</div><div class="ttdoc">Verify if an ip is correctly formed.</div><div class="ttdef"><b>Definition:</b> <a href="network_8c_source.html#l00012">network.c:12</a></div></div>
+<div class="ttc" id="astruct_game_configuration_html_aeed216b42efc2685bf31ff26599b2def"><div class="ttname"><a href="struct_game_configuration.html#aeed216b42efc2685bf31ff26599b2def">GameConfiguration::rooms</a></div><div class="ttdeci">Room * rooms</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00017">config.h:17</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_ad449d93d01791051b81d7e1d1d4addc6"><div class="ttname"><a href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a></div><div class="ttdeci">Room * get_client_room(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00121">config.c:121</a></div></div>
+<div class="ttc" id="astruct_room_html_a7ae7f386dbd66ead530e284073ec6541"><div class="ttname"><a href="struct_room.html#a7ae7f386dbd66ead530e284073ec6541">Room::nb_rounds</a></div><div class="ttdeci">unsigned int nb_rounds</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00009">config.h:9</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a6a44a77efe9d36d03240f900d00dad80"><div class="ttname"><a href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a></div><div class="ttdeci">Config * config</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00015">config.c:15</a></div></div>
+<div class="ttc" id="astruct_room_html_a69a6047cd574120f48361d87869b51a0"><div class="ttname"><a href="struct_room.html#a69a6047cd574120f48361d87869b51a0">Room::clients_id</a></div><div class="ttdeci">unsigned int * clients_id</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00011">config.h:11</a></div></div>
+<div class="ttc" id="astruct_config_html_a26eb18bf8d821c977bd209594517e140"><div class="ttname"><a href="struct_config.html#a26eb18bf8d821c977bd209594517e140">Config::executable_path</a></div><div class="ttdeci">char executable_path[256]</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00009">config.h:9</a></div></div>
+<div class="ttc" id="astruct_config_html_afc70f775f8877871e484ca7ab8970a6a"><div class="ttname"><a href="struct_config.html#afc70f775f8877871e484ca7ab8970a6a">Config::bind_port</a></div><div class="ttdeci">unsigned int bind_port</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00023">config.h:23</a></div></div>
+<div class="ttc" id="astruct_config_html_a9cbf55d70d6fa8a3f8d29794e4c45e26"><div class="ttname"><a href="struct_config.html#a9cbf55d70d6fa8a3f8d29794e4c45e26">Config::max_simultaneous_connection</a></div><div class="ttdeci">unsigned int max_simultaneous_connection</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00024">config.h:24</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_abcf382e0a3e3b4b51bf4c929c47c2e3e"><div class="ttname"><a href="server_2utils_2config_8c.html#abcf382e0a3e3b4b51bf4c929c47c2e3e">parse_game_configuration</a></div><div class="ttdeci">void parse_game_configuration(GameConfiguration *game_configuration, config_setting_t *settings)</div><div class="ttdoc">Parse only game_configuration section of config file.</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00022">config.c:22</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

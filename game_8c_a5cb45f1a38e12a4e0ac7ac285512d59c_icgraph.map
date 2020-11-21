@@ -1,0 +1,8 @@
+<map id="game_set_current_bet" name="game_set_current_bet">
+<area shape="rect" id="node1" title="Set current bet." alt="" coords="208,107,359,133"/>
+<area shape="rect" id="node2" href="$handlers_8h.html#a9f878bc18a4593e038761d2be5b39f74" title="Mise 100 handler." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node3" href="$handlers_8h.html#a56a3a5effaeda7c28bf74a24a8f6948f" title="Mise 10 handler." alt="" coords="9,56,157,83"/>
+<area shape="rect" id="node4" href="$handlers_8h.html#aa6fadee3c3589b977a8f6532095b1b98" title="Mise 25 handler." alt="" coords="9,107,157,133"/>
+<area shape="rect" id="node5" href="$handlers_8h.html#aa5a69a15e8ca45f3af385cbf39d25de0" title="Mise 50 handler." alt="" coords="9,157,157,184"/>
+<area shape="rect" id="node6" href="$handlers_8c.html#a8bac6d7d3cc3535e4ace96c970f5b5a8" title="Mise 75 handler." alt="" coords="9,208,157,235"/>
+</map>

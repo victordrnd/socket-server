@@ -1,0 +1,12 @@
+<map id="src/client/interfaces/game_ui/game_ui.c" name="src/client/interfaces/game_ui/game_ui.c">
+<area shape="rect" id="node1" title=" " alt="" coords="135,5,274,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,65,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,95,147,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="171,95,239,121"/>
+<area shape="rect" id="node5" href="$game__ui_8h.html" title=" " alt="" coords="263,95,344,121"/>
+<area shape="rect" id="node7" href="$client_2game_2game_8h.html" title=" " alt="" coords="382,95,502,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="261,169,333,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="439,244,514,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="408,169,489,196"/>
+<area shape="rect" id="node10" href="$common_2game_8h.html" title=" " alt="" coords="514,169,653,196"/>
+</map>

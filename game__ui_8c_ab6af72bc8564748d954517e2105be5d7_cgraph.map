@@ -1,0 +1,4 @@
+<map id="activate_countdown" name="activate_countdown">
+<area shape="rect" id="node1" title="Activate countdown for progress_bar." alt="" coords="5,5,144,32"/>
+<area shape="rect" id="node2" href="$game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b" title="Stop execution for a delay." alt="" coords="192,5,244,32"/>
+</map>

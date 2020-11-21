@@ -1,0 +1,5 @@
+<map id="on_mise_10_selected" name="on_mise_10_selected">
+<area shape="rect" id="node1" title="Mise 10 handler." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$game_8c.html#a5cb45f1a38e12a4e0ac7ac285512d59c" title="Set current bet." alt="" coords="215,5,365,32"/>
+<area shape="rect" id="node3" href="$game__ui_8c.html#adc2299fdf4c1e6b26b8c015a21f9fffe" title="Untoggle previously activated button." alt="" coords="201,56,379,83"/>
+</map>

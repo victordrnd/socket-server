@@ -1,0 +1,5 @@
+<map id="read_config" name="read_config">
+<area shape="rect" id="node1" title="Read configuration file." alt="" coords="5,31,93,57"/>
+<area shape="rect" id="node2" href="$network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="187,5,269,32"/>
+<area shape="rect" id="node3" href="$server_2utils_2config_8c.html#abcf382e0a3e3b4b51bf4c929c47c2e3e" title="Parse only game_configuration section of config file." alt="" coords="141,56,315,83"/>
+</map>

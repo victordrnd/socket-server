@@ -1,0 +1,532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier: Référence du fichier src/client/interfaces/game_ui/game_ui.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_c1dd3877bd8cd560a6a92f47963d8ddd.html">interfaces</a></li><li class="navelem"><a class="el" href="dir_50d970bcc5123721297e2e8d79d3f2bb.html">game_ui</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier game_ui.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="game__ui_8h_source.html">game_ui.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="client_2game_2game_8h_source.html">../../game/game.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de game_ui.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c__incl.png" border="0" usemap="#asrc_2client_2interfaces_2game__ui_2game__ui_8c" alt=""/></div>
+<map name="src_2client_2interfaces_2game__ui_2game__ui_8c" id="asrc_2client_2interfaces_2game__ui_2game__ui_8c">
+<area shape="rect" title=" " alt="" coords="135,5,274,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,65,121"/>
+<area shape="rect" title=" " alt="" coords="89,95,147,121"/>
+<area shape="rect" title=" " alt="" coords="171,95,239,121"/>
+<area shape="rect" href="game__ui_8h.html" title=" " alt="" coords="263,95,344,121"/>
+<area shape="rect" href="client_2game_2game_8h.html" title=" " alt="" coords="382,95,502,121"/>
+<area shape="rect" title=" " alt="" coords="261,169,333,196"/>
+<area shape="rect" title=" " alt="" coords="439,244,514,271"/>
+<area shape="rect" title=" " alt="" coords="408,169,489,196"/>
+<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="514,169,653,196"/>
+</map>
+</div>
+</div>
+<p><a href="game__ui_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4752443ae6ddafe33dbcd8b3521f397b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a> (unsigned int msecs)</td></tr>
+<tr class="memdesc:a4752443ae6ddafe33dbcd8b3521f397b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop execution for a delay.  <a href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4752443ae6ddafe33dbcd8b3521f397b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2299fdf4c1e6b26b8c015a21f9fffe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#adc2299fdf4c1e6b26b8c015a21f9fffe">untoggle_previous_bet_btn</a> (GtkBuilder *<a class="el" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, GtkWidget *button)</td></tr>
+<tr class="memdesc:adc2299fdf4c1e6b26b8c015a21f9fffe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Untoggle previously activated button.  <a href="game__ui_8c.html#adc2299fdf4c1e6b26b8c015a21f9fffe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc2299fdf4c1e6b26b8c015a21f9fffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6af72bc8564748d954517e2105be5d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#ab6af72bc8564748d954517e2105be5d7">activate_countdown</a> (GtkProgressBar *progress_bar, int seconds, int fps)</td></tr>
+<tr class="memdesc:ab6af72bc8564748d954517e2105be5d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate countdown for progress_bar.  <a href="game__ui_8c.html#ab6af72bc8564748d954517e2105be5d7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab6af72bc8564748d954517e2105be5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9034940d74f3c6dc39b3418b73d9c9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#ae9034940d74f3c6dc39b3418b73d9c9c">stop_count_down</a> (GtkProgressBar *progress_bar)</td></tr>
+<tr class="memdesc:ae9034940d74f3c6dc39b3418b73d9c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hide countdown progress bar.  <a href="game__ui_8c.html#ae9034940d74f3c6dc39b3418b73d9c9c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae9034940d74f3c6dc39b3418b73d9c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1346dcb3ff047467d3ea97814e3602b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b">toggle_action_button</a> (GtkBuilder *<a class="el" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, gboolean sensitive)</td></tr>
+<tr class="memdesc:ae1346dcb3ff047467d3ea97814e3602b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate or desactivate action buttons.  <a href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1346dcb3ff047467d3ea97814e3602b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4353172bcd1d2aefec8d9869312ad19d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#a4353172bcd1d2aefec8d9869312ad19d">radio_bet_button</a> (GtkBuilder *<a class="el" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, gboolean sensitive)</td></tr>
+<tr class="separator:a4353172bcd1d2aefec8d9869312ad19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aa51f04c144f825221a92e885e28f9ac0"><td class="memItemLeft" align="right" valign="top">GtkWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = NULL</td></tr>
+<tr class="separator:aa51f04c144f825221a92e885e28f9ac0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab6af72bc8564748d954517e2105be5d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6af72bc8564748d954517e2105be5d7">&#9670;&nbsp;</a></span>activate_countdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void activate_countdown </td>
+          <td>(</td>
+          <td class="paramtype">GtkProgressBar *&#160;</td>
+          <td class="paramname"><em>progress_bar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activate countdown for progress_bar. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progress_bar</td><td>GtkWidget (GtkProgressBar) </td></tr>
+    <tr><td class="paramname">seconds</td><td>time to go to 0 </td></tr>
+    <tr><td class="paramname">fps</td><td>fraps per seconds for animation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00050">50</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    gtk_widget_show((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    gtk_progress_bar_set_show_text(progress_bar, TRUE);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = seconds * fps; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        gdouble fraction = (i * (1.0 / seconds)) / fps;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> ((i / (fps / 10)) % 10 == 0)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">char</span> *res = (<span class="keywordtype">char</span> *)malloc(3 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            sprintf(res, <span class="stringliteral">&quot;%.f s&quot;</span>, (<span class="keywordtype">double</span>)i / fps);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            gtk_progress_bar_set_text(progress_bar, res);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">//free(res);</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        gtk_progress_bar_set_fraction(progress_bar, fraction);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">while</span> (gtk_events_pending())</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            gtk_main_iteration();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a>(1000 / fps);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="game__ui_8c_source.html#l00013">delay()</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00133">on_round_start_action()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_cgraph.png" border="0" usemap="#agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_cgraph" alt=""/></div>
+<map name="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_cgraph" id="agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_cgraph">
+<area shape="rect" title="Activate countdown for progress_bar." alt="" coords="5,5,144,32"/>
+<area shape="rect" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b" title="Stop execution for a delay." alt="" coords="192,5,244,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph.png" border="0" usemap="#agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph" alt=""/></div>
+<map name="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph" id="agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph">
+<area shape="rect" title="Activate countdown for progress_bar." alt="" coords="820,42,959,69"/>
+<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,42,772,69"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4752443ae6ddafe33dbcd8b3521f397b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4752443ae6ddafe33dbcd8b3521f397b">&#9670;&nbsp;</a></span>delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delay </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>msecs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop execution for a delay. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msecs</td><td>duration in milliseconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00013">13</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    clock_t goal = msecs * CLOCKS_PER_SEC / 1000 + clock();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">while</span> (goal &gt; clock())</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00050">activate_countdown()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph.png" border="0" usemap="#agame__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph" alt=""/></div>
+<map name="game__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph" id="agame__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph">
+<area shape="rect" title="Stop execution for a delay." alt="" coords="1007,42,1059,69"/>
+<area shape="rect" href="game__ui_8h.html#ab6af72bc8564748d954517e2105be5d7" title="Activate countdown for progress_bar." alt="" coords="820,42,959,69"/>
+<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,42,772,69"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4353172bcd1d2aefec8d9869312ad19d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4353172bcd1d2aefec8d9869312ad19d">&#9670;&nbsp;</a></span>radio_bet_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void radio_bet_button </td>
+          <td>(</td>
+          <td class="paramtype">GtkBuilder *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gboolean&#160;</td>
+          <td class="paramname"><em>sensitive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00097">97</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_25&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_50&quot;</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_75&quot;</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_100&quot;</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    gtk_widget_set_sensitive(mise_10, sensitive);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    gtk_widget_set_sensitive(mise_25, sensitive);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    gtk_widget_set_sensitive(mise_50, sensitive);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    gtk_widget_set_sensitive(mise_75, sensitive);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    gtk_widget_set_sensitive(mise_100, sensitive);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00111">on_failed_action()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph.png" border="0" usemap="#agame__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph" alt=""/></div>
+<map name="game__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph" id="agame__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph">
+<area shape="rect" title=" " alt="" coords="785,42,904,69"/>
+<area shape="rect" href="handlers_8h.html#a40aeca7c660df99a6e7782cdf573da9b" title=" " alt="" coords="621,42,737,69"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae9034940d74f3c6dc39b3418b73d9c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9034940d74f3c6dc39b3418b73d9c9c">&#9670;&nbsp;</a></span>stop_count_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stop_count_down </td>
+          <td>(</td>
+          <td class="paramtype">GtkProgressBar *&#160;</td>
+          <td class="paramname"><em>progress_bar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hide countdown progress bar. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">progress_bar</td><td>progressbar to hide </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00077">77</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae1346dcb3ff047467d3ea97814e3602b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1346dcb3ff047467d3ea97814e3602b">&#9670;&nbsp;</a></span>toggle_action_button()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void toggle_action_button </td>
+          <td>(</td>
+          <td class="paramtype">GtkBuilder *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">gboolean&#160;</td>
+          <td class="paramname"><em>sensitive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Activate or desactivate action buttons. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">builder</td><td>Window Builder </td></tr>
+    <tr><td class="paramname">sensitive</td><td>TRUE to toggle sensitiveness </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00089">89</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;betray_btn&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;collaborate_btn&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    gtk_widget_set_sensitive(betray_btn, sensitive);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    gtk_widget_set_sensitive(collaborate_btn, sensitive);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00071">on_betray_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00087">on_collaborate_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00101">on_connected_action()</a>, <a class="el" href="handlers_8c_source.html#l00111">on_failed_action()</a>, et <a class="el" href="handlers_8c_source.html#l00133">on_round_start_action()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph.png" border="0" usemap="#agame__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph" alt=""/></div>
+<map name="game__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph" id="agame__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph">
+<area shape="rect" title="Activate or desactivate action buttons." alt="" coords="820,123,963,149"/>
+<area shape="rect" href="handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="628,5,765,32"/>
+<area shape="rect" href="handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="631,57,762,98"/>
+<area shape="rect" href="handlers_8h.html#a206838ccba42dc7d6d58ccfa2dcc003f" title=" " alt="" coords="624,123,769,149"/>
+<area shape="rect" href="handlers_8h.html#a40aeca7c660df99a6e7782cdf573da9b" title=" " alt="" coords="639,173,755,200"/>
+<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,224,772,251"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,173,573,200"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,137,429,178"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,203,411,229"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,144,239,171"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,144,56,171"/>
+<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,203,197,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adc2299fdf4c1e6b26b8c015a21f9fffe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2299fdf4c1e6b26b8c015a21f9fffe">&#9670;&nbsp;</a></span>untoggle_previous_bet_btn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void untoggle_previous_bet_btn </td>
+          <td>(</td>
+          <td class="paramtype">GtkBuilder *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GtkWidget *&#160;</td>
+          <td class="paramname"><em>button</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Untoggle previously activated button. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">button</td><td>button to toggle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00025">25</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> == NULL)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>); <span class="comment">//selected by default</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> != button)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)button);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        gtk_style_context_add_class(context, <span class="stringliteral">&quot;selected&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *)<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        gtk_style_context_remove_class(PreviousButtoncontext, <span class="stringliteral">&quot;selected&quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = button;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>, et <a class="el" href="game__ui_8c_source.html#l00006">previousToggledBtn</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00059">on_mise_100_selected()</a>, <a class="el" href="handlers_8c_source.html#l00015">on_mise_10_selected()</a>, <a class="el" href="handlers_8c_source.html#l00026">on_mise_25_selected()</a>, <a class="el" href="handlers_8c_source.html#l00037">on_mise_50_selected()</a>, et <a class="el" href="handlers_8c_source.html#l00048">on_mise_75_selected()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="game__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph.png" border="0" usemap="#agame__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph" alt=""/></div>
+<map name="game__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph" id="agame__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph">
+<area shape="rect" title="Untoggle previously activated button." alt="" coords="208,107,385,133"/>
+<area shape="rect" href="handlers_8h.html#a9f878bc18a4593e038761d2be5b39f74" title="Mise 100 handler." alt="" coords="5,5,160,32"/>
+<area shape="rect" href="handlers_8h.html#a56a3a5effaeda7c28bf74a24a8f6948f" title="Mise 10 handler." alt="" coords="9,56,157,83"/>
+<area shape="rect" href="handlers_8h.html#aa6fadee3c3589b977a8f6532095b1b98" title="Mise 25 handler." alt="" coords="9,107,157,133"/>
+<area shape="rect" href="handlers_8h.html#aa5a69a15e8ca45f3af385cbf39d25de0" title="Mise 50 handler." alt="" coords="9,157,157,184"/>
+<area shape="rect" href="handlers_8c.html#a8bac6d7d3cc3535e4ace96c970f5b5a8" title="Mise 75 handler." alt="" coords="9,208,157,235"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="aa51f04c144f825221a92e885e28f9ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51f04c144f825221a92e885e28f9ac0">&#9670;&nbsp;</a></span>previousToggledBtn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GtkWidget* previousToggledBtn = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00006">6</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00025">untoggle_previous_bet_btn()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="ahandlers_8c_html_afa501dbb63ae6077ac8db76b560de42b"><div class="ttname"><a href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a></div><div class="ttdeci">GtkBuilder * builder</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00008">handlers.c:8</a></div></div>
+<div class="ttc" id="agame__ui_8c_html_a4752443ae6ddafe33dbcd8b3521f397b"><div class="ttname"><a href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a></div><div class="ttdeci">void delay(unsigned int msecs)</div><div class="ttdoc">Stop execution for a delay.</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00013">game_ui.c:13</a></div></div>
+<div class="ttc" id="agame__ui_8c_html_aa51f04c144f825221a92e885e28f9ac0"><div class="ttname"><a href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a></div><div class="ttdeci">GtkWidget * previousToggledBtn</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00006">game_ui.c:6</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

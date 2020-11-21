@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier:  Fichier source de src/client/game/game.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_4e216fde05fea1968aa059559682add7.html">game</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">game.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="game_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_2game_8h.html">game.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../utils/config.h&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">    4</a></span>&#160;<a class="code" href="struct_game.html">Game</a> *<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#aed0eb46c90ea1c84690520cbb3378af2">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#a869a2cc102466a96f92172b54265894f">init_game</a>(<a class="code" href="struct_game.html">Game</a> *c_game){</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a> = c_game;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7807929f96acfc6fdb147ae2c1456d52">action</a> = <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a8bb584db01e5ebc3a3d4d84157cebc3d">NOACTION</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a> = 100; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">bet</a> = 10;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#ab5a69d481942167342454e3150129a7b">current_round</a> = 1; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#a5cb45f1a38e12a4e0ac7ac285512d59c">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#a5cb45f1a38e12a4e0ac7ac285512d59c">game_set_current_bet</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> bet){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">bet</a> = bet;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#a04315527419bc1e46c0c1bd9cc974516">   34</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="game_8c.html#a04315527419bc1e46c0c1bd9cc974516">game_get_current_bet</a>(){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">bet</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#ab7048abaf9a31604f56fabb6f9f5df08">   38</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="game_8c.html#ab7048abaf9a31604f56fabb6f9f5df08">game_next_round</a>(){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#ab5a69d481942167342454e3150129a7b">current_round</a> + 1 &lt;= <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#afbf31c5867bccf2539884a16b0ddfe6f">total_rounds</a>) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#ab5a69d481942167342454e3150129a7b">current_round</a>++;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#a6c12da15fbd5e90b53898087825ca62c">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c">game_set_action</a>(<span class="keyword">enum</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1">actions</a> action){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7807929f96acfc6fdb147ae2c1456d52">action</a> = action;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#a60fdaf1c95a2df2ab30e3bd92b4151c0">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#a60fdaf1c95a2df2ab30e3bd92b4151c0">game_set_react_time</a>(<span class="keyword">struct</span> timeval <a class="code" href="handlers_8c.html#a8812cacbb85be2a5b733457d2cf572d1">round_start_time</a>, <span class="keyword">struct</span> timeval action_clicked_time){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a201b96ce325c07052016e18111888407">react_time</a> = (action_clicked_time.tv_sec - <a class="code" href="handlers_8c.html#a8812cacbb85be2a5b733457d2cf572d1">round_start_time</a>.tv_sec) * 1000.0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a201b96ce325c07052016e18111888407">react_time</a> += (action_clicked_time.tv_usec - <a class="code" href="handlers_8c.html#a8812cacbb85be2a5b733457d2cf572d1">round_start_time</a>.tv_usec) / 1000.0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b">game_set_max_rounds</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> maxrounds){</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#afbf31c5867bccf2539884a16b0ddfe6f">total_rounds</a> = maxrounds;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#a22d30488e3e1cc5d89cb6657b7604cb2">   61</a></span>&#160;<a class="code" href="struct_game.html">Game</a> *<a class="code" href="game_8c.html#a22d30488e3e1cc5d89cb6657b7604cb2">get_game</a>(){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#ad0bd98dd2437f38f7a32d32e82d3c2aa">   64</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db">set_game</a>(<a class="code" href="struct_game.html">Game</a> *game_v){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a> = game_v;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="client_2game_2game_8h.html#af3f55587265764fcddc314dc807a27f5">   68</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="game_8c.html#af3f55587265764fcddc314dc807a27f5">game_set_balance</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> balance){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a> = balance;;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="ahandlers_8c_html_a8812cacbb85be2a5b733457d2cf572d1"><div class="ttname"><a href="handlers_8c.html#a8812cacbb85be2a5b733457d2cf572d1">round_start_time</a></div><div class="ttdeci">struct timeval round_start_time</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00008">handlers.c:9</a></div></div>
+<div class="ttc" id="astruct_game_html_afbf31c5867bccf2539884a16b0ddfe6f"><div class="ttname"><a href="struct_game.html#afbf31c5867bccf2539884a16b0ddfe6f">Game::total_rounds</a></div><div class="ttdeci">unsigned int total_rounds</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00019">game.h:19</a></div></div>
+<div class="ttc" id="agame_8c_html_a22d30488e3e1cc5d89cb6657b7604cb2"><div class="ttname"><a href="game_8c.html#a22d30488e3e1cc5d89cb6657b7604cb2">get_game</a></div><div class="ttdeci">Game * get_game()</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00061">game.c:61</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
+<div class="ttc" id="acommon_2game_8h_html_af806efc6052edbc741683ec893bb2fe1"><div class="ttname"><a href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1">actions</a></div><div class="ttdeci">actions</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00007">game.h:8</a></div></div>
+<div class="ttc" id="agame_8c_html_a60fdaf1c95a2df2ab30e3bd92b4151c0"><div class="ttname"><a href="game_8c.html#a60fdaf1c95a2df2ab30e3bd92b4151c0">game_set_react_time</a></div><div class="ttdeci">void game_set_react_time(struct timeval round_start_time, struct timeval action_clicked_time)</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00051">game.c:51</a></div></div>
+<div class="ttc" id="agame_8c_html_a58bdb5643d0814ac4e697a1564b79b70"><div class="ttname"><a href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00004">game.c:4</a></div></div>
+<div class="ttc" id="agame_8c_html_a5cb45f1a38e12a4e0ac7ac285512d59c"><div class="ttname"><a href="game_8c.html#a5cb45f1a38e12a4e0ac7ac285512d59c">game_set_current_bet</a></div><div class="ttdeci">void game_set_current_bet(unsigned int bet)</div><div class="ttdoc">Set current bet.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00025">game.c:25</a></div></div>
+<div class="ttc" id="agame_8c_html_ab7048abaf9a31604f56fabb6f9f5df08"><div class="ttname"><a href="game_8c.html#ab7048abaf9a31604f56fabb6f9f5df08">game_next_round</a></div><div class="ttdeci">bool game_next_round()</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00038">game.c:38</a></div></div>
+<div class="ttc" id="agame_8c_html_a6c12da15fbd5e90b53898087825ca62c"><div class="ttname"><a href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c">game_set_action</a></div><div class="ttdeci">void game_set_action(enum actions action)</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00046">game.c:46</a></div></div>
+<div class="ttc" id="agame_8c_html_a510a5235ab09b46347ecc21a5abfa0db"><div class="ttname"><a href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db">set_game</a></div><div class="ttdeci">void set_game(Game *game_v)</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00064">game.c:64</a></div></div>
+<div class="ttc" id="astruct_game_html_ab5a69d481942167342454e3150129a7b"><div class="ttname"><a href="struct_game.html#ab5a69d481942167342454e3150129a7b">Game::current_round</a></div><div class="ttdeci">unsigned int current_round</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00018">game.h:18</a></div></div>
+<div class="ttc" id="agame_8c_html_a04315527419bc1e46c0c1bd9cc974516"><div class="ttname"><a href="game_8c.html#a04315527419bc1e46c0c1bd9cc974516">game_get_current_bet</a></div><div class="ttdeci">int game_get_current_bet()</div><div class="ttdoc">Get current bet.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00034">game.c:34</a></div></div>
+<div class="ttc" id="astruct_game_html_a7f9f1e1d23a8e972570e14f2f4748532"><div class="ttname"><a href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">Game::balance</a></div><div class="ttdeci">unsigned int balance</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00017">game.h:17</a></div></div>
+<div class="ttc" id="agame_8c_html_af3f55587265764fcddc314dc807a27f5"><div class="ttname"><a href="game_8c.html#af3f55587265764fcddc314dc807a27f5">game_set_balance</a></div><div class="ttdeci">void game_set_balance(unsigned int balance)</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00068">game.c:68</a></div></div>
+<div class="ttc" id="acommon_2game_8h_html"><div class="ttname"><a href="common_2game_8h.html">game.h</a></div></div>
+<div class="ttc" id="acommon_2game_8h_html_af806efc6052edbc741683ec893bb2fe1a8bb584db01e5ebc3a3d4d84157cebc3d"><div class="ttname"><a href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a8bb584db01e5ebc3a3d4d84157cebc3d">NOACTION</a></div><div class="ttdeci">@ NOACTION</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00009">game.h:9</a></div></div>
+<div class="ttc" id="agame_8c_html_a869a2cc102466a96f92172b54265894f"><div class="ttname"><a href="game_8c.html#a869a2cc102466a96f92172b54265894f">init_game</a></div><div class="ttdeci">void init_game(Game *c_game)</div><div class="ttdoc">Init current game.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00012">game.c:12</a></div></div>
+<div class="ttc" id="astruct_game_html_a7807929f96acfc6fdb147ae2c1456d52"><div class="ttname"><a href="struct_game.html#a7807929f96acfc6fdb147ae2c1456d52">Game::action</a></div><div class="ttdeci">enum actions action</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00019">game.h:20</a></div></div>
+<div class="ttc" id="agame_8c_html_ad6c29b9bc243da19d5e6ab8cb4a70e2b"><div class="ttname"><a href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b">game_set_max_rounds</a></div><div class="ttdeci">void game_set_max_rounds(unsigned int maxrounds)</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00057">game.c:57</a></div></div>
+<div class="ttc" id="astruct_game_html_a4bd1c1754fec5b5a47077e494ae8039c"><div class="ttname"><a href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">Game::bet</a></div><div class="ttdeci">unsigned int bet</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00016">game.h:16</a></div></div>
+<div class="ttc" id="astruct_game_html_a201b96ce325c07052016e18111888407"><div class="ttname"><a href="struct_game.html#a201b96ce325c07052016e18111888407">Game::react_time</a></div><div class="ttdeci">double react_time</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00015">game.h:15</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

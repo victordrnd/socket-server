@@ -1,0 +1,8 @@
+<map id="settle_action" name="settle_action">
+<area shape="rect" id="node1" title=" " alt="" coords="477,42,573,69"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" id="node5" href="$server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" id="node3" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" id="node4" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
+<area shape="rect" id="node6" href="$server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+</map>

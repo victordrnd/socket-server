@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier:  Fichier source de src/server/server.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_075bb3ff235063c77951cd176d15a741.html">server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">server.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * To change this license header, choose License Headers in Project Properties.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * To change this template file, choose Tools | Templates</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * and open the template in the editor.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * File:   main.c</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Author: aurelio</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;sys/socket.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;arpa/inet.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;./network/communication.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;utils/config.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="result_8h.html">utils/export/result.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="struct_config.html">Config</a> configuration;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="client_2utils_2config_8c.html#aa08df544e8579c3090ab13b8c7407069">init_executable_path</a>(&amp;configuration);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">char</span> *executable_path = <a class="code" href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="client_2utils_2config_8c.html#a7eb9b2879361ca0e028d34abd65df59a">read_config</a>(&amp;configuration, strcat(executable_path, <span class="stringliteral">&quot;/config/server_config.cfg&quot;</span>));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    free(executable_path);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> sockfd = -1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> index = 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="structconnection__t.html">connection_t</a> *connection;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    pthread_t thread;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* init array*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="server_2network_2communication_8c.html#acd9b786770513865bf74ec76f3ec80e2">init_sockets_array</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">/* create socket */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    sockfd = <a class="code" href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f">create_server_socket</a>(&amp;configuration);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">/* listen on port , stack size 50 for incoming connections*/</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (listen(sockfd, 50) &lt; 0) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;%s: error: cannot listen on port\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> -5;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;Ready and listening...\n&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//Wait for connection</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">/* accept incoming connections */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        connection = (<a class="code" href="structconnection__t.html">connection_t</a> *) malloc(<span class="keyword">sizeof</span> (<a class="code" href="structconnection__t.html">connection_t</a>));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        connection-&gt;<a class="code" href="structconnection__t.html#a3de3207917f1e032d3ad311e0d747237">sockfd</a> = accept(sockfd, &amp;connection-&gt;<a class="code" href="structconnection__t.html#a00fb3c2f8857e0586fd932958830f157">address</a>,(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> *) &amp;connection-&gt;<a class="code" href="structconnection__t.html#af2456407f49e87c24ff0d149ee8500e1">addr_len</a>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        connection-&gt;<a class="code" href="structconnection__t.html#a0a1d421255f93573bd55263f681ebc0f">index</a> = index++;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (connection-&gt;<a class="code" href="structconnection__t.html#a3de3207917f1e032d3ad311e0d747237">sockfd</a> &lt;= 0) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            free(connection);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="comment">/* start a new thread but do not wait for it */</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            pthread_create(&amp;thread, 0, <a class="code" href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697">threadProcess</a>, (<span class="keywordtype">void</span> *) connection);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            pthread_detach(thread);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> (EXIT_SUCCESS);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructconnection__t_html_a0a1d421255f93573bd55263f681ebc0f"><div class="ttname"><a href="structconnection__t.html#a0a1d421255f93573bd55263f681ebc0f">connection_t::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00026">communication.h:26</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_aa08df544e8579c3090ab13b8c7407069"><div class="ttname"><a href="client_2utils_2config_8c.html#aa08df544e8579c3090ab13b8c7407069">init_executable_path</a></div><div class="ttdeci">char * init_executable_path(Config *configuration)</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00071">config.c:71</a></div></div>
+<div class="ttc" id="alinks_8txt_html_aa16be43cd325511816067b39d68dea74"><div class="ttname"><a href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a></div><div class="ttdeci">printf(__VA_ARGS__)</div></div>
+<div class="ttc" id="aserver_8c_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="server_8c_source.html#l00035">server.c:35</a></div></div>
+<div class="ttc" id="astructconnection__t_html_a3de3207917f1e032d3ad311e0d747237"><div class="ttname"><a href="structconnection__t.html#a3de3207917f1e032d3ad311e0d747237">connection_t::sockfd</a></div><div class="ttdeci">int sockfd</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00023">communication.h:23</a></div></div>
+<div class="ttc" id="astructconnection__t_html_af2456407f49e87c24ff0d149ee8500e1"><div class="ttname"><a href="structconnection__t.html#af2456407f49e87c24ff0d149ee8500e1">connection_t::addr_len</a></div><div class="ttdeci">int addr_len</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00025">communication.h:25</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a7eb9b2879361ca0e028d34abd65df59a"><div class="ttname"><a href="client_2utils_2config_8c.html#a7eb9b2879361ca0e028d34abd65df59a">read_config</a></div><div class="ttdeci">void read_config(Config *configuration, const char *filename)</div><div class="ttdoc">Read configuration file.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00023">config.c:23</a></div></div>
+<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00004">config.h:5</a></div></div>
+<div class="ttc" id="astructconnection__t_html"><div class="ttname"><a href="structconnection__t.html">connection_t</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00021">communication.h:22</a></div></div>
+<div class="ttc" id="aresult_8h_html"><div class="ttname"><a href="result_8h.html">result.h</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_acd9b786770513865bf74ec76f3ec80e2"><div class="ttname"><a href="server_2network_2communication_8c.html#acd9b786770513865bf74ec76f3ec80e2">init_sockets_array</a></div><div class="ttdeci">void init_sockets_array()</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00018">communication.c:18</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a0827ab2ac31e7fd68e3437b17e63ce1b"><div class="ttname"><a href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a></div><div class="ttdeci">char * get_executable_path()</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00066">config.c:66</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_a866afac1361e7f042d6e37aa9ac86697"><div class="ttname"><a href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697">threadProcess</a></div><div class="ttdeci">void * threadProcess(void *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00064">communication.c:64</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_acba7085622f1c06ba3a68a8e6d05d69f"><div class="ttname"><a href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f">create_server_socket</a></div><div class="ttdeci">int create_server_socket(Config *configuration)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00115">communication.c:115</a></div></div>
+<div class="ttc" id="astructconnection__t_html_a00fb3c2f8857e0586fd932958830f157"><div class="ttname"><a href="structconnection__t.html#a00fb3c2f8857e0586fd932958830f157">connection_t::address</a></div><div class="ttdeci">struct sockaddr address</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00023">communication.h:24</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

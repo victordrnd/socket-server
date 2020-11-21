@@ -1,0 +1,17 @@
+<map id="src/common/protocol/protocol.h" name="src/common/protocol/protocol.h">
+<area shape="rect" id="node1" title=" " alt="" coords="399,5,543,47"/>
+<area shape="rect" id="node2" href="$handlers_8h.html" title=" " alt="" coords="117,95,256,136"/>
+<area shape="rect" id="node5" href="$client_2network_2actions_8c.html" title=" " alt="" coords="5,273,131,315"/>
+<area shape="rect" id="node6" href="$client_2network_2communication_8h.html" title=" " alt="" coords="329,95,455,136"/>
+<area shape="rect" id="node10" href="$protocol_8c.html" title=" " alt="" coords="479,95,623,136"/>
+<area shape="rect" id="node11" href="$server_2network_2actions_8h.html" title=" " alt="" coords="660,95,791,136"/>
+<area shape="rect" id="node14" href="$server_2network_2communication_8h.html" title=" " alt="" coords="815,95,945,136"/>
+<area shape="rect" id="node3" href="$handlers_8c.html" title=" " alt="" coords="204,273,343,315"/>
+<area shape="rect" id="node4" href="$launch_8c.html" title=" " alt="" coords="156,184,292,225"/>
+<area shape="rect" id="node7" href="$client_8c.html" title=" " alt="" coords="516,191,636,218"/>
+<area shape="rect" id="node8" href="$client_2network_2actions_8h.html" title=" " alt="" coords="316,184,441,225"/>
+<area shape="rect" id="node9" href="$client_2network_2communication_8c.html" title=" " alt="" coords="391,273,516,315"/>
+<area shape="rect" id="node12" href="$server_2network_2actions_8c.html" title=" " alt="" coords="660,184,791,225"/>
+<area shape="rect" id="node13" href="$server_2network_2communication_8c.html" title=" " alt="" coords="815,184,945,225"/>
+<area shape="rect" id="node15" href="$server_8c.html" title=" " alt="" coords="969,191,1100,218"/>
+</map>

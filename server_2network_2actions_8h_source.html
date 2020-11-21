@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier:  Fichier source de src/server/network/actions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_075bb3ff235063c77951cd176d15a741.html">server</a></li><li class="navelem"><a class="el" href="dir_651a747bfb01a645e263f069cf6a779a.html">network</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">actions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_2network_2actions_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef S_ACTIONS_HEADER_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define S_ACTIONS_HEADER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../common/protocol/protocol.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../utils/config.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../common/game.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_session.html">    7</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_session.html#a4e687bd269a57c0d50f9e8592c5a38c4">    8</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct_session.html#a4e687bd269a57c0d50f9e8592c5a38c4">client_id</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="struct_session.html#a76c2d107b5f5f1ca496ac08fa5620292">    9</a></span>&#160;    <a class="code" href="struct_game.html">Game</a> *<a class="code" href="struct_session.html#a76c2d107b5f5f1ca496ac08fa5620292">game</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;} <a class="code" href="struct_session.html">Session</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3">on_connect_action</a>(Encapsulation *packet);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a>(Encapsulation *packet, <a class="code" href="struct_room.html">Room</a>* room);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141">send_round_start</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> client_id);</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="server_2network_2actions_8h.html#aa2bab5e78078d2b7ffe94212734191c1">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="server_2network_2actions_8h.html#aa2bab5e78078d2b7ffe94212734191c1">on_action_received</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a>(Encapsulation *packet);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> client_id);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="struct_session.html">Session</a> *<a class="code" href="server_2network_2actions_8h.html#af73fe186b2233aa1ad60d4a55eab2bab">check_if_opponent_played</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> opponent_id);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556">send_game_end</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> client_id, <span class="keyword">enum</span> <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21">results</a> winner);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclient_2network_2actions_8h_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00005">actions.c:5</a></div></div>
+<div class="ttc" id="astruct_session_html_a4e687bd269a57c0d50f9e8592c5a38c4"><div class="ttname"><a href="struct_session.html#a4e687bd269a57c0d50f9e8592c5a38c4">Session::client_id</a></div><div class="ttdeci">unsigned int client_id</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8h_source.html#l00008">actions.h:8</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_a4aebe714b0093331cd12b504bfbe8f2a"><div class="ttname"><a href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a></div><div class="ttdeci">void send_game_start(Encapsulation *packet, Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00057">actions.c:57</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_aa2bab5e78078d2b7ffe94212734191c1"><div class="ttname"><a href="server_2network_2actions_8h.html#aa2bab5e78078d2b7ffe94212734191c1">on_action_received</a></div><div class="ttdeci">void on_action_received()</div></div>
+<div class="ttc" id="astruct_session_html"><div class="ttname"><a href="struct_session.html">Session</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8h_source.html#l00007">actions.h:7</a></div></div>
+<div class="ttc" id="astruct_session_html_a76c2d107b5f5f1ca496ac08fa5620292"><div class="ttname"><a href="struct_session.html#a76c2d107b5f5f1ca496ac08fa5620292">Session::game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8h_source.html#l00009">actions.h:9</a></div></div>
+<div class="ttc" id="astruct_room_html"><div class="ttname"><a href="struct_room.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00006">config.h:7</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_a339bb5524b06e496a6aaa0a97a4a8d21"><div class="ttname"><a href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21">results</a></div><div class="ttdeci">results</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00019">protocol.h:19</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_ac1e4df7de62df06fbe1cb46cd1adbff3"><div class="ttname"><a href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3">on_connect_action</a></div><div class="ttdeci">void on_connect_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00034">actions.c:34</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_af73fe186b2233aa1ad60d4a55eab2bab"><div class="ttname"><a href="server_2network_2actions_8h.html#af73fe186b2233aa1ad60d4a55eab2bab">check_if_opponent_played</a></div><div class="ttdeci">Session * check_if_opponent_played(unsigned int opponent_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00197">actions.c:197</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_a9651c190591cca70c995fa4156e17141"><div class="ttname"><a href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141">send_round_start</a></div><div class="ttdeci">void send_round_start(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00074">actions.c:74</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_a46ba5203ef139048e38bc26f90d4c3f4"><div class="ttname"><a href="server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a></div><div class="ttdeci">bool check_oppponent_connected(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00187">actions.c:187</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8h_html_a476eba14098db94568d354c71154c556"><div class="ttname"><a href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556">send_game_end</a></div><div class="ttdeci">void send_game_end(unsigned int client_id, enum results winner)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00153">actions.c:153</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

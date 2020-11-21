@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Diliemme du prisonnier: Référence du fichier src/client/utils/config.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Diliemme du prisonnier
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_4e603c70a04111f621bb3388687f9e47.html">utils</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier config.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;libconfig.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;libgen.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="client_2utils_2config_8h_source.html">config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="logs_8h_source.html">../../common/tests/logs/logs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="network_8h_source.html">../../common/tests/network/network.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de config.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c__incl.png" border="0" usemap="#asrc_2client_2utils_2config_8c" alt=""/></div>
+<map name="src_2client_2utils_2config_8c" id="asrc_2client_2utils_2config_8c">
+<area shape="rect" title=" " alt="" coords="379,5,529,32"/>
+<area shape="rect" title=" " alt="" coords="5,87,68,114"/>
+<area shape="rect" title=" " alt="" coords="92,87,171,114"/>
+<area shape="rect" title=" " alt="" coords="195,87,263,114"/>
+<area shape="rect" title=" " alt="" coords="287,87,351,114"/>
+<area shape="rect" title=" " alt="" coords="375,87,442,114"/>
+<area shape="rect" title=" " alt="" coords="466,87,533,114"/>
+<area shape="rect" href="client_2utils_2config_8h.html" title=" " alt="" coords="557,87,623,114"/>
+<area shape="rect" href="logs_8h.html" title=" " alt="" coords="647,80,773,121"/>
+<area shape="rect" href="network_8h.html" title=" " alt="" coords="797,80,929,121"/>
+<area shape="rect" title=" " alt="" coords="878,169,953,196"/>
+</map>
+</div>
+</div>
+<p><a href="client_2utils_2config_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a7eb9b2879361ca0e028d34abd65df59a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#a7eb9b2879361ca0e028d34abd65df59a">read_config</a> (<a class="el" href="struct_config.html">Config</a> *configuration, const char *filename)</td></tr>
+<tr class="memdesc:a7eb9b2879361ca0e028d34abd65df59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read configuration file.  <a href="client_2utils_2config_8c.html#a7eb9b2879361ca0e028d34abd65df59a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7eb9b2879361ca0e028d34abd65df59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1457d7f257cc842e037a5ac7323429a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a">config_get_client_id</a> ()</td></tr>
+<tr class="separator:ac1457d7f257cc842e037a5ac7323429a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74037e55cc5fe7d08b9249d216032ecd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#a74037e55cc5fe7d08b9249d216032ecd">config_get_server_ip</a> ()</td></tr>
+<tr class="separator:a74037e55cc5fe7d08b9249d216032ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d801ea74d26809dfb58277f289ea78e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#a8d801ea74d26809dfb58277f289ea78e">config_get_server_port</a> ()</td></tr>
+<tr class="separator:a8d801ea74d26809dfb58277f289ea78e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0827ab2ac31e7fd68e3437b17e63ce1b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a> ()</td></tr>
+<tr class="separator:a0827ab2ac31e7fd68e3437b17e63ce1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa08df544e8579c3090ab13b8c7407069"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#aa08df544e8579c3090ab13b8c7407069">init_executable_path</a> (<a class="el" href="struct_config.html">Config</a> *configuration)</td></tr>
+<tr class="separator:aa08df544e8579c3090ab13b8c7407069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a6a44a77efe9d36d03240f900d00dad80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_config.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a> = NULL</td></tr>
+<tr class="separator:a6a44a77efe9d36d03240f900d00dad80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ac1457d7f257cc842e037a5ac7323429a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1457d7f257cc842e037a5ac7323429a">&#9670;&nbsp;</a></span>config_get_client_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int config_get_client_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00052">52</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">client_id</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="client_2utils_2config_8h_source.html#l00006">Config::client_id</a>, et <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c_ac1457d7f257cc842e037a5ac7323429a_icgraph.png" border="0" usemap="#aclient_2utils_2config_8c_ac1457d7f257cc842e037a5ac7323429a_icgraph" alt=""/></div>
+<map name="client_2utils_2config_8c_ac1457d7f257cc842e037a5ac7323429a_icgraph" id="aclient_2utils_2config_8c_ac1457d7f257cc842e037a5ac7323429a_icgraph">
+<area shape="rect" title=" " alt="" coords="844,173,980,200"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="700,173,796,200"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="515,5,650,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,224,280,251"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="513,123,652,149"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="524,325,641,352"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="335,224,458,251"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="524,275,641,301"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="521,224,644,251"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="371,5,422,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,249,101,276"/>
+<area shape="rect" href="handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="328,107,465,133"/>
+<area shape="rect" href="handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="331,158,462,199"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="329,275,464,301"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a74037e55cc5fe7d08b9249d216032ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74037e55cc5fe7d08b9249d216032ecd">&#9670;&nbsp;</a></span>config_get_server_ip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* config_get_server_ip </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00057">57</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00007">Config::ip</a>.</p>
+
+</div>
+</div>
+<a id="a8d801ea74d26809dfb58277f289ea78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d801ea74d26809dfb58277f289ea78e">&#9670;&nbsp;</a></span>config_get_server_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int config_get_server_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00062">62</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">port</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00008">Config::port</a>.</p>
+
+</div>
+</div>
+<a id="a0827ab2ac31e7fd68e3437b17e63ce1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0827ab2ac31e7fd68e3437b17e63ce1b">&#9670;&nbsp;</a></span>get_executable_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* get_executable_path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00066">66</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                           {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">char</span> *executable_path = (<span class="keywordtype">char</span> *) malloc(256);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    memcpy(executable_path, <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>, 256);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">return</span> executable_path;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>, et <a class="el" href="launch_8c_source.html#l00009">register_styles()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph.png" border="0" usemap="#aclient_2utils_2config_8c_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph" alt=""/></div>
+<map name="client_2utils_2config_8c_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph" id="aclient_2utils_2config_8c_a0827ab2ac31e7fd68e3437b17e63ce1b_icgraph">
+<area shape="rect" title=" " alt="" coords="432,5,573,32"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+<area shape="rect" href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c" title="Register css styles from resource file." alt="" coords="277,31,384,57"/>
+<area shape="rect" href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="104,31,229,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa08df544e8579c3090ab13b8c7407069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa08df544e8579c3090ab13b8c7407069">&#9670;&nbsp;</a></span>init_executable_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* init_executable_path </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *&#160;</td>
+          <td class="paramname"><em>configuration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00071">71</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a> = configuration;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">char</span> filename[248];</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> count = readlink(<span class="stringliteral">&quot;/proc/self/exe&quot;</span>, filename, 256);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">if</span> (count != -1)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        memcpy(configuration-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>, dirname(filename), 256);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a>-&gt;<a class="code" href="struct_config.html#a26eb18bf8d821c977bd209594517e140">executable_path</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c_aa08df544e8579c3090ab13b8c7407069_icgraph.png" border="0" usemap="#aclient_2utils_2config_8c_aa08df544e8579c3090ab13b8c7407069_icgraph" alt=""/></div>
+<map name="client_2utils_2config_8c_aa08df544e8579c3090ab13b8c7407069_icgraph" id="aclient_2utils_2config_8c_aa08df544e8579c3090ab13b8c7407069_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,244,32"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7eb9b2879361ca0e028d34abd65df59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb9b2879361ca0e028d34abd65df59a">&#9670;&nbsp;</a></span>read_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void read_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_config.html">Config</a> *&#160;</td>
+          <td class="paramname"><em>configuration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read configuration file. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">configuration</td><td>current configuration (or empty) </td></tr>
+    <tr><td class="paramname">filename</td><td>filename of configuration file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00023">23</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    config_t cfg;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    config_init(&amp;cfg);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (!config_read_file(&amp;cfg, filename))</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        fprintf(stderr, <span class="stringliteral">&quot;%s:%d - %s\n&quot;</span>, config_error_file(&amp;cfg),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                config_error_line(&amp;cfg), config_error_text(&amp;cfg));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        config_destroy(&amp;cfg);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        config_lookup_int(&amp;cfg, <span class="stringliteral">&quot;client_id&quot;</span>, (<span class="keywordtype">int</span> *)&amp;configuration-&gt;<a class="code" href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">client_id</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        config_lookup_string(&amp;cfg, <span class="stringliteral">&quot;server_ip&quot;</span>, &amp;configuration-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        config_lookup_int(&amp;cfg, <span class="stringliteral">&quot;server_port&quot;</span>, (<span class="keywordtype">int</span> *)&amp;configuration-&gt;<a class="code" href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">port</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a> = configuration;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    assert(configuration-&gt;<a class="code" href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">client_id</a> &gt; 0);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">char</span> *ip = (<span class="keywordtype">char</span> *)malloc(12 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    strcpy(ip, configuration-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    assert(<a class="code" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b">is_ip_valid</a>(ip) == <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    free(ip);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="logs_8h.html#a6e9ec56bf6be72f425f1564901c8bc3b">debug_print_client_config</a>(configuration-&gt;<a class="code" href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">client_id</a>, configuration-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>, configuration-&gt;<a class="code" href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">port</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="client_2utils_2config_8h_source.html#l00006">Config::client_id</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00015">config</a>, <a class="el" href="logs_8h_source.html#l00005">debug_print_client_config</a>, <a class="el" href="client_2utils_2config_8h_source.html#l00007">Config::ip</a>, <a class="el" href="network_8c_source.html#l00012">is_ip_valid()</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00008">Config::port</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_cgraph.png" border="0" usemap="#aclient_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_cgraph" alt=""/></div>
+<map name="client_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_cgraph" id="aclient_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_cgraph">
+<area shape="rect" title="Read configuration file." alt="" coords="5,5,93,32"/>
+<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="141,5,224,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="client_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_icgraph.png" border="0" usemap="#aclient_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_icgraph" alt=""/></div>
+<map name="client_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_icgraph" id="aclient_2utils_2config_8c_a7eb9b2879361ca0e028d34abd65df59a_icgraph">
+<area shape="rect" title="Read configuration file." alt="" coords="104,5,192,32"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a6a44a77efe9d36d03240f900d00dad80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a44a77efe9d36d03240f900d00dad80">&#9670;&nbsp;</a></span>config</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_config.html">Config</a>* config = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="client_2utils_2config_8c_source.html#l00015">15</a> du fichier <a class="el" href="client_2utils_2config_8c_source.html">config.c</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="client_2utils_2config_8c_source.html#l00052">config_get_client_id()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00057">config_get_server_ip()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00062">config_get_server_port()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00066">get_executable_path()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00071">init_executable_path()</a>, et <a class="el" href="client_2utils_2config_8c_source.html#l00023">read_config()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<div class="ttc" id="astruct_config_html_ad907c7420d0546ef21ea78ddc31b78de"><div class="ttname"><a href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">Config::client_id</a></div><div class="ttdeci">unsigned int client_id</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00006">config.h:6</a></div></div>
+<div class="ttc" id="alogs_8h_html_a6e9ec56bf6be72f425f1564901c8bc3b"><div class="ttname"><a href="logs_8h.html#a6e9ec56bf6be72f425f1564901c8bc3b">debug_print_client_config</a></div><div class="ttdeci">#define debug_print_client_config(...)</div><div class="ttdef"><b>Definition:</b> <a href="logs_8h_source.html#l00005">logs.h:5</a></div></div>
+<div class="ttc" id="anetwork_8c_html_ab972e742ae1ea3be0eb8f877f018d13b"><div class="ttname"><a href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b">is_ip_valid</a></div><div class="ttdeci">bool is_ip_valid(char *ip)</div><div class="ttdoc">Verify if an ip is correctly formed.</div><div class="ttdef"><b>Definition:</b> <a href="network_8c_source.html#l00012">network.c:12</a></div></div>
+<div class="ttc" id="astruct_config_html_a0c8531e4232b2cf1fae860432ab523c6"><div class="ttname"><a href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">Config::port</a></div><div class="ttdeci">unsigned int port</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00008">config.h:8</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a6a44a77efe9d36d03240f900d00dad80"><div class="ttname"><a href="client_2utils_2config_8c.html#a6a44a77efe9d36d03240f900d00dad80">config</a></div><div class="ttdeci">Config * config</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00015">config.c:15</a></div></div>
+<div class="ttc" id="astruct_config_html_a14ef947a3d43345ff5ad05b89870758c"><div class="ttname"><a href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">Config::ip</a></div><div class="ttdeci">const char * ip</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00007">config.h:7</a></div></div>
+<div class="ttc" id="astruct_config_html_a26eb18bf8d821c977bd209594517e140"><div class="ttname"><a href="struct_config.html#a26eb18bf8d821c977bd209594517e140">Config::executable_path</a></div><div class="ttdeci">char executable_path[256]</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00009">config.h:9</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>
