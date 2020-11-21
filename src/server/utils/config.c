@@ -2,13 +2,14 @@
 #include <libconfig.h>
 #include <assert.h>
 #include <string.h>
+#include <libgen.h>
+#include <unistd.h>
 
 #include "config.h"
 #ifndef NDEBUG
 #include "../../common/tests/network/network.h"
 #include "../../common/tests/logs/logs.h"
 #endif
-
 
 Config *conf = NULL;
 
@@ -29,8 +30,8 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
     {
         config_setting_t *current_room_config = config_setting_get_elem(settings, i);
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
-        config_setting_lookup_int(current_room_config, "initial_amount",(int *) &wp->initial_amount);
-        config_setting_lookup_int(current_room_config, "nb_rounds",(int *) &wp->nb_rounds);
+        config_setting_lookup_int(current_room_config, "initial_amount", (int *)&wp->initial_amount);
+        config_setting_lookup_int(current_room_config, "nb_rounds", (int *)&wp->nb_rounds);
 
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
@@ -77,7 +78,7 @@ void read_config(Config *configuration, char *filename)
 
         setting = config_lookup(&cfg, "game_configuration");
         GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
-        
+
         parse_game_configuration(game_configuration, setting);
         configuration->game_config = game_configuration;
 
@@ -96,16 +97,18 @@ void read_config(Config *configuration, char *filename)
 #endif
 }
 
-bool is_client_exists(unsigned int client_id) {
+bool is_client_exists(unsigned int client_id)
+{
 
     GameConfiguration *game_config = conf->game_config;
 
-    for(unsigned int i=0; i<game_config->nb_room; i++){ 
+    for (unsigned int i = 0; i < game_config->nb_room; i++)
+    {
         Room current_room = game_config->rooms[i];
         unsigned int *wp = current_room.clients_id;
-        while(wp != NULL)
+        while (wp != NULL)
         {
-            if(*wp == client_id)
+            if (*wp == client_id)
             {
                 return true;
             }
@@ -115,16 +118,18 @@ bool is_client_exists(unsigned int client_id) {
     return false;
 }
 
-Room* get_client_room(unsigned int client_id){
+Room *get_client_room(unsigned int client_id)
+{
 
     GameConfiguration *game_config = conf->game_config;
 
-    for(unsigned int i=0; i<game_config->nb_room; i++)
+    for (unsigned int i = 0; i < game_config->nb_room; i++)
     {
         Room *current_room = &game_config->rooms[i];
 
-        for(int j = 0; j < 2; j++){
-            if(current_room->clients_id[j] == client_id)
+        for (int j = 0; j < 2; j++)
+        {
+            if (current_room->clients_id[j] == client_id)
                 return current_room;
         }
     }
@@ -132,10 +137,10 @@ Room* get_client_room(unsigned int client_id){
 }
 
 int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
-{ 
+{
     Room *current_room = get_client_room(client_id);
     unsigned int *wp = current_room->clients_id;
-    while (wp !=NULL)
+    while (wp != NULL)
     {
         if (*wp != client_id)
         {
@@ -146,10 +151,31 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
-unsigned int get_max_round_count(Room *room){
+unsigned int get_max_round_count(Room *room)
+{
     return room->nb_rounds;
 }
 
-unsigned int get_initial_amount(Room *room) {
+unsigned int get_initial_amount(Room *room)
+{
     return room->initial_amount;
+}
+
+char *get_executable_path()
+{
+    char *executable_path = (char *)malloc(256);
+    memcpy(executable_path, conf->executable_path, 256);
+    return executable_path;
+}
+
+char *init_executable_path(Config *configuration)
+{
+    conf = configuration;
+    char filename[256];
+    int count = readlink("/proc/self/exe", filename, 256);
+    if (count != -1)
+    {
+        memcpy(configuration->executable_path, dirname(filename), 256);
+    }
+    return conf->executable_path;
 }

@@ -54,7 +54,19 @@ void write_line(const char *filename,Game *data,int client_id) {
     FILE* file = fopen(filename,"a+");
 
     if(file != NULL){
-        fprintf(file,"%d;%.3f;%d;%d;%d;%d;%x\n",client_id,data->react_time / 1000,data->bet,data->balance,data->current_round,data->total_rounds,data->action);
+        char action[15];
+        switch (data->action)
+        {
+        case BETRAY:{
+            strcpy(action,"BETRAY");
+            break;
+        }
+        case COLLABORATE:{
+            strcpy(action,"COLLABORATE");
+            break;
+        }
+        }
+        fprintf(file,"%d;%.3f;%d;%d;%d;%d;%s\n",client_id,data->react_time / 1000,data->bet,data->balance,data->current_round,data->total_rounds,action);
     }
     fclose(file);
 }
