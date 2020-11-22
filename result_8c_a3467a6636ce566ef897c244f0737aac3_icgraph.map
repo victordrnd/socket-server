@@ -1,6 +1,7 @@
 <map id="write_header" name="write_header">
-<area shape="rect" id="node1" title=" " alt="" coords="499,5,595,32"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="328,5,451,32"/>
-<area shape="rect" id="node3" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,5,280,32"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="695,5,791,32"/>
+<area shape="rect" id="node2" href="$result_8h.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="499,5,647,32"/>
+<area shape="rect" id="node3" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="328,5,451,32"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,5,280,32"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
 </map>

@@ -11,5 +11,9 @@ var searchData=
   ['addr_5flen_14',['addr_len',['../structconnection__t.html#af2456407f49e87c24ff0d149ee8500e1',1,'connection_t']]],
   ['address_15',['address',['../structconnection__t.html#a00fb3c2f8857e0586fd932958830f157',1,'connection_t']]],
   ['align_16',['align',['../structf__cell__props.html#af62bf24b68171fffc82aada70aaaf46c',1,'f_cell_props']]],
-  ['app_5fthreads_5ft_17',['app_threads_t',['../structapp__threads__t.html',1,'']]]
+  ['app_5fthreads_5ft_17',['app_threads_t',['../structapp__threads__t.html',1,'']]],
+  ['argp_18',['argp',['../client_8c.html#ab70c96531b1b652d70c221cfaf3207f3',1,'client.c']]],
+  ['args_19',['args',['../struct_arguments.html#aededfa75e6fd15036ae84d1a4304cfb8',1,'Arguments']]],
+  ['args_5fdoc_20',['args_doc',['../client_8c.html#a91b08784b3668a8a1fbe2eec1947fb9d',1,'client.c']]],
+  ['arguments_21',['Arguments',['../struct_arguments.html',1,'']]]
 ];

@@ -1,18 +1,16 @@
 <map id="on_connect_action" name="on_connect_action">
-<area shape="rect" id="node1" title=" " alt="" coords="5,177,136,203"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="184,50,375,77"/>
-<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="442,13,553,39"/>
-<area shape="rect" id="node5" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="620,101,735,127"/>
-<area shape="rect" id="node6" href="$server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title=" " alt="" coords="260,531,299,558"/>
-<area shape="rect" id="node7" href="$server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="434,177,561,203"/>
-<area shape="rect" id="node8" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="218,253,341,279"/>
-<area shape="rect" id="node11" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="629,379,725,406"/>
-<area shape="rect" id="node4" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="439,126,556,153"/>
-<area shape="rect" id="node9" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="423,227,572,254"/>
-<area shape="rect" id="node10" href="$result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="458,278,537,305"/>
-<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="436,379,559,406"/>
-<area shape="rect" id="node15" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="449,430,545,457"/>
-<area shape="rect" id="node12" href="$client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="783,354,919,381"/>
-<area shape="rect" id="node13" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="789,405,913,431"/>
-<area shape="rect" id="node16" href="$links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="652,430,703,457"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,136,157"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="184,80,375,107"/>
+<area shape="rect" id="node5" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="620,29,735,56"/>
+<area shape="rect" id="node6" href="$server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="434,131,561,157"/>
+<area shape="rect" id="node7" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="218,181,341,208"/>
+<area shape="rect" id="node11" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="629,333,725,360"/>
+<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="442,29,553,56"/>
+<area shape="rect" id="node4" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="439,80,556,107"/>
+<area shape="rect" id="node8" href="$result_8c.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="423,232,571,259"/>
+<area shape="rect" id="node10" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="423,181,572,208"/>
+<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="436,333,559,360"/>
+<area shape="rect" id="node9" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="629,232,725,259"/>
+<area shape="rect" id="node12" href="$client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="783,308,919,335"/>
+<area shape="rect" id="node13" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="789,359,913,385"/>
 </map>

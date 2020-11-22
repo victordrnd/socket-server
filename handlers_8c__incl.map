@@ -1,16 +1,16 @@
 <map id="src/client/interfaces/handlers/handlers.c" name="src/client/interfaces/handlers/handlers.c">
 <area shape="rect" id="node1" title=" " alt="" coords="337,5,476,47"/>
 <area shape="rect" id="node2" href="$handlers_8h.html" title=" " alt="" coords="174,95,255,121"/>
-<area shape="rect" id="node6" href="$common_2game_8h.html" title=" " alt="" coords="387,169,535,196"/>
-<area shape="rect" id="node8" href="$game__ui_8h.html" title=" " alt="" coords="5,95,149,121"/>
-<area shape="rect" id="node9" href="$client_2game_2game_8h.html" title=" " alt="" coords="499,95,619,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="613,169,694,196"/>
+<area shape="rect" id="node6" href="$common_2game_8h.html" title=" " alt="" coords="350,169,498,196"/>
+<area shape="rect" id="node7" href="$game__ui_8h.html" title=" " alt="" coords="5,95,149,121"/>
+<area shape="rect" id="node8" href="$client_2game_2game_8h.html" title=" " alt="" coords="499,95,619,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="621,169,702,196"/>
 <area shape="rect" id="node11" href="$client_2network_2actions_8h.html" title=" " alt="" coords="280,95,424,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="56,169,128,196"/>
-<area shape="rect" id="node4" href="$protocol_8h.html" title=" " alt="" coords="96,244,248,285"/>
-<area shape="rect" id="node5" title=" " alt="" coords="143,333,201,360"/>
-<area shape="rect" id="node7" title=" " alt="" coords="500,251,575,278"/>
-<area shape="rect" id="node12" href="$client_2network_2communication_8h.html" title=" " alt="" coords="243,169,363,196"/>
-<area shape="rect" id="node13" href="$client_2utils_2config_8h.html" title=" " alt="" coords="272,251,376,278"/>
-<area shape="rect" id="node14" title=" " alt="" coords="400,251,475,278"/>
+<area shape="rect" id="node3" title=" " alt="" coords="47,169,119,196"/>
+<area shape="rect" id="node4" href="$protocol_8h.html" title=" " alt="" coords="71,244,223,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="118,333,175,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="521,169,596,196"/>
+<area shape="rect" id="node12" href="$client_2network_2communication_8h.html" title=" " alt="" coords="205,169,325,196"/>
+<area shape="rect" id="node13" href="$client_2utils_2config_8h.html" title=" " alt="" coords="345,251,449,278"/>
+<area shape="rect" id="node14" title=" " alt="" coords="247,251,321,278"/>
 </map>

@@ -87,11 +87,11 @@ Graphe des dépendances par inclusion de game_ui.c:</div>
 <area shape="rect" title=" " alt="" coords="89,95,147,121"/>
 <area shape="rect" title=" " alt="" coords="171,95,239,121"/>
 <area shape="rect" href="game__ui_8h.html" title=" " alt="" coords="263,95,344,121"/>
-<area shape="rect" href="client_2game_2game_8h.html" title=" " alt="" coords="382,95,502,121"/>
-<area shape="rect" title=" " alt="" coords="261,169,333,196"/>
-<area shape="rect" title=" " alt="" coords="439,244,514,271"/>
-<area shape="rect" title=" " alt="" coords="408,169,489,196"/>
-<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="514,169,653,196"/>
+<area shape="rect" href="client_2game_2game_8h.html" title=" " alt="" coords="406,95,526,121"/>
+<area shape="rect" title=" " alt="" coords="249,169,321,196"/>
+<area shape="rect" title=" " alt="" coords="345,169,419,196"/>
+<area shape="rect" title=" " alt="" coords="444,169,525,196"/>
+<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="550,169,689,196"/>
 </map>
 </div>
 </div>
@@ -165,31 +165,31 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00050">50</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    gtk_widget_show((GtkWidget *)progress_bar);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    gtk_progress_bar_set_show_text(progress_bar, TRUE);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = seconds * fps; i &gt;= 0; i--)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        gdouble fraction = (i * (1.0 / seconds)) / fps;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> ((i / (fps / 10)) % 10 == 0)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">char</span> *res = (<span class="keywordtype">char</span> *)malloc(3 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            sprintf(res, <span class="stringliteral">&quot;%.f s&quot;</span>, (<span class="keywordtype">double</span>)i / fps);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            gtk_progress_bar_set_text(progress_bar, res);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">//free(res);</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        gtk_progress_bar_set_fraction(progress_bar, fraction);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">while</span> (gtk_events_pending())</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            gtk_main_iteration();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a>(1000 / fps);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00056">56</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    gtk_widget_show((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    gtk_progress_bar_set_show_text(progress_bar, TRUE);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = seconds * fps; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        gdouble fraction = (i * (1.0 / seconds)) / fps;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">if</span> ((i / (fps / 10)) % 10 == 0)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">char</span> *res = (<span class="keywordtype">char</span> *)malloc(3 * <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            sprintf(res, <span class="stringliteral">&quot;%.f s&quot;</span>, (<span class="keywordtype">double</span>)i / fps);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            gtk_progress_bar_set_text(progress_bar, res);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="comment">//free(res);</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        gtk_progress_bar_set_fraction(progress_bar, fraction);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">while</span> (gtk_events_pending())</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            gtk_main_iteration();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a>(1000 / fps);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="game__ui_8c_source.html#l00013">delay()</a>.</p>
+<p class="reference">Références <a class="el" href="game__ui_8c_source.html#l00019">delay()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00133">on_round_start_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00139">on_round_start_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -205,13 +205,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph.png" border="0" usemap="#agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph" alt=""/></div>
 <map name="game__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph" id="agame__ui_8c_ab6af72bc8564748d954517e2105be5d7_icgraph">
 <area shape="rect" title="Activate countdown for progress_bar." alt="" coords="820,42,959,69"/>
-<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,42,772,69"/>
+<area shape="rect" href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692" title=" " alt="" coords="621,42,772,69"/>
 <area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
 <area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
 <area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
 <area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,71,197,98"/>
 </map>
 </div>
 
@@ -241,14 +241,14 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00013">13</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    clock_t goal = msecs * CLOCKS_PER_SEC / 1000 + clock();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">while</span> (goal &gt; clock())</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        ;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00019">19</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    clock_t goal = msecs * CLOCKS_PER_SEC / 1000 + clock();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">while</span> (goal &gt; clock())</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        ;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00050">activate_countdown()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00056">activate_countdown()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
@@ -256,13 +256,13 @@ Voici le graphe des appelants de cette fonction :</div>
 <map name="game__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph" id="agame__ui_8c_a4752443ae6ddafe33dbcd8b3521f397b_icgraph">
 <area shape="rect" title="Stop execution for a delay." alt="" coords="1007,42,1059,69"/>
 <area shape="rect" href="game__ui_8h.html#ab6af72bc8564748d954517e2105be5d7" title="Activate countdown for progress_bar." alt="" coords="820,42,959,69"/>
-<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,42,772,69"/>
+<area shape="rect" href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692" title=" " alt="" coords="621,42,772,69"/>
 <area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
 <area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
 <area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
 <area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,71,197,98"/>
 </map>
 </div>
 
@@ -294,37 +294,37 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00097">97</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_25&quot;</span>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_50&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_75&quot;</span>);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_100&quot;</span>);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    gtk_widget_set_sensitive(mise_10, sensitive);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    gtk_widget_set_sensitive(mise_25, sensitive);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    gtk_widget_set_sensitive(mise_50, sensitive);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    gtk_widget_set_sensitive(mise_75, sensitive);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    gtk_widget_set_sensitive(mise_100, sensitive);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00103">103</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_25&quot;</span>);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_50&quot;</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_75&quot;</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_100&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    gtk_widget_set_sensitive(mise_10, sensitive);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    gtk_widget_set_sensitive(mise_25, sensitive);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    gtk_widget_set_sensitive(mise_50, sensitive);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    gtk_widget_set_sensitive(mise_75, sensitive);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    gtk_widget_set_sensitive(mise_100, sensitive);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>.</p>
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00111">on_failed_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00117">on_failed_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="game__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph.png" border="0" usemap="#agame__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph" alt=""/></div>
 <map name="game__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph" id="agame__ui_8c_a4353172bcd1d2aefec8d9869312ad19d_icgraph">
 <area shape="rect" title=" " alt="" coords="785,42,904,69"/>
-<area shape="rect" href="handlers_8h.html#a40aeca7c660df99a6e7782cdf573da9b" title=" " alt="" coords="621,42,737,69"/>
+<area shape="rect" href="handlers_8h.html#a20e23fdf880893cdfcdd979bd78d2064" title=" " alt="" coords="621,42,737,69"/>
 <area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,42,573,69"/>
 <area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
 <area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
 <area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,71,197,98"/>
 </map>
 </div>
 
@@ -354,11 +354,11 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00077">77</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00083">83</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -397,34 +397,34 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00089">89</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;betray_btn&quot;</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;collaborate_btn&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    gtk_widget_set_sensitive(betray_btn, sensitive);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    gtk_widget_set_sensitive(collaborate_btn, sensitive);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00095">95</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;betray_btn&quot;</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;collaborate_btn&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    gtk_widget_set_sensitive(betray_btn, sensitive);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    gtk_widget_set_sensitive(collaborate_btn, sensitive);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>.</p>
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00071">on_betray_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00087">on_collaborate_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00101">on_connected_action()</a>, <a class="el" href="handlers_8c_source.html#l00111">on_failed_action()</a>, et <a class="el" href="handlers_8c_source.html#l00133">on_round_start_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00077">on_betray_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00093">on_collaborate_btn_click()</a>, <a class="el" href="handlers_8c_source.html#l00107">on_connected_action()</a>, <a class="el" href="handlers_8c_source.html#l00117">on_failed_action()</a>, et <a class="el" href="handlers_8c_source.html#l00139">on_round_start_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="game__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph.png" border="0" usemap="#agame__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph" alt=""/></div>
 <map name="game__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph" id="agame__ui_8c_ae1346dcb3ff047467d3ea97814e3602b_icgraph">
 <area shape="rect" title="Activate or desactivate action buttons." alt="" coords="820,123,963,149"/>
-<area shape="rect" href="handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="628,5,765,32"/>
-<area shape="rect" href="handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="631,57,762,98"/>
+<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="628,5,765,32"/>
+<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="631,57,762,98"/>
 <area shape="rect" href="handlers_8h.html#a206838ccba42dc7d6d58ccfa2dcc003f" title=" " alt="" coords="624,123,769,149"/>
-<area shape="rect" href="handlers_8h.html#a40aeca7c660df99a6e7782cdf573da9b" title=" " alt="" coords="639,173,755,200"/>
-<area shape="rect" href="handlers_8h.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="621,224,772,251"/>
+<area shape="rect" href="handlers_8h.html#a20e23fdf880893cdfcdd979bd78d2064" title=" " alt="" coords="639,173,755,200"/>
+<area shape="rect" href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692" title=" " alt="" coords="621,224,772,251"/>
 <area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="477,173,573,200"/>
 <area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,137,429,178"/>
 <area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,203,411,229"/>
 <area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,144,239,171"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,144,56,171"/>
-<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,203,197,229"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,203,197,229"/>
 </map>
 </div>
 
@@ -464,38 +464,38 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00025">25</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> == NULL)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>); <span class="comment">//selected by default</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> != button)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)button);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        gtk_style_context_add_class(context, <span class="stringliteral">&quot;selected&quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *)<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        gtk_style_context_remove_class(PreviousButtoncontext, <span class="stringliteral">&quot;selected&quot;</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = button;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00031">31</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> == NULL)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>); <span class="comment">//selected by default</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> != button)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)button);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        gtk_style_context_add_class(context, <span class="stringliteral">&quot;selected&quot;</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        GtkStyleContext *PreviousButtoncontext = gtk_widget_get_style_context((GtkWidget *)<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        gtk_style_context_remove_class(PreviousButtoncontext, <span class="stringliteral">&quot;selected&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = button;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>, et <a class="el" href="game__ui_8c_source.html#l00006">previousToggledBtn</a>.</p>
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>, et <a class="el" href="game__ui_8c_source.html#l00012">previousToggledBtn</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00059">on_mise_100_selected()</a>, <a class="el" href="handlers_8c_source.html#l00015">on_mise_10_selected()</a>, <a class="el" href="handlers_8c_source.html#l00026">on_mise_25_selected()</a>, <a class="el" href="handlers_8c_source.html#l00037">on_mise_50_selected()</a>, et <a class="el" href="handlers_8c_source.html#l00048">on_mise_75_selected()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="handlers_8c_source.html#l00065">on_mise_100_selected()</a>, <a class="el" href="handlers_8c_source.html#l00021">on_mise_10_selected()</a>, <a class="el" href="handlers_8c_source.html#l00032">on_mise_25_selected()</a>, <a class="el" href="handlers_8c_source.html#l00043">on_mise_50_selected()</a>, et <a class="el" href="handlers_8c_source.html#l00054">on_mise_75_selected()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="game__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph.png" border="0" usemap="#agame__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph" alt=""/></div>
 <map name="game__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph" id="agame__ui_8c_adc2299fdf4c1e6b26b8c015a21f9fffe_icgraph">
 <area shape="rect" title="Untoggle previously activated button." alt="" coords="208,107,385,133"/>
-<area shape="rect" href="handlers_8h.html#a9f878bc18a4593e038761d2be5b39f74" title="Mise 100 handler." alt="" coords="5,5,160,32"/>
-<area shape="rect" href="handlers_8h.html#a56a3a5effaeda7c28bf74a24a8f6948f" title="Mise 10 handler." alt="" coords="9,56,157,83"/>
-<area shape="rect" href="handlers_8h.html#aa6fadee3c3589b977a8f6532095b1b98" title="Mise 25 handler." alt="" coords="9,107,157,133"/>
-<area shape="rect" href="handlers_8h.html#aa5a69a15e8ca45f3af385cbf39d25de0" title="Mise 50 handler." alt="" coords="9,157,157,184"/>
-<area shape="rect" href="handlers_8c.html#a8bac6d7d3cc3535e4ace96c970f5b5a8" title="Mise 75 handler." alt="" coords="9,208,157,235"/>
+<area shape="rect" href="handlers_8h.html#a4e725a8a49ac1aa82a10588620862aec" title="Mise 100 handler." alt="" coords="5,5,160,32"/>
+<area shape="rect" href="handlers_8h.html#a0ce2c406eaa3ae57e68eec871e399bf4" title="Mise 10 handler." alt="" coords="9,56,157,83"/>
+<area shape="rect" href="handlers_8h.html#aed46fc176e2cd008c02b54a5447c2d70" title="Mise 25 handler." alt="" coords="9,107,157,133"/>
+<area shape="rect" href="handlers_8h.html#acaeb0aabec89f2495ba43099c0e0a109" title="Mise 50 handler." alt="" coords="9,157,157,184"/>
+<area shape="rect" href="handlers_8c.html#a64e29cba466d8862b35ee963a2a27d27" title="Mise 75 handler." alt="" coords="9,208,157,235"/>
 </map>
 </div>
 
@@ -514,19 +514,19 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00006">6</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00012">12</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00025">untoggle_previous_bet_btn()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="game__ui_8c_source.html#l00031">untoggle_previous_bet_btn()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="ahandlers_8c_html_afa501dbb63ae6077ac8db76b560de42b"><div class="ttname"><a href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a></div><div class="ttdeci">GtkBuilder * builder</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00008">handlers.c:8</a></div></div>
-<div class="ttc" id="agame__ui_8c_html_a4752443ae6ddafe33dbcd8b3521f397b"><div class="ttname"><a href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a></div><div class="ttdeci">void delay(unsigned int msecs)</div><div class="ttdoc">Stop execution for a delay.</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00013">game_ui.c:13</a></div></div>
-<div class="ttc" id="agame__ui_8c_html_aa51f04c144f825221a92e885e28f9ac0"><div class="ttname"><a href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a></div><div class="ttdeci">GtkWidget * previousToggledBtn</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00006">game_ui.c:6</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_afa501dbb63ae6077ac8db76b560de42b"><div class="ttname"><a href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a></div><div class="ttdeci">GtkBuilder * builder</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00014">handlers.c:14</a></div></div>
+<div class="ttc" id="agame__ui_8c_html_a4752443ae6ddafe33dbcd8b3521f397b"><div class="ttname"><a href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b">delay</a></div><div class="ttdeci">void delay(unsigned int msecs)</div><div class="ttdoc">Stop execution for a delay.</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00019">game_ui.c:19</a></div></div>
+<div class="ttc" id="agame__ui_8c_html_aa51f04c144f825221a92e885e28f9ac0"><div class="ttname"><a href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a></div><div class="ttdeci">GtkWidget * previousToggledBtn</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8c_source.html#l00012">game_ui.c:12</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

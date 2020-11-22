@@ -1,10 +1,9 @@
 <map id="src/client/network/actions.h" name="src/client/network/actions.h">
-<area shape="rect" id="node1" title=" " alt="" coords="240,5,365,47"/>
-<area shape="rect" id="node2" href="$client_2network_2communication_8h.html" title=" " alt="" coords="139,95,259,121"/>
-<area shape="rect" id="node7" href="$common_2game_8h.html" title=" " alt="" coords="337,95,476,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="184,5,309,47"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8h.html" title=" " alt="" coords="111,95,231,121"/>
+<area shape="rect" id="node7" href="$common_2game_8h.html" title=" " alt="" coords="255,95,393,121"/>
 <area shape="rect" id="node3" href="$client_2utils_2config_8h.html" title=" " alt="" coords="5,177,109,203"/>
 <area shape="rect" id="node4" title=" " alt="" coords="133,177,208,203"/>
 <area shape="rect" id="node5" href="$protocol_8h.html" title=" " alt="" coords="231,169,374,211"/>
 <area shape="rect" id="node6" title=" " alt="" coords="274,259,331,285"/>
-<area shape="rect" id="node8" title=" " alt="" coords="397,177,472,203"/>
 </map>

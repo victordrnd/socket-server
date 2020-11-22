@@ -1,5 +1,5 @@
 <map id="listen_socket_thread_process" name="listen_socket_thread_process">
 <area shape="rect" id="node1" title="Thread process for listening socket input." alt="" coords="5,23,148,65"/>
-<area shape="rect" id="node2" href="$client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="196,5,319,32"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="196,5,319,32"/>
 <area shape="rect" id="node3" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="209,56,305,83"/>
 </map>

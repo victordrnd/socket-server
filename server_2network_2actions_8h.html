@@ -81,12 +81,12 @@ Graphe des dépendances par inclusion de actions.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="server_2network_2actions_8h__incl.png" border="0" usemap="#asrc_2server_2network_2actions_8h" alt=""/></div>
 <map name="src_2server_2network_2actions_8h" id="asrc_2server_2network_2actions_8h">
-<area shape="rect" title=" " alt="" coords="83,5,213,47"/>
-<area shape="rect" title=" " alt="" coords="39,184,113,211"/>
-<area shape="rect" href="protocol_8h.html" title=" " alt="" coords="315,95,458,136"/>
-<area shape="rect" href="server_2utils_2config_8h.html" title=" " alt="" coords="24,102,128,129"/>
-<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="152,102,291,129"/>
-<area shape="rect" title=" " alt="" coords="358,184,415,211"/>
+<area shape="rect" title=" " alt="" coords="95,5,225,47"/>
+<area shape="rect" title=" " alt="" coords="5,184,80,211"/>
+<area shape="rect" href="protocol_8h.html" title=" " alt="" coords="163,95,306,136"/>
+<area shape="rect" href="server_2utils_2config_8h.html" title=" " alt="" coords="35,102,139,129"/>
+<area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="331,102,469,129"/>
+<area shape="rect" title=" " alt="" coords="206,184,263,211"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -115,26 +115,26 @@ Fonctions</h2></td></tr>
 <tr class="separator:a4aebe714b0093331cd12b504bfbe8f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9651c190591cca70c995fa4156e17141"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141">send_round_start</a> (unsigned int client_id)</td></tr>
 <tr class="separator:a9651c190591cca70c995fa4156e17141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2bab5e78078d2b7ffe94212734191c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#aa2bab5e78078d2b7ffe94212734191c1">on_action_received</a> ()</td></tr>
-<tr class="separator:aa2bab5e78078d2b7ffe94212734191c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5084505bd2ee1d2038605b46547d250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a> (Encapsulation *packet)</td></tr>
 <tr class="separator:ab5084505bd2ee1d2038605b46547d250"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ba5203ef139048e38bc26f90d4c3f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a> (unsigned int client_id)</td></tr>
 <tr class="separator:a46ba5203ef139048e38bc26f90d4c3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af73fe186b2233aa1ad60d4a55eab2bab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_session.html">Session</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#af73fe186b2233aa1ad60d4a55eab2bab">check_if_opponent_played</a> (unsigned int opponent_id)</td></tr>
-<tr class="separator:af73fe186b2233aa1ad60d4a55eab2bab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993dcff5a74d747c420db02ab49a731f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_session.html">Session</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#a993dcff5a74d747c420db02ab49a731f">check_opponent_played</a> (unsigned int opponent_id)</td></tr>
+<tr class="separator:a993dcff5a74d747c420db02ab49a731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b349b1c01cd0570eeb4e3add7e4b42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e">check_results</a> (<a class="el" href="struct_game.html">Game</a> *, <a class="el" href="struct_game.html">Game</a> *opponnent_game, unsigned int client_id, unsigned int opponent_id)</td></tr>
+<tr class="separator:a4b349b1c01cd0570eeb4e3add7e4b42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476eba14098db94568d354c71154c556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556">send_game_end</a> (unsigned int client_id, enum <a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21">results</a> winner)</td></tr>
 <tr class="separator:a476eba14098db94568d354c71154c556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="af73fe186b2233aa1ad60d4a55eab2bab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af73fe186b2233aa1ad60d4a55eab2bab">&#9670;&nbsp;</a></span>check_if_opponent_played()</h2>
+<a id="a993dcff5a74d747c420db02ab49a731f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993dcff5a74d747c420db02ab49a731f">&#9670;&nbsp;</a></span>check_opponent_played()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_session.html">Session</a>* check_if_opponent_played </td>
+          <td class="memname"><a class="el" href="struct_session.html">Session</a>* check_opponent_played </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>opponent_id</em></td><td>)</td>
@@ -143,28 +143,28 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00197">197</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;{</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="server_2network_2communication_8h.html#a7b2673a61734e3538ee2dc776008ea20">MAXSIMULTANEOUSCLIENTS</a>; i++)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i] != NULL)</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i]-&gt;client_id == opponent_id)</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i];</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        }</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00211">211</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;{</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="server_2network_2communication_8h.html#a7b2673a61734e3538ee2dc776008ea20">MAXSIMULTANEOUSCLIENTS</a>; i++)</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i] != NULL)</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i]-&gt;client_id == opponent_id)</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a>[i];</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        }</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="server_2network_2communication_8h_source.html#l00019">MAXSIMULTANEOUSCLIENTS</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00008">sessions</a>.</p>
+<p class="reference">Références <a class="el" href="server_2network_2communication_8h_source.html#l00014">MAXSIMULTANEOUSCLIENTS</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00016">sessions</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00094">on_action_received()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="server_2network_2actions_8h_af73fe186b2233aa1ad60d4a55eab2bab_icgraph.png" border="0" usemap="#aserver_2network_2actions_8h_af73fe186b2233aa1ad60d4a55eab2bab_icgraph" alt=""/></div>
-<map name="server_2network_2actions_8h_af73fe186b2233aa1ad60d4a55eab2bab_icgraph" id="aserver_2network_2actions_8h_af73fe186b2233aa1ad60d4a55eab2bab_icgraph">
-<area shape="rect" title=" " alt="" coords="332,5,507,32"/>
+<div class="center"><img src="server_2network_2actions_8h_a993dcff5a74d747c420db02ab49a731f_icgraph.png" border="0" usemap="#aserver_2network_2actions_8h_a993dcff5a74d747c420db02ab49a731f_icgraph" alt=""/></div>
+<map name="server_2network_2actions_8h_a993dcff5a74d747c420db02ab49a731f_icgraph" id="aserver_2network_2actions_8h_a993dcff5a74d747c420db02ab49a731f_icgraph">
+<area shape="rect" title=" " alt="" coords="332,5,493,32"/>
 <area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,5,284,32"/>
 <area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
 </map>
@@ -188,19 +188,19 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00187">187</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(client_id) &gt; 0)</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">int</span> opponent = <a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(client_id);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4">get_connection</a>(opponent) != NULL;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00201">201</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(client_id) &gt; 0)</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordtype">int</span> opponent = <a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(client_id);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4">get_connection</a>(opponent) != NULL;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="server_2network_2communication_8c_source.html#l00148">get_connection()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00139">get_opponent_id()</a>.</p>
+<p class="reference">Références <a class="el" href="server_2network_2communication_8c_source.html#l00138">get_connection()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00145">get_opponent_id()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00034">on_connect_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00044">on_connect_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -225,20 +225,89 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="aa2bab5e78078d2b7ffe94212734191c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2bab5e78078d2b7ffe94212734191c1">&#9670;&nbsp;</a></span>on_action_received()</h2>
+<a id="a4b349b1c01cd0570eeb4e3add7e4b42e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b349b1c01cd0570eeb4e3add7e4b42e">&#9670;&nbsp;</a></span>check_results()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void on_action_received </td>
+          <td class="memname">void check_results </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_game.html">Game</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="struct_game.html">Game</a> *&#160;</td>
+          <td class="paramname"><em>opponnent_game</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>client_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>opponent_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00148">148</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a> &gt; opponnent_game-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a>)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(client_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a>);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(opponent_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a> &lt; opponnent_game-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a>)</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(client_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(opponent_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a>);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(client_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a>);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a>(opponent_id, <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
+</div><!-- fragment -->
+<p class="reference">Références <a class="el" href="common_2game_8h_source.html#l00021">Game::balance</a>, <a class="el" href="protocol_8h_source.html#l00028">DEFEAT</a>, <a class="el" href="protocol_8h_source.html#l00029">EQUALITY</a>, <a class="el" href="game_8c_source.html#l00010">game</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00167">send_game_end()</a>, et <a class="el" href="protocol_8h_source.html#l00027">VICTORY</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00094">on_action_received()</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_cgraph.png" border="0" usemap="#aserver_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_cgraph" alt=""/></div>
+<map name="server_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_cgraph" id="aserver_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,108,57"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="156,31,273,57"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="321,31,417,57"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="465,5,601,32"/>
+<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="471,56,595,83"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="server_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_icgraph.png" border="0" usemap="#aserver_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_icgraph" alt=""/></div>
+<map name="server_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_icgraph" id="aserver_2network_2actions_8h_a4b349b1c01cd0570eeb4e3add7e4b42e_icgraph">
+<area shape="rect" title=" " alt="" coords="332,5,435,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,5,284,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -258,53 +327,48 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00034">34</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="struct_connected__data.html">Connected_data</a> data;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="struct_room.html">Room</a> *room = <a class="code" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a>(packet-&gt;sender_id);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (room != NULL)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        data.<a class="code" href="struct_connected__data.html#acf5579b0443887a184b07fd133dcac05">initial_balance</a> = <a class="code" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a>(room);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_connected__data.html">Connected_data</a>));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mCONNECTED\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a>(packet-&gt;sender_id))</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <a class="code" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a>(packet, room);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>, NULL, 0);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="structconnection__t.html">connection_t</a> *<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a> = <a class="code" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4">get_connection</a>(packet-&gt;sender_id);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac">del</a>(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mFAILED\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00044">44</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="struct_room.html">Room</a> *room = <a class="code" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a>(packet-&gt;sender_id);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> (room != NULL)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="struct_connected__data.html">Connected_data</a> data = {.<a class="code" href="struct_connected__data.html#acf5579b0443887a184b07fd133dcac05">initial_balance</a> = <a class="code" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a>(room)};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_connected__data.html">Connected_data</a>));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mCONNECTED\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a>(packet-&gt;sender_id))</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a>(packet, room);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>, NULL, 0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mFAILED\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="server_2network_2actions_8c_source.html#l00187">check_oppponent_connected()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00013">cnx</a>, <a class="el" href="protocol_8h_source.html#l00009">CONNECTED</a>, <a class="el" href="logs_8h_source.html#l00004">debug_print</a>, <a class="el" href="server_2network_2communication_8c_source.html#l00040">del()</a>, <a class="el" href="protocol_8h_source.html#l00010">FAILED</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00121">get_client_room()</a>, <a class="el" href="server_2network_2communication_8c_source.html#l00148">get_connection()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00159">get_initial_amount()</a>, <a class="el" href="protocol_8h_source.html#l00037">Connected_data::initial_balance</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00057">send_game_start()</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+<p class="reference">Références <a class="el" href="server_2network_2actions_8c_source.html#l00201">check_oppponent_connected()</a>, <a class="el" href="protocol_8h_source.html#l00016">CONNECTED</a>, <a class="el" href="logs_8h_source.html#l00010">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00017">FAILED</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00127">get_client_room()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00165">get_initial_amount()</a>, <a class="el" href="protocol_8h_source.html#l00044">Connected_data::initial_balance</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00064">send_game_start()</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00160">settle_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00174">settle_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="server_2network_2actions_8h_ac1e4df7de62df06fbe1cb46cd1adbff3_cgraph.png" border="0" usemap="#aserver_2network_2actions_8h_ac1e4df7de62df06fbe1cb46cd1adbff3_cgraph" alt=""/></div>
 <map name="server_2network_2actions_8h_ac1e4df7de62df06fbe1cb46cd1adbff3_cgraph" id="aserver_2network_2actions_8h_ac1e4df7de62df06fbe1cb46cd1adbff3_cgraph">
-<area shape="rect" title=" " alt="" coords="5,177,136,203"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="184,50,375,77"/>
-<area shape="rect" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="442,13,553,39"/>
-<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="620,101,735,127"/>
-<area shape="rect" href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title=" " alt="" coords="260,531,299,558"/>
-<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="434,177,561,203"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="218,253,341,279"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="629,379,725,406"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="439,126,556,153"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="423,227,572,254"/>
-<area shape="rect" href="result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="458,278,537,305"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="436,379,559,406"/>
-<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="449,430,545,457"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="783,354,919,381"/>
-<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="789,405,913,431"/>
-<area shape="rect" href="links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="652,430,703,457"/>
+<area shape="rect" title=" " alt="" coords="5,131,136,157"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="184,80,375,107"/>
+<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="620,29,735,56"/>
+<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="434,131,561,157"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="218,181,341,208"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="629,333,725,360"/>
+<area shape="rect" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="442,29,553,56"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="439,80,556,107"/>
+<area shape="rect" href="result_8c.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="423,232,571,259"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="423,181,572,208"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="436,333,559,360"/>
+<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="629,232,725,259"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="783,308,919,335"/>
+<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="789,359,913,385"/>
 </map>
 </div>
 <div class="dynheader">
@@ -345,16 +409,16 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00153">153</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;{</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="struct_game___end__data.html">Game_End_data</a> data = {winner};</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(client_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___end__data.html">Game_End_data</a>));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, client_id);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00167">167</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="struct_game___end__data.html">Game_End_data</a> data = {.<a class="code" href="struct_game___end__data.html#a8852b653f549121ed9d234f4e47a673d">result</a> = winner};</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(client_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___end__data.html">Game_End_data</a>));</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, client_id);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="logs_8h_source.html#l00004">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00015">GAME_END</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+<p class="reference">Références <a class="el" href="logs_8h_source.html#l00010">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00022">GAME_END</a>, <a class="el" href="protocol_8h_source.html#l00058">Game_End_data::result</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00148">check_results()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -362,7 +426,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="server_2network_2actions_8h_a476eba14098db94568d354c71154c556_cgraph" id="aserver_2network_2actions_8h_a476eba14098db94568d354c71154c556_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,123,57"/>
 <area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="171,31,267,57"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="315,5,451,32"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="315,5,451,32"/>
 <area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="321,56,445,83"/>
 </map>
 </div>
@@ -371,7 +435,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="server_2network_2actions_8h_a476eba14098db94568d354c71154c556_icgraph.png" border="0" usemap="#aserver_2network_2actions_8h_a476eba14098db94568d354c71154c556_icgraph" alt=""/></div>
 <map name="server_2network_2actions_8h_a476eba14098db94568d354c71154c556_icgraph" id="aserver_2network_2actions_8h_a476eba14098db94568d354c71154c556_icgraph">
-<area shape="rect" title=" " alt="" coords="332,5,449,32"/>
+<area shape="rect" title=" " alt="" coords="483,5,600,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="332,5,435,32"/>
 <area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,5,284,32"/>
 <area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
 </map>
@@ -405,43 +470,42 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00057">57</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="struct_game___start__data.html">Game_Start_data</a> data = {<a class="code" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9">get_max_round_count</a>(room), (<span class="keywordtype">unsigned</span> int)<a class="code" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a>(room)};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___start__data.html">Game_Start_data</a>));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> opponent = <a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(packet-&gt;sender_id);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(opponent, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___start__data.html">Game_Start_data</a>));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, opponent);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a>(packet-&gt;sender_id);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a>(opponent);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6">open_csv</a>((<span class="keywordtype">char</span> *)room-&gt;<a class="code" href="struct_room.html#a332b8317dd2530b64782fa6937efaeb5">name</a>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3">write_header</a>(room-&gt;<a class="code" href="struct_room.html#a332b8317dd2530b64782fa6937efaeb5">name</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00064">64</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="struct_game___start__data.html">Game_Start_data</a> data = {.<a class="code" href="struct_game___start__data.html#a4e49c7a856e751f6d65616d4ade4bf80">max_rounds</a> = <a class="code" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9">get_max_round_count</a>(room),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                            .initial_balance = (<span class="keywordtype">unsigned</span> int)<a class="code" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a>(room)};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(packet-&gt;sender_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___start__data.html">Game_Start_data</a>));</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, packet-&gt;sender_id);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> opponent = <a class="code" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a>(packet-&gt;sender_id);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(opponent, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_game___start__data.html">Game_Start_data</a>));</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, opponent);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a>(packet-&gt;sender_id);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a>(opponent);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="result_8c.html#a80b28471c356c8081a066c70d37297fe">create_csv_result_file</a>((<span class="keywordtype">char</span> *)room-&gt;<a class="code" href="struct_room.html#a332b8317dd2530b64782fa6937efaeb5">name</a>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="logs_8h_source.html#l00004">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00011">GAME_START</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00159">get_initial_amount()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00154">get_max_round_count()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00139">get_opponent_id()</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00008">Room::name</a>, <a class="el" href="result_8c_source.html#l00015">open_csv()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00074">send_round_start()</a>, et <a class="el" href="result_8c_source.html#l00031">write_header()</a>.</p>
+<p class="reference">Références <a class="el" href="result_8c_source.html#l00035">create_csv_result_file()</a>, <a class="el" href="logs_8h_source.html#l00010">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00018">GAME_START</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00165">get_initial_amount()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00160">get_max_round_count()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00145">get_opponent_id()</a>, <a class="el" href="protocol_8h_source.html#l00048">Game_Start_data::max_rounds</a>, <a class="el" href="server_2utils_2config_8h_source.html#l00014">Room::name</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00081">send_round_start()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00034">on_connect_action()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00044">on_connect_action()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="server_2network_2actions_8h_a4aebe714b0093331cd12b504bfbe8f2a_cgraph.png" border="0" usemap="#aserver_2network_2actions_8h_a4aebe714b0093331cd12b504bfbe8f2a_cgraph" alt=""/></div>
 <map name="server_2network_2actions_8h_a4aebe714b0093331cd12b504bfbe8f2a_cgraph" id="aserver_2network_2actions_8h_a4aebe714b0093331cd12b504bfbe8f2a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,157,128,184"/>
-<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="187,5,314,32"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="176,56,325,83"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="192,107,309,133"/>
-<area shape="rect" href="result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="211,157,290,184"/>
+<area shape="rect" title=" " alt="" coords="5,132,128,159"/>
+<area shape="rect" href="result_8c.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="177,5,325,32"/>
+<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="187,56,314,83"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="176,107,325,133"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="192,157,309,184"/>
 <area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="383,233,479,260"/>
 <area shape="rect" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="189,259,312,285"/>
-<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="203,309,299,336"/>
-<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="373,107,488,133"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="536,208,672,235"/>
+<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="383,5,479,32"/>
+<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="373,157,488,184"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="536,208,672,235"/>
 <area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="542,259,666,285"/>
-<area shape="rect" href="links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="405,309,456,336"/>
 </map>
 </div>
 <div class="dynheader">
@@ -473,16 +537,16 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00074">74</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="struct_round___start__data.html">Round_Start_data</a> data = {10};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(client_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_round___start__data.html">Round_Start_data</a>));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, client_id);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="server_2network_2actions_8c_source.html#l00081">81</a> du fichier <a class="el" href="server_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="struct_round___start__data.html">Round_Start_data</a> data = {10};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(client_id, <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a>, &amp;data, <span class="keyword">sizeof</span>(<a class="code" href="struct_round___start__data.html">Round_Start_data</a>));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a>(<span class="stringliteral">&quot;\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n&quot;</span>, client_id);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="logs_8h_source.html#l00004">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00012">ROUND_START</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+<p class="reference">Références <a class="el" href="logs_8h_source.html#l00010">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00019">ROUND_START</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00057">send_game_start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00094">on_action_received()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00064">send_game_start()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -490,7 +554,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="server_2network_2actions_8h_a9651c190591cca70c995fa4156e17141_cgraph" id="aserver_2network_2actions_8h_a9651c190591cca70c995fa4156e17141_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,128,57"/>
 <area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="176,31,272,57"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="320,5,456,32"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="320,5,456,32"/>
 <area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="326,56,450,83"/>
 </map>
 </div>
@@ -525,97 +589,96 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="client_2network_2actions_8c_source.html#l00005">5</a> du fichier <a class="el" href="client_2network_2actions_8c_source.html">actions.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">switch</span> (packet-&gt;action)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="struct_connected__data.html">Connected_data</a> *data = (<a class="code" href="struct_connected__data.html">Connected_data</a> *) packet-&gt;data;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a>(data);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="handlers_8c.html#a40aeca7c660df99a6e7782cdf573da9b">on_failed_action</a>();</div>
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2actions_8c_source.html#l00011">11</a> du fichier <a class="el" href="client_2network_2actions_8c_source.html">actions.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">switch</span> (packet-&gt;action)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="struct_connected__data.html">Connected_data</a> *data = (<a class="code" href="struct_connected__data.html">Connected_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a>(data);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="struct_game___start__data.html">Game_Start_data</a> *data = (<a class="code" href="struct_game___start__data.html">Game_Start_data</a> *) packet-&gt;data;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a>(data);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="struct_round___start__data.html">Round_Start_data</a> *data = (<a class="code" href="struct_round___start__data.html">Round_Start_data</a> *) packet-&gt;data;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="handlers_8c.html#a65be5a2ae07e01a0f09ca9be6c11fd0e">on_round_start_action</a>(data);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="handlers_8c.html#a20e23fdf880893cdfcdd979bd78d2064">on_failed_action</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="struct_game___start__data.html">Game_Start_data</a> *data = (<a class="code" href="struct_game___start__data.html">Game_Start_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a>(data);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="struct_game.html">Game</a> *data = (<a class="code" href="struct_game.html">Game</a> *) packet-&gt;data;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a>(data);       </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="struct_round___start__data.html">Round_Start_data</a> *data = (<a class="code" href="struct_round___start__data.html">Round_Start_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692">on_round_start_action</a>(data);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a>:{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="struct_game___end__data.html">Game_End_data</a> *data = (<a class="code" href="struct_game___end__data.html">Game_End_data</a> *) packet-&gt;data;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a>(data);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="struct_game.html">Game</a> *data = (<a class="code" href="struct_game.html">Game</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a>(data);       </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a>:{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="struct_game___end__data.html">Game_End_data</a> *data = (<a class="code" href="struct_game___end__data.html">Game_End_data</a> *) packet-&gt;data;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a>(data);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="protocol_8h_source.html#l00013">ACTION</a>, <a class="el" href="protocol_8h_source.html#l00008">CONNECT</a>, <a class="el" href="protocol_8h_source.html#l00009">CONNECTED</a>, <a class="el" href="logs_8h_source.html#l00004">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00016">DISCONNECT</a>, <a class="el" href="protocol_8h_source.html#l00010">FAILED</a>, <a class="el" href="protocol_8h_source.html#l00015">GAME_END</a>, <a class="el" href="protocol_8h_source.html#l00011">GAME_START</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00087">on_action_received()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00034">on_connect_action()</a>, <a class="el" href="handlers_8c_source.html#l00101">on_connected_action()</a>, <a class="el" href="handlers_8c_source.html#l00111">on_failed_action()</a>, <a class="el" href="handlers_8c_source.html#l00172">on_game_end_action()</a>, <a class="el" href="handlers_8c_source.html#l00123">on_game_start_action()</a>, <a class="el" href="handlers_8c_source.html#l00151">on_round_end_action()</a>, <a class="el" href="handlers_8c_source.html#l00133">on_round_start_action()</a>, <a class="el" href="protocol_8h_source.html#l00014">ROUND_END</a>, et <a class="el" href="protocol_8h_source.html#l00012">ROUND_START</a>.</p>
+<p class="reference">Références <a class="el" href="protocol_8h_source.html#l00020">ACTION</a>, <a class="el" href="protocol_8h_source.html#l00015">CONNECT</a>, <a class="el" href="protocol_8h_source.html#l00016">CONNECTED</a>, <a class="el" href="logs_8h_source.html#l00010">debug_print</a>, <a class="el" href="protocol_8h_source.html#l00023">DISCONNECT</a>, <a class="el" href="protocol_8h_source.html#l00017">FAILED</a>, <a class="el" href="protocol_8h_source.html#l00022">GAME_END</a>, <a class="el" href="protocol_8h_source.html#l00018">GAME_START</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00094">on_action_received()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00044">on_connect_action()</a>, <a class="el" href="handlers_8c_source.html#l00107">on_connected_action()</a>, <a class="el" href="handlers_8c_source.html#l00117">on_failed_action()</a>, <a class="el" href="handlers_8c_source.html#l00178">on_game_end_action()</a>, <a class="el" href="handlers_8c_source.html#l00129">on_game_start_action()</a>, <a class="el" href="handlers_8c_source.html#l00157">on_round_end_action()</a>, <a class="el" href="handlers_8c_source.html#l00139">on_round_start_action()</a>, <a class="el" href="protocol_8h_source.html#l00021">ROUND_END</a>, et <a class="el" href="protocol_8h_source.html#l00019">ROUND_START</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00064">listen_socket_thread_process()</a>, et <a class="el" href="server_2network_2communication_8c_source.html#l00064">threadProcess()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00070">listen_socket_thread_process()</a>, et <a class="el" href="server_2network_2communication_8c_source.html#l00069">threadProcess()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="server_2network_2actions_8h_ab5084505bd2ee1d2038605b46547d250_cgraph.png" border="0" usemap="#aserver_2network_2actions_8h_ab5084505bd2ee1d2038605b46547d250_cgraph" alt=""/></div>
 <map name="server_2network_2actions_8h_ab5084505bd2ee1d2038605b46547d250_cgraph" id="aserver_2network_2actions_8h_ab5084505bd2ee1d2038605b46547d250_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1044,101,1071"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="376,259,511,285"/>
-<area shape="rect" href="server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="159,689,290,716"/>
-<area shape="rect" href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f" title=" " alt="" coords="152,1019,297,1045"/>
-<area shape="rect" href="handlers_8c.html#a40aeca7c660df99a6e7782cdf573da9b" title=" " alt="" coords="167,1069,283,1096"/>
-<area shape="rect" href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19" title=" " alt="" coords="152,1171,297,1197"/>
-<area shape="rect" href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954" title=" " alt="" coords="149,1221,300,1248"/>
-<area shape="rect" href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363" title=" " alt="" coords="152,968,297,995"/>
-<area shape="rect" href="handlers_8c.html#a65be5a2ae07e01a0f09ca9be6c11fd0e" title=" " alt="" coords="149,1120,300,1147"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a4d5445ccc270f71572fe072d4621ed9f" title=" " alt="" coords="627,56,721,83"/>
-<area shape="rect" href="server_2network_2actions_8c.html#af73fe186b2233aa1ad60d4a55eab2bab" title=" " alt="" coords="587,107,761,133"/>
-<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="809,664,924,691"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="599,411,749,437"/>
-<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="615,664,733,691"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title=" " alt="" coords="615,157,733,184"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="615,208,733,235"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="615,259,733,285"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="613,309,735,336"/>
-<area shape="rect" href="result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f" title=" " alt="" coords="635,5,713,32"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="819,309,915,336"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ac1457d7f257cc842e037a5ac7323429a" title=" " alt="" coords="972,284,1108,311"/>
-<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="978,335,1102,361"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="348,715,539,741"/>
-<area shape="rect" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="619,765,729,792"/>
-<area shape="rect" href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title=" " alt="" coords="424,563,463,589"/>
-<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="611,715,737,741"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="382,613,505,640"/>
-<area shape="rect" href="result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="635,613,713,640"/>
-<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="626,563,722,589"/>
-<area shape="rect" href="links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="841,563,892,589"/>
-<area shape="rect" href="game_8c.html#af3f55587265764fcddc314dc807a27f5" title=" " alt="" coords="378,1019,509,1045"/>
-<area shape="rect" href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="372,1120,515,1147"/>
-<area shape="rect" href="game__ui_8c.html#a4353172bcd1d2aefec8d9869312ad19d" title=" " alt="" coords="384,1069,503,1096"/>
-<area shape="rect" href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b" title=" " alt="" coords="365,1221,521,1248"/>
-<area shape="rect" href="game_8c.html#ab7048abaf9a31604f56fabb6f9f5df08" title=" " alt="" coords="381,867,505,893"/>
-<area shape="rect" href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title=" " alt="" coords="383,917,504,944"/>
-<area shape="rect" href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title=" " alt="" coords="404,968,483,995"/>
-<area shape="rect" href="game__ui_8c.html#ab6af72bc8564748d954517e2105be5d7" title="Activate countdown for progress_bar." alt="" coords="374,1171,513,1197"/>
-<area shape="rect" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b" title="Stop execution for a delay." alt="" coords="648,1171,700,1197"/>
+<area shape="rect" title=" " alt="" coords="5,938,101,965"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="157,254,292,281"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="159,583,290,610"/>
+<area shape="rect" href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f" title=" " alt="" coords="152,913,297,939"/>
+<area shape="rect" href="handlers_8c.html#a20e23fdf880893cdfcdd979bd78d2064" title=" " alt="" coords="167,963,283,990"/>
+<area shape="rect" href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19" title=" " alt="" coords="152,1065,297,1091"/>
+<area shape="rect" href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954" title=" " alt="" coords="149,1115,300,1142"/>
+<area shape="rect" href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363" title=" " alt="" coords="152,862,297,889"/>
+<area shape="rect" href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692" title=" " alt="" coords="149,1014,300,1041"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a4d5445ccc270f71572fe072d4621ed9f" title=" " alt="" coords="396,254,491,281"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a993dcff5a74d747c420db02ab49a731f" title=" " alt="" coords="363,305,524,331"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a35fc7a198186e543e7e1a20543c8be4d" title=" " alt="" coords="392,51,495,78"/>
+<area shape="rect" href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="784,609,899,635"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="587,178,736,205"/>
+<area shape="rect" href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="603,609,720,635"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title=" " alt="" coords="385,153,502,179"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="603,21,720,47"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="600,305,723,331"/>
+<area shape="rect" href="result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f" title=" " alt="" coords="405,203,482,230"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="603,90,720,117"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="793,305,889,331"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="947,279,1083,306"/>
+<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="953,330,1077,357"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="348,659,539,686"/>
+<area shape="rect" href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="598,507,725,534"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="382,457,505,483"/>
+<area shape="rect" href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="606,659,717,686"/>
+<area shape="rect" href="result_8c.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="587,457,735,483"/>
+<area shape="rect" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="793,457,889,483"/>
+<area shape="rect" href="game_8c.html#af3f55587265764fcddc314dc807a27f5" title=" " alt="" coords="378,913,509,939"/>
+<area shape="rect" href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="372,1014,515,1041"/>
+<area shape="rect" href="game__ui_8c.html#a4353172bcd1d2aefec8d9869312ad19d" title=" " alt="" coords="384,963,503,990"/>
+<area shape="rect" href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b" title=" " alt="" coords="365,1115,521,1142"/>
+<area shape="rect" href="game_8c.html#a48af8574de5826a1afdbf5f163773c14" title=" " alt="" coords="381,761,505,787"/>
+<area shape="rect" href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title=" " alt="" coords="383,811,504,838"/>
+<area shape="rect" href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title=" " alt="" coords="404,862,483,889"/>
+<area shape="rect" href="game__ui_8c.html#ab6af72bc8564748d954517e2105be5d7" title="Activate countdown for progress_bar." alt="" coords="374,1065,513,1091"/>
+<area shape="rect" href="game__ui_8c.html#a4752443ae6ddafe33dbcd8b3521f397b" title="Stop execution for a delay." alt="" coords="635,1065,687,1091"/>
 </map>
 </div>
 <div class="dynheader">
@@ -628,53 +691,57 @@ Voici le graphe des appelants de cette fonction :</div>
 <area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
 <area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
-<area shape="rect" href="server_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="146,71,197,98"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,71,197,98"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aserver_2network_2communication_8c_html_aad0ff9ec9d4f8d7c12db5aabc7631aac"><div class="ttname"><a href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac">del</a></div><div class="ttdeci">void del(connection_t *connection)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00040">communication.c:40</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_abee5b4ff1b44a2d31f8c359db69b7363"><div class="ttname"><a href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a></div><div class="ttdeci">void on_round_end_action(Game *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00151">handlers.c:151</a></div></div>
-<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
-<div class="ttc" id="aserver_2utils_2config_8c_html_a3ec6cc3245582f471ca97f8eb0fc09e9"><div class="ttname"><a href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9">get_max_round_count</a></div><div class="ttdeci">unsigned int get_max_round_count(Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00154">config.c:154</a></div></div>
-<div class="ttc" id="astruct_connected__data_html"><div class="ttname"><a href="struct_connected__data.html">Connected_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00035">protocol.h:35</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_a8ebc55832799e7175e2cb853e13fc66a"><div class="ttname"><a href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a></div><div class="ttdeci">Connection * cnx</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00013">communication.c:13</a></div></div>
-<div class="ttc" id="astruct_game___start__data_html"><div class="ttname"><a href="struct_game___start__data.html">Game_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00040">protocol.h:40</a></div></div>
-<div class="ttc" id="aserver_2utils_2config_8c_html_a72b1706411d9de5e1b3800019f4b8df2"><div class="ttname"><a href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a></div><div class="ttdeci">int get_opponent_id(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00139">config.c:139</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_a40aeca7c660df99a6e7782cdf573da9b"><div class="ttname"><a href="handlers_8c.html#a40aeca7c660df99a6e7782cdf573da9b">on_failed_action</a></div><div class="ttdeci">void on_failed_action()</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00111">handlers.c:111</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_ab6b042ca056e1812003c2bae58e89954"><div class="ttname"><a href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a></div><div class="ttdeci">void on_game_start_action(Game_Start_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00123">handlers.c:123</a></div></div>
-<div class="ttc" id="astruct_game___end__data_html"><div class="ttname"><a href="struct_game___end__data.html">Game_End_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00050">protocol.h:50</a></div></div>
-<div class="ttc" id="aserver_2network_2communication_8h_html_a7b2673a61734e3538ee2dc776008ea20"><div class="ttname"><a href="server_2network_2communication_8h.html#a7b2673a61734e3538ee2dc776008ea20">MAXSIMULTANEOUSCLIENTS</a></div><div class="ttdeci">#define MAXSIMULTANEOUSCLIENTS</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00019">communication.h:19</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_a45a759d2dbd41a51b95f0718a2be9734"><div class="ttname"><a href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a></div><div class="ttdeci">void send_packet(enum verbs action, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00082">communication.c:82</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_aa1fed6654e7a3cfab8d1ba5c44c60b19"><div class="ttname"><a href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a></div><div class="ttdeci">void on_game_end_action(Game_End_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00172">handlers.c:172</a></div></div>
-<div class="ttc" id="aserver_2network_2actions_8c_html_a46ba5203ef139048e38bc26f90d4c3f4"><div class="ttname"><a href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a></div><div class="ttdeci">bool check_oppponent_connected(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00187">actions.c:187</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a></div><div class="ttdeci">@ ROUND_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00014">protocol.h:14</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a></div><div class="ttdeci">@ CONNECTED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00009">protocol.h:9</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00010">protocol.h:10</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_a65be5a2ae07e01a0f09ca9be6c11fd0e"><div class="ttname"><a href="handlers_8c.html#a65be5a2ae07e01a0f09ca9be6c11fd0e">on_round_start_action</a></div><div class="ttdeci">void on_round_start_action(Round_Start_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00133">handlers.c:133</a></div></div>
-<div class="ttc" id="aserver_2network_2actions_8c_html_a9651c190591cca70c995fa4156e17141"><div class="ttname"><a href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a></div><div class="ttdeci">void send_round_start(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00074">actions.c:74</a></div></div>
-<div class="ttc" id="astruct_room_html"><div class="ttname"><a href="struct_room.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00006">config.h:7</a></div></div>
-<div class="ttc" id="aresult_8c_html_a2ee3a651a19c9a6b4ff67c1855863bb6"><div class="ttname"><a href="result_8c.html#a2ee3a651a19c9a6b4ff67c1855863bb6">open_csv</a></div><div class="ttdeci">void open_csv(char *filename)</div><div class="ttdoc">Crée et ouvre le fichier csv de nom *filename en paramètre.</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00015">result.c:15</a></div></div>
-<div class="ttc" id="astruct_room_html_a332b8317dd2530b64782fa6937efaeb5"><div class="ttname"><a href="struct_room.html#a332b8317dd2530b64782fa6937efaeb5">Room::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00008">config.h:8</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_a206838ccba42dc7d6d58ccfa2dcc003f"><div class="ttname"><a href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a></div><div class="ttdeci">void on_connected_action(Connected_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00101">handlers.c:101</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a></div><div class="ttdeci">@ GAME_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00011">protocol.h:11</a></div></div>
-<div class="ttc" id="astruct_connected__data_html_acf5579b0443887a184b07fd133dcac05"><div class="ttname"><a href="struct_connected__data.html#acf5579b0443887a184b07fd133dcac05">Connected_data::initial_balance</a></div><div class="ttdeci">__uint32_t initial_balance</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00037">protocol.h:37</a></div></div>
-<div class="ttc" id="aserver_2network_2actions_8c_html_a4aebe714b0093331cd12b504bfbe8f2a"><div class="ttname"><a href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a></div><div class="ttdeci">void send_game_start(Encapsulation *packet, Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00057">actions.c:57</a></div></div>
-<div class="ttc" id="astruct_round___start__data_html"><div class="ttname"><a href="struct_round___start__data.html">Round_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00045">protocol.h:45</a></div></div>
-<div class="ttc" id="astructconnection__t_html"><div class="ttname"><a href="structconnection__t.html">connection_t</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00021">communication.h:22</a></div></div>
-<div class="ttc" id="aserver_2utils_2config_8c_html_ad449d93d01791051b81d7e1d1d4addc6"><div class="ttname"><a href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a></div><div class="ttdeci">Room * get_client_room(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00121">config.c:121</a></div></div>
-<div class="ttc" id="aserver_2network_2actions_8c_html_a9f2b9df260d3178f59e1a1ec75a6203e"><div class="ttname"><a href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a></div><div class="ttdeci">Session * sessions[50]</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00008">actions.c:8</a></div></div>
-<div class="ttc" id="alogs_8h_html_ac9e7326b4569847122754061b96c42d0"><div class="ttname"><a href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a></div><div class="ttdeci">#define debug_print(...)</div><div class="ttdef"><b>Definition:</b> <a href="logs_8h_source.html#l00004">logs.h:4</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a></div><div class="ttdeci">@ GAME_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00015">protocol.h:15</a></div></div>
-<div class="ttc" id="aserver_2network_2communication_8c_html_a0513fcbe2c89df7b19a16bef077de3e4"><div class="ttname"><a href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4">get_connection</a></div><div class="ttdeci">connection_t * get_connection(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00148">communication.c:148</a></div></div>
-<div class="ttc" id="aresult_8c_html_a3467a6636ce566ef897c244f0737aac3"><div class="ttname"><a href="result_8c.html#a3467a6636ce566ef897c244f0737aac3">write_header</a></div><div class="ttdeci">void write_header(const char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00031">result.c:31</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a></div><div class="ttdeci">@ ROUND_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00012">protocol.h:12</a></div></div>
-<div class="ttc" id="aserver_2utils_2config_8c_html_aa4e4ad826243b53bcba130bcca9dc0da"><div class="ttname"><a href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a></div><div class="ttdeci">unsigned int get_initial_amount(Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00159">config.c:159</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_abee5b4ff1b44a2d31f8c359db69b7363"><div class="ttname"><a href="handlers_8c.html#abee5b4ff1b44a2d31f8c359db69b7363">on_round_end_action</a></div><div class="ttdeci">void on_round_end_action(Game *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00157">handlers.c:157</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00018">game.h:18</a></div></div>
+<div class="ttc" id="aresult_8c_html_a80b28471c356c8081a066c70d37297fe"><div class="ttname"><a href="result_8c.html#a80b28471c356c8081a066c70d37297fe">create_csv_result_file</a></div><div class="ttdeci">void create_csv_result_file(char *filename)</div><div class="ttdoc">Crée et ouvre le fichier csv de nom *filename en paramètre.</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00035">result.c:35</a></div></div>
+<div class="ttc" id="agame_8c_html_a58bdb5643d0814ac4e697a1564b79b70"><div class="ttname"><a href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00010">game.c:10</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_a3ec6cc3245582f471ca97f8eb0fc09e9"><div class="ttname"><a href="server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9">get_max_round_count</a></div><div class="ttdeci">unsigned int get_max_round_count(Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00160">config.c:160</a></div></div>
+<div class="ttc" id="astruct_connected__data_html"><div class="ttname"><a href="struct_connected__data.html">Connected_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00042">protocol.h:42</a></div></div>
+<div class="ttc" id="astruct_game___start__data_html"><div class="ttname"><a href="struct_game___start__data.html">Game_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00047">protocol.h:47</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_a72b1706411d9de5e1b3800019f4b8df2"><div class="ttname"><a href="server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2">get_opponent_id</a></div><div class="ttdeci">int get_opponent_id(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00145">config.c:145</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_ab6b042ca056e1812003c2bae58e89954"><div class="ttname"><a href="handlers_8c.html#ab6b042ca056e1812003c2bae58e89954">on_game_start_action</a></div><div class="ttdeci">void on_game_start_action(Game_Start_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00129">handlers.c:129</a></div></div>
+<div class="ttc" id="astruct_game___start__data_html_a4e49c7a856e751f6d65616d4ade4bf80"><div class="ttname"><a href="struct_game___start__data.html#a4e49c7a856e751f6d65616d4ade4bf80">Game_Start_data::max_rounds</a></div><div class="ttdeci">__uint32_t max_rounds</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00048">protocol.h:48</a></div></div>
+<div class="ttc" id="astruct_game___end__data_html"><div class="ttname"><a href="struct_game___end__data.html">Game_End_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00057">protocol.h:57</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8h_html_a7b2673a61734e3538ee2dc776008ea20"><div class="ttname"><a href="server_2network_2communication_8h.html#a7b2673a61734e3538ee2dc776008ea20">MAXSIMULTANEOUSCLIENTS</a></div><div class="ttdeci">#define MAXSIMULTANEOUSCLIENTS</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00014">communication.h:14</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_a45a759d2dbd41a51b95f0718a2be9734"><div class="ttname"><a href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a></div><div class="ttdeci">void send_packet(enum verbs action, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00088">communication.c:88</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_aa1fed6654e7a3cfab8d1ba5c44c60b19"><div class="ttname"><a href="handlers_8c.html#aa1fed6654e7a3cfab8d1ba5c44c60b19">on_game_end_action</a></div><div class="ttdeci">void on_game_end_action(Game_End_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00178">handlers.c:178</a></div></div>
+<div class="ttc" id="astruct_game_html_a7f9f1e1d23a8e972570e14f2f4748532"><div class="ttname"><a href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">Game::balance</a></div><div class="ttdeci">unsigned int balance</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00021">game.h:21</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8c_html_a46ba5203ef139048e38bc26f90d4c3f4"><div class="ttname"><a href="server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4">check_oppponent_connected</a></div><div class="ttdeci">bool check_oppponent_connected(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00201">actions.c:201</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea45eccc32252dba401c6c26c5740f81d0">ROUND_END</a></div><div class="ttdeci">@ ROUND_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00021">protocol.h:21</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a20e23fdf880893cdfcdd979bd78d2064"><div class="ttname"><a href="handlers_8c.html#a20e23fdf880893cdfcdd979bd78d2064">on_failed_action</a></div><div class="ttdeci">void on_failed_action(void)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00117">handlers.c:117</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea7a691a2430ec26878897b5fbc9c22a4c">CONNECTED</a></div><div class="ttdeci">@ CONNECTED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00016">protocol.h:16</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaecedb56d1405a60c6069f4a0139bdec5">FAILED</a></div><div class="ttdeci">@ FAILED</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00017">protocol.h:17</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8c_html_a9651c190591cca70c995fa4156e17141"><div class="ttname"><a href="server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141">send_round_start</a></div><div class="ttdeci">void send_round_start(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00081">actions.c:81</a></div></div>
+<div class="ttc" id="astruct_room_html"><div class="ttname"><a href="struct_room.html">Room</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00012">config.h:13</a></div></div>
+<div class="ttc" id="astruct_room_html_a332b8317dd2530b64782fa6937efaeb5"><div class="ttname"><a href="struct_room.html#a332b8317dd2530b64782fa6937efaeb5">Room::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8h_source.html#l00014">config.h:14</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22"><div class="ttname"><a href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a></div><div class="ttdeci">@ DEFEAT</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00028">protocol.h:28</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a206838ccba42dc7d6d58ccfa2dcc003f"><div class="ttname"><a href="handlers_8c.html#a206838ccba42dc7d6d58ccfa2dcc003f">on_connected_action</a></div><div class="ttdeci">void on_connected_action(Connected_data *data)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00107">handlers.c:107</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea06dc2c041ca25d7638a9a74e181800f2">GAME_START</a></div><div class="ttdeci">@ GAME_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00018">protocol.h:18</a></div></div>
+<div class="ttc" id="astruct_connected__data_html_acf5579b0443887a184b07fd133dcac05"><div class="ttname"><a href="struct_connected__data.html#acf5579b0443887a184b07fd133dcac05">Connected_data::initial_balance</a></div><div class="ttdeci">__uint32_t initial_balance</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00044">protocol.h:44</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8c_html_a4aebe714b0093331cd12b504bfbe8f2a"><div class="ttname"><a href="server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a">send_game_start</a></div><div class="ttdeci">void send_game_start(Encapsulation *packet, Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00064">actions.c:64</a></div></div>
+<div class="ttc" id="astruct_round___start__data_html"><div class="ttname"><a href="struct_round___start__data.html">Round_Start_data</a></div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00052">protocol.h:52</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8c_html_a476eba14098db94568d354c71154c556"><div class="ttname"><a href="server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556">send_game_end</a></div><div class="ttdeci">void send_game_end(unsigned int client_id, enum results winner)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00167">actions.c:167</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_ad449d93d01791051b81d7e1d1d4addc6"><div class="ttname"><a href="server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6">get_client_room</a></div><div class="ttdeci">Room * get_client_room(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00127">config.c:127</a></div></div>
+<div class="ttc" id="aserver_2network_2actions_8c_html_a9f2b9df260d3178f59e1a1ec75a6203e"><div class="ttname"><a href="server_2network_2actions_8c.html#a9f2b9df260d3178f59e1a1ec75a6203e">sessions</a></div><div class="ttdeci">Session * sessions[50]</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2actions_8c_source.html#l00016">actions.c:16</a></div></div>
+<div class="ttc" id="alogs_8h_html_ac9e7326b4569847122754061b96c42d0"><div class="ttname"><a href="logs_8h.html#ac9e7326b4569847122754061b96c42d0">debug_print</a></div><div class="ttdeci">#define debug_print(...)</div><div class="ttdef"><b>Definition:</b> <a href="logs_8h_source.html#l00010">logs.h:10</a></div></div>
+<div class="ttc" id="astruct_game___end__data_html_a8852b653f549121ed9d234f4e47a673d"><div class="ttname"><a href="struct_game___end__data.html#a8852b653f549121ed9d234f4e47a673d">Game_End_data::result</a></div><div class="ttdeci">__uint32_t result</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00058">protocol.h:58</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea75001e0af1f4badfa9096e9a14265f31">GAME_END</a></div><div class="ttdeci">@ GAME_END</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00022">protocol.h:22</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_a0513fcbe2c89df7b19a16bef077de3e4"><div class="ttname"><a href="server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4">get_connection</a></div><div class="ttdeci">connection_t * get_connection(unsigned int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00138">communication.c:138</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00"><div class="ttname"><a href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a></div><div class="ttdeci">@ VICTORY</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00027">protocol.h:27</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1"><div class="ttname"><a href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a></div><div class="ttdeci">@ EQUALITY</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00030">protocol.h:29</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a></div><div class="ttdeci">@ ROUND_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00019">protocol.h:19</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a449abde4650ee45c4a7d9e266b0a9692"><div class="ttname"><a href="handlers_8c.html#a449abde4650ee45c4a7d9e266b0a9692">on_round_start_action</a></div><div class="ttdeci">void on_round_start_action(Round_Start_data *data __attribute__((unused)))</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00139">handlers.c:139</a></div></div>
+<div class="ttc" id="aserver_2utils_2config_8c_html_aa4e4ad826243b53bcba130bcca9dc0da"><div class="ttname"><a href="server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da">get_initial_amount</a></div><div class="ttdeci">unsigned int get_initial_amount(Room *room)</div><div class="ttdef"><b>Definition:</b> <a href="server_2utils_2config_8c_source.html#l00165">config.c:165</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="Init game window." alt="" coords="5,56,131,83"/>
 <area shape="rect" id="node2" href="$launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="179,5,317,32"/>
 <area shape="rect" id="node4" href="$handlers_8c.html#a3875841c1532579c95855055b3884f67" title=" " alt="" coords="193,56,303,83"/>
-<area shape="rect" id="node5" href="$launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c" title="Register css styles from resource file." alt="" coords="195,107,301,133"/>
-<area shape="rect" id="node3" href="$client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="375,5,497,32"/>
-<area shape="rect" id="node6" href="$client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b" title=" " alt="" coords="365,107,507,133"/>
+<area shape="rect" id="node5" href="$launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf" title="Register css styles from resource file." alt="" coords="195,107,301,133"/>
+<area shape="rect" id="node3" href="$client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="375,5,497,32"/>
+<area shape="rect" id="node6" href="$client_2utils_2config_8c.html#a7c129d7a2ef9a645d22910b970eca203" title=" " alt="" coords="365,107,507,133"/>
 </map>

@@ -97,13 +97,13 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:ab972e742ae1ea3be0eb8f877f018d13b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network_8h.html#ab972e742ae1ea3be0eb8f877f018d13b">is_ip_valid</a> (char *ip)</td></tr>
-<tr class="memdesc:ab972e742ae1ea3be0eb8f877f018d13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if an ip is correctly formed.  <a href="network_8h.html#ab972e742ae1ea3be0eb8f877f018d13b">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab972e742ae1ea3be0eb8f877f018d13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834e70f36cb4e5fdf0cf49d458d7b243"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="network_8h.html#a834e70f36cb4e5fdf0cf49d458d7b243">is_ip_valid</a> (char *ip) <a class="el" href="struct____attribute____.html">__attribute__</a>((pure))</td></tr>
+<tr class="memdesc:a834e70f36cb4e5fdf0cf49d458d7b243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if an ip is correctly formed.  <a href="network_8h.html#a834e70f36cb4e5fdf0cf49d458d7b243">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a834e70f36cb4e5fdf0cf49d458d7b243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="ab972e742ae1ea3be0eb8f877f018d13b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab972e742ae1ea3be0eb8f877f018d13b">&#9670;&nbsp;</a></span>is_ip_valid()</h2>
+<a id="a834e70f36cb4e5fdf0cf49d458d7b243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834e70f36cb4e5fdf0cf49d458d7b243">&#9670;&nbsp;</a></span>is_ip_valid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,34 +127,34 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>int </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="network_8c_source.html#l00012">12</a> du fichier <a class="el" href="network_8c_source.html">network.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                          {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> num, dots = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">char</span> *ptr;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span> (ip == NULL)</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    ptr = strtok(ip, <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">while</span> (ptr){</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        num = atoi(ptr);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (num &gt;= 0 &amp;&amp; num &lt;= 255){</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            ptr = strtok(NULL, <span class="stringliteral">&quot;.&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordflow">if</span> (ptr != NULL)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                dots++;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">if</span> (dots != 3)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="network_8c_source.html#l00018">18</a> du fichier <a class="el" href="network_8c_source.html">network.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                          {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> num, dots = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">char</span> *ptr;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (ip == NULL)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    ptr = strtok(ip, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">while</span> (ptr){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        num = atoi(ptr);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (num &gt;= 0 &amp;&amp; num &lt;= 255){</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            ptr = strtok(NULL, <span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (ptr != NULL)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                dots++;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (dots != 3)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Référencé par <a class="el" href="client_2utils_2config_8c_source.html#l00023">read_config()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_2utils_2config_8c_source.html#l00029">read_config()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="network_8h_ab972e742ae1ea3be0eb8f877f018d13b_icgraph.png" border="0" usemap="#anetwork_8h_ab972e742ae1ea3be0eb8f877f018d13b_icgraph" alt=""/></div>
-<map name="network_8h_ab972e742ae1ea3be0eb8f877f018d13b_icgraph" id="anetwork_8h_ab972e742ae1ea3be0eb8f877f018d13b_icgraph">
+<div class="center"><img src="network_8h_a834e70f36cb4e5fdf0cf49d458d7b243_icgraph.png" border="0" usemap="#anetwork_8h_a834e70f36cb4e5fdf0cf49d458d7b243_icgraph" alt=""/></div>
+<map name="network_8h_a834e70f36cb4e5fdf0cf49d458d7b243_icgraph" id="anetwork_8h_a834e70f36cb4e5fdf0cf49d458d7b243_icgraph">
 <area shape="rect" title="Verify if an ip is correctly formed." alt="" coords="240,5,323,32"/>
 <area shape="rect" href="client_2utils_2config_8h.html#a4d2e03c945907004eb7fe2d3de8c56a6" title="Read configuration file." alt="" coords="104,5,192,32"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
@@ -166,7 +166,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:11 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:25 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

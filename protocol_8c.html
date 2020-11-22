@@ -90,7 +90,6 @@ Graphe des dépendances par inclusion de protocol.c:</div>
 <area shape="rect" href="protocol_8h.html" title=" " alt="" coords="357,95,436,121"/>
 <area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="461,95,535,121"/>
 <area shape="rect" title=" " alt="" coords="368,169,425,196"/>
-<area shape="rect" title=" " alt="" coords="461,169,535,196"/>
 </map>
 </div>
 </div>
@@ -152,55 +151,56 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="protocol_8c_source.html#l00008">8</a> du fichier <a class="el" href="protocol_8c_source.html">protocol.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span>(destionation_id &gt; 0){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        sender_id = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    assert(data_size &lt;= <a class="code" href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    encapsulation-&gt;sender_id = sender_id;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    encapsulation-&gt;destination_id = destionation_id;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    encapsulation-&gt;timestamp = time(NULL);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    encapsulation-&gt;action = verb;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    encapsulation-&gt;sizeof_data = data_size;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span> (data != NULL)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        memcpy(encapsulation-&gt;data, (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)data, data_size);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="protocol_8c_source.html#l00014">14</a> du fichier <a class="el" href="protocol_8c_source.html">protocol.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(destionation_id &gt; 0){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        sender_id = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    assert(data_size &lt;= <a class="code" href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    encapsulation-&gt;sender_id = sender_id;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    encapsulation-&gt;destination_id = destionation_id;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    encapsulation-&gt;timestamp = time(NULL);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    encapsulation-&gt;action = verb;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    encapsulation-&gt;sizeof_data = data_size;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (data != NULL)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        memcpy(encapsulation-&gt;data, (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)data, data_size);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="protocol_8h_source.html#l00005">MAXPACKETSIZE</a>.</p>
+<p class="reference">Références <a class="el" href="protocol_8h_source.html#l00012">MAXPACKETSIZE</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00082">send_packet()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="protocol_8c_a0baf8375c1d8a7f647160ec879a9e9da_icgraph.png" border="0" usemap="#aprotocol_8c_a0baf8375c1d8a7f647160ec879a9e9da_icgraph" alt=""/></div>
 <map name="protocol_8c_a0baf8375c1d8a7f647160ec879a9e9da_icgraph" id="aprotocol_8c_a0baf8375c1d8a7f647160ec879a9e9da_icgraph">
-<area shape="rect" title=" " alt="" coords="844,173,968,200"/>
-<area shape="rect" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="700,173,796,200"/>
-<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="515,5,650,32"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,224,280,251"/>
-<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="513,123,652,149"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="524,325,641,352"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="335,224,458,251"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="524,275,641,301"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="521,224,644,251"/>
-<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="371,5,422,32"/>
-<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,249,101,276"/>
-<area shape="rect" href="handlers_8h.html#a5c3a267d5947cdf96ea66b50e98e8f7e" title="Handler for betray click event." alt="" coords="328,107,465,133"/>
-<area shape="rect" href="handlers_8h.html#af1c6d4c025d6a0cbc55e7b6a9d875a5c" title="Hander for collaborate click event." alt="" coords="331,158,462,199"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="329,275,464,301"/>
+<area shape="rect" title=" " alt="" coords="848,220,972,247"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="704,220,800,247"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="519,5,654,32"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="151,224,282,251"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="517,165,656,192"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="528,372,645,399"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="339,224,462,251"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="528,321,645,348"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="525,271,648,297"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="375,5,426,32"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,275,101,301"/>
+<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="332,107,469,133"/>
+<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="335,158,466,199"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="349,376,452,403"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,300,284,327"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aprotocol_8h_html_ac5b738d467a1bbf9325bcc0eaf4f5efa"><div class="ttname"><a href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a></div><div class="ttdeci">#define MAXPACKETSIZE</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00005">protocol.h:5</a></div></div>
+<div class="ttc" id="aprotocol_8h_html_ac5b738d467a1bbf9325bcc0eaf4f5efa"><div class="ttname"><a href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a></div><div class="ttdeci">#define MAXPACKETSIZE</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00012">protocol.h:12</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

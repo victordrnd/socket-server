@@ -69,25 +69,29 @@ $(function() {
 <div class="title">result.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="result_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONFIG_RESULT_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONFIG_RESULT_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../../../common/game.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="result_8h.html#a2ee3a651a19c9a6b4ff67c1855863bb6">open_csv</a>(<span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="result_8h.html#a3467a6636ce566ef897c244f0737aac3">write_header</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">void</span> <a class="code" href="result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f">write_line</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename,<a class="code" href="struct_game.html">Game</a> *data,<span class="keywordtype">int</span> client_id);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="result_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Created on Sun Nov 22 2020</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2020 Victor Durand &amp; Raphael Rabechault &amp; Tom Mollon &amp; Lisa Seigle-Morier</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef SRC_SERVER_UTILS_EXPORT_RESULT_H_</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define SRC_SERVER_UTILS_EXPORT_RESULT_H_</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../../../common/game.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="result_8h.html#a80b28471c356c8081a066c70d37297fe">create_csv_result_file</a>(<span class="keywordtype">char</span> *filename);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f">write_line</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *filename,<a class="code" href="struct_game.html">Game</a> *data,<span class="keywordtype">int</span> client_id);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif // SRC_SERVER_UTILS_EXPORT_RESULT_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
-<div class="ttc" id="aresult_8h_html_aa269210aba94e9caf3bf9bdbc1329d4f"><div class="ttname"><a href="result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f">write_line</a></div><div class="ttdeci">void write_line(const char *filename, Game *data, int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00052">result.c:52</a></div></div>
-<div class="ttc" id="aresult_8h_html_a3467a6636ce566ef897c244f0737aac3"><div class="ttname"><a href="result_8h.html#a3467a6636ce566ef897c244f0737aac3">write_header</a></div><div class="ttdeci">void write_header(const char *filename)</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00031">result.c:31</a></div></div>
-<div class="ttc" id="aresult_8h_html_a2ee3a651a19c9a6b4ff67c1855863bb6"><div class="ttname"><a href="result_8h.html#a2ee3a651a19c9a6b4ff67c1855863bb6">open_csv</a></div><div class="ttdeci">void open_csv(char *filename)</div><div class="ttdoc">Crée et ouvre le fichier csv de nom *filename en paramètre.</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00015">result.c:15</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00018">game.h:18</a></div></div>
+<div class="ttc" id="aresult_8h_html_aa269210aba94e9caf3bf9bdbc1329d4f"><div class="ttname"><a href="result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f">write_line</a></div><div class="ttdeci">void write_line(const char *filename, Game *data, int client_id)</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00051">result.c:51</a></div></div>
+<div class="ttc" id="aresult_8h_html_a80b28471c356c8081a066c70d37297fe"><div class="ttname"><a href="result_8h.html#a80b28471c356c8081a066c70d37297fe">create_csv_result_file</a></div><div class="ttdeci">void create_csv_result_file(char *filename)</div><div class="ttdoc">Crée et ouvre le fichier csv de nom *filename en paramètre.</div><div class="ttdef"><b>Definition:</b> <a href="result_8c_source.html#l00035">result.c:35</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

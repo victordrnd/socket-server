@@ -151,17 +151,29 @@ Configuration serveur</h3>
 <div class="line">);</div>
 </div><!-- fragment --><h3><a class="anchor" id="autotoc_md14"></a>
 Configuration client</h3>
-<p>La configuration du serveur se trouve dans le fichier <code>output/config/client_config.cfg</code> une fois le client compilé.</p>
+<p>La configuration du client se trouve dans le fichier <code>output/config/client_config.cfg</code> une fois le client compilé.</p>
 <div class="fragment"><div class="line">client_id = 1;</div>
 <div class="line">server_ip = &quot;127.0.0.1&quot;;</div>
 <div class="line">server_port = 7799;</div>
+</div><!-- fragment --><p>Il est par ailleurs possible de modifier la configuration en ajoutant des arguments à l'exécution du programme, ces changements sont <b>prioritaires</b> par rapport au fichier de configuration.</p>
+<div class="fragment"><div class="line">Usage: client [OPTION...] </div>
+<div class="line">client -- Dilemme du prisonnier de l&#39;Institut des Sciences Cognitives  </div>
+<div class="line"> </div>
+<div class="line">  -c, --client_id=1          Force client_id over config file</div>
+<div class="line">  -h, --host=127.0.0.1       Force server_ip over config file</div>
+<div class="line">  -p, --port=7799            Force server_port over config file</div>
+<div class="line">  -?, --help                 Give this help list</div>
+<div class="line">      --usage                Give a short usage message</div>
+<div class="line"> </div>
+<div class="line">Mandatory or optional arguments to long options are also mandatory or optional</div>
+<div class="line">for any corresponding short options.</div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
 Développement</h1>
 <h2><a class="anchor" id="autotoc_md16"></a>
 Debug</h2>
-<p>Il est possible d'activer le mode <b>DEBUG</b> sur le serveur et le client en ajoutant <b>-DNDEBUG</b> lors de la compilation.</p>
+<p>Il est possible de désactiver le mode <b>DEBUG</b> sur le serveur et le client en ajoutant <b>-DNDEBUG</b> lors de la compilation.</p>
 <p>Dans le <em>Makefile</em> modifié la ligne comme ceci :</p>
-<p><code>CFLAGS := -Wall -Wextra -g -std=c99 -DNDEBUG</code></p>
+<p><code>CFLAGS := -Wall -Wextra -g -std=c11 -DNDEBUG</code></p>
 <h2><a class="anchor" id="autotoc_md17"></a>
 Protocole</h2>
 <table class="markdownTable">
@@ -192,7 +204,7 @@ Protocole</h2>
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:11 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:25 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

@@ -90,7 +90,6 @@ Graphe des dépendances par inclusion de launch.c:</div>
 <area shape="rect" href="protocol_8h.html" title=" " alt="" coords="231,169,374,211"/>
 <area shape="rect" title=" " alt="" coords="274,259,331,285"/>
 <area shape="rect" href="common_2game_8h.html" title=" " alt="" coords="398,177,546,203"/>
-<area shape="rect" title=" " alt="" coords="435,259,509,285"/>
 </map>
 </div>
 </div>
@@ -98,11 +97,9 @@ Graphe des dépendances par inclusion de launch.c:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a8b3d16eba47cb96f4e9d0c8e37bd9d4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c">register_styles</a> ()</td></tr>
-<tr class="memdesc:a8b3d16eba47cb96f4e9d0c8e37bd9d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register css styles from resource file.  <a href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a8b3d16eba47cb96f4e9d0c8e37bd9d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2a6db0552bab413b69b58e8778fea49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="launch_8c.html#ab2a6db0552bab413b69b58e8778fea49">init_waiting_room</a> ()</td></tr>
-<tr class="separator:ab2a6db0552bab413b69b58e8778fea49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99a3982a2b926b0634df1b6d9374edf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf">register_styles</a> (void)</td></tr>
+<tr class="memdesc:aa99a3982a2b926b0634df1b6d9374edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register css styles from resource file.  <a href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa99a3982a2b926b0634df1b6d9374edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66cba4e1e630c1b29de0b87c3938f322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a> (int argc, char **argv)</td></tr>
 <tr class="memdesc:a66cba4e1e630c1b29de0b87c3938f322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init game window.  <a href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a66cba4e1e630c1b29de0b87c3938f322"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,23 +132,23 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00057">57</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    gtk_main_quit();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span> (is_cnx_closed == FALSE)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7">close_connection</a>();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00056">56</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    gtk_main_quit();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (is_cnx_closed == FALSE)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00092">close_connection()</a>.</p>
+<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00098">close_connection()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00035">init_main_window()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00034">init_main_window()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="launch_8c_a0e9e6ad399d50fc6e7deb9c106bef1fc_cgraph.png" border="0" usemap="#alaunch_8c_a0e9e6ad399d50fc6e7deb9c106bef1fc_cgraph" alt=""/></div>
 <map name="launch_8c_a0e9e6ad399d50fc6e7deb9c106bef1fc_cgraph" id="alaunch_8c_a0e9e6ad399d50fc6e7deb9c106bef1fc_cgraph">
 <area shape="rect" title="Close main window and connection." alt="" coords="5,5,144,32"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="192,5,315,32"/>
+<area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="192,5,315,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -203,23 +200,23 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00035">35</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    GtkWidget *win;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    gtk_init(&amp;argc, &amp;argv);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c">register_styles</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    GtkBuilder *<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a> = gtk_builder_new_from_resource(<span class="stringliteral">&quot;/org/ics/include/glade/game_interface.glade&quot;</span>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    win = GTK_WIDGET(gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;app_win&quot;</span>));</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    gtk_builder_connect_signals(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    gtk_widget_show(win);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="handlers_8c.html#a3875841c1532579c95855055b3884f67">gtk_set_builder</a>(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    g_signal_connect(G_OBJECT(win), <span class="stringliteral">&quot;destroy&quot;</span>,(GCallback) <a class="code" href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a>, NULL); </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00034">34</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    GtkWidget *win;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    gtk_init(&amp;argc, &amp;argv);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf">register_styles</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GtkBuilder *<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a> = gtk_builder_new_from_resource(<span class="stringliteral">&quot;/org/ics/include/glade/game_interface.glade&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    win = GTK_WIDGET(gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;app_win&quot;</span>));</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    gtk_builder_connect_signals(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    gtk_widget_show(win);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="handlers_8c.html#a3875841c1532579c95855055b3884f67">gtk_set_builder</a>(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    g_signal_connect(G_OBJECT(win), <span class="stringliteral">&quot;destroy&quot;</span>,(GCallback) <a class="code" href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a>, NULL); </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>, <a class="el" href="launch_8c_source.html#l00057">close_main_window()</a>, <a class="el" href="handlers_8c_source.html#l00199">gtk_set_builder()</a>, et <a class="el" href="launch_8c_source.html#l00009">register_styles()</a>.</p>
+<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>, <a class="el" href="launch_8c_source.html#l00056">close_main_window()</a>, <a class="el" href="handlers_8c_source.html#l00205">gtk_set_builder()</a>, et <a class="el" href="launch_8c_source.html#l00016">register_styles()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00017">main()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00070">main()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -228,9 +225,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <area shape="rect" title="Init game window." alt="" coords="5,56,131,83"/>
 <area shape="rect" href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="179,5,317,32"/>
 <area shape="rect" href="handlers_8c.html#a3875841c1532579c95855055b3884f67" title=" " alt="" coords="193,56,303,83"/>
-<area shape="rect" href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c" title="Register css styles from resource file." alt="" coords="195,107,301,133"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7" title="Close connection between client and server." alt="" coords="375,5,497,32"/>
-<area shape="rect" href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b" title=" " alt="" coords="365,107,507,133"/>
+<area shape="rect" href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf" title="Register css styles from resource file." alt="" coords="195,107,301,133"/>
+<area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="375,5,497,32"/>
+<area shape="rect" href="client_2utils_2config_8c.html#a7c129d7a2ef9a645d22910b970eca203" title=" " alt="" coords="365,107,507,133"/>
 </map>
 </div>
 <div class="dynheader">
@@ -245,35 +242,8 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="ab2a6db0552bab413b69b58e8778fea49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2a6db0552bab413b69b58e8778fea49">&#9670;&nbsp;</a></span>init_waiting_room()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void init_waiting_room </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00019">19</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    GtkBuilder *<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a> = gtk_builder_new_from_resource(<span class="stringliteral">&quot;/org/ics/include/glade/waiting_room_interface.glade&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    GtkWidget *waiting_room = GTK_WIDGET(gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;waiting_room_window&quot;</span>));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    gtk_window_set_keep_above((GtkWindow *) waiting_room, TRUE);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    gtk_widget_show(waiting_room);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-</div><!-- fragment -->
-<p class="reference">Références <a class="el" href="handlers_8c_source.html#l00008">builder</a>.</p>
-
-</div>
-</div>
-<a id="a8b3d16eba47cb96f4e9d0c8e37bd9d4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b3d16eba47cb96f4e9d0c8e37bd9d4c">&#9670;&nbsp;</a></span>register_styles()</h2>
+<a id="aa99a3982a2b926b0634df1b6d9374edf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99a3982a2b926b0634df1b6d9374edf">&#9670;&nbsp;</a></span>register_styles()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,6 +251,7 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void register_styles </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -289,33 +260,33 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Register css styles from resource file. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00009">9</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">char</span> *ressource_url = strcat(<a class="code" href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a>(),<span class="stringliteral">&quot;/ressources/app.gressource&quot;</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    GResource *resource = g_resource_load(ressource_url, NULL);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    g_resources_register(resource);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    GtkCssProvider *provider = gtk_css_provider_new();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    gtk_css_provider_load_from_resource(provider, <span class="stringliteral">&quot;/org/ics/style.css&quot;</span>);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="launch_8c_source.html#l00016">16</a> du fichier <a class="el" href="launch_8c_source.html">launch.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">char</span> *ressource_url = strcat(<a class="code" href="client_2utils_2config_8c.html#a7c129d7a2ef9a645d22910b970eca203">get_executable_path</a>(),<span class="stringliteral">&quot;/ressources/app.gressource&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    GResource *resource = g_resource_load(ressource_url, NULL);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    g_resources_register(resource);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    GtkCssProvider *provider = gtk_css_provider_new();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    gtk_css_provider_load_from_resource(provider, <span class="stringliteral">&quot;/org/ics/style.css&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    gtk_style_context_add_provider_for_screen(gdk_screen_get_default(), GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2utils_2config_8c_source.html#l00066">get_executable_path()</a>.</p>
+<p class="reference">Références <a class="el" href="client_2utils_2config_8c_source.html#l00079">get_executable_path()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00035">init_main_window()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00034">init_main_window()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="launch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_cgraph.png" border="0" usemap="#alaunch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_cgraph" alt=""/></div>
-<map name="launch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_cgraph" id="alaunch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_cgraph">
+<div class="center"><img src="launch_8c_aa99a3982a2b926b0634df1b6d9374edf_cgraph.png" border="0" usemap="#alaunch_8c_aa99a3982a2b926b0634df1b6d9374edf_cgraph" alt=""/></div>
+<map name="launch_8c_aa99a3982a2b926b0634df1b6d9374edf_cgraph" id="alaunch_8c_aa99a3982a2b926b0634df1b6d9374edf_cgraph">
 <area shape="rect" title="Register css styles from resource file." alt="" coords="5,5,112,32"/>
-<area shape="rect" href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b" title=" " alt="" coords="160,5,301,32"/>
+<area shape="rect" href="client_2utils_2config_8c.html#a7c129d7a2ef9a645d22910b970eca203" title=" " alt="" coords="160,5,301,32"/>
 </map>
 </div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="launch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_icgraph.png" border="0" usemap="#alaunch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_icgraph" alt=""/></div>
-<map name="launch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_icgraph" id="alaunch_8c_a8b3d16eba47cb96f4e9d0c8e37bd9d4c_icgraph">
+<div class="center"><img src="launch_8c_aa99a3982a2b926b0634df1b6d9374edf_icgraph.png" border="0" usemap="#alaunch_8c_aa99a3982a2b926b0634df1b6d9374edf_icgraph" alt=""/></div>
+<map name="launch_8c_aa99a3982a2b926b0634df1b6d9374edf_icgraph" id="alaunch_8c_aa99a3982a2b926b0634df1b6d9374edf_icgraph">
 <area shape="rect" title="Register css styles from resource file." alt="" coords="277,5,384,32"/>
 <area shape="rect" href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="104,5,229,32"/>
 <area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
@@ -325,15 +296,15 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="ahandlers_8c_html_afa501dbb63ae6077ac8db76b560de42b"><div class="ttname"><a href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a></div><div class="ttdeci">GtkBuilder * builder</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00008">handlers.c:8</a></div></div>
-<div class="ttc" id="ahandlers_8c_html_a3875841c1532579c95855055b3884f67"><div class="ttname"><a href="handlers_8c.html#a3875841c1532579c95855055b3884f67">gtk_set_builder</a></div><div class="ttdeci">void gtk_set_builder(GtkBuilder *buildr)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00199">handlers.c:199</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_a46274ed155268e6193b079e2b8cfb1e7"><div class="ttname"><a href="client_2network_2communication_8c.html#a46274ed155268e6193b079e2b8cfb1e7">close_connection</a></div><div class="ttdeci">void close_connection()</div><div class="ttdoc">Close connection between client and server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00092">communication.c:92</a></div></div>
-<div class="ttc" id="alaunch_8c_html_a0e9e6ad399d50fc6e7deb9c106bef1fc"><div class="ttname"><a href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a></div><div class="ttdeci">void close_main_window(gboolean is_cnx_closed)</div><div class="ttdoc">Close main window and connection.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00057">launch.c:57</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_a0827ab2ac31e7fd68e3437b17e63ce1b"><div class="ttname"><a href="client_2utils_2config_8c.html#a0827ab2ac31e7fd68e3437b17e63ce1b">get_executable_path</a></div><div class="ttdeci">char * get_executable_path()</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00066">config.c:66</a></div></div>
-<div class="ttc" id="alaunch_8c_html_a8b3d16eba47cb96f4e9d0c8e37bd9d4c"><div class="ttname"><a href="launch_8c.html#a8b3d16eba47cb96f4e9d0c8e37bd9d4c">register_styles</a></div><div class="ttdeci">void register_styles()</div><div class="ttdoc">Register css styles from resource file.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00009">launch.c:9</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_afa501dbb63ae6077ac8db76b560de42b"><div class="ttname"><a href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a></div><div class="ttdeci">GtkBuilder * builder</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00014">handlers.c:14</a></div></div>
+<div class="ttc" id="alaunch_8c_html_aa99a3982a2b926b0634df1b6d9374edf"><div class="ttname"><a href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf">register_styles</a></div><div class="ttdeci">void register_styles(void)</div><div class="ttdoc">Register css styles from resource file.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00016">launch.c:16</a></div></div>
+<div class="ttc" id="ahandlers_8c_html_a3875841c1532579c95855055b3884f67"><div class="ttname"><a href="handlers_8c.html#a3875841c1532579c95855055b3884f67">gtk_set_builder</a></div><div class="ttdeci">void gtk_set_builder(GtkBuilder *buildr)</div><div class="ttdef"><b>Definition:</b> <a href="handlers_8c_source.html#l00205">handlers.c:205</a></div></div>
+<div class="ttc" id="alaunch_8c_html_a0e9e6ad399d50fc6e7deb9c106bef1fc"><div class="ttname"><a href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a></div><div class="ttdeci">void close_main_window(gboolean is_cnx_closed)</div><div class="ttdoc">Close main window and connection.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00056">launch.c:56</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_ae4a13dbd540ae1a5b6409236c384013b"><div class="ttname"><a href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a></div><div class="ttdeci">void close_connection(void)</div><div class="ttdoc">Close connection between client and server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00098">communication.c:98</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a7c129d7a2ef9a645d22910b970eca203"><div class="ttname"><a href="client_2utils_2config_8c.html#a7c129d7a2ef9a645d22910b970eca203">get_executable_path</a></div><div class="ttdeci">char * get_executable_path(void)</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00079">config.c:79</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

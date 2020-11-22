@@ -69,20 +69,26 @@ $(function() {
 <div class="title">launch.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="launch_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LAUNCH_HEADER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LAUNCH_HEADER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;gtk/gtk.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="launch_8h.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a>(gboolean is_cnx_closed);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="launch_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Created on Sun Nov 22 2020</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2020 Victor Durand &amp; Raphael Rabechault &amp; Tom Mollon &amp; Lisa Seigle-Morier</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef LAUNCH_HEADER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define LAUNCH_HEADER_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;gtk/gtk.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="launch_8h.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a>(gboolean is_cnx_closed);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="alaunch_8h_html_a66cba4e1e630c1b29de0b87c3938f322"><div class="ttname"><a href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a></div><div class="ttdeci">void init_main_window(int argc, char **argv)</div><div class="ttdoc">Init game window.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00035">launch.c:35</a></div></div>
-<div class="ttc" id="alaunch_8h_html_a0e9e6ad399d50fc6e7deb9c106bef1fc"><div class="ttname"><a href="launch_8h.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a></div><div class="ttdeci">void close_main_window(gboolean is_cnx_closed)</div><div class="ttdoc">Close main window and connection.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00057">launch.c:57</a></div></div>
+<div class="ttc" id="alaunch_8h_html_a66cba4e1e630c1b29de0b87c3938f322"><div class="ttname"><a href="launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a></div><div class="ttdeci">void init_main_window(int argc, char **argv)</div><div class="ttdoc">Init game window.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00034">launch.c:34</a></div></div>
+<div class="ttc" id="alaunch_8h_html_a0e9e6ad399d50fc6e7deb9c106bef1fc"><div class="ttname"><a href="launch_8h.html#a0e9e6ad399d50fc6e7deb9c106bef1fc">close_main_window</a></div><div class="ttdeci">void close_main_window(gboolean is_cnx_closed)</div><div class="ttdoc">Close main window and connection.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00056">launch.c:56</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

@@ -69,24 +69,30 @@ $(function() {
 <div class="title">actions.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="client_2network_2actions_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef ACTIONS_HEADER_H</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define ACTIONS_HEADER_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="server_2network_2communication_8h.html">communication.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../../common/game.h&quot;</span></div>
+<a href="client_2network_2actions_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Created on Sun Nov 22 2020</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2020 Victor Durand &amp; Raphael Rabechault &amp; Tom Mollon &amp; Lisa Seigle-Morier</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a>(Encapsulation *packet);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e">send_action_packet</a>(<a class="code" href="struct_game.html">Game</a> *<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#ifndef ACTIONS_HEADER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#define ACTIONS_HEADER_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="server_2network_2communication_8h.html">communication.h</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../../common/game.h&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a>(Encapsulation *packet);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e">send_action_packet</a>(<a class="code" href="struct_game.html">Game</a> *<a class="code" href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclient_2network_2actions_8h_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00005">actions.c:5</a></div></div>
-<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00014">game.h:14</a></div></div>
-<div class="ttc" id="agame_8c_html_a58bdb5643d0814ac4e697a1564b79b70"><div class="ttname"><a href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00004">game.c:4</a></div></div>
+<div class="ttc" id="aclient_2network_2actions_8h_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00011">actions.c:11</a></div></div>
+<div class="ttc" id="astruct_game_html"><div class="ttname"><a href="struct_game.html">Game</a></div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00018">game.h:18</a></div></div>
+<div class="ttc" id="agame_8c_html_a58bdb5643d0814ac4e697a1564b79b70"><div class="ttname"><a href="game_8c.html#a58bdb5643d0814ac4e697a1564b79b70">game</a></div><div class="ttdeci">Game * game</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00010">game.c:10</a></div></div>
 <div class="ttc" id="aserver_2network_2communication_8h_html"><div class="ttname"><a href="server_2network_2communication_8h.html">communication.h</a></div></div>
-<div class="ttc" id="aclient_2network_2actions_8h_html_a93a56ae919ec9974e5354183fffa243e"><div class="ttname"><a href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e">send_action_packet</a></div><div class="ttdeci">void send_action_packet(Game *game)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00049">actions.c:49</a></div></div>
+<div class="ttc" id="aclient_2network_2actions_8h_html_a93a56ae919ec9974e5354183fffa243e"><div class="ttname"><a href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e">send_action_packet</a></div><div class="ttdeci">void send_action_packet(Game *game)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00055">actions.c:55</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 21 Novembre 2020 18:55:10 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 22 Novembre 2020 14:12:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
