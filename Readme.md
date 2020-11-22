@@ -1,3 +1,5 @@
+![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 # ICS - Dilemme du prisonnier
 
 ## Contexte 
@@ -143,6 +145,9 @@ Dans le *Makefile* modifié la ligne comme ceci :
 |  23  |            | GAME_END    | (round == maxRound \|\| balance == 0)                             |
 |  24  |            | DISCONNECT  |                                                                   |
 |  24  | DISCONNECT |             |                                                                   |
+
+
+
 
 
 
