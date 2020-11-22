@@ -1,5 +1,11 @@
-#ifndef CONFIG_HEADER_FILE_H
-#define CONFIG_HEADER_FILE_H
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
+#ifndef SRC_SERVER_UTILS_CONFIG_H_
+#define SRC_SERVER_UTILS_CONFIG_H_
 
 #include <stdbool.h>
 
@@ -34,7 +40,7 @@ Room *get_client_room(unsigned int client_id);
 unsigned int get_max_round_count(Room *room);
 unsigned int get_initial_amount(Room *room);
 
-char *get_executable_path();
+char *get_executable_path(void);
 char *init_executable_path(Config *configuration);
 
-#endif //!CONFIG_HEADER_FILE_H
+#endif //SRC_SERVER_UTILS_CONFIG_H_

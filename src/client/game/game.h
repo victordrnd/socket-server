@@ -1,17 +1,23 @@
-#ifndef GAME_HEADER_FILE_H
-#define GAME_HEADER_FILE_H
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
+#ifndef SRC_CLIENT_GAME_GAME_H_
+#define SRC_CLIENT_GAME_GAME_H_
 #include <stdbool.h>
 #include <sys/time.h>
 #include "../../common/game.h"
 
-void init_game(Game *game);
+Game*  init_game(Game *game);
 void game_set_current_bet(unsigned int bet);
-int game_get_current_bet();
 void game_set_balance(unsigned int balance);
 void game_set_action(enum actions action);
 void game_set_max_rounds(unsigned int maxrounds);
-bool game_next_round();
 void game_set_react_time(struct timeval round_start_time, struct timeval action_clicked_time);
-Game *get_game();
+int game_get_current_bet(void);
+bool game_next_round(void);
+Game *get_game(void);
 void set_game(Game *);
-#endif
+#endif // SRC_CLIENT_GAME_GAME_H_

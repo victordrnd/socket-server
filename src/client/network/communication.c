@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -36,7 +42,7 @@ void init_communication(Config *configuration)
  */
 Connection *open_connection(Config *configuration)
 {
-    Connection *cnx = (Connection *)malloc(sizeof(Connection));
+    cnx = (Connection *)malloc(sizeof(Connection));
 
     struct sockaddr_in serverAddr;
     int port = configuration->port;
@@ -89,7 +95,7 @@ void send_packet(enum verbs action, void *data, size_t data_size)
  * @brief Close connection between client and server
  * 
  */
-void close_connection()
+void close_connection(void)
 {
     pthread_cancel(threads.stdin_thread);
     close(cnx->sock);

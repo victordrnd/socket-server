@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include "actions.h"
 #include "../interfaces/handlers/handlers.h"
 #include "../../common/protocol/protocol.h"

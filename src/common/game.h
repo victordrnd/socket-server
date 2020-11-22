@@ -1,8 +1,12 @@
-#include <stdbool.h>
-
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
 
 #ifndef GAME_H
 #define GAME_H
+
 
 enum actions
 {

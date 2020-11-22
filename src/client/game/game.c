@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include "game.h"
 #include "../utils/config.h"
 
@@ -9,12 +15,13 @@ Game *game;
  * @param c_game game to initialized
  * @param config Client configuration
  */
-void init_game(Game *c_game){
+Game * init_game(Game *c_game){
     game = c_game;
     game->action = NOACTION;
     game->balance = 100; 
     game->bet = 10;
     game->current_round = 1; 
+    return game;
 }
 
 /**
@@ -31,11 +38,11 @@ void game_set_current_bet(unsigned int bet){
  * 
  * @return int 
  */
-int game_get_current_bet(){
+int game_get_current_bet(void){
     return game->bet;
 }
 
-bool game_next_round(){
+bool game_next_round(void){
     if(game->current_round + 1 <= game->total_rounds) {
         game->current_round++;
         return true;
@@ -53,18 +60,17 @@ void game_set_react_time(struct timeval round_start_time, struct timeval action_
     game->react_time += (action_clicked_time.tv_usec - round_start_time.tv_usec) / 1000.0;
 }
 
+void game_set_balance(unsigned int balance){
+    game->balance = balance;;
+}
 
 void game_set_max_rounds(unsigned int maxrounds){
     game->total_rounds = maxrounds;
 }
 
-Game *get_game(){
+Game *get_game(void){
     return game;
 }
 void set_game(Game *game_v){
     game = game_v;
-}
-
-void game_set_balance(unsigned int balance){
-    game->balance = balance;;
 }

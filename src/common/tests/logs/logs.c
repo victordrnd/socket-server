@@ -1,9 +1,16 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdio.h>
 #include <time.h>
 #include <stdarg.h>
 #include "logs.h"
 #include "fort.h"
-void debug_print_f(char *fm, ...)
+
+void debug_print_f(const char* fm, ...)
 {
     time_t t = time(NULL);
 
@@ -20,9 +27,7 @@ void debug_print_f(char *fm, ...)
             fm++;
             continue;
         }
-
         fm++;
-
         if (*fm == '\0')
         {
             break;
@@ -31,13 +36,13 @@ void debug_print_f(char *fm, ...)
         switch (*fm)
         {
         case 's':
-            fputs(va_arg(arg, char *), stdout);
+            fputs(va_arg(arg, char*), stdout);
             break;
         case 'c':
             putchar(va_arg(arg, int));
             break;
         case 'd':
-            printf("%d",va_arg(arg, int));
+            printf("%d", va_arg(arg, int));
             break;
         }
         fm++;
@@ -46,10 +51,10 @@ void debug_print_f(char *fm, ...)
     va_end(arg);
 }
 
-void debug_print_client_config_f(unsigned int client_id, const char *server_ip, unsigned int port)
+void debug_print_client_config_f(unsigned int client_id, const char* server_ip, unsigned int port)
 {
 #ifndef NDEBUG
-    ft_table_t *table = ft_create_table();
+    ft_table_t* table = ft_create_table();
     ft_set_cell_prop(table, 0, FT_ANY_COLUMN, FT_CPROP_ROW_TYPE, FT_ROW_HEADER);
     ft_write_ln(table, "Client ID", "Server IP", "Port");
     ft_printf_ln(table, "%d|%s|%d", client_id, server_ip, port);
@@ -58,10 +63,10 @@ void debug_print_client_config_f(unsigned int client_id, const char *server_ip, 
 #endif
 }
 
-void debug_print_server_config_f(const char *bind_ip, unsigned int port, unsigned int max_cnx)
+void debug_print_server_config_f(const char* bind_ip, unsigned int port, unsigned int max_cnx)
 {
 #ifndef NDEBUG
-    ft_table_t *table = ft_create_table();
+    ft_table_t* table = ft_create_table();
     ft_set_cell_prop(table, 0, FT_ANY_COLUMN, FT_CPROP_ROW_TYPE, FT_ROW_HEADER);
     ft_write_ln(table, "Bind IP", "Port", "Max connections");
     ft_printf_ln(table, "%s|%d|%d", bind_ip, port, max_cnx);

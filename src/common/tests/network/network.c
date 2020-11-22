@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>

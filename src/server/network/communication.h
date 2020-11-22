@@ -1,18 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
  */
 
-/* 
- * File:   srvcxnmanager.h
- * Author: aurelio
- *
- */
+#ifndef SRC_SERVER_NETWORK_COMMUNICATION_H_
+#define SRC_SERVER_NETWORK_COMMUNICATION_H_
 #include "../utils/config.h"
 #include "../../common/protocol/protocol.h"
-#ifndef SRVCXNMANAGER_H
-#define SRVCXNMANAGER_H
 #include <netinet/in.h>
 #include <sys/socket.h>
 #define BUFFERSIZE 2048
@@ -27,7 +22,7 @@ typedef struct
     unsigned int client_id;
 } connection_t;
 
-void init_sockets_array();
+void init_sockets_array(void);
 void add(connection_t *connection);
 void del(connection_t *connection);
 void *threadProcess(void *ptr);
@@ -37,4 +32,4 @@ connection_t *get_connection(unsigned int client_id);
 void send_packet(unsigned int client_id, enum verbs action, void *data, size_t data_size);
 
 
-#endif /* SRVCXNMANAGER_H */
+#endif //SRC_SERVER_NETWORK_COMMUNICATION_H_
