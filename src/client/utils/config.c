@@ -10,7 +10,6 @@
 #include <string.h>
 #include <libgen.h>
 #include <unistd.h>
-#include <stdbool.h>
 
 #include "config.h"
 #ifndef NDEBUG

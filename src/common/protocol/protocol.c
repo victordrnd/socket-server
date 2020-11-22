@@ -3,7 +3,6 @@
  *
  * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
  */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

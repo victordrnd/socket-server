@@ -1,3 +1,5 @@
+![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)
+![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)
 # ICS - Dilemme du prisonnier
 
 ## Contexte 
@@ -7,7 +9,7 @@ Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des donné
 On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une confrontation trahison-collaboration entre les deux volontaires.
 
 <h1 align="center">
-    <img src="https://i.postimg.cc/523HnPsr/Capture-d-cran-du-2020-11-17-17-20-52.png" />
+    <img src="./include/images/project.gif" />
 </h1>
 
 
@@ -143,6 +145,9 @@ Dans le *Makefile* modifié la ligne comme ceci :
 |  23  |            | GAME_END    | (round == maxRound \|\| balance == 0)                             |
 |  24  |            | DISCONNECT  |                                                                   |
 |  24  | DISCONNECT |             |                                                                   |
+
+
+
 
 
 
