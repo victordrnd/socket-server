@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme_599',['Readme',['../md__readme.html',1,'']]],
   ['radio_5fbet_5fbutton_600',['radio_bet_button',['../game__ui_8c.html#a4353172bcd1d2aefec8d9869312ad19d',1,'radio_bet_button(GtkBuilder *builder, gboolean sensitive):&#160;game_ui.c'],['../game__ui_8h.html#a4353172bcd1d2aefec8d9869312ad19d',1,'radio_bet_button(GtkBuilder *builder, gboolean sensitive):&#160;game_ui.c']]],
   ['raw_5favail_601',['raw_avail',['../structf__conv__context.html#a462ec68fefba0521caf1bc86ef2fd2e1',1,'f_conv_context']]],
   ['react_5ftime_602',['react_time',['../struct_game.html#a201b96ce325c07052016e18111888407',1,'Game']]],

@@ -1,13 +1,13 @@
 <map id="src/client/utils/config.c" name="src/client/utils/config.c">
-<area shape="rect" id="node1" title=" " alt="" coords="379,5,529,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="333,5,484,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,87,68,114"/>
 <area shape="rect" id="node3" title=" " alt="" coords="92,87,171,114"/>
 <area shape="rect" id="node4" title=" " alt="" coords="195,87,263,114"/>
 <area shape="rect" id="node5" title=" " alt="" coords="287,87,351,114"/>
 <area shape="rect" id="node6" title=" " alt="" coords="375,87,442,114"/>
 <area shape="rect" id="node7" title=" " alt="" coords="466,87,533,114"/>
-<area shape="rect" id="node8" title=" " alt="" coords="705,169,779,196"/>
-<area shape="rect" id="node9" href="$client_2utils_2config_8h.html" title=" " alt="" coords="607,87,674,114"/>
-<area shape="rect" id="node10" href="$logs_8h.html" title=" " alt="" coords="698,80,823,121"/>
-<area shape="rect" id="node11" href="$network_8h.html" title=" " alt="" coords="848,80,980,121"/>
+<area shape="rect" id="node8" href="$client_2utils_2config_8h.html" title=" " alt="" coords="557,87,623,114"/>
+<area shape="rect" id="node9" href="$logs_8h.html" title=" " alt="" coords="647,80,773,121"/>
+<area shape="rect" id="node10" href="$network_8h.html" title=" " alt="" coords="797,80,929,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="826,169,901,196"/>
 </map>
