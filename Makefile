@@ -8,7 +8,7 @@ CC = gcc
 GTK1 = `pkg-config --cflags gtk+-3.0` -rdynamic
 GTK2 = `pkg-config --libs gtk+-3.0`
 # define any compile-time flags #-DNDEBUG
-CFLAGS	:= -Wall -Wextra -g -std=c99 
+CFLAGS	:= -Wall -Wextra -g -std=c11 -D_GNU_SOURCE 
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
@@ -29,16 +29,7 @@ INCLUDE	:= include
 # define lib directory
 LIB		:= lib
 
-ifeq ($(OS),Windows_NT)
-CLIENT_MAIN := client
-SERVER_MAIN := server
-SOURCEDIRS	:= $(SRC)
-INCLUDEDIRS	:= $(INCLUDE)
-LIBDIRS		:= $(LIB)
-FIXPATH = $(subst /,\,$1)
-RM			:= del /q /f
-MD	:= mkdir
-else
+
 CLIENT_MAIN := client
 SERVER_MAIN := server
 CLIENT_SOURCEDIRS	:= $(shell find $(SRC_CLIENT) -type d) $(shell find $(SRC_COMMON) -type d)
@@ -49,7 +40,6 @@ LIBDIRS		:= $(shell find $(LIB) -type d)
 FIXPATH = $1
 RM = rm -f
 MD	:= mkdir -p
-endif
 
 # define any directories containing header files other than /usr/include
 INCLUDES	:= $(patsubst %,-I%, $(INCLUDEDIRS:%/=%))
@@ -72,7 +62,7 @@ SERVER_OBJECTS		:= $(SERVER_SOURCES:.c=.o)
 
 CLIENT_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(CLIENT_MAIN))
 SERVER_OUTPUTMAIN	:= $(call FIXPATH,$(OUTPUT)/$(SERVER_MAIN))
-_GREEN="\033[0;32m"
+
 
 
 $(OUTPUT):
@@ -80,7 +70,7 @@ $(OUTPUT):
 
 
 all: $(OUTPUT) $(CLIENT_MAIN) $(SERVER_MAIN)
-	@echo ${_GREEN}All compilation completed !
+	@echo All compilation completed !
 
 
 # Client compilation

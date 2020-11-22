@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #ifndef COMMUNICATION_HEADER_H
 #define COMMUNICATION_HEADER_H
 #include "../utils/config.h"
@@ -21,5 +27,5 @@ Connection *open_connection(Config *configuration);
 void *listen_socket_thread_process(void *ptr);
 void *listen_stdin_thread_process(void *ptr);
 void send_packet(enum verbs action, void *data, size_t data_size);
-void close_connection();
+void close_connection(void);
 #endif

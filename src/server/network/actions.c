@@ -1,4 +1,12 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdio.h>
+#include <assert.h>
+
 #include "actions.h"
 #include "communication.h"
 #include "../../common/tests/logs/logs.h"
@@ -14,9 +22,10 @@ void add_session(Session *session)
         if (sessions[i] == NULL)
         {
             sessions[i] = session;
-            continue;
+            return;
         }
     }
+    assert(false);
 }
 
 void remove_session(Session *session)
@@ -26,18 +35,18 @@ void remove_session(Session *session)
         if (session == sessions[i])
         {
             sessions[i] = NULL;
-            continue;
+            return;
         }
     }
+    assert(false);
 }
 
 void on_connect_action(Encapsulation *packet)
 {
-    Connected_data data;
     Room *room = get_client_room(packet->sender_id);
     if (room != NULL)
     {
-        data.initial_balance = get_initial_amount(room);
+        Connected_data data = {.initial_balance = get_initial_amount(room)};
         send_packet(packet->sender_id, CONNECTED, &data, sizeof(Connected_data));
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mCONNECTED\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
         if (check_oppponent_connected(packet->sender_id))
@@ -48,15 +57,14 @@ void on_connect_action(Encapsulation *packet)
     else
     {
         send_packet(packet->sender_id, FAILED, NULL, 0);
-        connection_t *cnx = get_connection(packet->sender_id);
-        del(cnx);
         debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mFAILED\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
     }
 }
 
 void send_game_start(Encapsulation *packet, Room *room)
 {
-    Game_Start_data data = {get_max_round_count(room), (unsigned int)get_initial_amount(room)};
+    Game_Start_data data = {.max_rounds = get_max_round_count(room),
+                            .initial_balance = (unsigned int)get_initial_amount(room)};
     send_packet(packet->sender_id, GAME_START, &data, sizeof(Game_Start_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n", packet->sender_id);
 
@@ -67,8 +75,7 @@ void send_game_start(Encapsulation *packet, Room *room)
     send_round_start(packet->sender_id);
     send_round_start(opponent);
 
-    open_csv((char *)room->name);
-    write_header(room->name);
+    create_csv_result_file((char *)room->name);
 }
 
 void send_round_start(unsigned int client_id)
@@ -88,7 +95,7 @@ void on_action_received(Encapsulation *packet)
 {
     Game *game = (Game *)packet->data;
     unsigned int opponent_id = get_opponent_id(packet->sender_id);
-    Session *opponent_session = check_if_opponent_played(opponent_id);
+    Session *opponent_session = check_opponent_played(opponent_id);
     if (opponent_session != NULL)
     {
         Game *opponnent_game = opponent_session->game;
@@ -128,19 +135,7 @@ void on_action_received(Encapsulation *packet)
         }
         else
         {
-            if (game->balance > opponnent_game->balance)
-            {
-                send_game_end(packet->sender_id, VICTORY);
-                send_game_end(opponent_id, DEFEAT);
-            }
-            else if (game->balance < opponnent_game->balance)
-            {
-                send_game_end(packet->sender_id, DEFEAT);
-                send_game_end(opponent_id, VICTORY);
-            }else{
-                send_game_end(packet->sender_id, EQUALITY);
-                send_game_end(opponent_id, EQUALITY);
-            }
+            check_results(game, opponnent_game, packet->sender_id, opponent_id);
         }
     }
     else
@@ -150,9 +145,28 @@ void on_action_received(Encapsulation *packet)
     }
 }
 
+void check_results(Game *game, Game *opponnent_game, unsigned int client_id, unsigned int opponent_id)
+{
+
+    if (game->balance > opponnent_game->balance)
+    {
+        send_game_end(client_id, VICTORY);
+        send_game_end(opponent_id, DEFEAT);
+    }
+    else if (game->balance < opponnent_game->balance)
+    {
+        send_game_end(client_id, DEFEAT);
+        send_game_end(opponent_id, VICTORY);
+    }
+    else
+    {
+        send_game_end(client_id, EQUALITY);
+        send_game_end(opponent_id, EQUALITY);
+    }
+}
 void send_game_end(unsigned int client_id, enum results winner)
 {
-    Game_End_data data = {winner};
+    Game_End_data data = {.result = winner};
     send_packet(client_id, GAME_END, &data, sizeof(Game_End_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
@@ -194,7 +208,7 @@ bool check_oppponent_connected(unsigned int client_id)
     return false;
 }
 
-Session *check_if_opponent_played(unsigned int opponent_id)
+Session *check_opponent_played(unsigned int opponent_id)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
     {

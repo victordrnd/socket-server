@@ -1,3 +1,8 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +20,7 @@
 
 connection_t *connections[MAXSIMULTANEOUSCLIENTS];
 
-void init_sockets_array()
+void init_sockets_array(void)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
     {
@@ -74,8 +79,7 @@ void *threadProcess(void *ptr)
 
     add(connection);
 
-    while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0)
-    {
+    while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0){
 
         int size = sizeof(Encapsulation);
         unsigned char *buffer = (unsigned char *)malloc(size);
@@ -85,20 +89,6 @@ void *threadProcess(void *ptr)
         {
             connection->client_id = packet->sender_id;
         }
-#ifndef NDEBUG
-        // printf("DEBUG-----------------------------------------------------------\n");
-        // // printf("len : %i\n", len);
-        // printf("Buffer : ");
-        // for (int i = 0; i < size; i++)
-        //     printf("%02X ", buffer[i]);
-        // printf("\n");
-        // printf("Sender_id : %d\n", packet->sender_id);
-        // printf("Destination_id : %d\n", packet->destination_id);
-        // printf("Action : %d\n", packet->action);
-        // printf("Packet size : %d\n", sizeof(Encapsulation));
-        // printf("Timestamp : %lld\n", (long long)packet->timestamp);
-        // printf("----------------------------------------------------------------\n");
-#endif
 
         assert(sizeof(*packet) == sizeof(Encapsulation));
         settle_action(packet);
@@ -122,7 +112,7 @@ int create_server_socket(Config *configuration)
     sockfd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (sockfd <= 0)
     {
-        fprintf(stderr, "%s: error: cannot create socket\n");
+        fprintf(stderr, "error: cannot create socket\n");
         return -3;
     }
 

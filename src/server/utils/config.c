@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdlib.h>
 #include <libconfig.h>
 #include <assert.h>
@@ -161,21 +167,21 @@ unsigned int get_initial_amount(Room *room)
     return room->initial_amount;
 }
 
-char *get_executable_path()
+char *get_executable_path(void)
 {
-    char *executable_path = (char *)malloc(256);
-    memcpy(executable_path, conf->executable_path, 256);
+    char *executable_path = (char *)malloc(sizeof(conf->executable_path));
+    memcpy(executable_path, conf->executable_path, sizeof(conf->executable_path));
     return executable_path;
 }
 
 char *init_executable_path(Config *configuration)
 {
     conf = configuration;
-    char filename[256];
-    int count = readlink("/proc/self/exe", filename, 256);
+    char filename[sizeof(conf->executable_path)];
+    int count = readlink("/proc/self/exe", filename, sizeof(filename));
     if (count != -1)
     {
-        memcpy(configuration->executable_path, dirname(filename), 256);
+        memcpy(configuration->executable_path, dirname(filename), sizeof(filename));
     }
     return conf->executable_path;
 }

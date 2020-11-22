@@ -95,7 +95,7 @@ game_configuration =
 ```
 
 ### Configuration client
-La configuration du serveur se trouve dans le fichier `output/config/client_config.cfg` une fois le client compilé.
+La configuration du client se trouve dans le fichier `output/config/client_config.cfg` une fois le client compilé.
 
 ```cfg
 client_id = 1;
@@ -103,15 +103,30 @@ server_ip = "127.0.0.1";
 server_port = 7799;
 ```
 
+Il est par ailleurs possible de modifier la configuration en ajoutant des arguments à l'exécution du programme, ces changements sont **prioritaires** par rapport au fichier de configuration. 
+
+```
+Usage: client [OPTION...] 
+client -- Dilemme du prisonnier de l'Institut des Sciences Cognitives  
+
+  -c, --client_id=1          Force client_id over config file
+  -h, --host=127.0.0.1       Force server_ip over config file
+  -p, --port=7799            Force server_port over config file
+  -?, --help                 Give this help list
+      --usage                Give a short usage message
+
+Mandatory or optional arguments to long options are also mandatory or optional
+for any corresponding short options.
+```
 
 # Développement
 
 ## Debug
-Il est possible d'activer le mode __DEBUG__ sur le serveur et le client en ajoutant **-DNDEBUG** lors de la compilation.
+Il est possible de désactiver le mode __DEBUG__ sur le serveur et le client en ajoutant **-DNDEBUG** lors de la compilation.
 
 Dans le *Makefile* modifié la ligne comme ceci :
 
-`CFLAGS	:= -Wall -Wextra -g -std=c99 -DNDEBUG`
+`CFLAGS	:= -Wall -Wextra -g -std=c11 -DNDEBUG`
 
 
 ## Protocole

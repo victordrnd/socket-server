@@ -1,3 +1,9 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include "handlers.h"
 #include "../game_ui/game_ui.h"
 #include "../../../common/game.h"
@@ -12,7 +18,7 @@ struct timeval round_start_time;
  * 
  * @param button clicked button
  */
-void on_mise_10_selected(GtkButton *button, GtkBuilder *builder)
+void on_mise_10_selected(GtkButton *button)
 {
     game_set_current_bet(10);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
@@ -23,7 +29,7 @@ void on_mise_10_selected(GtkButton *button, GtkBuilder *builder)
  * 
  * @param button clicked button 
  */
-void on_mise_25_selected(GtkButton *button, GtkBuilder *builder)
+void on_mise_25_selected(GtkButton *button)
 {
     game_set_current_bet(25);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
@@ -34,7 +40,7 @@ void on_mise_25_selected(GtkButton *button, GtkBuilder *builder)
  * 
  * @param button clicked button
  */
-void on_mise_50_selected(GtkButton *button, GtkBuilder *builder)
+void on_mise_50_selected(GtkButton *button)
 {
     game_set_current_bet(50);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
@@ -45,7 +51,7 @@ void on_mise_50_selected(GtkButton *button, GtkBuilder *builder)
  * 
  * @param button clicked button
  */
-void on_mise_75_selected(GtkButton *button, GtkBuilder *builder)
+void on_mise_75_selected(GtkButton *button)
 {
     game_set_current_bet(75);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
@@ -56,7 +62,7 @@ void on_mise_75_selected(GtkButton *button, GtkBuilder *builder)
  * 
  * @param button clicked button
  */
-void on_mise_100_selected(GtkButton *button, GtkBuilder *builder)
+void on_mise_100_selected(GtkButton *button)
 {
     game_set_current_bet(100);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
@@ -68,7 +74,7 @@ void on_mise_100_selected(GtkButton *button, GtkBuilder *builder)
  * @param button button clicked
  * @param builder Window builder
  */
-void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
+void on_betray_btn_click(GtkWidget *button __attribute__((unused)))
 {
     toggle_action_button(builder, FALSE);
     game_set_action(BETRAY);
@@ -84,7 +90,7 @@ void on_betray_btn_click(GtkWidget *button, GtkBuilder *builder)
  * @param button button clicked
  * @param builder Window builder
  */
-void on_collaborate_btn_click(GtkWidget *button, GtkBuilder *builder)
+void on_collaborate_btn_click(GtkWidget *button __attribute__((unused)))
 {
     toggle_action_button(builder, FALSE);
     game_set_action(COLLABORATE);
@@ -108,7 +114,7 @@ void on_connected_action(Connected_data *data)
     toggle_action_button(builder, FALSE);
 }
 
-void on_failed_action()
+void on_failed_action(void)
 {
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
     gtk_label_set_label(label, "Impossible de se connecter au serveur");
@@ -130,7 +136,7 @@ void on_game_start_action(Game_Start_data *data)
     gtk_window_set_title(window, title);
 }
 
-void on_round_start_action(Round_Start_data *data)
+void on_round_start_action(Round_Start_data *data __attribute__((unused)))
 {
 
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");

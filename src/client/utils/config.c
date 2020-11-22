@@ -1,15 +1,21 @@
+/*
+ * Created on Sun Nov 22 2020
+ *
+ * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
+ */
+
 #include <stdlib.h>
 #include <libconfig.h>
 #include <assert.h>
 #include <string.h>
 #include <libgen.h>
 #include <unistd.h>
+#include <stdbool.h>
 
 #include "config.h"
 #ifndef NDEBUG
 #include "../../common/tests/logs/logs.h"
 #include "../../common/tests/network/network.h"
-#include <stdbool.h>
 #endif
 
 Config *config = NULL;
@@ -32,9 +38,15 @@ void read_config(Config *configuration, const char *filename)
     }
     else
     {
-        config_lookup_int(&cfg, "client_id", (int *)&configuration->client_id);
-        config_lookup_string(&cfg, "server_ip", &configuration->ip);
-        config_lookup_int(&cfg, "server_port", (int *)&configuration->port);
+        if (!configuration->client_id){
+            config_lookup_int(&cfg, "client_id", (int *)&configuration->client_id);
+        }
+        if (configuration->ip == NULL){
+            config_lookup_string(&cfg, "server_ip", &configuration->ip);
+        }
+        if (!configuration->port){
+            config_lookup_int(&cfg, "server_port", (int *)&configuration->port);
+        }
         config = configuration;
     }
 
@@ -49,33 +61,36 @@ void read_config(Config *configuration, const char *filename)
 #endif
 }
 
-unsigned int config_get_client_id()
+unsigned int config_get_client_id(void)
 {
     return config->client_id;
 }
 
-const char *config_get_server_ip()
+const char *config_get_server_ip(void)
 {
     return config->ip;
 }
 
-unsigned int config_get_server_port()
+unsigned int config_get_server_port(void)
 {
     return config->port;
 }
-char *get_executable_path(){
-    char *executable_path = (char *) malloc(256);
-    memcpy(executable_path, config->executable_path, 256);
+
+char *get_executable_path(void)
+{
+    char *executable_path = (char *)malloc(sizeof(config->executable_path));
+    memcpy(executable_path, config->executable_path, sizeof(config->executable_path));
+    assert(strlen(executable_path) > 0);
     return executable_path;
 }
 char *init_executable_path(Config *configuration)
 {
     config = configuration;
-    char filename[248];
-    int count = readlink("/proc/self/exe", filename, 256);
+    char filename[sizeof(config->executable_path)];
+    int count = readlink("/proc/self/exe", filename, sizeof(filename));
     if (count != -1)
     {
-        memcpy(configuration->executable_path, dirname(filename), 256);
+        memcpy(configuration->executable_path, dirname(filename), sizeof(filename));
     }
     return config->executable_path;
 }
