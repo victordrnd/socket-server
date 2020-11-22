@@ -146,7 +146,7 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
     gtk_widget_hide(spinner_central);
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
-    activate_countdown(progress_bar, 15, 20);
+    activate_countdown(progress_bar, data->round_duration, 20);
 
     toggle_action_button(builder, TRUE);
 

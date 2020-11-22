@@ -9,7 +9,7 @@ Le doctorant, qui n’est pas un développeur, a besoin d’accumuler des donné
 On définira une partie comme étant un certain nombre de rounds. Un round est défini comme une confrontation trahison-collaboration entre les deux volontaires.
 
 <h1 align="center">
-    <img src="https://i.postimg.cc/523HnPsr/Capture-d-cran-du-2020-11-17-17-20-52.png" />
+    <img src="./include/images/project.gif" />
 </h1>
 
 
