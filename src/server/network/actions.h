@@ -17,6 +17,7 @@ typedef struct{
 
 
 void on_connect_action(Encapsulation *packet);
+void on_disconnect_action(Encapsulation *packet);
 void send_game_start(Encapsulation *packet, Room* room);
 void send_round_start(unsigned int client_id);
 void settle_action(Encapsulation *packet);
