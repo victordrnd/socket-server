@@ -102,22 +102,26 @@ void on_action_received(Encapsulation *packet)
         if (game->action == BETRAY)
         {
             if (opponnent_game->action == BETRAY)
-            {
+            { //J1 Trahi et J2 Trahi
                 game->balance -= game->bet;
-                opponnent_game->balance -= game->bet;
+                opponnent_game->balance -= opponnent_game->bet;
             }
             else
-            { //Collaborate
-                game->balance += opponnent_game->bet;
+            { //J1 Trahi et J2 Collaborate
+                game->balance += game->bet;
                 opponnent_game->balance -= opponnent_game->bet;
             }
         }
         else
         {
             if (opponnent_game->action == BETRAY)
-            {
+            { //J1 Collabore et J2 Trahi
                 game->balance -= game->bet;
-                opponnent_game->balance += game->bet;
+                opponnent_game->balance += opponnent_game->bet;
+            }else // Les deux collaborent
+            {
+                game->balance += game->bet /2;
+                opponnent_game->balance += opponnent_game->bet /2;
             }
         }
         Room *room = get_client_room(packet->sender_id);
@@ -184,7 +188,6 @@ void settle_action(Encapsulation *packet)
 
     case DISCONNECT:
     {
-
         break;
     }
     case ACTION:
@@ -219,4 +222,8 @@ Session *check_opponent_played(unsigned int opponent_id)
         }
     }
     return NULL;
+}
+
+void on_disconnect_action ( Encapsulation *packet){
+    
 }
