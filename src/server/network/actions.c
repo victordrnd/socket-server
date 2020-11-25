@@ -108,7 +108,7 @@ void on_action_received(Encapsulation *packet)
             }
             else
             { //Collaborate
-                game->balance += opponnent_game->bet;
+                game->balance += game->bet;
                 opponnent_game->balance -= opponnent_game->bet;
             }
         }
@@ -117,7 +117,7 @@ void on_action_received(Encapsulation *packet)
             if (opponnent_game->action == BETRAY)
             {
                 game->balance -= game->bet;
-                opponnent_game->balance += game->bet;
+                opponnent_game->balance += opponnent_game->bet;
             }
         }
         Room *room = get_client_room(packet->sender_id);

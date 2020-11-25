@@ -61,7 +61,7 @@ void game_set_react_time(struct timeval round_start_time, struct timeval action_
 }
 
 void game_set_balance(unsigned int balance){
-    game->balance = balance;;
+    game->balance = balance;
 }
 
 void game_set_max_rounds(unsigned int maxrounds){
