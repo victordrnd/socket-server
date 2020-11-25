@@ -20,7 +20,7 @@
  */
 void write_header(const char *filename)
 {
-    FILE *file = fopen(filename, "a+");
+    FILE *file = fopen(filename, "a");
     assert(file != NULL);
     fprintf(file, "client_id;react_time;bet;balance;current_round;total_rounds;action\n");
     fclose(file);
@@ -36,7 +36,7 @@ void create_csv_result_file(char *filename)
 {
     filename = strcat(filename, ".csv");
 
-    FILE *file = fopen(filename, "w");
+    FILE *file = fopen(filename, "w+");
     fclose(file);
     write_header(filename);
 }
@@ -51,7 +51,7 @@ void create_csv_result_file(char *filename)
 void write_line(const char *filename, Game *data, int client_id)
 {
 
-    FILE *file = fopen(filename, "a+");
+    FILE *file = fopen(filename, "a");
 
     if (file != NULL)
     {
