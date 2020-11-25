@@ -164,12 +164,25 @@ void check_results(Game *game, Game *opponnent_game, unsigned int client_id, uns
         send_game_end(opponent_id, EQUALITY);
     }
 }
+
 void send_game_end(unsigned int client_id, enum results winner)
 {
     Game_End_data data = {.result = winner};
     send_packet(client_id, GAME_END, &data, sizeof(Game_End_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
+
+void on_disconnect_action(Encapsulation *packet)
+{
+    debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", packet->sender_id);
+    connection_t* connection = get_connection(packet->sender_id);
+    close(connection->sockfd);
+    del(connection);
+    free(connection);
+    //pthread_exit(0);
+}
+
+
 
 void settle_action(Encapsulation *packet)
 {
@@ -182,17 +195,20 @@ void settle_action(Encapsulation *packet)
         break;
     }
 
-    case DISCONNECT:
-    {
-
-        break;
-    }
     case ACTION:
     {
         debug_print("\033[1;32m#%d\033[0m sent \033[0;32mACTION\033[0m action.\n", packet->sender_id);
         on_action_received(packet);
         break;
     }
+
+    case DISCONNECT:
+    {
+        debug_print("\033[1;32m#%d\033[0m sent \033[0;32mDISCONNECT\033[0m action.\n", packet->sender_id);
+        on_disconnect_action(packet);
+        break;
+    }
+
     default:
         break;
     }
@@ -220,3 +236,4 @@ Session *check_opponent_played(unsigned int opponent_id)
     }
     return NULL;
 }
+
