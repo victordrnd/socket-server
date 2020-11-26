@@ -5,7 +5,10 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
+#include <unistd.h>
+#include <pthread.h>
 
 #include "actions.h"
 #include "communication.h"
@@ -179,7 +182,7 @@ void on_disconnect_action(Encapsulation *packet)
     close(connection->sockfd);
     del(connection);
     free(connection);
-    //pthread_exit(0);
+    pthread_exit(0);
 }
 
 
