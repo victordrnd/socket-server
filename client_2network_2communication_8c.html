@@ -283,7 +283,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2network_2communication_8h_source.html#l00012">BUFFERSIZE</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00098">close_connection()</a>, et <a class="el" href="client_2network_2actions_8c_source.html#l00011">settle_action()</a>.</p>
+<p class="reference">Références <a class="el" href="client_2network_2communication_8h_source.html#l00012">BUFFERSIZE</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00098">close_connection()</a>, et <a class="el" href="client_2network_2actions_8c_source.html#l00022">settle_action()</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>.</p>
 <div class="dynheader">
@@ -421,7 +421,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00063">config_get_client_id()</a>, <a class="el" href="protocol_8c_source.html#l00013">encapsulate_data()</a>, et <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00044">on_connect_action()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00055">send_action_packet()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00167">send_game_end()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00064">send_game_start()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00088">send_round_end()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00081">send_round_start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00047">on_connect_action()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00012">send_action_packet()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00017">send_disconnect_packet()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00171">send_game_end()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00067">send_game_start()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00091">send_round_end()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00084">send_round_start()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -437,20 +437,25 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="client_2network_2communication_8c_a45a759d2dbd41a51b95f0718a2be9734_icgraph.png" border="0" usemap="#aclient_2network_2communication_8c_a45a759d2dbd41a51b95f0718a2be9734_icgraph" alt=""/></div>
 <map name="client_2network_2communication_8c_a45a759d2dbd41a51b95f0718a2be9734_icgraph" id="aclient_2network_2communication_8c_a45a759d2dbd41a51b95f0718a2be9734_icgraph">
-<area shape="rect" title=" " alt="" coords="704,220,800,247"/>
-<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="519,5,654,32"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="151,224,282,251"/>
-<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="517,165,656,192"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="528,372,645,399"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="339,224,462,251"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="528,321,645,348"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="525,271,648,297"/>
-<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="375,5,426,32"/>
-<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,275,101,301"/>
-<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="332,107,469,133"/>
-<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="335,158,466,199"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="349,376,452,403"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,300,284,327"/>
+<area shape="rect" title=" " alt="" coords="877,211,973,238"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,51,239,78"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="293,190,423,217"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="677,389,815,415"/>
+<area shape="rect" href="client_2network_2actions_8c.html#a3c3ace89c1f65ed5ed819cd4f11ccdf4" title=" " alt="" coords="663,85,829,111"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="687,287,805,314"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="485,186,607,213"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="687,338,805,365"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="685,237,807,263"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,51,56,78"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="123,215,219,242"/>
+<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="477,389,615,415"/>
+<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="481,440,611,481"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="498,85,594,111"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,73,429,115"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,139,411,166"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,139,197,166"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="495,287,597,314"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="291,262,425,289"/>
 </map>
 </div>
 
@@ -502,7 +507,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclient_2network_2actions_8c_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00011">actions.c:11</a></div></div>
+<div class="ttc" id="aclient_2network_2actions_8c_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00022">actions.c:22</a></div></div>
 <div class="ttc" id="astructapp__threads__t_html_ac5ef266da9d8d6a8144093b8ca695bca"><div class="ttname"><a href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">app_threads_t::stdin_thread</a></div><div class="ttdeci">pthread_t stdin_thread</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00015">communication.h:15</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8c_html_a696dec889c2641fd81501271d4683fe4"><div class="ttname"><a href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4">open_connection</a></div><div class="ttdeci">Connection * open_connection(Config *configuration)</div><div class="ttdoc">Open cpnnection socket with server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00043">communication.c:43</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8c_html_a8ebc55832799e7175e2cb853e13fc66a"><div class="ttname"><a href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a></div><div class="ttdeci">Connection * cnx</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00019">communication.c:19</a></div></div>
@@ -523,7 +528,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="ttc" id="aclient_2utils_2config_8c_html_ab1f468bc3547eedbfcea36dc86c4a3e7"><div class="ttname"><a href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7">config_get_client_id</a></div><div class="ttdeci">unsigned int config_get_client_id(void)</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00063">config.c:63</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 22 Novembre 2020 14:53:13 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Jeudi 26 Novembre 2020 10:45:45 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

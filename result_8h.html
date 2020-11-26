@@ -139,16 +139,16 @@ Fonctions</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="result_8c_source.html#l00035">35</a> du fichier <a class="el" href="result_8c_source.html">result.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    filename = strcat(filename, <span class="stringliteral">&quot;.csv&quot;</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    FILE *file = fopen(filename, <span class="stringliteral">&quot;w&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">char</span> *file_name = (<span class="keywordtype">char</span>*) malloc(strlen(filename) + 4);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    sprintf(file_name,<span class="stringliteral">&quot;%s.csv&quot;</span>, filename);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    FILE *file = fopen(file_name, <span class="stringliteral">&quot;w&quot;</span>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    fclose(file);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3">write_header</a>(filename);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="result_8c.html#a3467a6636ce566ef897c244f0737aac3">write_header</a>(file_name);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="result_8c_source.html#l00021">write_header()</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00064">send_game_start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00067">send_game_start()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -224,37 +224,38 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p class="definition">Définition à la ligne <a class="el" href="result_8c_source.html#l00051">51</a> du fichier <a class="el" href="result_8c_source.html">result.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    FILE *file = fopen(filename, <span class="stringliteral">&quot;a+&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (file != NULL)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">char</span> action[15];</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">switch</span> (data-&gt;<a class="code" href="struct_game.html#a7807929f96acfc6fdb147ae2c1456d52">action</a>)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a1a6181f4eb19e201c1f710a0c300a432">BETRAY</a>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            strcpy(action, <span class="stringliteral">&quot;BETRAY&quot;</span>);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1afa38e587472f8892b9713eaf9a50ba5a">COLLABORATE</a>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            strcpy(action, <span class="stringliteral">&quot;COLLABORATE&quot;</span>);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a8bb584db01e5ebc3a3d4d84157cebc3d">NOACTION</a>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">char</span> *file_name = (<span class="keywordtype">char</span>*) malloc(strlen(filename) + 4);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    sprintf(file_name,<span class="stringliteral">&quot;%s.csv&quot;</span>, filename);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    FILE *file = fopen(file_name, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">if</span> (file != NULL)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">char</span> action[15];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">switch</span> (data-&gt;<a class="code" href="struct_game.html#a7807929f96acfc6fdb147ae2c1456d52">action</a>)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a1a6181f4eb19e201c1f710a0c300a432">BETRAY</a>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            strcpy(action, <span class="stringliteral">&quot;BETRAY&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1afa38e587472f8892b9713eaf9a50ba5a">COLLABORATE</a>:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            strcpy(action, <span class="stringliteral">&quot;COLLABORATE&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">case</span> <a class="code" href="common_2game_8h.html#af806efc6052edbc741683ec893bb2fe1a8bb584db01e5ebc3a3d4d84157cebc3d">NOACTION</a>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        fprintf(file, <span class="stringliteral">&quot;%d;%.3f;%d;%d;%d;%d;%s\n&quot;</span>, client_id, data-&gt;<a class="code" href="struct_game.html#a201b96ce325c07052016e18111888407">react_time</a> / 1000, data-&gt;<a class="code" href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">bet</a>, data-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a>, data-&gt;<a class="code" href="struct_game.html#ab5a69d481942167342454e3150129a7b">current_round</a>, data-&gt;<a class="code" href="struct_game.html#afbf31c5867bccf2539884a16b0ddfe6f">total_rounds</a>, action);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    fclose(file);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        fprintf(file, <span class="stringliteral">&quot;%d;%.3f;%d;%d;%d;%d;%s\n&quot;</span>, client_id, data-&gt;<a class="code" href="struct_game.html#a201b96ce325c07052016e18111888407">react_time</a> / 1000, data-&gt;<a class="code" href="struct_game.html#a4bd1c1754fec5b5a47077e494ae8039c">bet</a>, data-&gt;<a class="code" href="struct_game.html#a7f9f1e1d23a8e972570e14f2f4748532">balance</a>, data-&gt;<a class="code" href="struct_game.html#ab5a69d481942167342454e3150129a7b">current_round</a>, data-&gt;<a class="code" href="struct_game.html#afbf31c5867bccf2539884a16b0ddfe6f">total_rounds</a>, action);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    fclose(file);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="common_2game_8h_source.html#l00024">Game::action</a>, <a class="el" href="common_2game_8h_source.html#l00021">Game::balance</a>, <a class="el" href="common_2game_8h_source.html#l00020">Game::bet</a>, <a class="el" href="common_2game_8h_source.html#l00014">BETRAY</a>, <a class="el" href="common_2game_8h_source.html#l00015">COLLABORATE</a>, <a class="el" href="common_2game_8h_source.html#l00022">Game::current_round</a>, <a class="el" href="common_2game_8h_source.html#l00013">NOACTION</a>, <a class="el" href="common_2game_8h_source.html#l00019">Game::react_time</a>, et <a class="el" href="common_2game_8h_source.html#l00023">Game::total_rounds</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00094">on_action_received()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00097">on_action_received()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
@@ -281,7 +282,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="ttc" id="astruct_game_html_a201b96ce325c07052016e18111888407"><div class="ttname"><a href="struct_game.html#a201b96ce325c07052016e18111888407">Game::react_time</a></div><div class="ttdeci">double react_time</div><div class="ttdef"><b>Definition:</b> <a href="common_2game_8h_source.html#l00019">game.h:19</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche 22 Novembre 2020 14:53:14 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Jeudi 26 Novembre 2020 10:45:45 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

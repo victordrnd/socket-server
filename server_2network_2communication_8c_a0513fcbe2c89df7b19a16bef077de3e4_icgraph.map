@@ -1,7 +1,8 @@
 <map id="get_connection" name="get_connection">
-<area shape="rect" id="node1" title=" " alt="" coords="567,31,677,57"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="328,5,519,32"/>
-<area shape="rect" id="node5" href="$server_2network_2communication_8h.html#a2735e7a193d415718db36388310cbe12" title=" " alt="" coords="375,56,471,83"/>
-<area shape="rect" id="node3" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="149,5,280,32"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="584,56,695,83"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="345,5,536,32"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8h.html#a8db14c0cdc58f8ddca8bd8b87c4ebf2f" title=" " alt="" coords="149,56,297,83"/>
+<area shape="rect" id="node6" href="$server_2network_2communication_8h.html#a2735e7a193d415718db36388310cbe12" title=" " alt="" coords="393,107,489,133"/>
+<area shape="rect" id="node3" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="158,5,289,32"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,31,101,57"/>
 </map>
