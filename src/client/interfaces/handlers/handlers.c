@@ -162,13 +162,12 @@ void on_round_end_action(Game *data)
     game_next_round();
     game_set_balance(data->balance);
     game_set_action(data->action);
-    //Modifie le titre de la fenêtre
+
     GtkWindow *window = (GtkWindow *)gtk_builder_get_object(builder, "app_win");
     char title[50];
     sprintf(title, "Round %d / %d", data->current_round, data->total_rounds);
     gtk_window_set_title(window, title);
 
-    //modifier le label  balance data->balance
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "balance");
     char amount[10];
     sprintf(amount, "$ %d", data->balance);

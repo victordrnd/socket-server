@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include <stdbool.h>
+#include <unistd.h>
 #include <assert.h>
 
 #include "result.h"
@@ -34,11 +34,11 @@ void write_header(const char *filename)
  */
 void create_csv_result_file(char *filename)
 {
-    filename = strcat(filename, ".csv");
-
-    FILE *file = fopen(filename, "w+");
+    char *file_name = (char*) malloc(strlen(filename) + 4);
+    sprintf(file_name,"%s.csv", filename);
+    FILE *file = fopen(file_name, "w");
     fclose(file);
-    write_header(filename);
+    write_header(file_name);
 }
 
 /**
@@ -50,8 +50,9 @@ void create_csv_result_file(char *filename)
  */
 void write_line(const char *filename, Game *data, int client_id)
 {
-
-    FILE *file = fopen(filename, "a");
+    char *file_name = (char*) malloc(strlen(filename) + 4);
+    sprintf(file_name,"%s.csv", filename);
+    FILE *file = fopen(file_name, "a");
 
     if (file != NULL)
     {
