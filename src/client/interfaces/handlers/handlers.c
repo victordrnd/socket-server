@@ -9,7 +9,7 @@
 #include "../../../common/game.h"
 #include "../../game/game.h"
 #include "../../network/actions.h"
-#include <sys/time.h> 
+#include <sys/time.h>
 
 GtkBuilder *builder = NULL;
 struct timeval round_start_time;
@@ -146,7 +146,9 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
     gtk_widget_hide(spinner_central);
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
+    gdk_threads_enter();
     activate_countdown(progress_bar, data->round_duration, 20);
+    gdk_threads_leave();
 
     toggle_action_button(builder, TRUE);
 
@@ -162,44 +164,47 @@ void on_round_end_action(Game *data)
     game_next_round();
     game_set_balance(data->balance);
     game_set_action(data->action);
-    //Modifie le titre de la fenêtre
+
     GtkWindow *window = (GtkWindow *)gtk_builder_get_object(builder, "app_win");
     char title[50];
     sprintf(title, "Round %d / %d", data->current_round, data->total_rounds);
     gtk_window_set_title(window, title);
 
-    //modifier le label  balance data->balance
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "balance");
     char amount[10];
     sprintf(amount, "$ %d", data->balance);
     gtk_label_set_label(label, amount);
 }
 
-void on_game_end_action(Game_End_data *data){
+void on_game_end_action(Game_End_data *data)
+{
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
     GtkImage *image = (GtkImage *)gtk_builder_get_object(builder, "result_image");
     GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
     gtk_widget_hide(spinner);
     switch (data->result)
     {
-    case VICTORY:{
+    case VICTORY:
+    {
         gtk_label_set_label(label, "VICTOIRE !");
         break;
     }
-    case DEFEAT:{
+    case DEFEAT:
+    {
         gtk_label_set_label(label, "DEFAITE !");
         gtk_image_set_from_resource(image, "/org/ics/include/images/defeat.png");
         break;
     }
-    case EQUALITY: {
+    case EQUALITY:
+    {
         gtk_label_set_label(label, "EGALITE !");
         gtk_image_set_from_resource(image, "/org/ics/include/images/equality.png");
         break;
-    }    
+    }
     default:
         break;
     }
-    gtk_widget_show((GtkWidget*) image);
+    gtk_widget_show((GtkWidget *)image);
 }
 
 void gtk_set_builder(GtkBuilder *buildr)
