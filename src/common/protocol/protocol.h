@@ -50,7 +50,7 @@ typedef struct {
 } Game_Start_data;
 
 typedef struct {
-    __uint32_t round_duration;
+    __uint32_t waiting_time;
 } Round_Start_data;
 
 

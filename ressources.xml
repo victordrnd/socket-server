@@ -3,6 +3,7 @@
     <gresource prefix="/org/ics/">
         <!-- <file>include/styles/main.css</file> -->
         <file alias="style.css">include/styles/orchis.css</file>
+        <file>include/images/logo.png</file>
         <file>include/images/victory.png</file>
         <file>include/images/defeat.png</file>
         <file>include/images/equality.png</file>

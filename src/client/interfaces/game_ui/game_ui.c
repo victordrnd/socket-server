@@ -12,18 +12,6 @@
 GtkWidget *previousToggledBtn = NULL;
 
 /**
- * @brief Stop execution for a delay
- * 
- * @param msecs duration in milliseconds 
- */
-void delay(unsigned int msecs)
-{
-    clock_t goal = msecs * CLOCKS_PER_SEC / 1000 + clock();
-    while (goal > clock())
-        ;
-}
-
-/**
  * @brief Untoggle previously activated button
  * 
  * @param button button to toggle
@@ -65,12 +53,12 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
             char *res = (char *)malloc(3 * sizeof(char));
             sprintf(res, "%.f s", (double)i / fps);
             gtk_progress_bar_set_text(progress_bar, res);
-            //free(res);
+            free(res);
         }
         gtk_progress_bar_set_fraction(progress_bar, fraction);
         while (gtk_events_pending())
             gtk_main_iteration();
-        delay(1000 / fps);
+        g_usleep(1e6 / fps);
     }
     gtk_widget_hide((GtkWidget *)progress_bar);
 }

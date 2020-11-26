@@ -147,7 +147,7 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
     gdk_threads_enter();
-    activate_countdown(progress_bar, data->round_duration, 20);
+    activate_countdown(progress_bar, data->waiting_time, 20);
     gdk_threads_leave();
 
     toggle_action_button(builder, TRUE);

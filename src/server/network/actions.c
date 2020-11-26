@@ -75,15 +75,15 @@ void send_game_start(Encapsulation *packet, Room *room)
     send_packet(opponent, GAME_START, &data, sizeof(Game_Start_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_START\033[0m to \033[1;32m#%d\033[0m.\n", opponent);
 
-    send_round_start(packet->sender_id);
-    send_round_start(opponent);
+    send_round_start(packet->sender_id, room);
+    send_round_start(opponent, room);
 
     create_csv_result_file((char *)room->name);
 }
 
-void send_round_start(unsigned int client_id)
+void send_round_start(unsigned int client_id, Room *room)
 {
-    Round_Start_data data = {.round_duration = 3};
+    Round_Start_data data = {.waiting_time = room->waiting_time};
     send_packet(client_id, ROUND_START, &data, sizeof(Round_Start_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
@@ -133,8 +133,8 @@ void on_action_received(Encapsulation *packet)
         remove_session(opponent_session);
         if (game->current_round < get_max_round_count(room))
         {
-            send_round_start(packet->sender_id);
-            send_round_start(opponent_id);
+            send_round_start(packet->sender_id, room);
+            send_round_start(opponent_id, room);
         }
         else
         {

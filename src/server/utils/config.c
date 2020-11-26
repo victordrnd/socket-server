@@ -38,10 +38,11 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
         config_setting_lookup_int(current_room_config, "initial_amount", (int *)&wp->initial_amount);
         config_setting_lookup_int(current_room_config, "nb_rounds", (int *)&wp->nb_rounds);
-
+        config_setting_lookup_int(current_room_config, "waiting_time", &wp->waiting_time);
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
         assert(wp->nb_rounds > 0);
+        assert(wp->waiting_time >= 0);
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);

@@ -14,6 +14,7 @@ typedef struct
     const char *name;
     unsigned int nb_rounds;
     unsigned int initial_amount;
+    unsigned int waiting_time;
     unsigned int *clients_id;
 } Room;
 
