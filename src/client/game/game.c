@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2020 Victor Durand & Raphael Rabechault & Tom Mollon & Lisa Seigle-Morier
  */
-
+#include <stdlib.h>
 #include "game.h"
 #include "../utils/config.h"
 
@@ -15,8 +15,8 @@ Game *game;
  * @param c_game game to initialized
  * @param config Client configuration
  */
-Game * init_game(Game *c_game){
-    game = c_game;
+Game * init_game(){
+    game = (Game *)malloc(sizeof(Game));
     game->action = NOACTION;
     game->balance = 100; 
     game->bet = 10;
@@ -42,6 +42,12 @@ int game_get_current_bet(void){
     return game->bet;
 }
 
+/**
+ * @brief Check if next round is allowed and increment current round count
+ * 
+ * @return true 
+ * @return false 
+ */
 bool game_next_round(void){
     if(game->current_round + 1 <= game->total_rounds) {
         game->current_round++;
@@ -50,6 +56,11 @@ bool game_next_round(void){
     return false;
 }
 
+/**
+ * @brief Set 
+ * 
+ * @param action 
+ */
 void game_set_action(enum actions action){
     game->action = action;
 }

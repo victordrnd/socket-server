@@ -10,19 +10,29 @@
 #include "protocol.h"
 #include "../game.h"
 
-void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint32_t destionation_id, enum verbs verb, void *data, size_t data_size)
+/**
+ * @brief Encapsulate data in a packet to send
+ * 
+ * @param packet 
+ * @param sender_id 
+ * @param destionation_id 
+ * @param verb 
+ * @param data 
+ * @param data_size 
+ */
+void encapsulate_data(Encapsulation *packet, __uint32_t sender_id, __uint32_t destionation_id, enum verbs verb, void *data, size_t data_size)
 {
     if(destionation_id > 0){
         sender_id = 0;
     }
     assert(data_size <= MAXPACKETSIZE);
-    encapsulation->sender_id = sender_id;
-    encapsulation->destination_id = destionation_id;
-    encapsulation->timestamp = time(NULL);
-    encapsulation->action = verb;
-    encapsulation->sizeof_data = data_size;
+    packet->sender_id = sender_id;
+    packet->destination_id = destionation_id;
+    packet->timestamp = time(NULL);
+    packet->action = verb;
+    packet->sizeof_data = data_size;
     if (data != NULL)
     {
-        memcpy(encapsulation->data, (const unsigned char *)data, data_size);
+        memcpy(packet->data, (const unsigned char *)data, data_size);
     }
 }

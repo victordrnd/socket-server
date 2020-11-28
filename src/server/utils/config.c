@@ -19,6 +19,17 @@
 
 Config *conf = NULL;
 
+
+/**
+ * @brief Init configuration
+ * 
+ * @return Config* 
+ */
+Config *init_configuration(void){
+    conf = (Config *) malloc(sizeof(Config));
+    init_executable_path();
+    return conf;
+}
 /**
  * @brief Parse only game_configuration section of config file
  * 
@@ -38,11 +49,10 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
         config_setting_lookup_string(current_room_config, "name", (const char **)&wp->name);
         config_setting_lookup_int(current_room_config, "initial_amount", (int *)&wp->initial_amount);
         config_setting_lookup_int(current_room_config, "nb_rounds", (int *)&wp->nb_rounds);
-        config_setting_lookup_int(current_room_config, "waiting_time", &wp->waiting_time);
+        config_setting_lookup_int(current_room_config, "waiting_time", (int *) &wp->waiting_time);
         assert(strlen(wp->name) > 1);
         assert(wp->initial_amount > 10);
         assert(wp->nb_rounds > 0);
-        assert(wp->waiting_time >= 0);
 
         const config_setting_t *clients_room_config = config_setting_get_member(current_room_config, "clients");
         const int nb_players = config_setting_length(clients_room_config);
@@ -64,8 +74,9 @@ void parse_game_configuration(GameConfiguration *game_configuration, config_sett
  * @param configuration configuration struct to fill  
  * @param filename filename of the cfg file.
  */
-void read_config(Config *configuration, char *filename)
+void read_config(char *filename)
 {
+    assert(conf);
     config_t cfg;
     config_setting_t *setting;
     config_init(&cfg);
@@ -79,31 +90,35 @@ void read_config(Config *configuration, char *filename)
     else
     {
         assert(sizeof(cfg) == sizeof(config_t));
-        config_lookup_string(&cfg, "bind_ip", &configuration->bind_ip);
-        config_lookup_int(&cfg, "bind_port", (int *)&configuration->bind_port);
-        config_lookup_int(&cfg, "max_simultaneous_connection", (int *)&configuration->max_simultaneous_connection);
+        config_lookup_string(&cfg, "bind_ip", &conf->bind_ip);
+        config_lookup_int(&cfg, "bind_port", (int *)&conf->bind_port);
+        config_lookup_int(&cfg, "max_simultaneous_connection", (int *)&conf->max_simultaneous_connection);
 
         setting = config_lookup(&cfg, "game_configuration");
         GameConfiguration *game_configuration = (GameConfiguration *)malloc(sizeof(GameConfiguration));
-
         parse_game_configuration(game_configuration, setting);
-        configuration->game_config = game_configuration;
-
-        conf = configuration;
+        conf->game_config = game_configuration;
     }
 
 #ifndef NDEBUG
-    assert(configuration->bind_port > 1024);
-    assert(configuration->max_simultaneous_connection == 50);
-    assert(sizeof(*(configuration->game_config)) == sizeof(GameConfiguration));
+    assert(conf->bind_port > 1024);
+    assert(conf->max_simultaneous_connection == 50);
+    assert(sizeof(*(conf->game_config)) == sizeof(GameConfiguration));
     char *ip = (char *)malloc(12 * sizeof(char));
-    strcpy(ip, configuration->bind_ip);
+    strcpy(ip, conf->bind_ip);
     assert(is_ip_valid(ip) == true);
     free(ip);
-    debug_print_server_config(configuration->bind_ip, configuration->bind_port, configuration->max_simultaneous_connection);
+    debug_print_server_config(conf->bind_ip, conf->bind_port, conf->max_simultaneous_connection);
 #endif
 }
 
+/**
+ * @brief Check if client_id exists in config
+ * 
+ * @param client_id 
+ * @return true 
+ * @return false 
+ */
 bool is_client_exists(unsigned int client_id)
 {
 
@@ -125,6 +140,12 @@ bool is_client_exists(unsigned int client_id)
     return false;
 }
 
+/**
+ * @brief Get the client room object
+ * 
+ * @param client_id 
+ * @return Room* 
+ */
 Room *get_client_room(unsigned int client_id)
 {
 
@@ -143,6 +164,12 @@ Room *get_client_room(unsigned int client_id)
     return NULL;
 }
 
+/**
+ * @brief Get the opponent id object
+ * 
+ * @param client_id 
+ * @return int 
+ */
 int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
 {
     Room *current_room = get_client_room(client_id);
@@ -158,31 +185,53 @@ int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
     return -1;
 }
 
+/**
+ * @brief Get the max round count object
+ * 
+ * @param room 
+ * @return unsigned int 
+ */
 unsigned int get_max_round_count(Room *room)
 {
     return room->nb_rounds;
 }
 
+/**
+ * @brief Get the initial amount object
+ * 
+ * @param room 
+ * @return unsigned int 
+ */
 unsigned int get_initial_amount(Room *room)
 {
     return room->initial_amount;
 }
 
-char *get_executable_path(void)
+/**
+ * @brief Get the executable path object
+ * 
+ * @return char* 
+ */
+char *config_get_executable_path(void)
 {
     char *executable_path = (char *)malloc(sizeof(conf->executable_path));
     memcpy(executable_path, conf->executable_path, sizeof(conf->executable_path));
     return executable_path;
 }
 
-char *init_executable_path(Config *configuration)
+/**
+ * @brief Init executable path in config
+ * 
+ * @param configuration 
+ * @return char* 
+ */
+char *init_executable_path(void)
 {
-    conf = configuration;
     char filename[sizeof(conf->executable_path)];
     int count = readlink("/proc/self/exe", filename, sizeof(filename));
     if (count != -1)
     {
-        memcpy(configuration->executable_path, dirname(filename), sizeof(filename));
+        memcpy(conf->executable_path, dirname(filename), sizeof(filename));
     }
     return conf->executable_path;
 }

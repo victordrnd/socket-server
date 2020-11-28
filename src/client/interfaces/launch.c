@@ -15,7 +15,7 @@
  */
 void register_styles(void)
 {
-    char *ressource_url = strcat(get_executable_path(),"/ressources/app.gressource");
+    char *ressource_url = strcat(config_get_executable_path(),"/ressources/app.gressource");
     GResource *resource = g_resource_load(ressource_url, NULL);
     g_resources_register(resource);
     GtkCssProvider *provider = gtk_css_provider_new();
@@ -40,8 +40,7 @@ void init_main_window(int argc, char **argv)
 
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
     GtkImage *img = (GtkImage *) gtk_image_new_from_resource("/org/ics/include/images/logo.png");
-    
-    gtk_window_set_icon(win, gtk_image_get_pixbuf(img));
+    gtk_window_set_icon((GtkWindow *) win, gtk_image_get_pixbuf(img));
     gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);
     gtk_set_builder(builder);

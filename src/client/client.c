@@ -12,11 +12,11 @@
 #include "game/game.h"
 #include "network/communication.h"
 
-Config configuration;
+Config *configuration;
 
 typedef struct 
 {
-    char *args[2]; /* ARG1 and ARG2 */
+    char *args[2];
     int client_id, host_port; // Arguments for -c and -p
     char *host_ip; //Argument for -h
 } Arguments;
@@ -29,15 +29,15 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state)
     {
     case 'c':
         arguments->client_id = atoi(arg);
-        configuration.client_id = arguments->client_id; 
+        configuration->client_id = arguments->client_id; 
         break;
     case 'h':
         arguments->host_ip = arg;
-        configuration.ip = arguments->host_ip; 
+        configuration->ip = arguments->host_ip; 
         break;
     case 'p':
         arguments->host_port = atoi(arg);
-        configuration.port = arguments->host_port;
+        configuration->port = arguments->host_port;
         break;
     case ARGP_KEY_ARG:
         if (state->arg_num >= 3)
@@ -69,18 +69,14 @@ static struct argp argp = {options, parse_opt, args_doc, doc};
 
 int main(int argc, char **argv)
 {
-    
     Arguments arguments;
+    configuration = init_configuration();
     argp_parse(&argp, argc, argv, 0, 0, &arguments);
-    init_executable_path(&configuration);
-    char *executable_path = get_executable_path();
-    read_config(&configuration, strcat(executable_path, "/config/client_config.cfg"));
-
-    Game game;
-    init_game(&game);
-
+    char *executable_path = config_get_executable_path();
+    read_config(strcat(executable_path, "/config/client_config.cfg"));
+    init_game();
     init_main_window(argc, argv);
-    init_communication(&configuration);
+    init_communication(configuration);
     gtk_main();
     return (EXIT_SUCCESS);
 }

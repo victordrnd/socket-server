@@ -104,6 +104,11 @@ void on_collaborate_btn_click(GtkWidget *button __attribute__((unused)))
 /* NETWORK HANDLERS*/
 /////////////////////
 
+/**
+ * @brief UI changes on connected action
+ * 
+ * @param data 
+ */
 void on_connected_action(Connected_data *data)
 {
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "balance");
@@ -114,28 +119,43 @@ void on_connected_action(Connected_data *data)
     toggle_action_button(builder, FALSE);
 }
 
+/**
+ * @brief UI changes on failed action
+ * 
+ */
 void on_failed_action(void)
 {
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
     gtk_label_set_label(label, "Impossible de se connecter au serveur");
     toggle_action_button(builder, FALSE);
-    radio_bet_button(builder, FALSE);
+    toggle_radio_bet_button_sensitive(builder, FALSE);
     GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
     gtk_widget_hide(spinner);
     GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *)label);
     gtk_style_context_add_class(context, "error-label");
 }
 
+
+/**
+ * @brief UI changes on game start action
+ * 
+ * @param data 
+ */
 void on_game_start_action(Game_Start_data *data)
 {
 
     GtkWindow *window = (GtkWindow *)gtk_builder_get_object(builder, "app_win");
     game_set_max_rounds(data->max_rounds);
-    char title[50];
+    char title[30];
     sprintf(title, "Round 1 / %d", data->max_rounds);
     gtk_window_set_title(window, title);
 }
 
+/**
+ * @brief UI changes on round start action
+ * 
+ * @param data 
+ */
 void on_round_start_action(Round_Start_data *data __attribute__((unused)))
 {
 
@@ -147,7 +167,7 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
     gdk_threads_enter();
-    activate_countdown(progress_bar, data->waiting_time, 20);
+    activate_countdown(progress_bar, data->waiting_time, 40);
     gdk_threads_leave();
 
     toggle_action_button(builder, TRUE);
@@ -156,6 +176,11 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
     gettimeofday(&round_start_time, NULL);
 }
 
+/**
+ * @brief UI changes on round end action
+ * 
+ * @param data 
+ */
 void on_round_end_action(Game *data)
 {
     GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
@@ -176,6 +201,12 @@ void on_round_end_action(Game *data)
     gtk_label_set_label(label, amount);
 }
 
+
+/**
+ * @brief UI changes on game end action
+ * 
+ * @param data 
+ */
 void on_game_end_action(Game_End_data *data)
 {
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
@@ -207,6 +238,12 @@ void on_game_end_action(Game_End_data *data)
     gtk_widget_show((GtkWidget *)image);
 }
 
+
+/**
+ * @brief Set builder
+ * 
+ * @param buildr 
+ */
 void gtk_set_builder(GtkBuilder *buildr)
 {
     builder = buildr;

@@ -13,7 +13,7 @@
 #include "result.h"
 
 /**
- * @brief  
+ * @brief  Write CSV header
  * @note   
  * @param  *filename: 
  * @retval None
@@ -42,7 +42,7 @@ void create_csv_result_file(char *filename)
 }
 
 /**
- * @brief  
+ * @brief  Write new result line in file
  * @note   
  * @param  *filename: 
  * @param  data: 

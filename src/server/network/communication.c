@@ -20,6 +20,10 @@
 
 connection_t *connections[MAXSIMULTANEOUSCLIENTS];
 
+/**
+ * @brief Init empty sockets array
+ * 
+ */
 void init_sockets_array(void)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
@@ -28,6 +32,11 @@ void init_sockets_array(void)
     }
 }
 
+/**
+ * @brief Add connection to connections list
+ * 
+ * @param connection 
+ */
 void add(connection_t *connection)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
@@ -42,6 +51,11 @@ void add(connection_t *connection)
     exit(-5);
 }
 
+/**
+ * @brief Delete connection from connections list
+ * 
+ * @param connection 
+ */
 void del(connection_t *connection)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
@@ -55,11 +69,8 @@ void del(connection_t *connection)
     perror("Connection not in pool ");
     exit(-5);
 }
-/*
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_lock(&lock);
-pthread_mutex_unlock(&lock);
- */
+
+
 
 /**
  * Thread allowing server to handle multiple client connections
@@ -102,6 +113,12 @@ void *threadProcess(void *ptr)
     pthread_exit(0);
 }
 
+/**
+ * @brief Create a server socket object
+ * 
+ * @param configuration 
+ * @return int 
+ */
 int create_server_socket(Config *configuration)
 {
     int sockfd = -1;
@@ -135,6 +152,12 @@ int create_server_socket(Config *configuration)
     return sockfd;
 }
 
+/**
+ * @brief Get the connection object
+ * 
+ * @param client_id 
+ * @return connection_t* 
+ */
 connection_t *get_connection(unsigned int client_id)
 {
     for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
@@ -148,6 +171,14 @@ connection_t *get_connection(unsigned int client_id)
     return NULL;
 }
 
+/**
+ * @brief Send packet to client
+ * 
+ * @param client_id 
+ * @param action 
+ * @param data 
+ * @param data_size 
+ */
 void send_packet(unsigned int client_id, enum verbs action, void *data, size_t data_size)
 {
     Encapsulation packet;

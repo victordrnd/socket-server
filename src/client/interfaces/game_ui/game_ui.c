@@ -48,7 +48,7 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
     for (int i = seconds * fps; i >= 0; i--)
     {
         gdouble fraction = (i * (1.0 / seconds)) / fps;
-        if ((i / (fps / 10)) % 10 == 0)
+        if (((int)fraction*100) % 10 == 0)
         {
             char *res = (char *)malloc(3 * sizeof(char));
             sprintf(res, "%.f s", (double)i / fps);
@@ -88,7 +88,13 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
 }
 
-void radio_bet_button(GtkBuilder *builder, gboolean sensitive)
+/**
+ * @brief Toogle radio bet buttons sensitivity
+ * 
+ * @param builder 
+ * @param sensitive 
+ */
+void toggle_radio_bet_button_sensitive(GtkBuilder *builder, gboolean sensitive)
 {
 
     GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(builder, "mise_10");

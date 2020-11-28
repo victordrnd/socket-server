@@ -11,5 +11,6 @@
 #include "../../common/game.h"
 
 void settle_action(Encapsulation *packet);
+void send_connect_packet(void);
 void send_action_packet(Game *game);
 #endif

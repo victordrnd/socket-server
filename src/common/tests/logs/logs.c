@@ -10,6 +10,12 @@
 #include "logs.h"
 #include "fort.h"
 
+/**
+ * @brief Print formated text with date 
+ * 
+ * @param fm 
+ * @param ... 
+ */
 void debug_print_f(const char* fm, ...)
 {
     time_t t = time(NULL);
@@ -51,6 +57,13 @@ void debug_print_f(const char* fm, ...)
     va_end(arg);
 }
 
+/**
+ * @brief Beautify client config in console
+ * 
+ * @param client_id 
+ * @param server_ip 
+ * @param port 
+ */
 void debug_print_client_config_f(unsigned int client_id, const char* server_ip, unsigned int port)
 {
 #ifndef NDEBUG
@@ -63,6 +76,13 @@ void debug_print_client_config_f(unsigned int client_id, const char* server_ip, 
 #endif
 }
 
+/**
+ * @brief Beautify server config in console
+ * 
+ * @param bind_ip 
+ * @param port 
+ * @param max_cnx 
+ */
 void debug_print_server_config_f(const char* bind_ip, unsigned int port, unsigned int max_cnx)
 {
 #ifndef NDEBUG
