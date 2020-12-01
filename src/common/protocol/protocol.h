@@ -24,9 +24,9 @@ enum verbs{
 };
 
 enum results {
-    VICTORY = 0x20,
-    DEFEAT = 0x21,
-    EQUALITY = 0x22
+    VICTORY = 0x20U,
+    DEFEAT = 0x21U,
+    EQUALITY = 0x22U
 };
 
 typedef struct {
@@ -35,7 +35,7 @@ typedef struct {
     __uint64_t timestamp;              //nb secondes depuis 01/01/1970 38237283723 
     __uint32_t action;
     __uint64_t sizeof_data;
-    __uint8_t data[32];
+    __uint8_t data[MAXPACKETSIZE];
 } __attribute__((packed)) Encapsulation;
 
 
@@ -44,10 +44,14 @@ typedef struct{
     __uint32_t initial_balance;
 } Connected_data;
 
+
+
 typedef struct {
     __uint32_t max_rounds;
     __uint32_t initial_balance;
 } Game_Start_data;
+
+
 
 typedef struct {
     __uint32_t waiting_time;

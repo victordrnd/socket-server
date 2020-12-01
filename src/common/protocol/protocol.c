@@ -33,6 +33,6 @@ void encapsulate_data(Encapsulation *packet, __uint32_t sender_id, __uint32_t de
     packet->sizeof_data = data_size;
     if (data != NULL)
     {
-        memcpy(packet->data, (const unsigned char *)data, data_size);
+        memcpy(packet->data, (const __uint8_t *)data, data_size);
     }
 }

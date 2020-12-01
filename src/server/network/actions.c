@@ -37,6 +37,8 @@ void add_session(Session *session)
     assert(false);
 }
 
+
+
 /**
  * @brief Remove round session 
  * 
@@ -55,6 +57,8 @@ void remove_session(Session *session)
     }
     assert(false);
 }
+
+
 
 /**
  * @brief Execute connect action
@@ -81,6 +85,8 @@ void on_connect_action(Encapsulation *packet)
     }
 }
 
+
+
 /**
  * @brief Send game start packet
  * 
@@ -104,6 +110,8 @@ void send_game_start(Encapsulation *packet, Room *room)
     create_csv_result_file((char *)room->name);
 }
 
+
+
 /**
  * @brief Send round start packet
  * 
@@ -117,6 +125,8 @@ void send_round_start(unsigned int client_id, Room *room)
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
 
+
+
 /**
  * @brief Send round end packet
  * 
@@ -128,6 +138,8 @@ void send_round_end(unsigned int client_id, Game *game)
     send_packet(client_id, ROUND_END, game, sizeof(Game));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_END\033[0m to \033[1;32m#%d\033[0m. %d/%d\n", client_id, game->current_round, game->total_rounds);
 }
+
+
 
 /**
  * @brief Execute action's action
@@ -166,6 +178,8 @@ void on_action_received(Encapsulation *packet)
     }
 }
 
+
+
 /**
  * @brief Calculate players balance based on current round data
  * 
@@ -195,6 +209,9 @@ void calculate_balance(Game *game, Game *opponent_game){
             }
         }
 }
+
+
+
 /**
  * @brief Check who won the game between client_id and opponent_id
  * 
@@ -223,6 +240,8 @@ void check_results(Game *game, Game *opponent_game, unsigned int client_id, unsi
     }
 }
 
+
+
 /**
  * @brief Send Game End packet
  * 
@@ -235,6 +254,8 @@ void send_game_end(unsigned int client_id, enum results winner)
     send_packet(client_id, GAME_END, &data, sizeof(Game_End_data));
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
+
+
 
 /**
  * @brief Execute disconnect action
@@ -250,6 +271,7 @@ void on_disconnect_action(Encapsulation *packet)
     free(connection);
     pthread_exit(0);
 }
+
 
 
 /**
@@ -304,6 +326,8 @@ bool check_oppponent_connected(unsigned int client_id)
     }
     return false;
 }
+
+
 
 /**
  * @brief Check if opponent has played for current round

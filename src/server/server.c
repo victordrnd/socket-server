@@ -33,8 +33,6 @@ int main(int argc __attribute__((unused)), char** argv) {
         return -5;
     }
 
-    printf("Ready and listening...\n");
-
     while (true) {
         connection = (connection_t *) malloc(sizeof (connection_t));
         connection->sockfd = accept(sockfd, &connection->address, (unsigned int *) &connection->addr_len);

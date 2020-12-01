@@ -32,6 +32,8 @@ void init_sockets_array(void)
     }
 }
 
+
+
 /**
  * @brief Add connection to connections list
  * 
@@ -50,6 +52,8 @@ void add(connection_t *connection)
     perror("Too much simultaneous connections");
     exit(-5);
 }
+
+
 
 /**
  * @brief Delete connection from connections list
@@ -93,7 +97,7 @@ void *threadProcess(void *ptr)
     while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0){
 
         int size = sizeof(Encapsulation);
-        unsigned char *buffer = (unsigned char *)malloc(size);
+        u_int8_t *buffer = (u_int8_t *)malloc(size);
         memcpy(buffer, buffer_in, size);
         Encapsulation *packet = (Encapsulation *)buffer;
         if (packet->action == CONNECT)
@@ -112,6 +116,8 @@ void *threadProcess(void *ptr)
     free(connection);
     pthread_exit(0);
 }
+
+
 
 /**
  * @brief Create a server socket object
@@ -152,6 +158,8 @@ int create_server_socket(Config *configuration)
     return sockfd;
 }
 
+
+
 /**
  * @brief Get the connection object
  * 
@@ -171,6 +179,8 @@ connection_t *get_connection(unsigned int client_id)
     return NULL;
 }
 
+
+
 /**
  * @brief Send packet to client
  * 
@@ -184,5 +194,5 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
     Encapsulation packet;
     encapsulate_data(&packet, 0, client_id, action, data, data_size);
     connection_t *connection = get_connection(client_id);
-    write(connection->sockfd, (const unsigned char *)&packet, sizeof(Encapsulation));
+    write(connection->sockfd, (const u_int8_t *)&packet, sizeof(Encapsulation));
 }

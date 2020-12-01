@@ -24,6 +24,8 @@ void on_mise_10_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
+
+
 /**
  * @brief Mise 25 handler
  * 
@@ -34,6 +36,8 @@ void on_mise_25_selected(GtkButton *button)
     game_set_current_bet(25);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
+
+
 
 /**
  * @brief Mise 50 handler
@@ -46,6 +50,8 @@ void on_mise_50_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
+
+
 /**
  * @brief Mise 75 handler
  * 
@@ -57,6 +63,8 @@ void on_mise_75_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
+
+
 /**
  * @brief Mise 100 handler
  * 
@@ -67,6 +75,8 @@ void on_mise_100_selected(GtkButton *button)
     game_set_current_bet(100);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
+
+
 
 /**
  * @brief Handler for betray click event
@@ -84,6 +94,8 @@ void on_betray_btn_click(GtkWidget *button __attribute__((unused)))
     send_action_packet(get_game());
 }
 
+
+
 /**
  * @brief Hander for collaborate click event
  * 
@@ -100,9 +112,13 @@ void on_collaborate_btn_click(GtkWidget *button __attribute__((unused)))
     send_action_packet(get_game());
 }
 
+
+
 /////////////////////
 /* NETWORK HANDLERS*/
 /////////////////////
+
+
 
 /**
  * @brief UI changes on connected action
@@ -118,6 +134,8 @@ void on_connected_action(Connected_data *data)
     gtk_label_set_label(label, amount);
     toggle_action_button(builder, FALSE);
 }
+
+
 
 /**
  * @brief UI changes on failed action
@@ -136,6 +154,7 @@ void on_failed_action(void)
 }
 
 
+
 /**
  * @brief UI changes on game start action
  * 
@@ -150,6 +169,8 @@ void on_game_start_action(Game_Start_data *data)
     sprintf(title, "Round 1 / %d", data->max_rounds);
     gtk_window_set_title(window, title);
 }
+
+
 
 /**
  * @brief UI changes on round start action
@@ -176,6 +197,8 @@ void on_round_start_action(Round_Start_data *data __attribute__((unused)))
     gettimeofday(&round_start_time, NULL);
 }
 
+
+
 /**
  * @brief UI changes on round end action
  * 
@@ -200,6 +223,7 @@ void on_round_end_action(Game *data)
     sprintf(amount, "$ %d", data->balance);
     gtk_label_set_label(label, amount);
 }
+
 
 
 /**
@@ -237,6 +261,7 @@ void on_game_end_action(Game_End_data *data)
     }
     gtk_widget_show((GtkWidget *)image);
 }
+
 
 
 /**

@@ -34,6 +34,8 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
     }
 }
 
+
+
 /**
  * @brief Activate countdown for progress_bar
  * 
@@ -63,6 +65,8 @@ void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
     gtk_widget_hide((GtkWidget *)progress_bar);
 }
 
+
+
 /**
  * @brief Hide countdown progress bar
  * 
@@ -73,6 +77,8 @@ void stop_count_down(GtkProgressBar *progress_bar)
     gtk_widget_hide((GtkWidget *)progress_bar);
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }
+
+
 
 /**
  * @brief Activate or desactivate action buttons
@@ -87,6 +93,8 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     gtk_widget_set_sensitive(betray_btn, sensitive);
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
 }
+
+
 
 /**
  * @brief Toogle radio bet buttons sensitivity

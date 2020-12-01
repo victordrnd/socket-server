@@ -29,6 +29,8 @@ Config *init_configuration(void){
     init_executable_path();
     return config;
 }
+
+
 /**
  * @brief Read configuration file
  * 
@@ -69,6 +71,8 @@ void read_config(const char *filename)
 #endif
 }
 
+
+
 /**
  * @brief 
  * 
@@ -79,16 +83,33 @@ unsigned int config_get_client_id(void)
     return config->client_id;
 }
 
+/**
+ * @brief Get server IP
+ * 
+ * @return const char* 
+ */
 const char *config_get_server_ip(void)
 {
     return config->ip;
 }
 
+
+/**
+ * @brief Get server port
+ * 
+ * @return unsigned int 
+ */
 unsigned int config_get_server_port(void)
 {
     return config->port;
 }
 
+
+/**
+ * @brief Get executable path
+ * 
+ * @return char* 
+ */
 char *config_get_executable_path(void)
 {
     char *executable_path = (char *)malloc(sizeof(config->executable_path));
@@ -97,6 +118,12 @@ char *config_get_executable_path(void)
     return executable_path;
 }
 
+
+/**
+ * @brief Init executable path
+ * 
+ * @return char* 
+ */
 char *init_executable_path(void)
 {
     char filename[sizeof(config->executable_path)];

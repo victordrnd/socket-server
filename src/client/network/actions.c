@@ -17,6 +17,8 @@ void send_connect_packet(void)
     send_packet(CONNECT, NULL, (size_t)0);
 }
 
+
+
 /**
  * @brief Send round data
  * 
@@ -27,6 +29,8 @@ void send_action_packet(Game *game)
     send_packet(ACTION, game, sizeof(Game));
 }
 
+
+
 /**
  * @brief Send disconnect packet to console
  * 
@@ -35,6 +39,8 @@ void send_disconnect_packet(void)
 {
     send_packet(DISCONNECT, NULL, (size_t) 0);
 }
+
+
 
 /**
  * @brief Settle the packet based on action

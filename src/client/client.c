@@ -49,6 +49,8 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state)
     }
     return 0;
 }
+
+
 static struct argp_option options[] =
     {
         {"client_id", 'c', "1", 0, "Force client_id over config file"},
@@ -56,16 +58,11 @@ static struct argp_option options[] =
         {"port", 'p', "7799", 0, "Force server_port over config file"},
         {0}};
 
-/*
-  DOC.  Field 4 in ARGP.
-  Program documentation.
-*/
+
 static char doc[] = "client -- Dilemme du prisonnier de l'Institut des Sciences Cognitives  \v";
-static char args_doc[] = "";
-/*
-   The ARGP structure itself.
-*/
-static struct argp argp = {options, parse_opt, args_doc, doc};
+
+static struct argp argp = {options, parse_opt, "", doc};
+
 
 int main(int argc, char **argv)
 {
