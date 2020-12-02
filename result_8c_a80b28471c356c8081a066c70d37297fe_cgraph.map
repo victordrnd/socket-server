@@ -1,4 +1,4 @@
 <map id="create_csv_result_file" name="create_csv_result_file">
 <area shape="rect" id="node1" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="5,5,153,32"/>
-<area shape="rect" id="node2" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="201,5,297,32"/>
+<area shape="rect" id="node2" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title="Write CSV header." alt="" coords="201,5,297,32"/>
 </map>

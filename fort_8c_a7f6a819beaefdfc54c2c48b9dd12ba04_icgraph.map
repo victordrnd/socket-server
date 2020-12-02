@@ -1,6 +1,6 @@
 <map id="set_cell_property" name="set_cell_property">
 <area shape="rect" id="node1" title=" " alt="" coords="348,46,468,73"/>
 <area shape="rect" id="node2" href="$fort_8h.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4" title=" " alt="" coords="185,46,300,73"/>
-<area shape="rect" id="node3" href="$logs_8h.html#acafe45da547dcc1c5e01344a5f365880" title=" " alt="" coords="8,5,135,47"/>
-<area shape="rect" id="node4" href="$logs_8h.html#ad00fabc05d04796b663e7362db3839f3" title=" " alt="" coords="5,71,137,112"/>
+<area shape="rect" id="node3" href="$logs_8h.html#acafe45da547dcc1c5e01344a5f365880" title="Beautify client config in console." alt="" coords="8,5,135,47"/>
+<area shape="rect" id="node4" href="$logs_8h.html#ad00fabc05d04796b663e7362db3839f3" title="Beautify server config in console." alt="" coords="5,71,137,112"/>
 </map>

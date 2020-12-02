@@ -1,5 +1,5 @@
 <map id="is_ip_valid" name="is_ip_valid">
 <area shape="rect" id="node1" title="Verify if an ip is correctly formed." alt="" coords="240,5,323,32"/>
-<area shape="rect" id="node2" href="$client_2utils_2config_8h.html#a4d2e03c945907004eb7fe2d3de8c56a6" title="Read configuration file." alt="" coords="104,5,192,32"/>
+<area shape="rect" id="node2" href="$client_2utils_2config_8h.html#ad5569d373b3c342033954f78c4b7cd2c" title="Read configuration file." alt="" coords="104,5,192,32"/>
 <area shape="rect" id="node3" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
 </map>

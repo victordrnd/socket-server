@@ -1,0 +1,5 @@
+<map id="on_failed_action" name="on_failed_action">
+<area shape="rect" id="node1" title="UI changes on failed action." alt="" coords="5,35,121,61"/>
+<area shape="rect" id="node2" href="$game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="178,5,321,32"/>
+<area shape="rect" id="node3" href="$game__ui_8c.html#a6dcc493587fb2474f4b9b8e24bdad8f6" title="Toogle radio bet buttons sensitivity." alt="" coords="169,57,329,98"/>
+</map>

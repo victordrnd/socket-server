@@ -1,0 +1,4 @@
+<map id="on_round_start_ready" name="on_round_start_ready">
+<area shape="rect" id="node1" title="Executed on round start progress Bar end." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="200,5,343,32"/>
+</map>

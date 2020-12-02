@@ -144,15 +144,16 @@ Macros</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:aff70d8ff2628c7ee57c4151716a6c72e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a339bb5524b06e496a6aaa0a97a4a8d21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21">results</a> { <a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a> = 0x20, 
-<a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a> = 0x21, 
-<a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a> = 0x22
+<tr class="memitem:a339bb5524b06e496a6aaa0a97a4a8d21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21">results</a> { <a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a> = 0x20U, 
+<a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a> = 0x21U, 
+<a class="el" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a> = 0x22U
  }</td></tr>
 <tr class="separator:a339bb5524b06e496a6aaa0a97a4a8d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:a0baf8375c1d8a7f647160ec879a9e9da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8h.html#a0baf8375c1d8a7f647160ec879a9e9da">encapsulate_data</a> (Encapsulation *encapsulation, __uint32_t sender_id, __uint32_t destionation_id, enum <a class="el" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72e">verbs</a> verb, void *data, size_t data_size)</td></tr>
+<tr class="memdesc:a0baf8375c1d8a7f647160ec879a9e9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encapsulate data in a packet to send.  <a href="protocol_8h.html#a0baf8375c1d8a7f647160ec879a9e9da">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0baf8375c1d8a7f647160ec879a9e9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07bed794a0b217fbd607d360f6586809"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocol_8h.html#a07bed794a0b217fbd607d360f6586809">parse_verbs_data</a> (Encapsulation *encapsulation)</td></tr>
 <tr class="separator:a07bed794a0b217fbd607d360f6586809"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,9 +195,9 @@ Fonctions</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="protocol_8h_source.html#l00026">26</a> du fichier <a class="el" href="protocol_8h_source.html">protocol.h</a>.</p>
 <div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;             {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a> = 0x20,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a> = 0x21,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a> = 0x22</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a38088c60165dc5b369946da1d8797d00">VICTORY</a> = 0x20U,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21afa6a17124aaf95b93c339c823454df22">DEFEAT</a> = 0x21U,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="protocol_8h.html#a339bb5524b06e496a6aaa0a97a4a8d21a67039f5b6bfa7fb2b9b29217e6be44c1">EQUALITY</a> = 0x22U</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 </div><!-- fragment -->
 </div>
@@ -250,7 +251,7 @@ Fonctions</h2></td></tr>
           <td class="memname">void encapsulate_data </td>
           <td>(</td>
           <td class="paramtype">Encapsulation *&#160;</td>
-          <td class="paramname"><em>encapsulation</em>, </td>
+          <td class="paramname"><em>packet</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -290,51 +291,65 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="protocol_8c_source.html#l00013">13</a> du fichier <a class="el" href="protocol_8c_source.html">protocol.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">if</span>(destionation_id &gt; 0){</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        sender_id = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    assert(data_size &lt;= <a class="code" href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    encapsulation-&gt;sender_id = sender_id;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    encapsulation-&gt;destination_id = destionation_id;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    encapsulation-&gt;timestamp = time(NULL);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    encapsulation-&gt;action = verb;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    encapsulation-&gt;sizeof_data = data_size;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (data != NULL)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        memcpy(encapsulation-&gt;data, (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)data, data_size);</div>
+<p>Encapsulate data in a packet to send. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td></td></tr>
+    <tr><td class="paramname">sender_id</td><td></td></tr>
+    <tr><td class="paramname">destionation_id</td><td></td></tr>
+    <tr><td class="paramname">verb</td><td></td></tr>
+    <tr><td class="paramname">data</td><td></td></tr>
+    <tr><td class="paramname">data_size</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="protocol_8c_source.html#l00023">23</a> du fichier <a class="el" href="protocol_8c_source.html">protocol.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(destionation_id &gt; 0){</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        sender_id = 0;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    assert(data_size &lt;= <a class="code" href="protocol_8h.html#ac5b738d467a1bbf9325bcc0eaf4f5efa">MAXPACKETSIZE</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    packet-&gt;sender_id = sender_id;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    packet-&gt;destination_id = destionation_id;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    packet-&gt;timestamp = time(NULL);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    packet-&gt;action = verb;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    packet-&gt;sizeof_data = data_size;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (data != NULL)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        memcpy(packet-&gt;data, (<span class="keyword">const</span> __uint8_t *)data, data_size);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="protocol_8h_source.html#l00012">MAXPACKETSIZE</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00087">send_packet()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="protocol_8h_a0baf8375c1d8a7f647160ec879a9e9da_icgraph.png" border="0" usemap="#aprotocol_8h_a0baf8375c1d8a7f647160ec879a9e9da_icgraph" alt=""/></div>
 <map name="protocol_8h_a0baf8375c1d8a7f647160ec879a9e9da_icgraph" id="aprotocol_8h_a0baf8375c1d8a7f647160ec879a9e9da_icgraph">
-<area shape="rect" title=" " alt="" coords="1021,211,1145,238"/>
-<area shape="rect" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="877,211,973,238"/>
-<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,51,239,78"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="293,190,423,217"/>
-<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="677,389,815,415"/>
-<area shape="rect" href="client_2network_2actions_8c.html#a3c3ace89c1f65ed5ed819cd4f11ccdf4" title=" " alt="" coords="663,85,829,111"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="687,287,805,314"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="485,186,607,213"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="687,338,805,365"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="685,237,807,263"/>
-<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,51,56,78"/>
-<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="123,215,219,242"/>
-<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="477,389,615,415"/>
-<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="481,440,611,481"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="498,85,594,111"/>
-<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,73,429,115"/>
-<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,139,411,166"/>
-<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,139,197,166"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="495,287,597,314"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="291,262,425,289"/>
+<area shape="rect" title="Encapsulate data in a packet to send." alt="" coords="1028,172,1152,199"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="884,172,980,199"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="296,46,427,72"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title="Send round data." alt="" coords="683,248,822,275"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="287,363,436,390"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ae238a6922701561bceb50a1b7946584c" title="Send disconnect packet to console." alt="" coords="669,420,836,447"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="694,147,811,174"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="491,46,614,72"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="694,198,811,224"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="691,96,814,123"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="123,71,219,98"/>
+<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="484,248,621,275"/>
+<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="487,300,618,341"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,392,239,419"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,392,56,419"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="505,422,601,448"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="290,414,433,456"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="308,480,415,507"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,480,197,507"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title="Check who won the game between client_id and opponent_id." alt="" coords="501,147,604,174"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title="Execute action&#39;s action." alt="" coords="294,122,429,148"/>
 </map>
 </div>
 
@@ -374,7 +389,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72eaa254fad9d203c9e3e090277ed3b63cb4">ROUND_START</a></div><div class="ttdeci">@ ROUND_START</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00019">protocol.h:19</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2020 11:08:42 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Mercredi 2 Décembre 2020 17:49:06 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

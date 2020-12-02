@@ -1,5 +1,5 @@
 <map id="on_disconnect_action" name="on_disconnect_action">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,153,57"/>
-<area shape="rect" id="node2" href="$server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title=" " alt="" coords="237,5,276,32"/>
-<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="201,56,312,83"/>
+<area shape="rect" id="node1" title="Execute disconnect action." alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title="Delete connection from connections list." alt="" coords="237,5,276,32"/>
+<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title="Get the connection object." alt="" coords="201,56,312,83"/>
 </map>

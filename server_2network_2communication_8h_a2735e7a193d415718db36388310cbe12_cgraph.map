@@ -1,5 +1,5 @@
 <map id="send_packet" name="send_packet">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,101,57"/>
-<area shape="rect" id="node2" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="149,5,273,32"/>
-<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="156,56,267,83"/>
+<area shape="rect" id="node1" title="Send packet to client." alt="" coords="5,31,101,57"/>
+<area shape="rect" id="node2" href="$protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="149,5,273,32"/>
+<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title="Get the connection object." alt="" coords="156,56,267,83"/>
 </map>

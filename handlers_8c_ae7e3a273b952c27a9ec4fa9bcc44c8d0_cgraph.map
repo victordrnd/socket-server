@@ -1,11 +1,11 @@
 <map id="on_betray_btn_click" name="on_betray_btn_click">
 <area shape="rect" id="node1" title="Handler for betray click event." alt="" coords="5,107,143,133"/>
-<area shape="rect" id="node2" href="$game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title=" " alt="" coords="203,5,325,32"/>
-<area shape="rect" id="node3" href="$game_8c.html#a60fdaf1c95a2df2ab30e3bd92b4151c0" title=" " alt="" coords="191,56,337,83"/>
-<area shape="rect" id="node4" href="$game_8c.html#a35f030d50cc0e91abd89a1e4b513767d" title=" " alt="" coords="225,107,303,133"/>
-<area shape="rect" id="node5" href="$client_2network_2actions_8c.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="195,157,333,184"/>
+<area shape="rect" id="node2" href="$game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title="Set Action code." alt="" coords="203,5,325,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#a60fdaf1c95a2df2ab30e3bd92b4151c0" title="Set round react time." alt="" coords="191,56,337,83"/>
+<area shape="rect" id="node4" href="$game_8c.html#a35f030d50cc0e91abd89a1e4b513767d" title="Get the game object." alt="" coords="225,107,303,133"/>
+<area shape="rect" id="node5" href="$client_2network_2actions_8c.html#a93a56ae919ec9974e5354183fffa243e" title="Send round data." alt="" coords="195,157,333,184"/>
 <area shape="rect" id="node9" href="$game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="193,208,335,235"/>
 <area shape="rect" id="node6" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="385,157,481,184"/>
 <area shape="rect" id="node7" href="$client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="529,132,665,159"/>
-<area shape="rect" id="node8" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="535,183,659,209"/>
+<area shape="rect" id="node8" href="$protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="535,183,659,209"/>
 </map>

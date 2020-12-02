@@ -1,16 +1,16 @@
 <map id="on_connect_action" name="on_connect_action">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,136,157"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title=" " alt="" coords="184,80,375,107"/>
-<area shape="rect" id="node5" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title=" " alt="" coords="620,29,735,56"/>
-<area shape="rect" id="node6" href="$server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title=" " alt="" coords="434,131,561,157"/>
-<area shape="rect" id="node7" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="218,181,341,208"/>
+<area shape="rect" id="node1" title="Execute connect action." alt="" coords="5,131,136,157"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a46ba5203ef139048e38bc26f90d4c3f4" title="Check if opponent is connected." alt="" coords="184,80,375,107"/>
+<area shape="rect" id="node5" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title="Get the client room object." alt="" coords="620,29,735,56"/>
+<area shape="rect" id="node6" href="$server_2utils_2config_8c.html#aa4e4ad826243b53bcba130bcca9dc0da" title="Get the initial amount object." alt="" coords="434,131,561,157"/>
+<area shape="rect" id="node7" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="218,181,341,208"/>
 <area shape="rect" id="node11" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="629,333,725,360"/>
-<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title=" " alt="" coords="442,29,553,56"/>
-<area shape="rect" id="node4" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title=" " alt="" coords="439,80,556,107"/>
+<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#a0513fcbe2c89df7b19a16bef077de3e4" title="Get the connection object." alt="" coords="442,29,553,56"/>
+<area shape="rect" id="node4" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title="Get the opponent id object." alt="" coords="439,80,556,107"/>
 <area shape="rect" id="node8" href="$result_8c.html#a80b28471c356c8081a066c70d37297fe" title="Crée et ouvre le fichier csv de nom *filename en paramètre." alt="" coords="423,232,571,259"/>
-<area shape="rect" id="node10" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title=" " alt="" coords="423,181,572,208"/>
-<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="436,333,559,360"/>
-<area shape="rect" id="node9" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title=" " alt="" coords="629,232,725,259"/>
+<area shape="rect" id="node10" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title="Get the max round count object." alt="" coords="423,181,572,208"/>
+<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="436,333,559,360"/>
+<area shape="rect" id="node9" href="$result_8c.html#a3467a6636ce566ef897c244f0737aac3" title="Write CSV header." alt="" coords="629,232,725,259"/>
 <area shape="rect" id="node12" href="$client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="783,308,919,335"/>
-<area shape="rect" id="node13" href="$protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="789,359,913,385"/>
+<area shape="rect" id="node13" href="$protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="789,359,913,385"/>
 </map>

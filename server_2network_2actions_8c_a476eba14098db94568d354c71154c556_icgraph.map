@@ -1,6 +1,6 @@
 <map id="send_game_end" name="send_game_end">
-<area shape="rect" id="node1" title=" " alt="" coords="483,5,600,32"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="332,5,435,32"/>
-<area shape="rect" id="node3" href="$server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="149,5,284,32"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node1" title="Send Game End packet." alt="" coords="483,5,600,32"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title="Check who won the game between client_id and opponent_id." alt="" coords="332,5,435,32"/>
+<area shape="rect" id="node3" href="$server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title="Execute action&#39;s action." alt="" coords="149,5,284,32"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="5,5,101,32"/>
 </map>

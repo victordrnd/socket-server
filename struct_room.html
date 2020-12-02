@@ -74,7 +74,7 @@ Graphe de collaboration de Room:</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_room__coll__graph.png" border="0" usemap="#a_room_coll__map" alt="Collaboration graph"/></div>
 <map name="_room_coll__map" id="a_room_coll__map">
-<area shape="rect" title=" " alt="" coords="53,124,109,151"/>
+<area shape="rect" title=" " alt="" coords="53,139,109,165"/>
 <area shape="rect" title=" " alt="" coords="5,5,44,32"/>
 <area shape="rect" title=" " alt="" coords="91,5,182,32"/>
 </map>
@@ -88,6 +88,8 @@ Champs de données</h2></td></tr>
 <tr class="separator:a7ae7f386dbd66ead530e284073ec6541"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2b0e701929309b33a7d25d5a16fe39"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room.html#a2b2b0e701929309b33a7d25d5a16fe39">initial_amount</a></td></tr>
 <tr class="separator:a2b2b0e701929309b33a7d25d5a16fe39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662fb3ba81b86a01ec99e8eaac12e98b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room.html#a662fb3ba81b86a01ec99e8eaac12e98b">waiting_time</a></td></tr>
+<tr class="separator:a662fb3ba81b86a01ec99e8eaac12e98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69a6047cd574120f48361d87869b51a0"><td class="memItemLeft" align="right" valign="top">unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_room.html#a69a6047cd574120f48361d87869b51a0">clients_id</a></td></tr>
 <tr class="separator:a69a6047cd574120f48361d87869b51a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -107,9 +109,9 @@ Champs de données</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00017">17</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00018">18</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00127">get_client_room()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00145">get_opponent_id()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00106">is_client_exists()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00028">parse_game_configuration()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00149">get_client_room()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00173">get_opponent_id()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00122">is_client_exists()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00039">parse_game_configuration()</a>.</p>
 
 </div>
 </div>
@@ -127,7 +129,7 @@ Champs de données</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00016">16</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00165">get_initial_amount()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00028">parse_game_configuration()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00205">get_initial_amount()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00039">parse_game_configuration()</a>.</p>
 
 </div>
 </div>
@@ -145,7 +147,7 @@ Champs de données</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00014">14</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00097">on_action_received()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00028">parse_game_configuration()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00067">send_game_start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00149">on_action_received()</a>, <a class="el" href="server_2utils_2config_8c_source.html#l00039">parse_game_configuration()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00096">send_game_start()</a>.</p>
 
 </div>
 </div>
@@ -163,7 +165,25 @@ Champs de données</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00015">15</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00160">get_max_round_count()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00028">parse_game_configuration()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00194">get_max_round_count()</a>, et <a class="el" href="server_2utils_2config_8c_source.html#l00039">parse_game_configuration()</a>.</p>
+
+</div>
+</div>
+<a id="a662fb3ba81b86a01ec99e8eaac12e98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662fb3ba81b86a01ec99e8eaac12e98b">&#9670;&nbsp;</a></span>waiting_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Room::waiting_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="server_2utils_2config_8h_source.html#l00017">17</a> du fichier <a class="el" href="server_2utils_2config_8h_source.html">config.h</a>.</p>
+
+<p class="reference">Référencé par <a class="el" href="server_2utils_2config_8c_source.html#l00039">parse_game_configuration()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00121">send_round_start()</a>.</p>
 
 </div>
 </div>
@@ -173,7 +193,7 @@ Champs de données</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2020 11:08:42 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Mercredi 2 Décembre 2020 17:49:07 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

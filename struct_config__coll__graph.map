@@ -1,9 +1,9 @@
 <map id="Config" name="Config">
-<area shape="rect" id="node1" title=" " alt="" coords="159,376,218,403"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,272,52,299"/>
+<area shape="rect" id="node1" title=" " alt="" coords="159,391,218,417"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,287,52,313"/>
 <area shape="rect" id="node3" title=" " alt="" coords="181,5,220,32"/>
-<area shape="rect" id="node6" href="$struct_room.html" title=" " alt="" coords="229,124,285,151"/>
+<area shape="rect" id="node6" href="$struct_room.html" title=" " alt="" coords="229,139,285,165"/>
 <area shape="rect" id="node4" title=" " alt="" coords="353,5,443,32"/>
-<area shape="rect" id="node5" href="$struct_game_configuration.html" title=" " alt="" coords="217,272,349,299"/>
-<area shape="rect" id="node7" title=" " alt="" coords="309,124,399,151"/>
+<area shape="rect" id="node5" href="$struct_game_configuration.html" title=" " alt="" coords="217,287,349,313"/>
+<area shape="rect" id="node7" title=" " alt="" coords="309,139,399,165"/>
 </map>

@@ -1,10 +1,9 @@
 <map id="printf" name="printf">
-<area shape="rect" id="node1" title=" " alt="" coords="467,130,517,157"/>
-<area shape="rect" id="node2" href="$logs_8h.html#acafe45da547dcc1c5e01344a5f365880" title=" " alt="" coords="289,5,416,47"/>
-<area shape="rect" id="node3" href="$logs_8h.html#a2b33b95cf337eec7af9cfd3f56de6415" title=" " alt="" coords="303,71,403,98"/>
-<area shape="rect" id="node4" href="$logs_8h.html#ad00fabc05d04796b663e7362db3839f3" title=" " alt="" coords="287,123,419,164"/>
-<area shape="rect" id="node5" href="$server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="327,189,378,215"/>
-<area shape="rect" id="node6" href="$client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="293,239,413,266"/>
-<area shape="rect" id="node7" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,239,239,266"/>
-<area shape="rect" id="node8" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,239,56,266"/>
+<area shape="rect" id="node1" title=" " alt="" coords="467,101,517,127"/>
+<area shape="rect" id="node2" href="$logs_8h.html#acafe45da547dcc1c5e01344a5f365880" title="Beautify client config in console." alt="" coords="289,5,416,47"/>
+<area shape="rect" id="node3" href="$logs_8h.html#a2b33b95cf337eec7af9cfd3f56de6415" title="Print formated text with date." alt="" coords="303,71,403,98"/>
+<area shape="rect" id="node4" href="$logs_8h.html#ad00fabc05d04796b663e7362db3839f3" title="Beautify server config in console." alt="" coords="287,123,419,164"/>
+<area shape="rect" id="node5" href="$client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="293,189,413,215"/>
+<area shape="rect" id="node6" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,189,239,215"/>
+<area shape="rect" id="node7" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,189,56,215"/>
 </map>

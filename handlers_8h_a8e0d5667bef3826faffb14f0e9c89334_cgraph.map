@@ -1,0 +1,6 @@
+<map id="on_round_start_action" name="on_round_start_action">
+<area shape="rect" id="node1" title="UI changes on round start action." alt="" coords="5,31,156,57"/>
+<area shape="rect" id="node2" href="$game__ui_8c.html#a7186a517ca8bb1937c200569d64bfd53" title="Activate countdown for progress_bar." alt="" coords="208,5,347,32"/>
+<area shape="rect" id="node3" href="$handlers_8c.html#a4696b94e3193b6e83b95a4a4174bcc12" title="Executed on round start progress Bar end." alt="" coords="204,56,351,83"/>
+<area shape="rect" id="node4" href="$game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="399,56,541,83"/>
+</map>

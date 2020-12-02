@@ -119,10 +119,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:af6f333aef95418aceff428c71785712b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b">init_communication</a> (<a class="el" href="struct_config.html">Config</a> *<a class="el" href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a>)</td></tr>
+<tr class="memitem:af6f333aef95418aceff428c71785712b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b">init_communication</a> (<a class="el" href="struct_config.html">Config</a> *<a class="el" href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a>)</td></tr>
 <tr class="memdesc:af6f333aef95418aceff428c71785712b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts listening thread process and establish server connection.  <a href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af6f333aef95418aceff428c71785712b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696dec889c2641fd81501271d4683fe4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_connection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4">open_connection</a> (<a class="el" href="struct_config.html">Config</a> *<a class="el" href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a>)</td></tr>
+<tr class="memitem:a696dec889c2641fd81501271d4683fe4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_connection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4">open_connection</a> (<a class="el" href="struct_config.html">Config</a> *<a class="el" href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a>)</td></tr>
 <tr class="memdesc:a696dec889c2641fd81501271d4683fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open cpnnection socket with server.  <a href="client_2network_2communication_8h.html#a696dec889c2641fd81501271d4683fe4">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a696dec889c2641fd81501271d4683fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42fc9c0eb8502984121f1b6d8fbb92b1"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a> (void *ptr)</td></tr>
@@ -172,16 +172,15 @@ Fonctions</h2></td></tr>
 
 <p>Close connection between client and server. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00098">98</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    pthread_cancel(<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">stdin_thread</a>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    close(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">// close_main_window(TRUE);</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00100">100</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    pthread_cancel(<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">stdin_thread</a>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    close(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00015">app_threads_t::stdin_thread</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00018">threads</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00056">close_main_window()</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00070">listen_socket_thread_process()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="launch_8c_source.html#l00058">close_main_window()</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00070">listen_socket_thread_process()</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
@@ -224,32 +223,31 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00026">26</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a> = <a class="code" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4">open_connection</a>(<a class="code" href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a>(<a class="code" href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea20391dd2915a0e64343d24c2f2e40b95">CONNECT</a>, NULL, (<span class="keywordtype">size_t</span>)0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a> = <a class="code" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4">open_connection</a>(<a class="code" href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb">send_connect_packet</a>();</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Creation d&#39;un pthread de lecture</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    pthread_create(&amp;<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">socket_thread</a>, 0, <a class="code" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a>, &amp;<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//write(connection-&gt;sock,&quot;Main APP Still running&quot;,15);</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    pthread_detach(<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">socket_thread</a>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    pthread_create(&amp;<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">socket_thread</a>, 0, <a class="code" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a>, &amp;<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    pthread_detach(<a class="code" href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a>.<a class="code" href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">socket_thread</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="protocol_8h_source.html#l00015">CONNECT</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00070">listen_socket_thread_process()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00043">open_connection()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00088">send_packet()</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00016">app_threads_t::socket_thread</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00018">threads</a>.</p>
+<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00070">listen_socket_thread_process()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00041">open_connection()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00016">send_connect_packet()</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>, <a class="el" href="client_2network_2communication_8h_source.html#l00016">app_threads_t::socket_thread</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00018">threads</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00070">main()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="client_8c_source.html#l00067">main()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="client_2network_2communication_8h_af6f333aef95418aceff428c71785712b_cgraph.png" border="0" usemap="#aclient_2network_2communication_8h_af6f333aef95418aceff428c71785712b_cgraph" alt=""/></div>
 <map name="client_2network_2communication_8h_af6f333aef95418aceff428c71785712b_cgraph" id="aclient_2network_2communication_8h_af6f333aef95418aceff428c71785712b_cgraph">
 <area shape="rect" title="Starts listening thread process and establish server connection." alt="" coords="5,111,140,137"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="188,45,331,86"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="199,111,319,137"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="211,161,307,188"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="191,45,334,86"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="203,111,323,137"/>
+<area shape="rect" href="client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="188,161,337,188"/>
 <area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="385,5,508,32"/>
-<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="399,56,495,83"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="399,56,495,83"/>
 <area shape="rect" href="links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="421,111,472,137"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="379,161,515,188"/>
-<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="385,212,509,239"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="399,161,495,188"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="556,136,692,163"/>
+<area shape="rect" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="562,187,686,213"/>
 </map>
 </div>
 <div class="dynheader">
@@ -296,17 +294,16 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> len;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">while</span> ((len = read(sockfd, buffer_in, <span class="keyword">sizeof</span>(Encapsulation))) != 0)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *buffer = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)malloc(<span class="keyword">sizeof</span>(Encapsulation));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        u_int8_t *buffer = (u_int8_t *) malloc(<span class="keyword">sizeof</span>(Encapsulation));</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        memcpy(buffer, buffer_in, <span class="keyword">sizeof</span>(Encapsulation));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// printf(&quot;Received buffer len : %d\n&quot;, len);</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Encapsulation *packet = (Encapsulation *)buffer;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a>(packet);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        Encapsulation *packet = (Encapsulation *)buffer;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a>(packet);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2network_2communication_8h_source.html#l00012">BUFFERSIZE</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00098">close_connection()</a>, et <a class="el" href="client_2network_2actions_8c_source.html#l00022">settle_action()</a>.</p>
+<p class="reference">Références <a class="el" href="client_2network_2communication_8h_source.html#l00012">BUFFERSIZE</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00100">close_connection()</a>, et <a class="el" href="client_2network_2actions_8c_source.html#l00051">settle_action()</a>.</p>
 
 <p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>.</p>
 <div class="dynheader">
@@ -316,7 +313,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="client_2network_2communication_8h_a42fc9c0eb8502984121f1b6d8fbb92b1_cgraph" id="aclient_2network_2communication_8h_a42fc9c0eb8502984121f1b6d8fbb92b1_cgraph">
 <area shape="rect" title="Thread process for listening socket input." alt="" coords="5,23,148,65"/>
 <area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="196,5,319,32"/>
-<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="209,56,305,83"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="209,56,305,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -375,26 +372,26 @@ Voici le graphe des appelants de cette fonction :</div>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Connection* </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00043">43</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a> = (<a class="code" href="struct_connection.html">Connection</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_connection.html">Connection</a>));</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">struct </span>sockaddr_in serverAddr;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> port = <a class="code" href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a>-&gt;<a class="code" href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">port</a>;</div>
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00041">41</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a> = (<a class="code" href="struct_connection.html">Connection</a> *)malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct_connection.html">Connection</a>));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">struct </span>sockaddr_in serverAddr;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> port = <a class="code" href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a>-&gt;<a class="code" href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">port</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a> = socket(AF_INET, SOCK_STREAM, 0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a> = socket(AF_INET, SOCK_STREAM, 0);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    serverAddr.sin_family = AF_INET;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    serverAddr.sin_port = htons(port);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    serverAddr.sin_addr.s_addr = inet_addr(<a class="code" href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a>-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    memset(serverAddr.sin_zero, <span class="charliteral">&#39;\0&#39;</span>, <span class="keyword">sizeof</span> serverAddr.sin_zero);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (connect(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>, (<span class="keyword">struct</span> sockaddr *)&amp;serverAddr, <span class="keyword">sizeof</span>(serverAddr)) != 0)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;Fail to connect to server&quot;</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        exit(-1);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    serverAddr.sin_family = AF_INET;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    serverAddr.sin_port = htons(port);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    serverAddr.sin_addr.s_addr = inet_addr(<a class="code" href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a>-&gt;<a class="code" href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">ip</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    memset(serverAddr.sin_zero, <span class="charliteral">&#39;\0&#39;</span>, <span class="keyword">sizeof</span> serverAddr.sin_zero);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (connect(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>, (<span class="keyword">struct</span> sockaddr *)&amp;serverAddr, <span class="keyword">sizeof</span>(serverAddr)) != 0)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;Fail to connect to server&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        exit(-1);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="client_2utils_2config_8h_source.html#l00015">Config::ip</a>, <a class="el" href="client_2utils_2config_8h_source.html#l00016">Config::port</a>, <a class="el" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf()</a>, et <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>.</p>
 
@@ -453,16 +450,16 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00088">88</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    Encapsulation packet;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da">encapsulate_data</a>(&amp;packet, <a class="code" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7">config_get_client_id</a>(), 0, action, data, data_size);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    write(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>, (<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *)&amp;packet, <span class="keyword">sizeof</span>(Encapsulation));</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="client_2network_2communication_8c_source.html#l00087">87</a> du fichier <a class="el" href="client_2network_2communication_8c_source.html">communication.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    Encapsulation packet;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9">encapsulate_data</a>(&amp;packet, <a class="code" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7">config_get_client_id</a>(), 0, action, data, data_size);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    write(<a class="code" href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a>-&gt;<a class="code" href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">sock</a>, (<span class="keyword">const</span> u_int8_t *)&amp;packet, <span class="keyword">sizeof</span>(Encapsulation));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00063">config_get_client_id()</a>, <a class="el" href="protocol_8c_source.html#l00013">encapsulate_data()</a>, et <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>.</p>
+<p class="reference">Références <a class="el" href="client_2network_2communication_8c_source.html#l00019">cnx</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00081">config_get_client_id()</a>, <a class="el" href="protocol_8c_source.html#l00023">encapsulate_data()</a>, et <a class="el" href="client_2network_2communication_8h_source.html#l00021">Connection::sock</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00047">on_connect_action()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00012">send_action_packet()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00017">send_disconnect_packet()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00171">send_game_end()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00067">send_game_start()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00091">send_round_end()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00084">send_round_start()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2actions_8c_source.html#l00068">on_connect_action()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00028">send_action_packet()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00016">send_connect_packet()</a>, <a class="el" href="client_2network_2actions_8c_source.html#l00039">send_disconnect_packet()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00251">send_game_end()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00096">send_game_start()</a>, <a class="el" href="server_2network_2actions_8c_source.html#l00136">send_round_end()</a>, et <a class="el" href="server_2network_2actions_8c_source.html#l00121">send_round_start()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
@@ -470,7 +467,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <map name="client_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_cgraph" id="aclient_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,101,57"/>
 <area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="149,5,285,32"/>
-<area shape="rect" href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da" title=" " alt="" coords="155,56,279,83"/>
+<area shape="rect" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="155,56,279,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -478,53 +475,53 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="client_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_icgraph.png" border="0" usemap="#aclient_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_icgraph" alt=""/></div>
 <map name="client_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_icgraph" id="aclient_2network_2communication_8h_a45a759d2dbd41a51b95f0718a2be9734_icgraph">
-<area shape="rect" title=" " alt="" coords="877,211,973,238"/>
-<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,51,239,78"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title=" " alt="" coords="293,190,423,217"/>
-<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title=" " alt="" coords="677,389,815,415"/>
-<area shape="rect" href="client_2network_2actions_8c.html#a3c3ace89c1f65ed5ed819cd4f11ccdf4" title=" " alt="" coords="663,85,829,111"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title=" " alt="" coords="687,287,805,314"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title=" " alt="" coords="485,186,607,213"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title=" " alt="" coords="687,338,805,365"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a9651c190591cca70c995fa4156e17141" title=" " alt="" coords="685,237,807,263"/>
-<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,51,56,78"/>
-<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="123,215,219,242"/>
-<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="477,389,615,415"/>
-<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="481,440,611,481"/>
-<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title=" " alt="" coords="498,85,594,111"/>
-<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,73,429,115"/>
-<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,139,411,166"/>
-<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,139,197,166"/>
-<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title=" " alt="" coords="495,287,597,314"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title=" " alt="" coords="291,262,425,289"/>
+<area shape="rect" title=" " alt="" coords="884,172,980,199"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="296,46,427,72"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title="Send round data." alt="" coords="683,248,822,275"/>
+<area shape="rect" href="client_2network_2actions_8h.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="287,363,436,390"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ae238a6922701561bceb50a1b7946584c" title="Send disconnect packet to console." alt="" coords="669,420,836,447"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="694,147,811,174"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="491,46,614,72"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="694,198,811,224"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="691,96,814,123"/>
+<area shape="rect" href="server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="123,71,219,98"/>
+<area shape="rect" href="handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="484,248,621,275"/>
+<area shape="rect" href="handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="487,300,618,341"/>
+<area shape="rect" href="client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,392,239,419"/>
+<area shape="rect" href="client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,392,56,419"/>
+<area shape="rect" href="server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="505,422,601,448"/>
+<area shape="rect" href="client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="290,414,433,456"/>
+<area shape="rect" href="server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="308,480,415,507"/>
+<area shape="rect" href="server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,480,197,507"/>
+<area shape="rect" href="server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title="Check who won the game between client_id and opponent_id." alt="" coords="501,147,604,174"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title="Execute action&#39;s action." alt="" coords="294,122,429,148"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aclient_2network_2actions_8c_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00022">actions.c:22</a></div></div>
+<div class="ttc" id="aclient_2network_2actions_8c_html_ab5084505bd2ee1d2038605b46547d250"><div class="ttname"><a href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250">settle_action</a></div><div class="ttdeci">void settle_action(Encapsulation *packet)</div><div class="ttdoc">Settle the packet based on action.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00051">actions.c:51</a></div></div>
 <div class="ttc" id="astructapp__threads__t_html_ac5ef266da9d8d6a8144093b8ca695bca"><div class="ttname"><a href="structapp__threads__t.html#ac5ef266da9d8d6a8144093b8ca695bca">app_threads_t::stdin_thread</a></div><div class="ttdeci">pthread_t stdin_thread</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00015">communication.h:15</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_a696dec889c2641fd81501271d4683fe4"><div class="ttname"><a href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4">open_connection</a></div><div class="ttdeci">Connection * open_connection(Config *configuration)</div><div class="ttdoc">Open cpnnection socket with server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00043">communication.c:43</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_a696dec889c2641fd81501271d4683fe4"><div class="ttname"><a href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4">open_connection</a></div><div class="ttdeci">Connection * open_connection(Config *configuration)</div><div class="ttdoc">Open cpnnection socket with server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00041">communication.c:41</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8c_html_a8ebc55832799e7175e2cb853e13fc66a"><div class="ttname"><a href="client_2network_2communication_8c.html#a8ebc55832799e7175e2cb853e13fc66a">cnx</a></div><div class="ttdeci">Connection * cnx</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00019">communication.c:19</a></div></div>
 <div class="ttc" id="astructapp__threads__t_html_ab629518f21130c02a9d789c26a4260cc"><div class="ttname"><a href="structapp__threads__t.html#ab629518f21130c02a9d789c26a4260cc">app_threads_t::socket_thread</a></div><div class="ttdeci">pthread_t socket_thread</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00016">communication.h:16</a></div></div>
 <div class="ttc" id="alinks_8txt_html_aa16be43cd325511816067b39d68dea74"><div class="ttname"><a href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a></div><div class="ttdeci">printf(__VA_ARGS__)</div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_a45a759d2dbd41a51b95f0718a2be9734"><div class="ttname"><a href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734">send_packet</a></div><div class="ttdeci">void send_packet(enum verbs action, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00088">communication.c:88</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8c_html_ab0febe533679ce24c85fd3da3bb0c39b"><div class="ttname"><a href="client_2network_2communication_8c.html#ab0febe533679ce24c85fd3da3bb0c39b">threads</a></div><div class="ttdeci">static app_threads_t threads</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00018">communication.c:18</a></div></div>
-<div class="ttc" id="aprotocol_8c_html_a0baf8375c1d8a7f647160ec879a9e9da"><div class="ttname"><a href="protocol_8c.html#a0baf8375c1d8a7f647160ec879a9e9da">encapsulate_data</a></div><div class="ttdeci">void encapsulate_data(Encapsulation *encapsulation, __uint32_t sender_id, __uint32_t destionation_id, enum verbs verb, void *data, size_t data_size)</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8c_source.html#l00013">protocol.c:13</a></div></div>
 <div class="ttc" id="astruct_connection_html"><div class="ttname"><a href="struct_connection.html">Connection</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00020">communication.h:20</a></div></div>
-<div class="ttc" id="aclient_8c_html_ac5f0ba9a3348f08447ee5fd636181f63"><div class="ttname"><a href="client_8c.html#ac5f0ba9a3348f08447ee5fd636181f63">configuration</a></div><div class="ttdeci">Config configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8c_html_a42fc9c0eb8502984121f1b6d8fbb92b1"><div class="ttname"><a href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1">listen_socket_thread_process</a></div><div class="ttdeci">void * listen_socket_thread_process(void *ptr)</div><div class="ttdoc">Thread process for listening socket input.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00070">communication.c:70</a></div></div>
-<div class="ttc" id="aprotocol_8h_html_aff70d8ff2628c7ee57c4151716a6c72ea20391dd2915a0e64343d24c2f2e40b95"><div class="ttname"><a href="protocol_8h.html#aff70d8ff2628c7ee57c4151716a6c72ea20391dd2915a0e64343d24c2f2e40b95">CONNECT</a></div><div class="ttdeci">@ CONNECT</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8h_source.html#l00015">protocol.h:15</a></div></div>
+<div class="ttc" id="aclient_2network_2actions_8c_html_a9bb721ab8ff8c13316490e55eed66dfb"><div class="ttname"><a href="client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb">send_connect_packet</a></div><div class="ttdeci">void send_connect_packet(void)</div><div class="ttdoc">Send connect packet to console.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2actions_8c_source.html#l00016">actions.c:16</a></div></div>
 <div class="ttc" id="astruct_config_html_a0c8531e4232b2cf1fae860432ab523c6"><div class="ttname"><a href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">Config::port</a></div><div class="ttdeci">unsigned int port</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00016">config.h:16</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_ae4a13dbd540ae1a5b6409236c384013b"><div class="ttname"><a href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a></div><div class="ttdeci">void close_connection(void)</div><div class="ttdoc">Close connection between client and server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00098">communication.c:98</a></div></div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_ae4a13dbd540ae1a5b6409236c384013b"><div class="ttname"><a href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b">close_connection</a></div><div class="ttdeci">void close_connection(void)</div><div class="ttdoc">Close connection between client and server.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00100">communication.c:100</a></div></div>
+<div class="ttc" id="aprotocol_8c_html_af3cf09720a83e824c9028bb9385711a9"><div class="ttname"><a href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9">encapsulate_data</a></div><div class="ttdeci">void encapsulate_data(Encapsulation *packet, __uint32_t sender_id, __uint32_t destionation_id, enum verbs verb, void *data, size_t data_size)</div><div class="ttdoc">Encapsulate data in a packet to send.</div><div class="ttdef"><b>Definition:</b> <a href="protocol_8c_source.html#l00023">protocol.c:23</a></div></div>
+<div class="ttc" id="aclient_8c_html_a2063aebd66c8ebc1ee9e22d22f3c40c0"><div class="ttname"><a href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a></div><div class="ttdeci">Config * configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
 <div class="ttc" id="astruct_config_html_a14ef947a3d43345ff5ad05b89870758c"><div class="ttname"><a href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">Config::ip</a></div><div class="ttdeci">const char * ip</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00015">config.h:15</a></div></div>
 <div class="ttc" id="astruct_connection_html_acccd0099e1f8360fa0a0b04d7a5abe93"><div class="ttname"><a href="struct_connection.html#acccd0099e1f8360fa0a0b04d7a5abe93">Connection::sock</a></div><div class="ttdeci">int sock</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00021">communication.h:21</a></div></div>
 <div class="ttc" id="aclient_2network_2communication_8h_html_ac3146f1e9227301bb4aa518f4d336cee"><div class="ttname"><a href="client_2network_2communication_8h.html#ac3146f1e9227301bb4aa518f4d336cee">BUFFERSIZE</a></div><div class="ttdeci">#define BUFFERSIZE</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8h_source.html#l00012">communication.h:12</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_ab1f468bc3547eedbfcea36dc86c4a3e7"><div class="ttname"><a href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7">config_get_client_id</a></div><div class="ttdeci">unsigned int config_get_client_id(void)</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00063">config.c:63</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_ab1f468bc3547eedbfcea36dc86c4a3e7"><div class="ttname"><a href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7">config_get_client_id</a></div><div class="ttdeci">unsigned int config_get_client_id(void)</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00081">config.c:81</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Jeudi 26 Novembre 2020 11:08:42 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Mercredi 2 Décembre 2020 17:49:06 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
