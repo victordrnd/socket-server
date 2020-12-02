@@ -18,7 +18,6 @@ typedef struct
     int sockfd;
     struct sockaddr address;
     int addr_len;
-    int index;
     unsigned int client_id;
 } connection_t;
 

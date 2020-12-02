@@ -26,11 +26,9 @@ Connection *cnx;
 void init_communication(Config *configuration)
 {
     cnx = open_connection(configuration);
-    send_packet(CONNECT, NULL, (size_t)0);
+    send_connect_packet();
 
-    //Creation d'un pthread de lecture
     pthread_create(&threads.socket_thread, 0, listen_socket_thread_process, &cnx->sock);
-    //write(connection->sock,"Main APP Still running",15);
     pthread_detach(threads.socket_thread);
 }
 
@@ -61,6 +59,8 @@ Connection *open_connection(Config *configuration)
     return cnx;
 }
 
+
+
 /**
  * @brief Thread process for listening socket input
  * 
@@ -74,9 +74,8 @@ void *listen_socket_thread_process(void *ptr)
     int len;
     while ((len = read(sockfd, buffer_in, sizeof(Encapsulation))) != 0)
     {
-        unsigned char *buffer = (unsigned char *)malloc(sizeof(Encapsulation));
+        u_int8_t *buffer = (u_int8_t *) malloc(sizeof(Encapsulation));
         memcpy(buffer, buffer_in, sizeof(Encapsulation));
-        // printf("Received buffer len : %d\n", len);
         Encapsulation *packet = (Encapsulation *)buffer;
         settle_action(packet);
     }
@@ -89,8 +88,11 @@ void send_packet(enum verbs action, void *data, size_t data_size)
 {
     Encapsulation packet;
     encapsulate_data(&packet, config_get_client_id(), 0, action, data, data_size);
-    write(cnx->sock, (const unsigned char *)&packet, sizeof(Encapsulation));
+    write(cnx->sock, (const u_int8_t *)&packet, sizeof(Encapsulation));
 }
+
+
+
 /**
  * @brief Close connection between client and server
  * 
@@ -99,5 +101,4 @@ void close_connection(void)
 {
     pthread_cancel(threads.stdin_thread);
     close(cnx->sock);
-    // close_main_window(TRUE);
 }

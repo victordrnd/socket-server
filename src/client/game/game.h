@@ -10,7 +10,7 @@
 #include <sys/time.h>
 #include "../../common/game.h"
 
-Game*  init_game(Game *game);
+Game* init_game(void);
 void game_set_current_bet(unsigned int bet);
 void game_set_balance(unsigned int balance);
 void game_set_action(enum actions action);

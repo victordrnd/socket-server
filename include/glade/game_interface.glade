@@ -290,7 +290,7 @@
                         <property name="margin_left">50</property>
                         <property name="margin_right">50</property>
                         <property name="margin_bottom">20</property>
-                        <property name="fraction">0.14999999999999999</property>
+                        <property name="fraction">1</property>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
