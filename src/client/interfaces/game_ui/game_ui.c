@@ -51,6 +51,7 @@ gboolean activate_countdown(ProgressData *data)
         gtk_progress_bar_set_fraction(data->progress_bar, 1);
         gtk_widget_hide(data->progress_bar);
         data->callback(NULL);
+        free(data);
         return FALSE;
     }
     return TRUE;
