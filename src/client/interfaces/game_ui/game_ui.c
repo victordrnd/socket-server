@@ -35,7 +35,6 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
 }
 
 
-
 /**
  * @brief Activate countdown for progress_bar
  * 
@@ -43,26 +42,18 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
  * @param seconds time to go to 0
  * @param fps fraps per seconds for animation
  */
-void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps)
+gboolean activate_countdown(ProgressData *data)
 {
-    gtk_widget_show((GtkWidget *)progress_bar);
-    gtk_progress_bar_set_show_text(progress_bar, TRUE);
-    for (int i = seconds * fps; i >= 0; i--)
-    {
-        gdouble fraction = (i * (1.0 / seconds)) / fps;
-        if (((int)fraction*100) % 10 == 0)
-        {
-            char *res = (char *)malloc(3 * sizeof(char));
-            sprintf(res, "%.f s", (double)i / fps);
-            gtk_progress_bar_set_text(progress_bar, res);
-            free(res);
-        }
-        gtk_progress_bar_set_fraction(progress_bar, fraction);
-        while (gtk_events_pending())
-            gtk_main_iteration();
-        g_usleep(1e6 / fps);
+    gtk_progress_bar_set_show_text(data->progress_bar, TRUE);
+    data->progress -= (1.0 /(data->time*10));
+    gtk_progress_bar_set_fraction(data->progress_bar, data->progress);
+    if(data->progress <= 0.01){
+        gtk_progress_bar_set_fraction(data->progress_bar, 1);
+        gtk_widget_hide(data->progress_bar);
+        data->callback(NULL);
+        return FALSE;
     }
-    gtk_widget_hide((GtkWidget *)progress_bar);
+    return TRUE;
 }
 
 

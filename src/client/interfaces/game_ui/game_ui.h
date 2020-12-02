@@ -9,8 +9,15 @@
 
 #include <gtk/gtk.h>
 
+typedef struct _ProgressData {
+  GtkProgressBar *progress_bar;
+  GSourceFunc callback;
+  double progress;
+  int time;
+} ProgressData;
+
 void untoggle_previous_bet_btn(GtkBuilder *builder,GtkWidget *button);
-void activate_countdown(GtkProgressBar *progress_bar, int seconds, int fps);
+gboolean activate_countdown(ProgressData *data);
 void toggle_action_button(GtkBuilder *builder, gboolean sensitive);
 void toggle_radio_bet_button_sensitive(GtkBuilder *builder, gboolean sensitive);
 void stop_count_down(GtkProgressBar *progress_bar);
