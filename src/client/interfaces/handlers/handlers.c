@@ -189,7 +189,7 @@ gboolean on_round_start_action(Round_Start_data *data)
     progress_data->progress = 1.0;
     progress_data->time = data->waiting_time * 2;
     gtk_widget_show((GtkWidget *)progress_bar);
-    g_timeout_add(50, activate_countdown, progress_data);
+    g_timeout_add(50, (GSourceFunc) activate_countdown, progress_data);
     return FALSE;
 }
 
@@ -207,16 +207,16 @@ gboolean on_round_end_action(Game *data)
     balance_data->label = label;
     if (game_get_balance() < data->balance)
     {
-        balance_data->class = "balance-win";
-        balance_toggle_class(balance_data);
-        g_timeout_add(300, balance_toggle_class, balance_data);
+        balance_data->class_name = "balance-win";
     }
     else if (game_get_balance() > data->balance)
     {
-        balance_data->class = "balance-loose";
-        balance_toggle_class(balance_data);
-        g_timeout_add(300, balance_toggle_class, balance_data);
+        balance_data->class_name = "balance-loose";
+    }else{
+        balance_data->class_name = "balance-draw";
     }
+    balance_toggle_class(balance_data);
+    g_timeout_add(300, balance_toggle_class, balance_data);
     set_game(data);
     game_next_round();
     game_set_balance(data->balance);

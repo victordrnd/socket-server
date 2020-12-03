@@ -49,7 +49,7 @@ gboolean activate_countdown(ProgressData *data)
     if (data->progress <= 0.01)
     {
         gtk_progress_bar_set_fraction(data->progress_bar, 1);
-        gtk_widget_hide(data->progress_bar);
+        gtk_widget_hide((GtkWidget*) data->progress_bar);
         data->callback(NULL);
         free(data);
         return FALSE;
@@ -85,14 +85,14 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
 gboolean balance_toggle_class(gpointer data)
 {
     BalanceData *balance_data = (BalanceData *)data;
-    GtkStyleContext *context = gtk_widget_get_style_context(balance_data->label);
-    if (gtk_style_context_has_class(context, balance_data->class))
+    GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) balance_data->label);
+    if (gtk_style_context_has_class(context, balance_data->class_name))
     {
-        gtk_style_context_remove_class(context, balance_data->class);
+        gtk_style_context_remove_class(context, balance_data->class_name);
     }
     else
     {
-        gtk_style_context_add_class(context, balance_data->class);
+        gtk_style_context_add_class(context, balance_data->class_name);
     }
     return FALSE;
 }

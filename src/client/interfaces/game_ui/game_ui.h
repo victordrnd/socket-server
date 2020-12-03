@@ -18,7 +18,7 @@ typedef struct _ProgressData {
 
 typedef struct {
   GtkLabel *label;
-  char * class;
+  char * class_name;
 }BalanceData;
 
 void untoggle_previous_bet_btn(GtkBuilder *builder,GtkWidget *button);
