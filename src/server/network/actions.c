@@ -266,10 +266,10 @@ void on_disconnect_action(Encapsulation *packet)
 {
     debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", packet->sender_id);
     connection_t* connection = get_connection(packet->sender_id);
-    close(connection->sockfd);
-    del(connection);
-    free(connection);
-    pthread_exit(0);
+    // close(connection->sockfd);
+    // del(connection);
+    // free(connection);
+    // pthread_exit(0);
 }
 
 

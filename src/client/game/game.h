@@ -17,6 +17,7 @@ void game_set_action(enum actions action);
 void game_set_max_rounds(unsigned int maxrounds);
 void game_set_react_time(struct timeval round_start_time, struct timeval action_clicked_time);
 int game_get_current_bet(void);
+unsigned int game_get_balance(void);
 bool game_next_round(void);
 Game *get_game(void);
 void set_game(Game *);

@@ -25,8 +25,6 @@ void on_mise_10_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
-
-
 /**
  * @brief Mise 25 handler
  * 
@@ -37,8 +35,6 @@ void on_mise_25_selected(GtkButton *button)
     game_set_current_bet(25);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
-
-
 
 /**
  * @brief Mise 50 handler
@@ -51,8 +47,6 @@ void on_mise_50_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
-
-
 /**
  * @brief Mise 75 handler
  * 
@@ -64,8 +58,6 @@ void on_mise_75_selected(GtkButton *button)
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
 
-
-
 /**
  * @brief Mise 100 handler
  * 
@@ -76,8 +68,6 @@ void on_mise_100_selected(GtkButton *button)
     game_set_current_bet(100);
     untoggle_previous_bet_btn(builder, (GtkWidget *)button);
 }
-
-
 
 /**
  * @brief Handler for betray click event
@@ -95,8 +85,6 @@ void on_betray_btn_click(GtkWidget *button __attribute__((unused)))
     send_action_packet(get_game());
 }
 
-
-
 /**
  * @brief Hander for collaborate click event
  * 
@@ -113,13 +101,9 @@ void on_collaborate_btn_click(GtkWidget *button __attribute__((unused)))
     send_action_packet(get_game());
 }
 
-
-
 /////////////////////
 /* NETWORK HANDLERS*/
 /////////////////////
-
-
 
 /**
  * @brief UI changes on connected action
@@ -137,8 +121,6 @@ gboolean on_connected_action(Connected_data *data)
     return FALSE;
 }
 
-
-
 /**
  * @brief UI changes on failed action
  * 
@@ -155,8 +137,6 @@ gboolean on_failed_action(gpointer data __attribute__((unused)))
     gtk_style_context_add_class(context, "error-label");
     return FALSE;
 }
-
-
 
 /**
  * @brief UI changes on game start action
@@ -178,7 +158,8 @@ gboolean on_game_start_action(Game_Start_data *data)
  * @brief Executed on round start progress Bar end
  * 
  */
-gboolean on_round_start_ready(gpointer data __attribute__((unused))){
+gboolean on_round_start_ready(gpointer data __attribute__((unused)))
+{
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
     toggle_action_button(builder, TRUE);
     gtk_label_set_label(label, "A vous de jouer!");
@@ -191,7 +172,7 @@ gboolean on_round_start_ready(gpointer data __attribute__((unused))){
  * 
  * @param data 
  */
-gboolean on_round_start_action(Round_Start_data *data )
+gboolean on_round_start_action(Round_Start_data *data)
 {
 
     GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "info_label");
@@ -202,17 +183,15 @@ gboolean on_round_start_action(Round_Start_data *data )
 
     GtkProgressBar *progress_bar = (GtkProgressBar *)gtk_builder_get_object(builder, "progressbar");
 
-    ProgressData *progress_data = (ProgressData *) malloc(sizeof(ProgressData));
+    ProgressData *progress_data = (ProgressData *)malloc(sizeof(ProgressData));
     progress_data->progress_bar = progress_bar;
     progress_data->callback = on_round_start_ready;
     progress_data->progress = 1.0;
-    progress_data->time = data->waiting_time*2;
-    gtk_widget_show((GtkWidget *) progress_bar);
+    progress_data->time = data->waiting_time * 2;
+    gtk_widget_show((GtkWidget *)progress_bar);
     g_timeout_add(50, activate_countdown, progress_data);
     return FALSE;
 }
-
-
 
 /**
  * @brief UI changes on round end action
@@ -222,7 +201,22 @@ gboolean on_round_start_action(Round_Start_data *data )
 gboolean on_round_end_action(Game *data)
 {
     GtkWidget *spinner = (GtkWidget *)gtk_builder_get_object(builder, "spinner_central");
+    GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "balance");
     gtk_widget_show(spinner);
+    BalanceData *balance_data = (BalanceData *) malloc(sizeof(BalanceData));
+    balance_data->label = label;
+    if (game_get_balance() < data->balance)
+    {
+        balance_data->class = "balance-win";
+        balance_toggle_class(balance_data);
+        g_timeout_add(300, balance_toggle_class, balance_data);
+    }
+    else if (game_get_balance() > data->balance)
+    {
+        balance_data->class = "balance-loose";
+        balance_toggle_class(balance_data);
+        g_timeout_add(300, balance_toggle_class, balance_data);
+    }
     set_game(data);
     game_next_round();
     game_set_balance(data->balance);
@@ -233,14 +227,12 @@ gboolean on_round_end_action(Game *data)
     sprintf(title, "Round %d / %d", data->current_round, data->total_rounds);
     gtk_window_set_title(window, title);
 
-    GtkLabel *label = (GtkLabel *)gtk_builder_get_object(builder, "balance");
+    
     char amount[10];
     sprintf(amount, "$ %d", data->balance);
     gtk_label_set_label(label, amount);
     return FALSE;
 }
-
-
 
 /**
  * @brief UI changes on game end action
@@ -278,8 +270,6 @@ gboolean on_game_end_action(Game_End_data *data)
     gtk_widget_show((GtkWidget *)image);
     return FALSE;
 }
-
-
 
 /**
  * @brief Set builder

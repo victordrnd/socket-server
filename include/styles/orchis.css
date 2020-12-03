@@ -66,10 +66,17 @@
 
   .error-label{
     font-size: 55px;
-    color : #F28B82;
+    color : rgb(242, 139, 130);
 
   }
   
+  .balance-win{
+    background-color : rgba(175, 242, 130, 0.45);
+  }
+
+  .balance-loose{
+    background-color : rgba(242, 139, 130,0.45);
+  }
 
   .progressbar{
       border: none;
