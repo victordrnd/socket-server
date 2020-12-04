@@ -15,6 +15,8 @@ typedef struct{
     Game *game;
 } Session;
 
+void remove_session(Session *session);
+Session *get_client_session(unsigned int client_id);
 
 void on_connect_action(Encapsulation *packet);
 void on_disconnect_action(Encapsulation *packet);
@@ -22,7 +24,6 @@ void send_game_start(Encapsulation *packet, Room* room);
 void send_round_start(unsigned int client_id, Room *room);
 void settle_action(Encapsulation *packet);
 bool check_oppponent_connected(unsigned int client_id);
-Session *check_opponent_played(unsigned int opponent_id);
 void calculate_balance(Game *game, Game *opponent_game);
 void check_results(Game *, Game *opponnent_game, unsigned int client_id, unsigned int opponent_id);
 void send_game_end(unsigned int client_id, enum results winner);

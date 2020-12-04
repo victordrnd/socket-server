@@ -37,8 +37,6 @@ void add_session(Session *session)
     assert(false);
 }
 
-
-
 /**
  * @brief Remove round session 
  * 
@@ -58,7 +56,24 @@ void remove_session(Session *session)
     assert(false);
 }
 
-
+/**
+ * @brief Check if client has played for current round
+ * 
+ * @param client_id 
+ * @return Session*
+ */
+Session *get_client_session(unsigned int client_id)
+{
+    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
+    {
+        if (sessions[i] != NULL)
+        {
+            if (sessions[i]->client_id == client_id)
+                return sessions[i];
+        }
+    }
+    return NULL;
+}
 
 /**
  * @brief Execute connect action
@@ -85,8 +100,6 @@ void on_connect_action(Encapsulation *packet)
     }
 }
 
-
-
 /**
  * @brief Send game start packet
  * 
@@ -110,8 +123,6 @@ void send_game_start(Encapsulation *packet, Room *room)
     create_csv_result_file((char *)room->name);
 }
 
-
-
 /**
  * @brief Send round start packet
  * 
@@ -125,8 +136,6 @@ void send_round_start(unsigned int client_id, Room *room)
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_START\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
 
-
-
 /**
  * @brief Send round end packet
  * 
@@ -139,8 +148,6 @@ void send_round_end(unsigned int client_id, Game *game)
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mROUND_END\033[0m to \033[1;32m#%d\033[0m. %d/%d\n", client_id, game->current_round, game->total_rounds);
 }
 
-
-
 /**
  * @brief Execute action's action
  * 
@@ -150,7 +157,7 @@ void on_action_received(Encapsulation *packet)
 {
     Game *game = (Game *)packet->data;
     unsigned int opponent_id = get_opponent_id(packet->sender_id);
-    Session *opponent_session = check_opponent_played(opponent_id);
+    Session *opponent_session = get_client_session(opponent_id);
     if (opponent_session != NULL)
     {
         Game *opponent_game = opponent_session->game;
@@ -178,39 +185,36 @@ void on_action_received(Encapsulation *packet)
     }
 }
 
-
-
 /**
  * @brief Calculate players balance based on current round data
  * 
  * @param game 
  * @param opponent_game 
  */
-void calculate_balance(Game *game, Game *opponent_game){
+void calculate_balance(Game *game, Game *opponent_game)
+{
     if (game->action == BETRAY)
-        {
-            if (opponent_game->action == BETRAY)
-            { //J1 Trahi et J2 Trahi
-                game->balance -= game->bet;
-                opponent_game->balance -= opponent_game->bet;
-            }
-            else
-            { //Collaborate
-                game->balance += game->bet;
-                opponent_game->balance -= opponent_game->bet;
-            }
+    {
+        if (opponent_game->action == BETRAY)
+        { //J1 Trahi et J2 Trahi
+            game->balance -= game->bet;
+            opponent_game->balance -= opponent_game->bet;
         }
         else
-        {
-            if (opponent_game->action == BETRAY)
-            { //J1 Collabore et J2 Trahi
-                game->balance -= game->bet;
-                opponent_game->balance += opponent_game->bet;
-            }
+        { //Collaborate
+            game->balance += game->bet;
+            opponent_game->balance -= opponent_game->bet;
         }
+    }
+    else
+    {
+        if (opponent_game->action == BETRAY)
+        { //J1 Collabore et J2 Trahi
+            game->balance -= game->bet;
+            opponent_game->balance += opponent_game->bet;
+        }
+    }
 }
-
-
 
 /**
  * @brief Check who won the game between client_id and opponent_id
@@ -240,8 +244,6 @@ void check_results(Game *game, Game *opponent_game, unsigned int client_id, unsi
     }
 }
 
-
-
 /**
  * @brief Send Game End packet
  * 
@@ -255,8 +257,6 @@ void send_game_end(unsigned int client_id, enum results winner)
     debug_print("\033[1;32mCONSOLE \033[0msent packet \033[0;32mGAME_END\033[0m to \033[1;32m#%d\033[0m.\n", client_id);
 }
 
-
-
 /**
  * @brief Execute disconnect action
  * 
@@ -265,14 +265,12 @@ void send_game_end(unsigned int client_id, enum results winner)
 void on_disconnect_action(Encapsulation *packet)
 {
     debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", packet->sender_id);
-    connection_t* connection = get_connection(packet->sender_id);
+    connection_t *connection = get_connection(packet->sender_id);
     close(connection->sockfd);
-    //del(connection);
+    del(connection);
     free(connection);
     pthread_exit(0);
 }
-
-
 
 /**
  * @brief Execute action based on packet's action
@@ -326,25 +324,3 @@ bool check_oppponent_connected(unsigned int client_id)
     }
     return false;
 }
-
-
-
-/**
- * @brief Check if opponent has played for current round
- * 
- * @param opponent_id 
- * @return Session* 
- */
-Session *check_opponent_played(unsigned int opponent_id)
-{
-    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
-    {
-        if (sessions[i] != NULL)
-        {
-            if (sessions[i]->client_id == opponent_id)
-                return sessions[i];
-        }
-    }
-    return NULL;
-}
-
