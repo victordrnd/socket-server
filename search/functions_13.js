@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['wcs_5fiter_5fwidth_1174',['wcs_iter_width',['../fort_8c.html#a50f1f21fe5a7f76e0dedd9e8d16486a4',1,'fort.c']]],
-  ['while_1175',['while',['../links_8txt.html#aac48c59dcc76698d8a651ef20251df47',1,'links.txt']]],
-  ['write_5fheader_1176',['write_header',['../result_8c.html#a3467a6636ce566ef897c244f0737aac3',1,'result.c']]],
-  ['write_5fline_1177',['write_line',['../result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f',1,'write_line(const char *filename, Game *data, int client_id):&#160;result.c'],['../result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f',1,'write_line(const char *filename, Game *data, int client_id):&#160;result.c']]],
-  ['wsnprint_5fn_5fstring_1178',['wsnprint_n_string',['../fort_8c.html#ac3c3118b3e7b905cdec8c2981330ac40',1,'fort.c']]],
-  ['wstr_5fn_5fsubstring_1179',['wstr_n_substring',['../fort_8c.html#a9a685f73dd10b05bd7a883df248ea331',1,'fort.c']]],
-  ['wstr_5fn_5fsubstring_5fbeg_1180',['wstr_n_substring_beg',['../fort_8c.html#ae62fe4106ad5446dac4c90d0e7bcec46',1,'fort.c']]],
-  ['wstrchr_5fcount_1181',['wstrchr_count',['../fort_8c.html#a4a18622ffa980ace9b771b1a30c1855b',1,'fort.c']]]
+  ['wcs_5fiter_5fwidth_1182',['wcs_iter_width',['../fort_8c.html#a50f1f21fe5a7f76e0dedd9e8d16486a4',1,'fort.c']]],
+  ['while_1183',['while',['../links_8txt.html#aac48c59dcc76698d8a651ef20251df47',1,'links.txt']]],
+  ['write_5fheader_1184',['write_header',['../result_8c.html#a3467a6636ce566ef897c244f0737aac3',1,'result.c']]],
+  ['write_5fline_1185',['write_line',['../result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f',1,'write_line(const char *filename, Game *data, int client_id):&#160;result.c'],['../result_8h.html#aa269210aba94e9caf3bf9bdbc1329d4f',1,'write_line(const char *filename, Game *data, int client_id):&#160;result.c']]],
+  ['wsnprint_5fn_5fstring_1186',['wsnprint_n_string',['../fort_8c.html#ac3c3118b3e7b905cdec8c2981330ac40',1,'fort.c']]],
+  ['wstr_5fn_5fsubstring_1187',['wstr_n_substring',['../fort_8c.html#a9a685f73dd10b05bd7a883df248ea331',1,'fort.c']]],
+  ['wstr_5fn_5fsubstring_5fbeg_1188',['wstr_n_substring_beg',['../fort_8c.html#ae62fe4106ad5446dac4c90d0e7bcec46',1,'fort.c']]],
+  ['wstrchr_5fcount_1189',['wstrchr_count',['../fort_8c.html#a4a18622ffa980ace9b771b1a30c1855b',1,'fort.c']]]
 ];

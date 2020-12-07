@@ -1,18 +1,18 @@
 <map id="on_action_received" name="on_action_received">
 <area shape="rect" id="node1" title="Execute action&#39;s action." alt="" coords="5,259,140,285"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a4d5445ccc270f71572fe072d4621ed9f" title="Add round session." alt="" coords="221,5,316,32"/>
-<area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ad1cea3e028cb068743c4e6fca47e01a2" title="Calculate players balance based on current round data." alt="" coords="205,56,332,83"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#a993dcff5a74d747c420db02ab49a731f" title="Check if opponent has played for current round." alt="" coords="188,107,349,133"/>
-<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#a5fea4741ee4da8be24b5ccd34fb131d6" title="Check who won the game between client_id and opponent_id." alt="" coords="217,157,320,184"/>
-<area shape="rect" id="node10" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title="Get the client room object." alt="" coords="401,259,516,285"/>
-<area shape="rect" id="node11" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title="Get the max round count object." alt="" coords="194,259,343,285"/>
-<area shape="rect" id="node12" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title="Get the opponent id object." alt="" coords="210,309,327,336"/>
-<area shape="rect" id="node13" href="$server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session." alt="" coords="210,360,327,387"/>
-<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="400,411,517,437"/>
-<area shape="rect" id="node15" href="$server_2network_2actions_8c.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="397,461,520,488"/>
-<area shape="rect" id="node16" href="$result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f" title="Write new result line in file." alt="" coords="230,512,307,539"/>
-<area shape="rect" id="node6" href="$server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="400,183,517,209"/>
-<area shape="rect" id="node7" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="568,411,664,437"/>
-<area shape="rect" id="node8" href="$client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="712,385,848,412"/>
-<area shape="rect" id="node9" href="$protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="718,436,842,463"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a4d5445ccc270f71572fe072d4621ed9f" title="Add round session." alt="" coords="215,5,310,32"/>
+<area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ad1cea3e028cb068743c4e6fca47e01a2" title="Calculate players balance based on current round data." alt="" coords="199,56,326,83"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#a5fea4741ee4da8be24b5ccd34fb131d6" title="Check who won the game between client_id and opponent_id." alt="" coords="211,107,314,133"/>
+<area shape="rect" id="node9" href="$server_2utils_2config_8c.html#ad449d93d01791051b81d7e1d1d4addc6" title="Get the client room object." alt="" coords="389,233,504,260"/>
+<area shape="rect" id="node10" href="$server_2network_2actions_8c.html#a69251fe9c3b5d3391be45d7584a0652a" title="Check if client has played for current round." alt="" coords="197,208,328,235"/>
+<area shape="rect" id="node11" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title="Get the max round count object." alt="" coords="188,259,337,285"/>
+<area shape="rect" id="node12" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title="Get the opponent id object." alt="" coords="204,309,321,336"/>
+<area shape="rect" id="node13" href="$server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session." alt="" coords="204,360,321,387"/>
+<area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="388,411,505,437"/>
+<area shape="rect" id="node15" href="$server_2network_2actions_8c.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="385,461,508,488"/>
+<area shape="rect" id="node16" href="$result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f" title="Write new result line in file." alt="" coords="224,512,301,539"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="388,145,505,172"/>
+<area shape="rect" id="node6" href="$client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="556,411,652,437"/>
+<area shape="rect" id="node7" href="$client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="700,385,836,412"/>
+<area shape="rect" id="node8" href="$protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="706,436,830,463"/>
 </map>

@@ -1,7 +1,9 @@
 <map id="on_round_end_action" name="on_round_end_action">
-<area shape="rect" id="node1" title="UI changes on round end action." alt="" coords="5,81,151,108"/>
-<area shape="rect" id="node2" href="$game_8c.html#a48af8574de5826a1afdbf5f163773c14" title="Check if next round is allowed and increment current round count." alt="" coords="202,5,326,32"/>
-<area shape="rect" id="node3" href="$game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title="Set Action code." alt="" coords="203,56,325,83"/>
-<area shape="rect" id="node4" href="$game_8c.html#af3f55587265764fcddc314dc807a27f5" title="Set game balance." alt="" coords="199,107,329,133"/>
-<area shape="rect" id="node5" href="$game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title="Set the game object." alt="" coords="225,157,303,184"/>
+<area shape="rect" id="node1" title="UI changes on round end action." alt="" coords="5,132,151,159"/>
+<area shape="rect" id="node2" href="$game__ui_8c.html#a37c0b386d8fadcf0fdcece902032df26" title=" " alt="" coords="199,5,345,32"/>
+<area shape="rect" id="node3" href="$game_8c.html#aced35ff8a49a5ba41158a407da860405" title="Get balance object." alt="" coords="207,56,337,83"/>
+<area shape="rect" id="node4" href="$game_8c.html#a48af8574de5826a1afdbf5f163773c14" title="Check if next round is allowed and increment current round count." alt="" coords="210,107,334,133"/>
+<area shape="rect" id="node5" href="$game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title="Set Action code." alt="" coords="211,157,333,184"/>
+<area shape="rect" id="node6" href="$game_8c.html#af3f55587265764fcddc314dc807a27f5" title="Set game balance." alt="" coords="207,208,337,235"/>
+<area shape="rect" id="node7" href="$game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title="Set the game object." alt="" coords="233,259,311,285"/>
 </map>

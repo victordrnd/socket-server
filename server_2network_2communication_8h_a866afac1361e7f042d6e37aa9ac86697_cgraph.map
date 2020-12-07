@@ -1,6 +1,8 @@
 <map id="threadProcess" name="threadProcess">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,112,83"/>
-<area shape="rect" id="node2" href="$server_2network_2communication_8c.html#ac1960ca052713a9abf6f4183f78cb85c" title="Add connection to connections list." alt="" coords="187,5,229,32"/>
-<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title="Delete connection from connections list." alt="" coords="189,56,227,83"/>
-<area shape="rect" id="node4" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="160,107,256,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,112,133"/>
+<area shape="rect" id="node2" href="$server_2network_2communication_8c.html#ac1960ca052713a9abf6f4183f78cb85c" title="Add connection to connections list." alt="" coords="204,5,247,32"/>
+<area shape="rect" id="node3" href="$server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title="Delete connection from connections list." alt="" coords="206,56,245,83"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#a69251fe9c3b5d3391be45d7584a0652a" title="Check if client has played for current round." alt="" coords="160,107,291,133"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session." alt="" coords="167,157,284,184"/>
+<area shape="rect" id="node6" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="177,208,273,235"/>
 </map>
