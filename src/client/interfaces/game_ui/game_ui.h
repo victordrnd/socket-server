@@ -16,8 +16,14 @@ typedef struct _ProgressData {
   int time;
 } ProgressData;
 
+typedef struct {
+  GtkLabel *label;
+  char * class_name;
+}BalanceData;
+
 void untoggle_previous_bet_btn(GtkBuilder *builder,GtkWidget *button);
 gboolean activate_countdown(ProgressData *data);
+gboolean balance_toggle_class(gpointer data);
 void toggle_action_button(GtkBuilder *builder, gboolean sensitive);
 void toggle_radio_bet_button_sensitive(GtkBuilder *builder, gboolean sensitive);
 void stop_count_down(GtkProgressBar *progress_bar);

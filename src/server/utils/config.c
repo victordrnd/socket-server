@@ -170,7 +170,7 @@ Room *get_client_room(unsigned int client_id)
  * @param client_id 
  * @return int 
  */
-int get_opponent_id(unsigned int client_id) //recuperer l'id de l'adversaire
+int get_opponent_id(unsigned int client_id)
 {
     Room *current_room = get_client_room(client_id);
     unsigned int *wp = current_room->clients_id;

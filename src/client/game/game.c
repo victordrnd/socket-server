@@ -44,6 +44,14 @@ int game_get_current_bet(void){
     return game->bet;
 }
 
+/**
+ * @brief  Get balance object
+ * @note   
+ * @retval 
+ */
+unsigned int game_get_balance(void){
+    return game->balance;
+}
 
 
 /**

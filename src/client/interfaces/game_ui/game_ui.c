@@ -34,7 +34,6 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
     }
 }
 
-
 /**
  * @brief Activate countdown for progress_bar
  * 
@@ -45,18 +44,18 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
 gboolean activate_countdown(ProgressData *data)
 {
     gtk_progress_bar_set_show_text(data->progress_bar, TRUE);
-    data->progress -= (1.0 /(data->time*10));
+    data->progress -= (1.0 / (data->time * 10));
     gtk_progress_bar_set_fraction(data->progress_bar, data->progress);
-    if(data->progress <= 0.01){
+    if (data->progress <= 0.01)
+    {
         gtk_progress_bar_set_fraction(data->progress_bar, 1);
-        gtk_widget_hide(data->progress_bar);
+        gtk_widget_hide((GtkWidget*) data->progress_bar);
         data->callback(NULL);
+        free(data);
         return FALSE;
     }
     return TRUE;
 }
-
-
 
 /**
  * @brief Hide countdown progress bar
@@ -68,8 +67,6 @@ void stop_count_down(GtkProgressBar *progress_bar)
     gtk_widget_hide((GtkWidget *)progress_bar);
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }
-
-
 
 /**
  * @brief Activate or desactivate action buttons
@@ -85,7 +82,20 @@ void toggle_action_button(GtkBuilder *builder, gboolean sensitive)
     gtk_widget_set_sensitive(collaborate_btn, sensitive);
 }
 
-
+gboolean balance_toggle_class(gpointer data)
+{
+    BalanceData *balance_data = (BalanceData *)data;
+    GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) balance_data->label);
+    if (gtk_style_context_has_class(context, balance_data->class_name))
+    {
+        gtk_style_context_remove_class(context, balance_data->class_name);
+    }
+    else
+    {
+        gtk_style_context_add_class(context, balance_data->class_name);
+    }
+    return FALSE;
+}
 
 /**
  * @brief Toogle radio bet buttons sensitivity

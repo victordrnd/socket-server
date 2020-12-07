@@ -135,7 +135,7 @@ Dans le *Makefile* modifié la ligne comme ceci :
 
 | Code | Client     | Server      | Détails                                                           |
 |------|------------|-------------|-------------------------------------------------------------------|
-|  16  | CONNECT    |             |                                                                   |
+|  16  | CONNECT    |             | *void*                                                            |
 |  17  |            | CONNECTED   | *Connected_data*                                                  |
 |  18  |            | FAILED      | *Failed_data*                                                     |
 |  19  |            | GAME_START  | *Game_Start_data*                                                 |
@@ -143,7 +143,7 @@ Dans le *Makefile* modifié la ligne comme ceci :
 |  21  | ACTION     |             | *Game*                                                            |
 |  22  |            | ROUND_END   | *Game*                                                            |
 |  23  |            | GAME_END    | *Game_End_data*                                                   |
-|  24  | DISCONNECT |             | *void                                                             |
+|  24  | DISCONNECT |             | *void*                                                             |
 
 
 
