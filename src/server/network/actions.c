@@ -37,24 +37,6 @@ void add_session(Session *session)
     assert(false);
 }
 
-/**
- * @brief Remove round session 
- * 
- * @param session session to remove
- */
-void remove_session(Session *session)
-{
-    assert(session);
-    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
-    {
-        if (session == sessions[i])
-        {
-            sessions[i] = NULL;
-            return;
-        }
-    }
-    assert(false);
-}
 
 /**
  * @brief Check if client has played for current round
@@ -167,7 +149,7 @@ void on_action_received(Encapsulation *packet)
         write_line(room->name, opponent_game, opponent_session->client_id);
         send_round_end(packet->sender_id, game);
         send_round_end(opponent_id, opponent_game);
-        remove_session(opponent_session);
+        opponent_session = NULL;
         if (game->current_round < get_max_round_count(room))
         {
             send_round_start(packet->sender_id, room);

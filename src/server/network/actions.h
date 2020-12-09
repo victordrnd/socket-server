@@ -15,7 +15,6 @@ typedef struct{
     Game *game;
 } Session;
 
-void remove_session(Session *session);
 Session *get_client_session(unsigned int client_id);
 
 void on_connect_action(Encapsulation *packet);
