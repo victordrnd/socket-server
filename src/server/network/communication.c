@@ -113,7 +113,7 @@ void *threadProcess(void *ptr)
     debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", connection->client_id);
     Session *client_session = get_client_session(connection->client_id);
     if(client_session != NULL){
-        client_session = NULL;
+        remove_session(client_session);
     }
     close(connection->sockfd);
     del(connection);
