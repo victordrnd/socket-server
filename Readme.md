@@ -123,27 +123,9 @@ for any corresponding short options.
 
 # Développement
 
-## Debug
-Il est possible de désactiver le mode __DEBUG__ sur le serveur et le client en ajoutant **-DNDEBUG** lors de la compilation.
-
-Dans le *Makefile* modifié la ligne comme ceci :
-
-`CFLAGS	:= -Wall -Wextra -g -std=c11 -DNDEBUG`
+La documentation spécifique au développement de ce projet est disponible [ici](docs/Readme.md)
 
 
-## Protocole
-
-| Code | Client     | Server      | Détails                                                           |
-|------|------------|-------------|-------------------------------------------------------------------|
-|  16  | CONNECT    |             | *void*                                                            |
-|  17  |            | CONNECTED   | *Connected_data*                                                  |
-|  18  |            | FAILED      | *Failed_data*                                                     |
-|  19  |            | GAME_START  | *Game_Start_data*                                                 |
-|  20  |            | ROUND_START | *Round_Start_data*                                                |
-|  21  | ACTION     |             | *Game*                                                            |
-|  22  |            | ROUND_END   | *Game*                                                            |
-|  23  |            | GAME_END    | *Game_End_data*                                                   |
-|  24  | DISCONNECT |             | *void*                                                             |
 
 
 
