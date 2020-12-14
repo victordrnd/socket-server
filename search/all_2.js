@@ -38,7 +38,7 @@ var searchData=
   ['buffer_5fsubstring_57',['buffer_substring',['../fort_8c.html#a9dd52c23737b04223baca49230f08d1e',1,'fort.c']]],
   ['buffer_5ftext_5fvisible_5fheight_58',['buffer_text_visible_height',['../fort_8c.html#a5f634484454c5580d385c204b7e20cb3',1,'fort.c']]],
   ['buffer_5ftext_5fvisible_5fwidth_59',['buffer_text_visible_width',['../fort_8c.html#abeb7cd0e534872a130c148ea69e950a1',1,'fort.c']]],
-  ['buffersize_60',['BUFFERSIZE',['../client_2network_2communication_8h.html#ac3146f1e9227301bb4aa518f4d336cee',1,'BUFFERSIZE():&#160;communication.h'],['../server_2network_2communication_8h.html#ac3146f1e9227301bb4aa518f4d336cee',1,'BUFFERSIZE():&#160;communication.h']]],
+  ['buffersize_60',['BUFFERSIZE',['../client_2network_2communication_8h.html#ac3146f1e9227301bb4aa518f4d336cee',1,'communication.h']]],
   ['builder_61',['builder',['../handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b',1,'handlers.c']]],
   ['built_5fin_5fexternal_5fstyles_62',['built_in_external_styles',['../fort_8c.html#a4c296f49d560749f35b96e4ba4524abc',1,'fort.c']]],
   ['built_5fin_5fstyles_63',['built_in_styles',['../fort_8c.html#ae712501287780ce0f9432a9f6b3ee182',1,'fort.c']]],

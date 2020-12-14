@@ -172,19 +172,20 @@ Fonctions</h2></td></tr>
 
 <p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00044">44</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    gtk_progress_bar_set_show_text(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, TRUE);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a> -= (1.0 / (data-&gt;<a class="code" href="struct___progress_data.html#a571b0810e106942b631443a24b7b81e5">time</a> * 10));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    gtk_progress_bar_set_fraction(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span> (data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a> &lt;= 0.01)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        gtk_progress_bar_set_fraction(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, 1);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        gtk_widget_hide((GtkWidget*) data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        data-&gt;<a class="code" href="struct___progress_data.html#a08089c431a0583aa6a55f4cb0d98eb39">callback</a>(NULL);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        free(data);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> FALSE;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> TRUE;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    GTK_PROGRESS_BAR(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    gtk_progress_bar_set_show_text(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, TRUE);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a> -= (1.0 / (data-&gt;<a class="code" href="struct___progress_data.html#a571b0810e106942b631443a24b7b81e5">time</a> * 10));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    gtk_progress_bar_set_fraction(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (data-&gt;<a class="code" href="struct___progress_data.html#a2d578d5328418f356ca57a53196052dc">progress</a> &lt;= 0.01)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        gtk_progress_bar_set_fraction(data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>, 1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        gtk_widget_hide((GtkWidget*) data-&gt;<a class="code" href="struct___progress_data.html#afa841ad7787dc03a6c3b6199d395553c">progress_bar</a>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        data-&gt;<a class="code" href="struct___progress_data.html#a08089c431a0583aa6a55f4cb0d98eb39">callback</a>(NULL);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        free(data);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> FALSE;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> TRUE;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="game__ui_8h_source.html#l00014">_ProgressData::callback</a>, <a class="el" href="game__ui_8h_source.html#l00015">_ProgressData::progress</a>, <a class="el" href="game__ui_8h_source.html#l00013">_ProgressData::progress_bar</a>, et <a class="el" href="game__ui_8h_source.html#l00016">_ProgressData::time</a>.</p>
 
@@ -223,20 +224,20 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00085">85</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="struct_balance_data.html">BalanceData</a> *balance_data = (<a class="code" href="struct_balance_data.html">BalanceData</a> *)data;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) balance_data-&gt;<a class="code" href="struct_balance_data.html#a2a3d452d82367090930ae62a576e5731">label</a>);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> (gtk_style_context_has_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>))</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        gtk_style_context_remove_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        gtk_style_context_add_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> FALSE;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00087">87</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="struct_balance_data.html">BalanceData</a> *balance_data = (<a class="code" href="struct_balance_data.html">BalanceData</a> *)data;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    GtkStyleContext *context = gtk_widget_get_style_context((GtkWidget *) balance_data-&gt;<a class="code" href="struct_balance_data.html#a2a3d452d82367090930ae62a576e5731">label</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">if</span> (gtk_style_context_has_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>))</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        gtk_style_context_remove_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        gtk_style_context_add_class(context, balance_data-&gt;<a class="code" href="struct_balance_data.html#acd3ad43907a0c013e6e2344edd497054">class_name</a>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> FALSE;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="game__ui_8h_source.html#l00021">BalanceData::class_name</a>, et <a class="el" href="game__ui_8h_source.html#l00020">BalanceData::label</a>.</p>
 
@@ -283,11 +284,12 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00065">65</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00066">66</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    GTK_PROGRESS_BAR(progress_bar);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    gtk_widget_hide((GtkWidget *)progress_bar);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -326,13 +328,13 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00077">77</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;betray_btn&quot;</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;collaborate_btn&quot;</span>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    gtk_widget_set_sensitive(betray_btn, sensitive);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    gtk_widget_set_sensitive(collaborate_btn, sensitive);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00079">79</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    GtkWidget *betray_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;betray_btn&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    GtkWidget *collaborate_btn = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;collaborate_btn&quot;</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    gtk_widget_set_sensitive(betray_btn, sensitive);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    gtk_widget_set_sensitive(collaborate_btn, sensitive);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>.</p>
 
@@ -395,20 +397,20 @@ Voici le graphe des appelants de cette fonction :</div>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00106">106</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_25&quot;</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_50&quot;</span>);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_75&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_100&quot;</span>);</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    gtk_widget_set_sensitive(mise_10, sensitive);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    gtk_widget_set_sensitive(mise_25, sensitive);</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    gtk_widget_set_sensitive(mise_50, sensitive);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    gtk_widget_set_sensitive(mise_75, sensitive);</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    gtk_widget_set_sensitive(mise_100, sensitive);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<p class="definition">Définition à la ligne <a class="el" href="game__ui_8c_source.html#l00108">108</a> du fichier <a class="el" href="game__ui_8c_source.html">game_ui.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    GtkWidget *mise_10 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    GtkWidget *mise_25 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_25&quot;</span>);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    GtkWidget *mise_50 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_50&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    GtkWidget *mise_75 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_75&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    GtkWidget *mise_100 = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_100&quot;</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    gtk_widget_set_sensitive(mise_10, sensitive);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    gtk_widget_set_sensitive(mise_25, sensitive);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    gtk_widget_set_sensitive(mise_50, sensitive);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    gtk_widget_set_sensitive(mise_75, sensitive);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    gtk_widget_set_sensitive(mise_100, sensitive);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="handlers_8c_source.html#l00014">builder</a>.</p>
 
@@ -469,7 +471,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> == NULL)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = (GtkWidget *)gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>); <span class="comment">//selected by default</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> = (GtkWidget *) GTK_BUTTON(gtk_builder_get_object(<a class="code" href="handlers_8c.html#afa501dbb63ae6077ac8db76b560de42b">builder</a>, <span class="stringliteral">&quot;mise_10&quot;</span>)); <span class="comment">//selected by default</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="game__ui_8c.html#aa51f04c144f825221a92e885e28f9ac0">previousToggledBtn</a> != button)</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
@@ -514,7 +516,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="ttc" id="astruct___progress_data_html_a571b0810e106942b631443a24b7b81e5"><div class="ttname"><a href="struct___progress_data.html#a571b0810e106942b631443a24b7b81e5">_ProgressData::time</a></div><div class="ttdeci">int time</div><div class="ttdef"><b>Definition:</b> <a href="game__ui_8h_source.html#l00016">game_ui.h:16</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi 7 Décembre 2020 08:55:24 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Lundi 14 Décembre 2020 17:58:34 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

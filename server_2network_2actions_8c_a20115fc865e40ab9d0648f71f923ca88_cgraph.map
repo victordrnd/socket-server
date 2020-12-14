@@ -7,7 +7,7 @@
 <area shape="rect" id="node10" href="$server_2network_2actions_8c.html#a69251fe9c3b5d3391be45d7584a0652a" title="Check if client has played for current round." alt="" coords="197,208,328,235"/>
 <area shape="rect" id="node11" href="$server_2utils_2config_8c.html#a3ec6cc3245582f471ca97f8eb0fc09e9" title="Get the max round count object." alt="" coords="188,259,337,285"/>
 <area shape="rect" id="node12" href="$server_2utils_2config_8c.html#a72b1706411d9de5e1b3800019f4b8df2" title="Get the opponent id object." alt="" coords="204,309,321,336"/>
-<area shape="rect" id="node13" href="$server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session." alt="" coords="204,360,321,387"/>
+<area shape="rect" id="node13" href="$server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session" alt="" coords="204,360,321,387"/>
 <area shape="rect" id="node14" href="$server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="388,411,505,437"/>
 <area shape="rect" id="node15" href="$server_2network_2actions_8c.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="385,461,508,488"/>
 <area shape="rect" id="node16" href="$result_8c.html#aa269210aba94e9caf3bf9bdbc1329d4f" title="Write new result line in file." alt="" coords="224,512,301,539"/>
