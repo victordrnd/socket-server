@@ -24,6 +24,7 @@ void write_header(const char *filename)
     assert(file != NULL);
     fprintf(file, "client_id;react_time;bet;balance;current_round;total_rounds;action\n");
     fclose(file);
+    free(filename);
 }
 
 /**
@@ -77,4 +78,5 @@ void write_line(const char *filename, Game *data, int client_id)
         fprintf(file, "%d;%.3f;%d;%d;%d;%d;%s\n", client_id, data->react_time / 1000, data->bet, data->balance, data->current_round, data->total_rounds, action);
     }
     fclose(file);
+    free(file_name);
 }

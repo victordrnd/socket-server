@@ -69,14 +69,14 @@ Connection *open_connection(Config *configuration)
  */
 void *listen_socket_thread_process(void *ptr)
 {
-    char buffer_in[BUFFERSIZE];
+    Encapsulation *buffer_in = (Encapsulation *) malloc(sizeof(Encapsulation));
     int sockfd = *((int *)ptr);
     int len;
     while ((len = read(sockfd, buffer_in, sizeof(Encapsulation))) != 0)
     {
-        u_int8_t *buffer = (u_int8_t *) malloc(sizeof(Encapsulation));
+        Encapsulation *buffer = (Encapsulation *) malloc(sizeof(Encapsulation));
         memcpy(buffer, buffer_in, sizeof(Encapsulation));
-        Encapsulation *packet = (Encapsulation *)buffer;
+        Encapsulation *packet = buffer;
         settle_action(packet);
     }
     close_connection();
@@ -88,7 +88,7 @@ void send_packet(enum verbs action, void *data, size_t data_size)
 {
     Encapsulation packet;
     encapsulate_data(&packet, config_get_client_id(), 0, action, data, data_size);
-    write(cnx->sock, (const u_int8_t *)&packet, sizeof(Encapsulation));
+    write(cnx->sock, &packet, sizeof(Encapsulation));
 }
 
 

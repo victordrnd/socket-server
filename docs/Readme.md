@@ -95,3 +95,8 @@ enum results {
 ```
 
 
+## Ressources
+
+L'ensemble des fichiers nécessaires au fonctionnement de l'application (images, css, xml) sont convertis en un seul fichier binaire *app.gressource* une fois le client compilé. Pour ajouter de nouveau fichier à convertir, il faut ajouter le lien vers celui ci dans le fichier *ressources.xml*
+
+> Le prefix actuel est `/org/ics/`

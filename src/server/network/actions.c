@@ -167,7 +167,7 @@ void on_action_received(Encapsulation *packet)
         write_line(room->name, opponent_game, opponent_session->client_id);
         send_round_end(packet->sender_id, game);
         send_round_end(opponent_id, opponent_game);
-        remove_session(opponent_session);	
+        remove_session(opponent_session);
         if (game->current_round < get_max_round_count(room))
         {
             send_round_start(packet->sender_id, room);
@@ -325,17 +325,3 @@ bool check_oppponent_connected(unsigned int client_id)
     return false;
 }
 
-
-
-
-//-> Quand un client fait un choix
-
-//si choix de l'adversaire n'est pas stocké get_client_choice(get_adversaire_id(connection->client_id))
-
-    //add_client_choice(mon_choix)
-
-//sinon
-    //Récupère le choix de l'adversaire
-    //Je détermine qui a gagné  0 -> 0 |  1 -> 1 | 0 -> 1
-    //IMPORTANT : adversaire_choice = NULL
-    //Envoie aux deux client qui a gagné 
