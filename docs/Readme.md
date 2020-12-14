@@ -100,3 +100,14 @@ enum results {
 L'ensemble des fichiers nécessaires au fonctionnement de l'application (images, css, xml) sont convertis en un seul fichier binaire *app.gressource* une fois le client compilé. Pour ajouter de nouveau fichier à convertir, il faut ajouter le lien vers celui ci dans le fichier *ressources.xml*
 
 > Le prefix actuel est `/org/ics/`
+
+
+## Github Actions
+
+Le projet comporte deux Actions Github.
+
+### Doxygen
+A chaque push ou merge sur la branche master, la documentation doxygen est créée et publiée sur [https://victordurand.fr/socket-server](https://victordurand.fr/socket-server) 
+
+### Test de compilation
+Une deuxième action est chargée de vérifier que le projet se compile sans erreur, sinon le merge n'est pas autorisé.
