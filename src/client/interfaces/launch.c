@@ -40,7 +40,7 @@ void init_main_window(int argc, char **argv)
     GtkBuilder *builder = gtk_builder_new_from_resource("/org/ics/include/glade/game_interface.glade");
 
     win = GTK_WIDGET(gtk_builder_get_object(builder, "app_win"));
-    GtkImage *img = (GtkImage *) gtk_image_new_from_resource("/org/ics/include/images/logo.png");
+    GtkImage *img = (GtkImage *) gtk_image_new_from_resource("/org/ics/include/images/icon.svg");
     gtk_window_set_icon((GtkWindow *) win, gtk_image_get_pixbuf(img));
     gtk_builder_connect_signals(builder, builder);
     gtk_widget_show(win);

@@ -20,7 +20,7 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
 {
     if (previousToggledBtn == NULL)
     {
-        previousToggledBtn = (GtkWidget *)gtk_builder_get_object(builder, "mise_10"); //selected by default
+        previousToggledBtn = (GtkWidget *) GTK_BUTTON(gtk_builder_get_object(builder, "mise_10")); //selected by default
     }
     if (previousToggledBtn != button)
     {
@@ -43,6 +43,7 @@ void untoggle_previous_bet_btn(GtkBuilder *builder, GtkWidget *button)
  */
 gboolean activate_countdown(ProgressData *data)
 {
+    GTK_PROGRESS_BAR(data->progress_bar);
     gtk_progress_bar_set_show_text(data->progress_bar, TRUE);
     data->progress -= (1.0 / (data->time * 10));
     gtk_progress_bar_set_fraction(data->progress_bar, data->progress);
@@ -64,6 +65,7 @@ gboolean activate_countdown(ProgressData *data)
  */
 void stop_count_down(GtkProgressBar *progress_bar)
 {
+    GTK_PROGRESS_BAR(progress_bar);
     gtk_widget_hide((GtkWidget *)progress_bar);
     gtk_progress_bar_set_fraction(progress_bar, (gdouble)1);
 }

@@ -32,8 +32,6 @@ void init_sockets_array(void)
     }
 }
 
-
-
 /**
  * @brief Add connection to connections list
  * 
@@ -52,8 +50,6 @@ void add(connection_t *connection)
     perror("Too much simultaneous connections");
     exit(-5);
 }
-
-
 
 /**
  * @brief Delete connection from connections list
@@ -74,8 +70,6 @@ void del(connection_t *connection)
     exit(-5);
 }
 
-
-
 /**
  * Thread allowing server to handle multiple client connections
  * @param ptr connection_t 
@@ -83,7 +77,7 @@ void del(connection_t *connection)
  */
 void *threadProcess(void *ptr)
 {
-    char buffer_in[BUFFERSIZE];
+    Encapsulation *buffer_in = (Encapsulation *) malloc(sizeof(Encapsulation));
 
     int len;
     connection_t *connection;
@@ -94,11 +88,11 @@ void *threadProcess(void *ptr)
 
     add(connection);
 
-    while ((len = read(connection->sockfd, buffer_in, BUFFERSIZE)) > 0){
+    while ((len = read(connection->sockfd, buffer_in, sizeof(Encapsulation))) > 0)
+    {
 
-        int size = sizeof(Encapsulation);
-        u_int8_t *buffer = (u_int8_t *)malloc(size);
-        memcpy(buffer, buffer_in, size);
+        Encapsulation *buffer = (Encapsulation *) malloc(sizeof(Encapsulation));
+        memcpy(buffer, buffer_in, sizeof(Encapsulation));
         Encapsulation *packet = (Encapsulation *)buffer;
         if (packet->action == CONNECT)
         {
@@ -107,12 +101,12 @@ void *threadProcess(void *ptr)
 
         assert(sizeof(*packet) == sizeof(Encapsulation));
         settle_action(packet);
-
-        memset(buffer_in, '\0', BUFFERSIZE);
+        free(buffer);
     }
     debug_print("\033[1;32m#%d\033[0m Connection to client ended\n", connection->client_id);
     Session *client_session = get_client_session(connection->client_id);
-    if(client_session != NULL){
+    if (client_session != NULL)
+    {
         remove_session(client_session);
     }
     close(connection->sockfd);
@@ -120,8 +114,6 @@ void *threadProcess(void *ptr)
     free(connection);
     pthread_exit(0);
 }
-
-
 
 /**
  * @brief Create a server socket object
@@ -162,8 +154,6 @@ int create_server_socket(Config *configuration)
     return sockfd;
 }
 
-
-
 /**
  * @brief Get the connection object
  * 
@@ -183,8 +173,6 @@ connection_t *get_connection(unsigned int client_id)
     return NULL;
 }
 
-
-
 /**
  * @brief Send packet to client
  * 
@@ -198,5 +186,5 @@ void send_packet(unsigned int client_id, enum verbs action, void *data, size_t d
     Encapsulation packet;
     encapsulate_data(&packet, 0, client_id, action, data, data_size);
     connection_t *connection = get_connection(client_id);
-    write(connection->sockfd, (const u_int8_t *)&packet, sizeof(Encapsulation));
+    write(connection->sockfd, &packet, sizeof(Encapsulation));
 }

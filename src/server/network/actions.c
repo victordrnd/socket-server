@@ -37,23 +37,23 @@ void add_session(Session *session)
     assert(false);
 }
 
-/**
- * @brief Remove round session 
- * 
- * @param session session to remove
- */
-void remove_session(Session *session)
-{
-    assert(session);
-    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)
-    {
-        if (session == sessions[i])
-        {
-            sessions[i] = NULL;
-            return;
-        }
-    }
-    assert(false);
+/**	
+ * @brief Remove round session 	
+ * 	
+ * @param session session to remove	
+ */	
+void remove_session(Session *session)	
+{	
+    assert(session);	
+    for (int i = 0; i < MAXSIMULTANEOUSCLIENTS; i++)	
+    {	
+        if (session == sessions[i])	
+        {	
+            sessions[i] = NULL;	
+            return;	
+        }	
+    }	
+    assert(false);	
 }
 
 /**
@@ -324,3 +324,4 @@ bool check_oppponent_connected(unsigned int client_id)
     }
     return false;
 }
+
