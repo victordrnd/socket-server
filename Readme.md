@@ -13,24 +13,29 @@ On définira une partie comme étant un certain nombre de rounds. Un round est d
 </h1>
 
 
+
+
 ---
 # Documentation
-### 1. Installation
-- [Dépendances](#dépendances)
-- [Comment l'utiliser](#how-to-use)
+- [ICS - Dilemme du prisonnier](#ics---dilemme-du-prisonnier)
+  - [Contexte](#contexte)
+- [Documentation](#documentation)
+  - [Installation](#installation)
+    - [Dépendances](#dépendances)
+      - [Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)](#distribution-basée-sur-ubuntu-ubuntu-linux-mint-elementary-etc)
+      - [Fedora, CentOS](#fedora-centos)
+    - [How to use](#how-to-use)
+  - [Configuration](#configuration)
+    - [Configuration serveur](#configuration-serveur)
+    - [Configuration client](#configuration-client)
+    - [Export des résultats](#export-des-résultats)
+- [Développement](#développement)
 
-### 2. Configuration
-- [Serveur](#configuration-serveur)
-- [Client](#configuration-client)
-  
-### 2. Développement
-- [Debug](#debug)
-- [Protocole](#protocole)
 ## Installation 
 
 ### Dépendances
 
-Ce projet est dépendant de la librairie [libconfig](https://hyperrealm.github.io/libconfig/).
+Ce projet est dépendant de la librairie [**libconfig**](https://hyperrealm.github.io/libconfig/).
 #### Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)
 
 Exécutez la commande suivante dans un terminal.
@@ -121,9 +126,15 @@ Mandatory or optional arguments to long options are also mandatory or optional
 for any corresponding short options.
 ```
 
+
+### Export des résultats
+Une fois la partie terminée, les résultats sont accessibles dans le fichier `{nom_room}.csv`. 
+
+> **Remarque** : A chaque démarrage de partie sur cette room, les anciennes données associées à cette salle sont suprimmées. **Il est important de sauvegarder les résultats après chaque partie.**
+
 # Développement
 
-La documentation spécifique au développement de ce projet est disponible [ici](docs/Readme.md)
+La documentation spécifique au développement de ce projet est disponible [**ici**](docs/Readme.md)
 
 
 
