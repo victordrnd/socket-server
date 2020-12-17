@@ -73,7 +73,7 @@ $ ./output/client
 ### Configuration serveur
 La configuration du serveur se trouve dans le fichier `output/config/server_config.cfg` une fois le serveur compilé.
 
-```cfg
+```json
 bind_ip = "0.0.0.0";
 bind_port = 7799;
 max_simultaneous_connection = 50;
@@ -104,7 +104,7 @@ game_configuration =
 ### Configuration client
 La configuration du client se trouve dans le fichier `output/config/client_config.cfg` une fois le client compilé.
 
-```cfg
+```json
 client_id = 1;
 server_ip = "127.0.0.1";
 server_port = 7799;
