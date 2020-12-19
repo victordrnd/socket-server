@@ -76,38 +76,49 @@ Contexte</h2>
 <hr  />
  <h1><a class="anchor" id="autotoc_md15"></a>
 Documentation</h1>
-<h3><a class="anchor" id="autotoc_md16"></a>
-1. Installation</h3>
 <ul>
-<li><a href="#dépendances">Dépendances</a></li>
-<li><a href="#how-to-use">Comment l'utiliser</a></li>
+<li><a href="#ics---dilemme-du-prisonnier">ICS - Dilemme du prisonnier</a><ul>
+<li><a href="#contexte">Contexte</a></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md17"></a>
-2. Configuration</h3>
-<ul>
-<li><a href="#configuration-serveur">Serveur</a></li>
-<li><a href="#configuration-client">Client</a></li>
+</li>
+<li><a href="#documentation">Documentation</a><ul>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#dépendances">Dépendances</a><ul>
+<li><a href="#distribution-basée-sur-ubuntu-ubuntu-linux-mint-elementary-etc">Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)</a></li>
+<li><a href="#fedora-centos">Fedora, CentOS</a></li>
 </ul>
-<h3><a class="anchor" id="autotoc_md18"></a>
-2. Développement</h3>
-<ul>
-<li><a href="#debug">Debug</a></li>
-<li><a href="#protocole">Protocole</a> </li>
+</li>
+<li><a href="#how-to-use">How to use</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md19"></a>
+</li>
+<li><a href="#configuration">Configuration</a><ul>
+<li><a href="#configuration-serveur">Configuration serveur</a></li>
+<li><a href="#configuration-client">Configuration client</a></li>
+</ul>
+</li>
+<li><a href="#principe">Principe</a><ul>
+<li><a href="#fonctionnement-du-calcul-de-points">Fonctionnement du calcul de points</a></li>
+<li><a href="#export-des-résultats">Export des résultats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#développement">Développement</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Installation</h2>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 Dépendances</h3>
-<p>Ce projet est dépendant de la librairie <a href="https://hyperrealm.github.io/libconfig/">libconfig</a>. </p>
-<h4><a class="anchor" id="autotoc_md21"></a>
+<p>Ce projet est dépendant de la librairie <a href="https://hyperrealm.github.io/libconfig/"><b>libconfig</b></a>. </p>
+<h4><a class="anchor" id="autotoc_md18"></a>
 Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)</h4>
 <p>Exécutez la commande suivante dans un terminal.</p>
 <p><code>sudo apt install libconfig-dev</code> </p>
-<h4><a class="anchor" id="autotoc_md22"></a>
+<h4><a class="anchor" id="autotoc_md19"></a>
 Fedora, CentOS</h4>
 <p>Exécutez la commande suivante dans un terminal.</p>
 <p><code>dnf install libconfig-devel</code></p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md20"></a>
 How to use</h3>
 <p>Exécutez la commande suivante dans un terminal.</p>
 <div class="fragment"><div class="line"># Clonez le dépot Github </div>
@@ -122,9 +133,9 @@ How to use</h3>
 <div class="line"># Executer le serveur/client</div>
 <div class="line">$ ./output/server</div>
 <div class="line">$ ./output/client</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
 Configuration</h2>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md22"></a>
 Configuration serveur</h3>
 <p>La configuration du serveur se trouve dans le fichier <code>output/config/server_config.cfg</code> une fois le serveur compilé.</p>
 <div class="fragment"><div class="line">bind_ip = &quot;0.0.0.0&quot;;</div>
@@ -152,7 +163,7 @@ Configuration serveur</h3>
 <div class="line">    );</div>
 <div class="line">  }</div>
 <div class="line">);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md23"></a>
 Configuration client</h3>
 <p>La configuration du client se trouve dans le fichier <code>output/config/client_config.cfg</code> une fois le client compilé.</p>
 <div class="fragment"><div class="line">client_id = 1;</div>
@@ -170,14 +181,37 @@ Configuration client</h3>
 <div class="line"> </div>
 <div class="line">Mandatory or optional arguments to long options are also mandatory or optional</div>
 <div class="line">for any corresponding short options.</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+Principe</h2>
+<p>Une fois les deux adversaires connectés, la partie se lance, chacun des joueurs fait alors un choix, trahir ou collaborer.</p>
+<h3><a class="anchor" id="autotoc_md25"></a>
+Fonctionnement du calcul de points</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone"><b>Choix n° 1</b>  </th><th class="markdownTableHeadNone"><b>Choix n° 2</b>  </th><th class="markdownTableHeadNone"><b>Détails</b>   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>COLLABORATE</b>  </td><td class="markdownTableBodyNone"><b>COLLABORATE</b>  </td><td class="markdownTableBodyNone">Aucune perte d'argent   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>BETRAY</b>  </td><td class="markdownTableBodyNone"><b>COLLABORATE</b>  </td><td class="markdownTableBodyNone">Le client 1 double sa mise, le client 2 perd la sienne   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><b>COLLABORATE</b>  </td><td class="markdownTableBodyNone"><b>BETRAY</b>  </td><td class="markdownTableBodyNone">Le client 2 double sa mise, le client 1 perd la sienne   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><b>BETRAY</b>  </td><td class="markdownTableBodyNone"><b>BETRAY</b>  </td><td class="markdownTableBodyNone">Les deux clients perdent leurs mises   </td></tr>
+</table>
+<h3><a class="anchor" id="autotoc_md26"></a>
+Export des résultats</h3>
+<p>Une fois la partie terminée, les résultats sont accessibles dans le fichier <code>{nom_room}.csv</code>.</p>
+<blockquote class="doxtable">
+<p><b>Remarque</b> : A chaque démarrage de partie sur cette room, les anciennes données associées à cette salle sont suprimmées. <b>Il est important de sauvegarder les résultats après chaque partie.</b> </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Développement</h1>
-<p>La documentation spécifique au développement de ce projet est disponible <a class="el" href="md_docs__readme.html">ici</a> </p>
+<p>La documentation spécifique au développement de ce projet est disponible <a class="el" href="md_docs__readme.html">**ici**</a> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi 14 Décembre 2020 18:02:09 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Samedi 19 Décembre 2020 13:12:15 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
