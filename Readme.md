@@ -13,24 +13,31 @@ On définira une partie comme étant un certain nombre de rounds. Un round est d
 </h1>
 
 
+
+
 ---
 # Documentation
-### 1. Installation
-- [Dépendances](#dépendances)
-- [Comment l'utiliser](#how-to-use)
+- [ICS - Dilemme du prisonnier](#ics---dilemme-du-prisonnier)
+  - [Contexte](#contexte)
+- [Documentation](#documentation)
+  - [Installation](#installation)
+    - [Dépendances](#dépendances)
+      - [Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)](#distribution-basée-sur-ubuntu-ubuntu-linux-mint-elementary-etc)
+      - [Fedora, CentOS](#fedora-centos)
+    - [How to use](#how-to-use)
+  - [Configuration](#configuration)
+    - [Configuration serveur](#configuration-serveur)
+    - [Configuration client](#configuration-client)
+  - [Principe](#principe)
+    - [Fonctionnement du calcul de points](#fonctionnement-du-calcul-de-points)
+    - [Export des résultats](#export-des-résultats)
+- [Développement](#développement)
 
-### 2. Configuration
-- [Serveur](#configuration-serveur)
-- [Client](#configuration-client)
-  
-### 2. Développement
-- [Debug](#debug)
-- [Protocole](#protocole)
 ## Installation 
 
 ### Dépendances
 
-Ce projet est dépendant de la librairie [libconfig](https://hyperrealm.github.io/libconfig/).
+Ce projet est dépendant de la librairie [**libconfig**](https://hyperrealm.github.io/libconfig/).
 #### Distribution basée sur Ubuntu (Ubuntu, Linux Mint, Elementary, etc)
 
 Exécutez la commande suivante dans un terminal.
@@ -68,7 +75,7 @@ $ ./output/client
 ### Configuration serveur
 La configuration du serveur se trouve dans le fichier `output/config/server_config.cfg` une fois le serveur compilé.
 
-```cfg
+```
 bind_ip = "0.0.0.0";
 bind_port = 7799;
 max_simultaneous_connection = 50;
@@ -99,7 +106,7 @@ game_configuration =
 ### Configuration client
 La configuration du client se trouve dans le fichier `output/config/client_config.cfg` une fois le client compilé.
 
-```cfg
+```
 client_id = 1;
 server_ip = "127.0.0.1";
 server_port = 7799;
@@ -121,9 +128,26 @@ Mandatory or optional arguments to long options are also mandatory or optional
 for any corresponding short options.
 ```
 
+## Principe
+Une fois les deux adversaires connectés, la partie se lance, chacun des joueurs fait alors un choix, trahir ou collaborer.
+
+### Fonctionnement du calcul de points
+
+| **Choix n° 1**  | **Choix n° 2**  | **Détails**                                            |
+| --------------- | --------------- | ------------------------------------------------------ |
+| **COLLABORATE** | **COLLABORATE** | Aucune perte d'argent                                  |
+| **BETRAY**      | **COLLABORATE** | Le client 1 double sa mise, le client 2 perd la sienne |
+| **COLLABORATE** | **BETRAY**      | Le client 2 double sa mise, le client 1 perd la sienne |
+| **BETRAY**      | **BETRAY**      | Les deux clients perdent leurs mises                   |
+
+### Export des résultats
+Une fois la partie terminée, les résultats sont accessibles dans le fichier `{nom_room}.csv`. 
+
+> **Remarque** : A chaque démarrage de partie sur cette room, les anciennes données associées à cette salle sont suprimmées. **Il est important de sauvegarder les résultats après chaque partie.**
+
 # Développement
 
-La documentation spécifique au développement de ce projet est disponible [ici](docs/Readme.md)
+La documentation spécifique au développement de ce projet est disponible [**ici**](docs/Readme.md)
 
 
 

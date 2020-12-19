@@ -62,11 +62,9 @@ void read_config(const char *filename)
 
 #ifndef NDEBUG
     assert(config->client_id > 0);
-    char *ip = (char *)malloc(12 * sizeof(char));
-    strcpy(ip, config->ip);
+    char *ip = strdup(config->ip);
     assert(is_ip_valid(ip) == true);
     free(ip);
-
     debug_print_client_config(config->client_id, config->ip, config->port);
 #endif
 }
@@ -112,8 +110,7 @@ unsigned int config_get_server_port(void)
  */
 char *config_get_executable_path(void)
 {
-    char *executable_path = (char *)malloc(sizeof(config->executable_path));
-    memcpy(executable_path, config->executable_path, sizeof(config->executable_path));
+    char *executable_path = strdup(config->executable_path);
     assert(strlen(executable_path) > 0);
     return executable_path;
 }
