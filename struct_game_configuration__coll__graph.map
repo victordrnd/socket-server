@@ -1,7 +1,6 @@
 <map id="GameConfiguration" name="GameConfiguration">
-<area shape="rect" id="node1" title=" " alt="" coords="63,228,195,255"/>
-<area shape="rect" id="node2" href="$struct_room.html" title=" " alt="" coords="53,139,109,165"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,44,32"/>
-<area shape="rect" id="node4" title=" " alt="" coords="91,5,182,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="133,139,223,165"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,228,137,255"/>
+<area shape="rect" id="node2" title=" " alt="" coords="52,5,91,32"/>
+<area shape="rect" id="node3" href="$struct_room.html" title=" " alt="" coords="127,139,183,165"/>
+<area shape="rect" id="node4" title=" " alt="" coords="183,5,229,32"/>
 </map>

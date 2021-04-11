@@ -1,5 +1,5 @@
 <map id="game_set_react_time" name="game_set_react_time">
 <area shape="rect" id="node1" title="Set round react time." alt="" coords="191,35,337,61"/>
-<area shape="rect" id="node2" href="$handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="5,5,143,32"/>
-<area shape="rect" id="node3" href="$handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="9,57,139,98"/>
+<area shape="rect" id="node2" href="$handlers_8c.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="5,5,143,32"/>
+<area shape="rect" id="node3" href="$handlers_8c.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="9,57,139,98"/>
 </map>

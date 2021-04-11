@@ -1,24 +1,24 @@
 <map id="src/client/interfaces" name="src/client/interfaces">
-<area shape="rect" id="node3" href="dir_2fc423b38c6fab7c4bd675b77e310ef3.html" title="handlers" alt="" coords="37,159,109,207"/>
-<area shape="rect" id="edge12-headlabel" href="dir_000005_000007.html" title="1" alt="" coords="80,133,88,148"/>
-<area shape="rect" id="node7" href="dir_4e603c70a04111f621bb3388687f9e47.html" title="utils" alt="" coords="111,447,183,495"/>
-<area shape="rect" id="edge13-headlabel" href="dir_000005_000011.html" title="1" alt="" coords="154,421,162,436"/>
-<area shape="rect" id="node2" href="dir_50d970bcc5123721297e2e8d79d3f2bb.html" title="game_ui" alt="" coords="37,255,109,303"/>
-<area shape="rect" id="node4" href="dir_4e216fde05fea1968aa059559682add7.html" title="game" alt="" coords="37,351,109,399"/>
-<area shape="rect" id="edge7-headlabel" href="dir_000006_000003.html" title="1" alt="" coords="78,325,86,340"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000007_000006.html" title="1" alt="" coords="78,229,86,244"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000007_000003.html" title="1" alt="" coords="34,324,42,339"/>
-<area shape="rect" id="node5" href="dir_95286cc27d0839770b2811ca335a3dfc.html" title="network" alt="" coords="156,63,228,111"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000007_000008.html" title="1" alt="" coords="132,107,140,122"/>
-<area shape="rect" id="node6" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html" title="common" alt="" coords="73,543,145,591"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000007_000004.html" title="3" alt="" coords="89,515,97,530"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000003_000004.html" title="1" alt="" coords="106,516,114,530"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000003_000011.html" title="1" alt="" coords="120,420,128,434"/>
-<area shape="rect" id="edge9-headlabel" href="dir_000008_000005.html" title="1" alt="" coords="131,88,139,102"/>
-<area shape="rect" id="edge8-headlabel" href="dir_000008_000007.html" title="1" alt="" coords="125,148,133,162"/>
-<area shape="rect" id="edge10-headlabel" href="dir_000008_000004.html" title="3" alt="" coords="159,531,167,546"/>
-<area shape="rect" id="edge11-headlabel" href="dir_000008_000011.html" title="1" alt="" coords="163,424,171,439"/>
-<area shape="rect" id="edge14-headlabel" href="dir_000011_000004.html" title="2" alt="" coords="129,522,137,536"/>
-<area shape="rect" id="clust2" href="dir_c1dd3877bd8cd560a6a92f47963d8ddd.html" alt="" coords="27,52,128,313"/>
-<area shape="rect" id="clust1" href="dir_6908ff505388a07996d238c763adbdab.html" title="client" alt="" coords="16,16,139,324"/>
+<area shape="rect" id="node1" href="dir_4e216fde05fea1968aa059559682add7.html" title="game" alt="" coords="68,351,140,399"/>
+<area shape="rect" id="node2" href="dir_4e603c70a04111f621bb3388687f9e47.html" title="utils" alt="" coords="56,447,128,495"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000003_000011.html" title="1" alt="" coords="102,422,110,437"/>
+<area shape="rect" id="node7" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html" title="common" alt="" coords="155,543,227,591"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000003_000004.html" title="1" alt="" coords="178,515,186,530"/>
+<area shape="rect" id="edge14-headlabel" href="dir_000011_000004.html" title="2" alt="" coords="155,517,163,531"/>
+<area shape="rect" id="node3" href="dir_95286cc27d0839770b2811ca335a3dfc.html" title="network" alt="" coords="147,63,219,111"/>
+<area shape="rect" id="edge9-headlabel" href="dir_000008_000011.html" title="1" alt="" coords="132,432,140,446"/>
+<area shape="rect" id="edge10-headlabel" href="dir_000008_000005.html" title="1" alt="" coords="136,88,144,102"/>
+<area shape="rect" id="node6" href="dir_2fc423b38c6fab7c4bd675b77e310ef3.html" title="handlers" alt="" coords="53,159,125,207"/>
+<area shape="rect" id="edge8-headlabel" href="dir_000008_000007.html" title="1" alt="" coords="135,145,143,160"/>
+<area shape="rect" id="edge11-headlabel" href="dir_000008_000004.html" title="3" alt="" coords="222,525,230,540"/>
+<area shape="rect" id="edge13-headlabel" href="dir_000005_000011.html" title="1" alt="" coords="73,419,81,434"/>
+<area shape="rect" id="edge12-headlabel" href="dir_000005_000007.html" title="1" alt="" coords="91,133,99,147"/>
+<area shape="rect" id="node5" href="dir_50d970bcc5123721297e2e8d79d3f2bb.html" title="game_ui" alt="" coords="53,255,125,303"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000006_000003.html" title="1" alt="" coords="102,324,110,339"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000007_000003.html" title="1" alt="" coords="133,332,141,346"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000007_000008.html" title="1" alt="" coords="129,110,137,125"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000007_000006.html" title="1" alt="" coords="94,229,102,244"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000007_000004.html" title="3" alt="" coords="208,520,216,535"/>
+<area shape="rect" id="clust2" href="dir_c1dd3877bd8cd560a6a92f47963d8ddd.html" alt="" coords="32,52,136,313"/>
+<area shape="rect" id="clust1" href="dir_6908ff505388a07996d238c763adbdab.html" title="client" alt="" coords="16,16,229,505"/>
 </map>

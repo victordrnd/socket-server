@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Diliemme du prisonnier: Référence du fichier src/server/server.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +29,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.20 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -81,7 +81,7 @@ $(function() {
 Graphe des dépendances par inclusion de server.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="server_8c__incl.png" border="0" usemap="#asrc_2server_2server_8c" alt=""/></div>
-<map name="src_2server_2server_8c" id="asrc_2server_2server_8c">
+<map name="asrc_2server_2server_8c" id="asrc_2server_2server_8c">
 <area shape="rect" title=" " alt="" coords="190,5,321,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,65,107"/>
 <area shape="rect" title=" " alt="" coords="89,80,152,107"/>
@@ -162,47 +162,69 @@ Fonctions</h2></td></tr>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> (EXIT_SUCCESS);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a3db387f7559aeb05f12f22ffee1a60d8"><div class="ttname"><a href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8">init_configuration</a></div><div class="ttdeci">Config * init_configuration(void)</div><div class="ttdoc">Init configuration.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00027">config.c:27</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_af2ec0601f381d7b6fa603bfea7b2b786"><div class="ttname"><a href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786">config_get_executable_path</a></div><div class="ttdeci">char * config_get_executable_path(void)</div><div class="ttdoc">Get executable path.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00111">config.c:111</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_af7e1901f41bdeb07463d04c5442684ce"><div class="ttname"><a href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce">read_config</a></div><div class="ttdeci">void read_config(const char *filename)</div><div class="ttdoc">Read configuration file.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00040">config.c:40</a></div></div>
+<div class="ttc" id="aclient_8c_html_a2063aebd66c8ebc1ee9e22d22f3c40c0"><div class="ttname"><a href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a></div><div class="ttdeci">Config * configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_a866afac1361e7f042d6e37aa9ac86697"><div class="ttname"><a href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697">threadProcess</a></div><div class="ttdeci">void * threadProcess(void *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00078">communication.c:78</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_aaa13b1f2f5637920c4cfa871a1ff8106"><div class="ttname"><a href="server_2network_2communication_8c.html#aaa13b1f2f5637920c4cfa871a1ff8106">init_sockets_array</a></div><div class="ttdeci">void init_sockets_array(void)</div><div class="ttdoc">Init empty sockets array.</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00027">communication.c:27</a></div></div>
+<div class="ttc" id="aserver_2network_2communication_8c_html_acba7085622f1c06ba3a68a8e6d05d69f"><div class="ttname"><a href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f">create_server_socket</a></div><div class="ttdeci">int create_server_socket(Config *configuration)</div><div class="ttdoc">Create a server socket object.</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00124">communication.c:124</a></div></div>
+<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00012">config.h:13</a></div></div>
+<div class="ttc" id="astructconnection__t_html"><div class="ttname"><a href="structconnection__t.html">connection_t</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00015">communication.h:16</a></div></div>
+<div class="ttc" id="astructconnection__t_html_a00fb3c2f8857e0586fd932958830f157"><div class="ttname"><a href="structconnection__t.html#a00fb3c2f8857e0586fd932958830f157">connection_t::address</a></div><div class="ttdeci">struct sockaddr address</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00017">communication.h:18</a></div></div>
+<div class="ttc" id="astructconnection__t_html_a3de3207917f1e032d3ad311e0d747237"><div class="ttname"><a href="structconnection__t.html#a3de3207917f1e032d3ad311e0d747237">connection_t::sockfd</a></div><div class="ttdeci">int sockfd</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00017">communication.h:17</a></div></div>
+<div class="ttc" id="astructconnection__t_html_af2456407f49e87c24ff0d149ee8500e1"><div class="ttname"><a href="structconnection__t.html#af2456407f49e87c24ff0d149ee8500e1">connection_t::addr_len</a></div><div class="ttdeci">int addr_len</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00019">communication.h:19</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="server_2network_2communication_8h_source.html#l00019">connection_t::addr_len</a>, <a class="el" href="server_2network_2communication_8h_source.html#l00018">connection_t::address</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00111">config_get_executable_path()</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="server_2network_2communication_8c_source.html#l00124">create_server_socket()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00027">init_configuration()</a>, <a class="el" href="server_2network_2communication_8c_source.html#l00027">init_sockets_array()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00040">read_config()</a>, <a class="el" href="server_2network_2communication_8h_source.html#l00017">connection_t::sockfd</a>, et <a class="el" href="server_2network_2communication_8c_source.html#l00078">threadProcess()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="server_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph.png" border="0" usemap="#aserver_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph" alt=""/></div>
-<map name="server_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph" id="aserver_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,132,56,159"/>
-<area shape="rect" href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786" title="Get executable path." alt="" coords="104,5,287,32"/>
-<area shape="rect" href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f" title="Create a server socket object." alt="" coords="122,56,269,83"/>
-<area shape="rect" href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8" title="Init configuration." alt="" coords="136,107,255,133"/>
-<area shape="rect" href="server_2network_2communication_8c.html#aaa13b1f2f5637920c4cfa871a1ff8106" title="Init empty sockets array." alt="" coords="132,157,259,184"/>
-<area shape="rect" href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce" title="Read configuration file." alt="" coords="151,208,239,235"/>
-<area shape="rect" href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="142,296,249,323"/>
-<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="359,169,441,196"/>
-<area shape="rect" href="server_2network_2communication_8c.html#ac1960ca052713a9abf6f4183f78cb85c" title="Add connection to connections list." alt="" coords="379,220,421,247"/>
-<area shape="rect" href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title="Delete connection from connections list." alt="" coords="381,271,419,297"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a69251fe9c3b5d3391be45d7584a0652a" title="Check if client has played for current round." alt="" coords="335,321,465,348"/>
-<area shape="rect" href="server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session" alt="" coords="341,372,459,399"/>
-<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="352,423,448,449"/>
+<map name="aserver_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph" id="aserver_8c_a15facdd2ec747bb377e2497d8c6cecf5_cgraph">
+<area shape="rect" title=" " alt="" coords="5,187,56,213"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786" title="Get executable path." alt="" coords="104,60,287,87"/>
+<area shape="rect" href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f" title="Create a server socket object." alt="" coords="122,111,269,137"/>
+<area shape="rect" href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8" title="Init configuration." alt="" coords="136,161,255,188"/>
+<area shape="rect" href="server_2network_2communication_8c.html#aaa13b1f2f5637920c4cfa871a1ff8106" title="Init empty sockets array." alt="" coords="132,212,259,239"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce" title="Read configuration file." alt="" coords="151,263,239,289"/>
+<area shape="rect" href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="142,339,249,365"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af94a9b890e34555f57f6e89e19a4b97b" title="Init executable path." alt="" coords="335,161,475,188"/>
+<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="363,224,446,251"/>
+<area shape="rect" href="server_2network_2communication_8c.html#ac1960ca052713a9abf6f4183f78cb85c" title="Add connection to connections list." alt="" coords="383,275,426,301"/>
+<area shape="rect" href="server_2network_2communication_8c.html#aad0ff9ec9d4f8d7c12db5aabc7631aac" title="Delete connection from connections list." alt="" coords="385,325,424,352"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a69251fe9c3b5d3391be45d7584a0652a" title="Check if client has played for current round." alt="" coords="339,376,470,403"/>
+<area shape="rect" href="server_2network_2actions_8c.html#a645cdbbcf6fa09b04c429cf866460fb9" title="Remove round session" alt="" coords="346,427,463,453"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="357,477,453,504"/>
+<area shape="rect" href="handlers_8c.html#ae47d443e8fb0b9703415c971211bbf5a" title="UI changes on connected action." alt="" coords="533,309,679,336"/>
+<area shape="rect" href="handlers_8c.html#a0e8dc696f2f3b97bb8feccd527923ed7" title="UI changes on failed action." alt="" coords="548,419,664,445"/>
+<area shape="rect" href="handlers_8c.html#adb0c82b4905ca5eca2e50ebd8864fda7" title="UI changes on game end action." alt="" coords="533,528,679,555"/>
+<area shape="rect" href="handlers_8c.html#a94ee920435e37c73bf5000ed59287b51" title="UI changes on game start action." alt="" coords="531,579,681,605"/>
+<area shape="rect" href="handlers_8c.html#add14ee429ce69f54c4844fbc3df1f55d" title="UI changes on round end action." alt="" coords="533,157,679,184"/>
+<area shape="rect" href="handlers_8c.html#a8e0d5667bef3826faffb14f0e9c89334" title="UI changes on round start action." alt="" coords="531,477,681,504"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ae238a6922701561bceb50a1b7946584c" title="Send disconnect packet to console." alt="" coords="523,629,689,656"/>
+<area shape="rect" href="game_8c.html#af3f55587265764fcddc314dc807a27f5" title="Set game balance." alt="" coords="752,259,883,285"/>
+<area shape="rect" href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="945,360,1088,387"/>
+<area shape="rect" href="game__ui_8c.html#a6dcc493587fb2474f4b9b8e24bdad8f6" title="Toogle radio bet buttons sensitivity." alt="" coords="737,411,897,453"/>
+<area shape="rect" href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b" title="Set game max round." alt="" coords="739,579,895,605"/>
+<area shape="rect" href="game__ui_8c.html#a37c0b386d8fadcf0fdcece902032df26" title=" " alt="" coords="744,5,891,32"/>
+<area shape="rect" href="game_8c.html#aced35ff8a49a5ba41158a407da860405" title="Get balance object." alt="" coords="752,56,883,83"/>
+<area shape="rect" href="game_8c.html#a48af8574de5826a1afdbf5f163773c14" title="Check if next round is allowed and increment current round count." alt="" coords="755,107,879,133"/>
+<area shape="rect" href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title="Set Action code." alt="" coords="757,157,878,184"/>
+<area shape="rect" href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title="Set the game object." alt="" coords="778,208,857,235"/>
+<area shape="rect" href="game__ui_8c.html#a7186a517ca8bb1937c200569d64bfd53" title="Activate countdown for progress_bar." alt="" coords="748,528,887,555"/>
+<area shape="rect" href="handlers_8c.html#a4696b94e3193b6e83b95a4a4174bcc12" title="Executed on round start progress Bar end." alt="" coords="744,477,891,504"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="769,629,865,656"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="949,604,1085,631"/>
+<area shape="rect" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="955,655,1079,681"/>
 </map>
 </div>
 
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="aserver_2network_2communication_8c_html_aaa13b1f2f5637920c4cfa871a1ff8106"><div class="ttname"><a href="server_2network_2communication_8c.html#aaa13b1f2f5637920c4cfa871a1ff8106">init_sockets_array</a></div><div class="ttdeci">void init_sockets_array(void)</div><div class="ttdoc">Init empty sockets array.</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00027">communication.c:27</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_a3db387f7559aeb05f12f22ffee1a60d8"><div class="ttname"><a href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8">init_configuration</a></div><div class="ttdeci">Config * init_configuration(void)</div><div class="ttdoc">Init configuration.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00027">config.c:27</a></div></div>
-<div class="ttc" id="astructconnection__t_html_a3de3207917f1e032d3ad311e0d747237"><div class="ttname"><a href="structconnection__t.html#a3de3207917f1e032d3ad311e0d747237">connection_t::sockfd</a></div><div class="ttdeci">int sockfd</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00017">communication.h:17</a></div></div>
-<div class="ttc" id="astructconnection__t_html_af2456407f49e87c24ff0d149ee8500e1"><div class="ttname"><a href="structconnection__t.html#af2456407f49e87c24ff0d149ee8500e1">connection_t::addr_len</a></div><div class="ttdeci">int addr_len</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00019">communication.h:19</a></div></div>
-<div class="ttc" id="astruct_config_html"><div class="ttname"><a href="struct_config.html">Config</a></div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00012">config.h:13</a></div></div>
-<div class="ttc" id="astructconnection__t_html"><div class="ttname"><a href="structconnection__t.html">connection_t</a></div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00015">communication.h:16</a></div></div>
-<div class="ttc" id="aclient_8c_html_a2063aebd66c8ebc1ee9e22d22f3c40c0"><div class="ttname"><a href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a></div><div class="ttdeci">Config * configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
-<div class="ttc" id="aserver_2network_2communication_8c_html_a866afac1361e7f042d6e37aa9ac86697"><div class="ttname"><a href="server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697">threadProcess</a></div><div class="ttdeci">void * threadProcess(void *ptr)</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00078">communication.c:78</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_af2ec0601f381d7b6fa603bfea7b2b786"><div class="ttname"><a href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786">config_get_executable_path</a></div><div class="ttdeci">char * config_get_executable_path(void)</div><div class="ttdoc">Get executable path.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00111">config.c:111</a></div></div>
-<div class="ttc" id="aserver_2network_2communication_8c_html_acba7085622f1c06ba3a68a8e6d05d69f"><div class="ttname"><a href="server_2network_2communication_8c.html#acba7085622f1c06ba3a68a8e6d05d69f">create_server_socket</a></div><div class="ttdeci">int create_server_socket(Config *configuration)</div><div class="ttdoc">Create a server socket object.</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8c_source.html#l00124">communication.c:124</a></div></div>
-<div class="ttc" id="astructconnection__t_html_a00fb3c2f8857e0586fd932958830f157"><div class="ttname"><a href="structconnection__t.html#a00fb3c2f8857e0586fd932958830f157">connection_t::address</a></div><div class="ttdeci">struct sockaddr address</div><div class="ttdef"><b>Definition:</b> <a href="server_2network_2communication_8h_source.html#l00017">communication.h:18</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_af7e1901f41bdeb07463d04c5442684ce"><div class="ttname"><a href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce">read_config</a></div><div class="ttdeci">void read_config(const char *filename)</div><div class="ttdoc">Read configuration file.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00040">config.c:40</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 19 Décembre 2020 13:13:31 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 11 Avril 2021 12:44:49 pour Diliemme du prisonnier par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

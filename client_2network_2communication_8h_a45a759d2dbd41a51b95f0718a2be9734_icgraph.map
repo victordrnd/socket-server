@@ -1,22 +1,22 @@
 <map id="send_packet" name="send_packet">
 <area shape="rect" id="node1" title=" " alt="" coords="884,172,980,199"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="296,46,427,72"/>
-<area shape="rect" id="node4" href="$client_2network_2actions_8h.html#a93a56ae919ec9974e5354183fffa243e" title="Send round data." alt="" coords="683,248,822,275"/>
-<area shape="rect" id="node7" href="$client_2network_2actions_8h.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="287,363,436,390"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="296,46,427,72"/>
+<area shape="rect" id="node4" href="$client_2network_2actions_8c.html#a93a56ae919ec9974e5354183fffa243e" title="Send round data." alt="" coords="683,248,822,275"/>
+<area shape="rect" id="node7" href="$client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="287,363,436,390"/>
 <area shape="rect" id="node10" href="$client_2network_2actions_8c.html#ae238a6922701561bceb50a1b7946584c" title="Send disconnect packet to console." alt="" coords="669,420,836,447"/>
-<area shape="rect" id="node15" href="$server_2network_2actions_8h.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="694,147,811,174"/>
-<area shape="rect" id="node18" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="491,46,614,72"/>
+<area shape="rect" id="node15" href="$server_2network_2actions_8c.html#a476eba14098db94568d354c71154c556" title="Send Game End packet." alt="" coords="694,147,811,174"/>
+<area shape="rect" id="node18" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="491,46,614,72"/>
 <area shape="rect" id="node19" href="$server_2network_2actions_8c.html#a8a6686eeb5bc292630a95aeda5486e01" title="Send round end packet." alt="" coords="694,198,811,224"/>
-<area shape="rect" id="node20" href="$server_2network_2actions_8h.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="691,96,814,123"/>
+<area shape="rect" id="node20" href="$server_2network_2actions_8c.html#a46cd845fb499f56b6d3838a43565e7a9" title="Send round start packet." alt="" coords="691,96,814,123"/>
 <area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="123,71,219,98"/>
-<area shape="rect" id="node5" href="$handlers_8h.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="484,248,621,275"/>
-<area shape="rect" id="node6" href="$handlers_8h.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="487,300,618,341"/>
-<area shape="rect" id="node8" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,392,239,419"/>
+<area shape="rect" id="node5" href="$handlers_8c.html#ae7e3a273b952c27a9ec4fa9bcc44c8d0" title="Handler for betray click event." alt="" coords="484,248,621,275"/>
+<area shape="rect" id="node6" href="$handlers_8c.html#afcd28beb6e8fb38879d678193644d457" title="Hander for collaborate click event." alt="" coords="487,300,618,341"/>
+<area shape="rect" id="node8" href="$client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,392,239,419"/>
 <area shape="rect" id="node9" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,392,56,419"/>
-<area shape="rect" id="node11" href="$server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="505,422,601,448"/>
-<area shape="rect" id="node12" href="$client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="290,414,433,456"/>
-<area shape="rect" id="node13" href="$server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="308,480,415,507"/>
+<area shape="rect" id="node11" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="505,422,601,448"/>
+<area shape="rect" id="node12" href="$client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="290,414,433,456"/>
+<area shape="rect" id="node13" href="$server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="308,480,415,507"/>
 <area shape="rect" id="node14" href="$server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,480,197,507"/>
-<area shape="rect" id="node16" href="$server_2network_2actions_8h.html#a4b349b1c01cd0570eeb4e3add7e4b42e" title="Check who won the game between client_id and opponent_id." alt="" coords="501,147,604,174"/>
+<area shape="rect" id="node16" href="$server_2network_2actions_8c.html#a5fea4741ee4da8be24b5ccd34fb131d6" title="Check who won the game between client_id and opponent_id." alt="" coords="501,147,604,174"/>
 <area shape="rect" id="node17" href="$server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title="Execute action&#39;s action." alt="" coords="294,122,429,148"/>
 </map>

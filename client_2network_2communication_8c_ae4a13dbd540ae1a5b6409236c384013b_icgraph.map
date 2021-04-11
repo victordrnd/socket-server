@@ -1,8 +1,8 @@
 <map id="close_connection" name="close_connection">
 <area shape="rect" id="node1" title="Close connection between client and server." alt="" coords="477,35,600,61"/>
-<area shape="rect" id="node2" href="$launch_8h.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="289,5,427,32"/>
-<area shape="rect" id="node5" href="$client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,57,429,98"/>
-<area shape="rect" id="node3" href="$launch_8h.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="109,8,234,35"/>
+<area shape="rect" id="node2" href="$launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="289,5,427,32"/>
+<area shape="rect" id="node5" href="$client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,57,429,98"/>
+<area shape="rect" id="node3" href="$launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="109,8,234,35"/>
 <area shape="rect" id="node4" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,35,56,61"/>
-<area shape="rect" id="node6" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,60,239,87"/>
+<area shape="rect" id="node6" href="$client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,60,239,87"/>
 </map>

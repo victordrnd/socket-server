@@ -1,8 +1,7 @@
 <map id="ft_add_separator" name="ft_add_separator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,124,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,124,83"/>
 <area shape="rect" id="node2" href="$fort_8c.html#a94c929e1b487b952cc2ab7316a287d5b" title=" " alt="" coords="172,5,291,32"/>
-<area shape="rect" id="node3" href="$links_8txt.html#a047243bcb979db94967d9b217a8fcea9" title=" " alt="" coords="212,56,251,83"/>
-<area shape="rect" id="node4" href="$fort_8c.html#a9ad50f7ccd4946e4b50b3f35430bfd21" title=" " alt="" coords="185,107,278,133"/>
-<area shape="rect" id="node6" href="$fort_8c.html#a18d185fb2be1fd8424f19759a2f17885" title=" " alt="" coords="187,157,275,184"/>
-<area shape="rect" id="node5" href="$fort_8c.html#a7d9a384b07f9ea738549c55c1b514246" title=" " alt="" coords="339,107,467,133"/>
+<area shape="rect" id="node3" href="$fort_8c.html#a9ad50f7ccd4946e4b50b3f35430bfd21" title=" " alt="" coords="185,56,278,83"/>
+<area shape="rect" id="node5" href="$fort_8c.html#a18d185fb2be1fd8424f19759a2f17885" title=" " alt="" coords="187,107,275,133"/>
+<area shape="rect" id="node4" href="$fort_8c.html#a7d9a384b07f9ea738549c55c1b514246" title=" " alt="" coords="339,56,467,83"/>
 </map>

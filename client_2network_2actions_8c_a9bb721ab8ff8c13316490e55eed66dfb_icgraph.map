@@ -1,5 +1,5 @@
 <map id="send_connect_packet" name="send_connect_packet">
 <area shape="rect" id="node1" title="Send connect packet to console." alt="" coords="287,5,436,32"/>
-<area shape="rect" id="node2" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,5,239,32"/>
+<area shape="rect" id="node2" href="$client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,5,239,32"/>
 <area shape="rect" id="node3" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
 </map>

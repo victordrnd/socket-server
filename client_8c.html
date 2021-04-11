@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Diliemme du prisonnier: Référence du fichier src/client/client.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +29,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.20 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -83,7 +83,7 @@ $(function() {
 Graphe des dépendances par inclusion de client.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="client_8c__incl.png" border="0" usemap="#asrc_2client_2client_8c" alt=""/></div>
-<map name="src_2client_2client_8c" id="asrc_2client_2client_8c">
+<map name="asrc_2client_2client_8c" id="asrc_2client_2client_8c">
 <area shape="rect" title=" " alt="" coords="246,5,366,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,65,107"/>
 <area shape="rect" title=" " alt="" coords="89,80,147,107"/>
@@ -166,33 +166,60 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    gtk_main();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> (EXIT_SUCCESS);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="ttc" id="aclient_2network_2communication_8c_html_af6f333aef95418aceff428c71785712b"><div class="ttname"><a href="client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b">init_communication</a></div><div class="ttdeci">void init_communication(Config *configuration)</div><div class="ttdoc">Starts listening thread process and establish server connection.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00026">communication.c:26</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_a3db387f7559aeb05f12f22ffee1a60d8"><div class="ttname"><a href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8">init_configuration</a></div><div class="ttdeci">Config * init_configuration(void)</div><div class="ttdoc">Init configuration.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00027">config.c:27</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_af2ec0601f381d7b6fa603bfea7b2b786"><div class="ttname"><a href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786">config_get_executable_path</a></div><div class="ttdeci">char * config_get_executable_path(void)</div><div class="ttdoc">Get executable path.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00111">config.c:111</a></div></div>
+<div class="ttc" id="aclient_2utils_2config_8c_html_af7e1901f41bdeb07463d04c5442684ce"><div class="ttname"><a href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce">read_config</a></div><div class="ttdeci">void read_config(const char *filename)</div><div class="ttdoc">Read configuration file.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00040">config.c:40</a></div></div>
+<div class="ttc" id="aclient_8c_html_a2063aebd66c8ebc1ee9e22d22f3c40c0"><div class="ttname"><a href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a></div><div class="ttdeci">Config * configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
+<div class="ttc" id="aclient_8c_html_ab70c96531b1b652d70c221cfaf3207f3"><div class="ttname"><a href="client_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a></div><div class="ttdeci">static struct argp argp</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00062">client.c:64</a></div></div>
+<div class="ttc" id="agame_8c_html_a6bc0753b1826dfaec7c23e4c49363294"><div class="ttname"><a href="game_8c.html#a6bc0753b1826dfaec7c23e4c49363294">init_game</a></div><div class="ttdeci">Game * init_game()</div><div class="ttdoc">Init current game.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00018">game.c:18</a></div></div>
+<div class="ttc" id="alaunch_8c_html_a66cba4e1e630c1b29de0b87c3938f322"><div class="ttname"><a href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a></div><div class="ttdeci">void init_main_window(int argc, char **argv)</div><div class="ttdoc">Init game window.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00035">launch.c:35</a></div></div>
+<div class="ttc" id="astruct_arguments_html"><div class="ttname"><a href="struct_arguments.html">Arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00017">client.c:18</a></div></div>
 </div><!-- fragment -->
 <p class="reference">Références <a class="el" href="client_8c_source.html#l00064">argp</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00111">config_get_executable_path()</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="client_2utils_2config_8c_source.html#l00027">init_configuration()</a>, <a class="el" href="game_8c_source.html#l00018">init_game()</a>, <a class="el" href="launch_8c_source.html#l00035">init_main_window()</a>, et <a class="el" href="client_2utils_2config_8c_source.html#l00040">read_config()</a>.</p>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="client_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#aclient_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" alt=""/></div>
-<map name="client_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="aclient_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
-<area shape="rect" title=" " alt="" coords="5,216,56,242"/>
-<area shape="rect" href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786" title="Get executable path." alt="" coords="484,12,667,38"/>
-<area shape="rect" href="client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,190,239,217"/>
-<area shape="rect" href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8" title="Init configuration." alt="" coords="112,241,231,268"/>
-<area shape="rect" href="game_8c.html#a6bc0753b1826dfaec7c23e4c49363294" title="Init current game." alt="" coords="132,292,211,318"/>
-<area shape="rect" href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="109,102,234,129"/>
-<area shape="rect" href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce" title="Read configuration file." alt="" coords="127,344,215,370"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="290,179,433,220"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="301,245,421,272"/>
-<area shape="rect" href="client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="287,296,436,322"/>
-<area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="514,92,637,118"/>
-<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="527,186,623,213"/>
-<area shape="rect" href="links_8txt.html#aa16be43cd325511816067b39d68dea74" title=" " alt="" coords="550,245,601,272"/>
-<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="527,296,623,322"/>
-<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="715,270,851,297"/>
-<area shape="rect" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="721,321,845,348"/>
-<area shape="rect" href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="292,77,431,104"/>
-<area shape="rect" href="handlers_8c.html#a3875841c1532579c95855055b3884f67" title="Set builder." alt="" coords="306,128,417,154"/>
-<area shape="rect" href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf" title="Register css styles from resource file." alt="" coords="308,26,415,53"/>
-<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="320,346,403,373"/>
+<map name="aclient_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph" id="aclient_8c_a3c04138a5bfe5d72780bb7e82a18e627_cgraph">
+<area shape="rect" title=" " alt="" coords="5,604,56,631"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786" title="Get executable path." alt="" coords="477,353,660,380"/>
+<area shape="rect" href="client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,579,239,605"/>
+<area shape="rect" href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8" title="Init configuration." alt="" coords="112,629,231,656"/>
+<area shape="rect" href="game_8c.html#a6bc0753b1826dfaec7c23e4c49363294" title="Init current game." alt="" coords="132,680,211,707"/>
+<area shape="rect" href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322" title="Init game window." alt="" coords="109,436,234,463"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce" title="Read configuration file." alt="" coords="127,731,215,757"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,513,429,554"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a696dec889c2641fd81501271d4683fe4" title="Open cpnnection socket with server." alt="" coords="298,629,418,656"/>
+<area shape="rect" href="client_2network_2actions_8c.html#a9bb721ab8ff8c13316490e55eed66dfb" title="Send connect packet to console." alt="" coords="494,615,643,641"/>
+<area shape="rect" href="client_2network_2communication_8c.html#ae4a13dbd540ae1a5b6409236c384013b" title="Close connection between client and server." alt="" coords="507,419,630,445"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="521,499,617,525"/>
+<area shape="rect" href="handlers_8c.html#ae47d443e8fb0b9703415c971211bbf5a" title="UI changes on connected action." alt="" coords="719,309,864,336"/>
+<area shape="rect" href="handlers_8c.html#a0e8dc696f2f3b97bb8feccd527923ed7" title="UI changes on failed action." alt="" coords="733,419,849,445"/>
+<area shape="rect" href="handlers_8c.html#adb0c82b4905ca5eca2e50ebd8864fda7" title="UI changes on game end action." alt="" coords="719,524,864,551"/>
+<area shape="rect" href="handlers_8c.html#a94ee920435e37c73bf5000ed59287b51" title="UI changes on game start action." alt="" coords="716,575,867,601"/>
+<area shape="rect" href="handlers_8c.html#add14ee429ce69f54c4844fbc3df1f55d" title="UI changes on round end action." alt="" coords="719,157,864,184"/>
+<area shape="rect" href="handlers_8c.html#a8e0d5667bef3826faffb14f0e9c89334" title="UI changes on round start action." alt="" coords="716,473,867,500"/>
+<area shape="rect" href="client_2network_2actions_8c.html#ae238a6922701561bceb50a1b7946584c" title="Send disconnect packet to console." alt="" coords="708,625,875,652"/>
+<area shape="rect" href="game_8c.html#af3f55587265764fcddc314dc807a27f5" title="Set game balance." alt="" coords="937,259,1068,285"/>
+<area shape="rect" href="game__ui_8c.html#ae1346dcb3ff047467d3ea97814e3602b" title="Activate or desactivate action buttons." alt="" coords="1131,360,1273,387"/>
+<area shape="rect" href="game__ui_8c.html#a6dcc493587fb2474f4b9b8e24bdad8f6" title="Toogle radio bet buttons sensitivity." alt="" coords="923,411,1083,453"/>
+<area shape="rect" href="game_8c.html#ad6c29b9bc243da19d5e6ab8cb4a70e2b" title="Set game max round." alt="" coords="925,579,1081,605"/>
+<area shape="rect" href="game__ui_8c.html#a37c0b386d8fadcf0fdcece902032df26" title=" " alt="" coords="929,5,1076,32"/>
+<area shape="rect" href="game_8c.html#aced35ff8a49a5ba41158a407da860405" title="Get balance object." alt="" coords="937,56,1068,83"/>
+<area shape="rect" href="game_8c.html#a48af8574de5826a1afdbf5f163773c14" title="Check if next round is allowed and increment current round count." alt="" coords="941,107,1065,133"/>
+<area shape="rect" href="game_8c.html#a6c12da15fbd5e90b53898087825ca62c" title="Set Action code." alt="" coords="942,157,1063,184"/>
+<area shape="rect" href="game_8c.html#a510a5235ab09b46347ecc21a5abfa0db" title="Set the game object." alt="" coords="963,208,1042,235"/>
+<area shape="rect" href="game__ui_8c.html#a7186a517ca8bb1937c200569d64bfd53" title="Activate countdown for progress_bar." alt="" coords="933,528,1072,555"/>
+<area shape="rect" href="handlers_8c.html#a4696b94e3193b6e83b95a4a4174bcc12" title="Executed on round start progress Bar end." alt="" coords="929,477,1076,504"/>
+<area shape="rect" href="client_2network_2communication_8c.html#a45a759d2dbd41a51b95f0718a2be9734" title=" " alt="" coords="955,651,1051,677"/>
+<area shape="rect" href="client_2utils_2config_8c.html#ab1f468bc3547eedbfcea36dc86c4a3e7" title=" " alt="" coords="1134,625,1270,652"/>
+<area shape="rect" href="protocol_8c.html#af3cf09720a83e824c9028bb9385711a9" title="Encapsulate data in a packet to send." alt="" coords="1140,676,1264,703"/>
+<area shape="rect" href="client_2utils_2config_8c.html#af94a9b890e34555f57f6e89e19a4b97b" title="Init executable path." alt="" coords="288,680,428,707"/>
+<area shape="rect" href="launch_8c.html#a0e9e6ad399d50fc6e7deb9c106bef1fc" title="Close main window and connection." alt="" coords="289,411,427,437"/>
+<area shape="rect" href="handlers_8c.html#a3875841c1532579c95855055b3884f67" title="Set builder." alt="" coords="303,461,413,488"/>
+<area shape="rect" href="launch_8c.html#aa99a3982a2b926b0634df1b6d9374edf" title="Register css styles from resource file." alt="" coords="305,360,411,387"/>
+<area shape="rect" href="network_8c.html#ab972e742ae1ea3be0eb8f877f018d13b" title="Verify if an ip is correctly formed." alt="" coords="317,731,399,757"/>
 </map>
 </div>
 
@@ -266,9 +293,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+<div class="ttc" id="astruct_arguments_html_a689283a54c1295db17082965c1d8a8ce"><div class="ttname"><a href="struct_arguments.html#a689283a54c1295db17082965c1d8a8ce">Arguments::client_id</a></div><div class="ttdeci">int client_id</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00020">client.c:20</a></div></div>
+<div class="ttc" id="astruct_arguments_html_a9a1a18b925f811eca414fcc366ee13da"><div class="ttname"><a href="struct_arguments.html#a9a1a18b925f811eca414fcc366ee13da">Arguments::host_ip</a></div><div class="ttdeci">char * host_ip</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00021">client.c:21</a></div></div>
+<div class="ttc" id="astruct_arguments_html_acf0fee034534ae099abd2405426c5784"><div class="ttname"><a href="struct_arguments.html#acf0fee034534ae099abd2405426c5784">Arguments::host_port</a></div><div class="ttdeci">int host_port</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00020">client.c:20</a></div></div>
+<div class="ttc" id="astruct_arguments_html_aededfa75e6fd15036ae84d1a4304cfb8"><div class="ttname"><a href="struct_arguments.html#aededfa75e6fd15036ae84d1a4304cfb8">Arguments::args</a></div><div class="ttdeci">char * args[2]</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00019">client.c:19</a></div></div>
+<div class="ttc" id="astruct_config_html_a0c8531e4232b2cf1fae860432ab523c6"><div class="ttname"><a href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">Config::port</a></div><div class="ttdeci">unsigned int port</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00016">config.h:16</a></div></div>
+<div class="ttc" id="astruct_config_html_a14ef947a3d43345ff5ad05b89870758c"><div class="ttname"><a href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">Config::ip</a></div><div class="ttdeci">const char * ip</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00015">config.h:15</a></div></div>
+<div class="ttc" id="astruct_config_html_ad907c7420d0546ef21ea78ddc31b78de"><div class="ttname"><a href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">Config::client_id</a></div><div class="ttdeci">unsigned int client_id</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00014">config.h:14</a></div></div>
 </div><!-- fragment -->
-<p class="reference">Références <a class="el" href="client_8c_source.html#l00019">Arguments::args</a>, <a class="el" href="client_8c_source.html#l00020">Arguments::client_id</a>, <a class="el" href="client_2utils_2config_8h_source.html#l00014">Config::client_id</a>, <a class="el" href="client_8c_source.html#l00015">configuration</a>, <a class="el" href="client_8c_source.html#l00021">Arguments::host_ip</a>, <a class="el" href="client_8c_source.html#l00020">Arguments::host_port</a>, <a class="el" href="client_2utils_2config_8h_source.html#l00015">Config::ip</a>, et <a class="el" href="client_2utils_2config_8h_source.html#l00016">Config::port</a>.</p>
-
 </div>
 </div>
 <h2 class="groupheader">Documentation des variables</h2>
@@ -312,7 +344,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p class="definition">Définition à la ligne <a class="el" href="client_8c_source.html#l00015">15</a> du fichier <a class="el" href="client_8c_source.html">client.c</a>.</p>
 
-<p class="reference">Référencé par <a class="el" href="server_2network_2communication_8c_source.html#l00124">create_server_socket()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="client_8c_source.html#l00067">main()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00041">open_connection()</a>, et <a class="el" href="client_8c_source.html#l00024">parse_opt()</a>.</p>
+<p class="reference">Référencé par <a class="el" href="server_2network_2communication_8c_source.html#l00124">create_server_socket()</a>, <a class="el" href="client_2network_2communication_8c_source.html#l00026">init_communication()</a>, <a class="el" href="client_8c_source.html#l00067">main()</a>, et <a class="el" href="client_2network_2communication_8c_source.html#l00041">open_connection()</a>.</p>
 
 </div>
 </div>
@@ -371,25 +403,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="alaunch_8c_html_a66cba4e1e630c1b29de0b87c3938f322"><div class="ttname"><a href="launch_8c.html#a66cba4e1e630c1b29de0b87c3938f322">init_main_window</a></div><div class="ttdeci">void init_main_window(int argc, char **argv)</div><div class="ttdoc">Init game window.</div><div class="ttdef"><b>Definition:</b> <a href="launch_8c_source.html#l00035">launch.c:35</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_a3db387f7559aeb05f12f22ffee1a60d8"><div class="ttname"><a href="client_2utils_2config_8c.html#a3db387f7559aeb05f12f22ffee1a60d8">init_configuration</a></div><div class="ttdeci">Config * init_configuration(void)</div><div class="ttdoc">Init configuration.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00027">config.c:27</a></div></div>
-<div class="ttc" id="astruct_config_html_ad907c7420d0546ef21ea78ddc31b78de"><div class="ttname"><a href="struct_config.html#ad907c7420d0546ef21ea78ddc31b78de">Config::client_id</a></div><div class="ttdeci">unsigned int client_id</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00014">config.h:14</a></div></div>
-<div class="ttc" id="astruct_arguments_html_aededfa75e6fd15036ae84d1a4304cfb8"><div class="ttname"><a href="struct_arguments.html#aededfa75e6fd15036ae84d1a4304cfb8">Arguments::args</a></div><div class="ttdeci">char * args[2]</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00019">client.c:19</a></div></div>
-<div class="ttc" id="aclient_8c_html_ab70c96531b1b652d70c221cfaf3207f3"><div class="ttname"><a href="client_8c.html#ab70c96531b1b652d70c221cfaf3207f3">argp</a></div><div class="ttdeci">static struct argp argp</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00062">client.c:64</a></div></div>
-<div class="ttc" id="astruct_arguments_html_a9a1a18b925f811eca414fcc366ee13da"><div class="ttname"><a href="struct_arguments.html#a9a1a18b925f811eca414fcc366ee13da">Arguments::host_ip</a></div><div class="ttdeci">char * host_ip</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00021">client.c:21</a></div></div>
-<div class="ttc" id="aclient_2network_2communication_8c_html_af6f333aef95418aceff428c71785712b"><div class="ttname"><a href="client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b">init_communication</a></div><div class="ttdeci">void init_communication(Config *configuration)</div><div class="ttdoc">Starts listening thread process and establish server connection.</div><div class="ttdef"><b>Definition:</b> <a href="client_2network_2communication_8c_source.html#l00026">communication.c:26</a></div></div>
-<div class="ttc" id="astruct_arguments_html_a689283a54c1295db17082965c1d8a8ce"><div class="ttname"><a href="struct_arguments.html#a689283a54c1295db17082965c1d8a8ce">Arguments::client_id</a></div><div class="ttdeci">int client_id</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00020">client.c:20</a></div></div>
-<div class="ttc" id="agame_8c_html_a6bc0753b1826dfaec7c23e4c49363294"><div class="ttname"><a href="game_8c.html#a6bc0753b1826dfaec7c23e4c49363294">init_game</a></div><div class="ttdeci">Game * init_game()</div><div class="ttdoc">Init current game.</div><div class="ttdef"><b>Definition:</b> <a href="game_8c_source.html#l00018">game.c:18</a></div></div>
-<div class="ttc" id="astruct_config_html_a0c8531e4232b2cf1fae860432ab523c6"><div class="ttname"><a href="struct_config.html#a0c8531e4232b2cf1fae860432ab523c6">Config::port</a></div><div class="ttdeci">unsigned int port</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00016">config.h:16</a></div></div>
-<div class="ttc" id="astruct_arguments_html"><div class="ttname"><a href="struct_arguments.html">Arguments</a></div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00017">client.c:18</a></div></div>
-<div class="ttc" id="aclient_8c_html_a2063aebd66c8ebc1ee9e22d22f3c40c0"><div class="ttname"><a href="client_8c.html#a2063aebd66c8ebc1ee9e22d22f3c40c0">configuration</a></div><div class="ttdeci">Config * configuration</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00015">client.c:15</a></div></div>
-<div class="ttc" id="astruct_config_html_a14ef947a3d43345ff5ad05b89870758c"><div class="ttname"><a href="struct_config.html#a14ef947a3d43345ff5ad05b89870758c">Config::ip</a></div><div class="ttdeci">const char * ip</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8h_source.html#l00015">config.h:15</a></div></div>
-<div class="ttc" id="astruct_arguments_html_acf0fee034534ae099abd2405426c5784"><div class="ttname"><a href="struct_arguments.html#acf0fee034534ae099abd2405426c5784">Arguments::host_port</a></div><div class="ttdeci">int host_port</div><div class="ttdef"><b>Definition:</b> <a href="client_8c_source.html#l00020">client.c:20</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_af2ec0601f381d7b6fa603bfea7b2b786"><div class="ttname"><a href="client_2utils_2config_8c.html#af2ec0601f381d7b6fa603bfea7b2b786">config_get_executable_path</a></div><div class="ttdeci">char * config_get_executable_path(void)</div><div class="ttdoc">Get executable path.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00111">config.c:111</a></div></div>
-<div class="ttc" id="aclient_2utils_2config_8c_html_af7e1901f41bdeb07463d04c5442684ce"><div class="ttname"><a href="client_2utils_2config_8c.html#af7e1901f41bdeb07463d04c5442684ce">read_config</a></div><div class="ttdeci">void read_config(const char *filename)</div><div class="ttdoc">Read configuration file.</div><div class="ttdef"><b>Definition:</b> <a href="client_2utils_2config_8c_source.html#l00040">config.c:40</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 19 Décembre 2020 13:13:31 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 11 Avril 2021 12:44:48 pour Diliemme du prisonnier par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

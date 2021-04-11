@@ -1,6 +1,6 @@
 <map id="get_initial_amount" name="get_initial_amount">
 <area shape="rect" id="node1" title="Get the initial amount object." alt="" coords="499,5,625,32"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="149,5,280,32"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="328,31,451,57"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="149,5,280,32"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="328,31,451,57"/>
 <area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="5,5,101,32"/>
 </map>

@@ -1,10 +1,10 @@
 <map id="game_set_max_rounds" name="game_set_max_rounds">
 <area shape="rect" id="node1" title="Set game max round." alt="" coords="820,42,976,69"/>
-<area shape="rect" id="node2" href="$handlers_8h.html#a94ee920435e37c73bf5000ed59287b51" title="UI changes on game start action." alt="" coords="621,42,772,69"/>
-<area shape="rect" id="node3" href="$server_2network_2actions_8h.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="477,42,573,69"/>
-<area shape="rect" id="node4" href="$client_2network_2communication_8h.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
-<area shape="rect" id="node7" href="$server_2network_2communication_8h.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
-<area shape="rect" id="node5" href="$client_2network_2communication_8h.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
+<area shape="rect" id="node2" href="$handlers_8c.html#a94ee920435e37c73bf5000ed59287b51" title="UI changes on game start action." alt="" coords="621,42,772,69"/>
+<area shape="rect" id="node3" href="$client_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Settle the packet based on action." alt="" coords="477,42,573,69"/>
+<area shape="rect" id="node4" href="$client_2network_2communication_8c.html#a42fc9c0eb8502984121f1b6d8fbb92b1" title="Thread process for listening socket input." alt="" coords="287,5,429,47"/>
+<area shape="rect" id="node7" href="$server_2network_2communication_8c.html#a866afac1361e7f042d6e37aa9ac86697" title=" " alt="" coords="305,71,411,98"/>
+<area shape="rect" id="node5" href="$client_2network_2communication_8c.html#af6f333aef95418aceff428c71785712b" title="Starts listening thread process and establish server connection." alt="" coords="104,13,239,39"/>
 <area shape="rect" id="node6" href="$client_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 <area shape="rect" id="node8" href="$server_8c.html#a15facdd2ec747bb377e2497d8c6cecf5" title=" " alt="" coords="146,71,197,98"/>
 </map>

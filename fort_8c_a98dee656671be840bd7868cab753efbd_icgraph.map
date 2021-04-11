@@ -1,9 +1,7 @@
 <map id="set_cell_property_impl" name="set_cell_property_impl">
-<area shape="rect" id="node1" title=" " alt="" coords="608,70,759,97"/>
-<area shape="rect" id="node2" href="$fort_8c.html#a7f6a819beaefdfc54c2c48b9dd12ba04" title=" " alt="" coords="417,45,537,71"/>
-<area shape="rect" id="node6" href="$fort_8c.html#a2cab515df421cccc2567e1ea3ae7030a" title=" " alt="" coords="393,95,560,122"/>
-<area shape="rect" id="node3" href="$fort_8h.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4" title=" " alt="" coords="208,45,323,71"/>
-<area shape="rect" id="node4" href="$logs_8h.html#acafe45da547dcc1c5e01344a5f365880" title="Beautify client config in console." alt="" coords="8,5,135,47"/>
-<area shape="rect" id="node5" href="$logs_8h.html#ad00fabc05d04796b663e7362db3839f3" title="Beautify server config in console." alt="" coords="5,71,137,112"/>
-<area shape="rect" id="node7" href="$fort_8h.html#a894497fac87518023122266da59f8da1" title=" " alt="" coords="185,95,345,122"/>
+<area shape="rect" id="node1" title=" " alt="" coords="516,46,667,73"/>
+<area shape="rect" id="node2" href="$fort_8c.html#a7f6a819beaefdfc54c2c48b9dd12ba04" title=" " alt="" coords="348,46,468,73"/>
+<area shape="rect" id="node3" href="$fort_8c.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4" title=" " alt="" coords="185,46,300,73"/>
+<area shape="rect" id="node4" href="$logs_8c.html#acafe45da547dcc1c5e01344a5f365880" title="Beautify client config in console." alt="" coords="8,5,135,47"/>
+<area shape="rect" id="node5" href="$logs_8c.html#ad00fabc05d04796b663e7362db3839f3" title="Beautify server config in console." alt="" coords="5,71,137,112"/>
 </map>

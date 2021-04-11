@@ -1,7 +1,7 @@
 <map id="get_max_round_count" name="get_max_round_count">
 <area shape="rect" id="node1" title="Get the max round count object." alt="" coords="503,31,652,57"/>
 <area shape="rect" id="node2" href="$server_2network_2actions_8c.html#a20115fc865e40ab9d0648f71f923ca88" title="Execute action&#39;s action." alt="" coords="149,5,284,32"/>
-<area shape="rect" id="node4" href="$server_2network_2actions_8h.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="332,56,455,83"/>
+<area shape="rect" id="node4" href="$server_2network_2actions_8c.html#a4aebe714b0093331cd12b504bfbe8f2a" title="Send game start packet." alt="" coords="332,56,455,83"/>
 <area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="5,31,101,57"/>
-<area shape="rect" id="node5" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="151,56,282,83"/>
+<area shape="rect" id="node5" href="$server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="151,56,282,83"/>
 </map>

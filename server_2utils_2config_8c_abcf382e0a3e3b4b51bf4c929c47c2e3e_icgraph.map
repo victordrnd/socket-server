@@ -1,4 +1,4 @@
 <map id="parse_game_configuration" name="parse_game_configuration">
 <area shape="rect" id="node1" title="Parse only game_configuration section of config file." alt="" coords="141,5,315,32"/>
-<area shape="rect" id="node2" href="$server_2utils_2config_8h.html#a068fa4af89d5a8b0052e2c7c6e99aa55" title="Read configuration file." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$server_2utils_2config_8c.html#a068fa4af89d5a8b0052e2c7c6e99aa55" title="Read configuration file." alt="" coords="5,5,93,32"/>
 </map>

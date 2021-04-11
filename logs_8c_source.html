@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Diliemme du prisonnier:  Fichier source de src/common/tests/logs/logs.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +29,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.20 -->
+<!-- Généré par Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="logs_8h.html">logs.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fort_8h.html">fort.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="logs_8h.html#a2b33b95cf337eec7af9cfd3f56de6415">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#a2b33b95cf337eec7af9cfd3f56de6415">debug_print_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fm, ...)</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="logs_8c.html#a2b33b95cf337eec7af9cfd3f56de6415">   19</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#a2b33b95cf337eec7af9cfd3f56de6415">debug_print_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fm, ...)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    time_t t = time(NULL);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
@@ -89,7 +89,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    va_start(arg, fm);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">struct </span>tm tm = *localtime(&amp;t);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;\033[0;34m[%d-%02d-%02d %02d:%02d:%02d] \033[0m&quot;</span>, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    printf(<span class="stringliteral">&quot;\033[0;34m[%d-%02d-%02d %02d:%02d:%02d] \033[0m&quot;</span>, tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday, tm.tm_hour, tm.tm_min, tm.tm_sec);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">while</span> (*fm != <span class="charliteral">&#39;\0&#39;</span>)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (*fm != <span class="charliteral">&#39;%&#39;</span>)</div>
@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            putchar(va_arg(arg, <span class="keywordtype">int</span>));</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;%d&quot;</span>, va_arg(arg, <span class="keywordtype">int</span>));</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            printf(<span class="stringliteral">&quot;%d&quot;</span>, va_arg(arg, <span class="keywordtype">int</span>));</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        fm++;</div>
@@ -122,48 +122,47 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    va_end(arg);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="logs_8h.html#acafe45da547dcc1c5e01344a5f365880">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#acafe45da547dcc1c5e01344a5f365880">debug_print_client_config_f</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> client_id, <span class="keyword">const</span> <span class="keywordtype">char</span>* server_ip, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> port)</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="logs_8c.html#acafe45da547dcc1c5e01344a5f365880">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#acafe45da547dcc1c5e01344a5f365880">debug_print_client_config_f</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> client_id, <span class="keyword">const</span> <span class="keywordtype">char</span>* server_ip, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> port)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="structft__table.html">ft_table_t</a>* table = <a class="code" href="fort_8c.html#af73fc78695a3009f5ff79a2c0d28c600">ft_create_table</a>();</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="fort_8c.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4">ft_set_cell_prop</a>(table, 0, <a class="code" href="fort_8h.html#ad5b6b32262309f37874d11369f47c7a5">FT_ANY_COLUMN</a>, <a class="code" href="fort_8h.html#abd5e4b5a6cb494024967f9d22a50c708">FT_CPROP_ROW_TYPE</a>, <a class="code" href="fort_8h.html#a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a">FT_ROW_HEADER</a>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="fort_8h.html#a4ebdb2eea82c8b8c3b80f0c7b7bf1536">ft_write_ln</a>(table, <span class="stringliteral">&quot;Client ID&quot;</span>, <span class="stringliteral">&quot;Server IP&quot;</span>, <span class="stringliteral">&quot;Port&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    ft_printf_ln(table, <span class="stringliteral">&quot;%d|%s|%d&quot;</span>, client_id, server_ip, port);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="fort_8c.html#aba499778dc3afcddfed50e79b0d97832">ft_to_string</a>(table));</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="fort_8c.html#aba499778dc3afcddfed50e79b0d97832">ft_to_string</a>(table));</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="fort_8c.html#ad8cb9ed46da7455f8b6baed42a4a1d31">ft_destroy_table</a>(table);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="logs_8h.html#ad00fabc05d04796b663e7362db3839f3">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#ad00fabc05d04796b663e7362db3839f3">debug_print_server_config_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* bind_ip, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> port, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_cnx)</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="logs_8c.html#ad00fabc05d04796b663e7362db3839f3">   86</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="logs_8c.html#ad00fabc05d04796b663e7362db3839f3">debug_print_server_config_f</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* bind_ip, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> port, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_cnx)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#ifndef NDEBUG</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="structft__table.html">ft_table_t</a>* table = <a class="code" href="fort_8c.html#af73fc78695a3009f5ff79a2c0d28c600">ft_create_table</a>();</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="fort_8c.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4">ft_set_cell_prop</a>(table, 0, <a class="code" href="fort_8h.html#ad5b6b32262309f37874d11369f47c7a5">FT_ANY_COLUMN</a>, <a class="code" href="fort_8h.html#abd5e4b5a6cb494024967f9d22a50c708">FT_CPROP_ROW_TYPE</a>, <a class="code" href="fort_8h.html#a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a">FT_ROW_HEADER</a>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="fort_8h.html#a4ebdb2eea82c8b8c3b80f0c7b7bf1536">ft_write_ln</a>(table, <span class="stringliteral">&quot;Bind IP&quot;</span>, <span class="stringliteral">&quot;Port&quot;</span>, <span class="stringliteral">&quot;Max connections&quot;</span>);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ft_printf_ln(table, <span class="stringliteral">&quot;%s|%d|%d&quot;</span>, bind_ip, port, max_cnx);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a>(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="fort_8c.html#aba499778dc3afcddfed50e79b0d97832">ft_to_string</a>(table));</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="fort_8c.html#aba499778dc3afcddfed50e79b0d97832">ft_to_string</a>(table));</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <a class="code" href="fort_8c.html#ad8cb9ed46da7455f8b6baed42a4a1d31">ft_destroy_table</a>(table);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
-</div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="afort_8h_html_ad5b6b32262309f37874d11369f47c7a5"><div class="ttname"><a href="fort_8h.html#ad5b6b32262309f37874d11369f47c7a5">FT_ANY_COLUMN</a></div><div class="ttdeci">#define FT_ANY_COLUMN</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00765">fort.h:765</a></div></div>
-<div class="ttc" id="alinks_8txt_html_aa16be43cd325511816067b39d68dea74"><div class="ttname"><a href="links_8txt.html#aa16be43cd325511816067b39d68dea74">printf</a></div><div class="ttdeci">printf(__VA_ARGS__)</div></div>
-<div class="ttc" id="alogs_8c_html_ad00fabc05d04796b663e7362db3839f3"><div class="ttname"><a href="logs_8c.html#ad00fabc05d04796b663e7362db3839f3">debug_print_server_config_f</a></div><div class="ttdeci">void debug_print_server_config_f(const char *bind_ip, unsigned int port, unsigned int max_cnx)</div><div class="ttdoc">Beautify server config in console.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00086">logs.c:86</a></div></div>
-<div class="ttc" id="afort_8h_html_abd5e4b5a6cb494024967f9d22a50c708"><div class="ttname"><a href="fort_8h.html#abd5e4b5a6cb494024967f9d22a50c708">FT_CPROP_ROW_TYPE</a></div><div class="ttdeci">#define FT_CPROP_ROW_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00786">fort.h:786</a></div></div>
-<div class="ttc" id="afort_8h_html_a4ebdb2eea82c8b8c3b80f0c7b7bf1536"><div class="ttname"><a href="fort_8h.html#a4ebdb2eea82c8b8c3b80f0c7b7bf1536">ft_write_ln</a></div><div class="ttdeci">#define ft_write_ln(table,...)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00514">fort.h:514</a></div></div>
-<div class="ttc" id="alogs_8c_html_acafe45da547dcc1c5e01344a5f365880"><div class="ttname"><a href="logs_8c.html#acafe45da547dcc1c5e01344a5f365880">debug_print_client_config_f</a></div><div class="ttdeci">void debug_print_client_config_f(unsigned int client_id, const char *server_ip, unsigned int port)</div><div class="ttdoc">Beautify client config in console.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00067">logs.c:67</a></div></div>
-<div class="ttc" id="alogs_8h_html"><div class="ttname"><a href="logs_8h.html">logs.h</a></div></div>
 <div class="ttc" id="afort_8c_html_a10dc95b3d810a0ab2bf6c90b7b8c66a4"><div class="ttname"><a href="fort_8c.html#a10dc95b3d810a0ab2bf6c90b7b8c66a4">ft_set_cell_prop</a></div><div class="ttdeci">int ft_set_cell_prop(ft_table_t *table, size_t row, size_t col, uint32_t property, int value)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l03565">fort.c:3565</a></div></div>
-<div class="ttc" id="afort_8c_html_ad8cb9ed46da7455f8b6baed42a4a1d31"><div class="ttname"><a href="fort_8c.html#ad8cb9ed46da7455f8b6baed42a4a1d31">ft_destroy_table</a></div><div class="ttdeci">void ft_destroy_table(ft_table_t *table)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02671">fort.c:2671</a></div></div>
-<div class="ttc" id="afort_8h_html"><div class="ttname"><a href="fort_8h.html">fort.h</a></div><div class="ttdoc">Main header file describing libfort API.</div></div>
-<div class="ttc" id="astructft__table_html"><div class="ttname"><a href="structft__table.html">ft_table</a></div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02231">fort.c:2231</a></div></div>
-<div class="ttc" id="afort_8h_html_a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a"><div class="ttname"><a href="fort_8h.html#a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a">FT_ROW_HEADER</a></div><div class="ttdeci">@ FT_ROW_HEADER</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00848">fort.h:847</a></div></div>
-<div class="ttc" id="alogs_8c_html_a2b33b95cf337eec7af9cfd3f56de6415"><div class="ttname"><a href="logs_8c.html#a2b33b95cf337eec7af9cfd3f56de6415">debug_print_f</a></div><div class="ttdeci">void debug_print_f(const char *fm,...)</div><div class="ttdoc">Print formated text with date.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00019">logs.c:19</a></div></div>
-<div class="ttc" id="afort_8c_html_af73fc78695a3009f5ff79a2c0d28c600"><div class="ttname"><a href="fort_8c.html#af73fc78695a3009f5ff79a2c0d28c600">ft_create_table</a></div><div class="ttdeci">ft_table_t * ft_create_table(void)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02639">fort.c:2639</a></div></div>
 <div class="ttc" id="afort_8c_html_aba499778dc3afcddfed50e79b0d97832"><div class="ttname"><a href="fort_8c.html#aba499778dc3afcddfed50e79b0d97832">ft_to_string</a></div><div class="ttdeci">const char * ft_to_string(const ft_table_t *table)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l03405">fort.c:3405</a></div></div>
+<div class="ttc" id="afort_8c_html_ad8cb9ed46da7455f8b6baed42a4a1d31"><div class="ttname"><a href="fort_8c.html#ad8cb9ed46da7455f8b6baed42a4a1d31">ft_destroy_table</a></div><div class="ttdeci">void ft_destroy_table(ft_table_t *table)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02671">fort.c:2671</a></div></div>
+<div class="ttc" id="afort_8c_html_af73fc78695a3009f5ff79a2c0d28c600"><div class="ttname"><a href="fort_8c.html#af73fc78695a3009f5ff79a2c0d28c600">ft_create_table</a></div><div class="ttdeci">ft_table_t * ft_create_table(void)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02639">fort.c:2639</a></div></div>
+<div class="ttc" id="afort_8h_html"><div class="ttname"><a href="fort_8h.html">fort.h</a></div><div class="ttdoc">Main header file describing libfort API.</div></div>
+<div class="ttc" id="afort_8h_html_a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a"><div class="ttname"><a href="fort_8h.html#a06d9536a2e476d68f5055820535d3b34a2a0a31078eac88202029c3e9bdaa614a">FT_ROW_HEADER</a></div><div class="ttdeci">@ FT_ROW_HEADER</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00848">fort.h:847</a></div></div>
+<div class="ttc" id="afort_8h_html_a4ebdb2eea82c8b8c3b80f0c7b7bf1536"><div class="ttname"><a href="fort_8h.html#a4ebdb2eea82c8b8c3b80f0c7b7bf1536">ft_write_ln</a></div><div class="ttdeci">#define ft_write_ln(table,...)</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00514">fort.h:514</a></div></div>
+<div class="ttc" id="afort_8h_html_abd5e4b5a6cb494024967f9d22a50c708"><div class="ttname"><a href="fort_8h.html#abd5e4b5a6cb494024967f9d22a50c708">FT_CPROP_ROW_TYPE</a></div><div class="ttdeci">#define FT_CPROP_ROW_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00786">fort.h:786</a></div></div>
+<div class="ttc" id="afort_8h_html_ad5b6b32262309f37874d11369f47c7a5"><div class="ttname"><a href="fort_8h.html#ad5b6b32262309f37874d11369f47c7a5">FT_ANY_COLUMN</a></div><div class="ttdeci">#define FT_ANY_COLUMN</div><div class="ttdef"><b>Definition:</b> <a href="fort_8h_source.html#l00765">fort.h:765</a></div></div>
+<div class="ttc" id="alogs_8c_html_a2b33b95cf337eec7af9cfd3f56de6415"><div class="ttname"><a href="logs_8c.html#a2b33b95cf337eec7af9cfd3f56de6415">debug_print_f</a></div><div class="ttdeci">void debug_print_f(const char *fm,...)</div><div class="ttdoc">Print formated text with date.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00019">logs.c:19</a></div></div>
+<div class="ttc" id="alogs_8c_html_acafe45da547dcc1c5e01344a5f365880"><div class="ttname"><a href="logs_8c.html#acafe45da547dcc1c5e01344a5f365880">debug_print_client_config_f</a></div><div class="ttdeci">void debug_print_client_config_f(unsigned int client_id, const char *server_ip, unsigned int port)</div><div class="ttdoc">Beautify client config in console.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00067">logs.c:67</a></div></div>
+<div class="ttc" id="alogs_8c_html_ad00fabc05d04796b663e7362db3839f3"><div class="ttname"><a href="logs_8c.html#ad00fabc05d04796b663e7362db3839f3">debug_print_server_config_f</a></div><div class="ttdeci">void debug_print_server_config_f(const char *bind_ip, unsigned int port, unsigned int max_cnx)</div><div class="ttdoc">Beautify server config in console.</div><div class="ttdef"><b>Definition:</b> <a href="logs_8c_source.html#l00086">logs.c:86</a></div></div>
+<div class="ttc" id="alogs_8h_html"><div class="ttname"><a href="logs_8h.html">logs.h</a></div></div>
+<div class="ttc" id="astructft__table_html"><div class="ttname"><a href="structft__table.html">ft_table</a></div><div class="ttdef"><b>Definition:</b> <a href="fort_8c_source.html#l02231">fort.c:2231</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi 19 Décembre 2020 13:13:31 pour Diliemme du prisonnier par&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Généré le Dimanche 11 Avril 2021 12:44:48 pour Diliemme du prisonnier par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

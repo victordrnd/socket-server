@@ -1,5 +1,5 @@
 <map id="check_oppponent_connected" name="check_oppponent_connected">
 <area shape="rect" id="node1" title="Check if opponent is connected." alt="" coords="328,5,519,32"/>
-<area shape="rect" id="node2" href="$server_2network_2actions_8h.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="149,5,280,32"/>
+<area shape="rect" id="node2" href="$server_2network_2actions_8c.html#ac1e4df7de62df06fbe1cb46cd1adbff3" title="Execute connect action." alt="" coords="149,5,280,32"/>
 <area shape="rect" id="node3" href="$server_2network_2actions_8c.html#ab5084505bd2ee1d2038605b46547d250" title="Execute action based on packet&#39;s action." alt="" coords="5,5,101,32"/>
 </map>
