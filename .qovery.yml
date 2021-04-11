@@ -1,0 +1,11 @@
+---
+application:
+  name: "socket-server"
+  project: "test"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-socket-server"
+  routes:
+  - application_name: "socket-server"
+    paths:
+    - "/*"
